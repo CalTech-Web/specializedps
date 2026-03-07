@@ -10,26 +10,30 @@ export default function DoctorCard({ doctor }: DoctorCardProps) {
   return (
     <Link
       href={`/doctors/${doctor.slug}`}
-      className="group block overflow-hidden rounded-lg bg-white shadow-sm transition-shadow duration-200 hover:shadow-lg"
+      className="group block overflow-hidden bg-white transition-shadow duration-300 hover:shadow-xl"
     >
-      {/* Photo */}
-      <div className="relative h-80 overflow-hidden bg-[#f5f5f5]">
+      {/* Photo, full width, no border radius */}
+      <div className="relative h-80 overflow-hidden bg-cream">
         <Image
           src={doctor.image}
           alt={doctor.name}
           fill
-          className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, 50vw"
         />
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-heading/0 transition-colors duration-300 group-hover:bg-heading/10" />
       </div>
 
       {/* Content */}
       <div className="p-5 text-center">
-        <h3 className="text-xl font-bold text-[#32373c]">{doctor.name}</h3>
-        <p className="mt-1 text-sm text-gray-600">
+        <h3 className="font-heading text-2xl font-bold text-heading">
+          {doctor.name}
+        </h3>
+        <p className="mt-1 text-base text-body">
           {doctor.title}
         </p>
-        <p className="mt-0.5 text-sm text-gray-500">
+        <p className="mt-0.5 text-sm text-body/80">
           {doctor.credentials}
         </p>
       </div>

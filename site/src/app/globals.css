@@ -2,37 +2,60 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #32373c;
-  --navy: #1f385f;
-  --accent-blue: #4054b2;
-  --accent-orange: #fb8e28;
-  --bg-light: #f5f5f5;
-  --text-dark: #333333;
-  --charcoal: #32373c;
+  --foreground: #481E0B;
+  --primary: #CD5F37;
+  --secondary: #F7E6D4;
+  --heading: #481E0B;
+  --body-text: #6A5952;
+  --cream: #FCF6EF;
+  --peach: #F0DED6;
+  --peach-light: #FDF2ED;
+  --peach-lighter: #FAEFEB;
+  --warm-beige: #F0E3D2;
+  --warm-grey: #F5F2ED;
+  --gold: #FFD056;
+  --blog-bg: #FCF4F1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: var(--navy);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-orange: var(--accent-orange);
-  --color-bg-light: var(--bg-light);
-  --color-charcoal: var(--charcoal);
-  --font-sans: var(--font-source-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-heading: var(--heading);
+  --color-body: var(--body-text);
+  --color-cream: var(--cream);
+  --color-peach: var(--peach);
+  --color-peach-light: var(--peach-light);
+  --color-peach-lighter: var(--peach-lighter);
+  --color-warm-beige: var(--warm-beige);
+  --color-warm-grey: var(--warm-grey);
+  --color-gold: var(--gold);
+  --color-blog-bg: var(--blog-bg);
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-playfair);
 }
 
 body {
   background: var(--background);
-  color: var(--text-dark);
+  color: var(--body-text);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+  color: var(--heading);
+  line-height: 1.1;
+}
+
+a, button, input, select, textarea, li {
+  transition: all 0.3s ease-out;
 }
 
 @keyframes fade-in {
@@ -48,4 +71,17 @@ html {
 
 .animate-fade-in {
   animation: fade-in 0.35s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.4s ease-out;
 }

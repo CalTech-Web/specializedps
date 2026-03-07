@@ -56,7 +56,7 @@ export default function LocationsPage() {
         <section
           key={loc.id}
           id={loc.id}
-          className={loc.id === "ny" ? "bg-gray-50 py-20" : "py-20"}
+          className={loc.id === "ny" ? "bg-peach-light py-20" : "py-20"}
         >
           <div className="mx-auto max-w-7xl px-6">
             <SectionHeading
@@ -69,43 +69,43 @@ export default function LocationsPage() {
               {/* Details */}
               <div className="space-y-6">
                 {/* Contact Info */}
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h3 className="text-lg font-bold text-[#32373c]">
+                <div className="rounded-2xl border border-secondary bg-white p-6 shadow-sm">
+                  <h3 className="font-heading text-lg font-bold text-heading">
                     Contact Information
                   </h3>
                   <div className="mt-4 space-y-3">
                     <div className="flex items-start gap-3">
-                      <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
+                      <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                       <a
                         href={loc.mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                        className="text-sm text-body transition-colors hover:text-primary"
                       >
                         {loc.address}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 shrink-0 text-[#4054b2]" />
+                      <Phone className="h-5 w-5 shrink-0 text-primary" />
                       <a
                         href={`tel:${loc.phoneRaw}`}
-                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                        className="text-sm text-body transition-colors hover:text-primary"
                       >
                         {loc.phone}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 shrink-0 text-[#4054b2]" />
+                      <Mail className="h-5 w-5 shrink-0 text-primary" />
                       <a
                         href={`mailto:${loc.email}`}
-                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                        className="text-sm text-body transition-colors hover:text-primary"
                       >
                         {loc.email}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Clock className="h-5 w-5 shrink-0 text-[#4054b2]" />
-                      <span className="text-sm text-gray-600">
+                      <Clock className="h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-sm text-body">
                         {loc.hours}, Sat-Sun Closed
                       </span>
                     </div>
@@ -113,10 +113,10 @@ export default function LocationsPage() {
                 </div>
 
                 {/* Services */}
-                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+                <div className="rounded-2xl border border-secondary bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-2">
-                    <Stethoscope className="h-5 w-5 text-[#4054b2]" />
-                    <h3 className="text-lg font-bold text-[#32373c]">
+                    <Stethoscope className="h-5 w-5 text-primary" />
+                    <h3 className="font-heading text-lg font-bold text-heading">
                       Services Offered
                     </h3>
                   </div>
@@ -124,9 +124,9 @@ export default function LocationsPage() {
                     {loc.services.map((service) => (
                       <li
                         key={service}
-                        className="flex items-start gap-2 text-sm text-gray-600"
+                        className="flex items-start gap-2 text-sm text-body"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                         {service}
                       </li>
                     ))}
@@ -135,7 +135,7 @@ export default function LocationsPage() {
               </div>
 
               {/* Map */}
-              <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+              <div className="overflow-hidden rounded-2xl border border-secondary shadow-sm">
                 <iframe
                   src={loc.mapEmbed}
                   width="100%"

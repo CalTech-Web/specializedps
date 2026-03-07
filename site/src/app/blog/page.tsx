@@ -30,24 +30,24 @@ export default function BlogPage() {
         subtitle="Insights, education, and updates from our board-certified plastic surgeons on the latest in aesthetic and reconstructive surgery."
       />
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-peach-light py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {sortedPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-secondary bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 {/* Image placeholder */}
-                <div className="flex h-48 items-center justify-center bg-[#1f385f]">
+                <div className="flex h-48 items-center justify-center bg-heading">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
                     height="48"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#4054b2"
+                    stroke="#CD5F37"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -60,27 +60,27 @@ export default function BlogPage() {
 
                 <div className="flex flex-1 flex-col p-6">
                   {/* Category badge */}
-                  <span className="inline-block w-fit rounded-full bg-[#4054b2]/10 px-3 py-1 text-xs font-medium text-[#4054b2]">
+                  <span className="inline-block w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                     {post.category}
                   </span>
 
                   {/* Title */}
-                  <h2 className="mt-3 text-lg font-bold text-[#32373c] transition-colors group-hover:text-[#4054b2]">
+                  <h2 className="font-heading mt-3 text-lg font-bold text-heading transition-colors group-hover:text-primary">
                     {post.title}
                   </h2>
 
                   {/* Date */}
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="mt-2 text-sm text-body">
                     {formatDate(post.date)}
                   </p>
 
                   {/* Excerpt */}
-                  <p className="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">
+                  <p className="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-body">
                     {post.excerpt}
                   </p>
 
                   {/* Read more */}
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4054b2] transition-colors group-hover:text-[#32373c]">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors group-hover:text-heading">
                     Read More
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

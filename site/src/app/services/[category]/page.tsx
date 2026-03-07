@@ -50,29 +50,29 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       />
 
       {/* Procedures Grid */}
-      <section className="bg-[#f5f5f5] py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-bold text-[#32373c]">
+      <section className="bg-cream py-24 sm:py-28">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Our {cat.name} Procedures
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-body">
             {cat.description}
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {procedures.map((procedure) => (
               <Link
                 key={procedure.slug}
                 href={`/services/${procedure.categorySlug}/${procedure.slug}`}
-                className="group rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                className="group border border-peach bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
               >
-                <h3 className="text-lg font-bold text-[#32373c] transition-colors group-hover:text-[#4054b2]">
+                <h3 className="font-heading text-lg font-bold text-heading transition-colors group-hover:text-primary">
                   {procedure.shortName ?? procedure.name}
                 </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-body">
                   {procedure.description}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4054b2] transition-colors group-hover:text-[#1f385f]">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-colors group-hover:text-heading">
                   Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

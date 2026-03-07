@@ -119,16 +119,16 @@ export default function FirstAppointmentPage() {
             ].map((tip, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6"
+                className="flex items-start gap-4 rounded-xl border border-secondary bg-peach-light p-6"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#4054b2]/10">
-                  <tip.icon className="h-5 w-5 text-[#4054b2]" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <tip.icon className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#32373c]">
+                  <h3 className="font-heading text-base font-bold text-heading">
                     {tip.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                  <p className="mt-1 text-sm leading-relaxed text-body">
                     {tip.description}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function FirstAppointmentPage() {
       </section>
 
       {/* What to Bring */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-4xl px-6">
           <SectionHeading
             eyebrow="Checklist"
@@ -147,7 +147,7 @@ export default function FirstAppointmentPage() {
             centered
           />
 
-          <div className="mt-12 rounded-2xl border border-[#4054b2]/20 bg-white p-10">
+          <div className="mt-12 rounded-2xl border border-primary/20 bg-white p-10">
             <ul className="grid gap-4 sm:grid-cols-2">
               {[
                 "Photo ID (driver's license or passport)",
@@ -162,8 +162,8 @@ export default function FirstAppointmentPage() {
                 "A supportive friend or family member (optional)",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                  <span className="text-base leading-relaxed text-gray-700">
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-base leading-relaxed text-body">
                     {item}
                   </span>
                 </li>
@@ -171,7 +171,7 @@ export default function FirstAppointmentPage() {
             </ul>
           </div>
 
-          <p className="mt-8 text-center text-sm leading-relaxed text-gray-500">
+          <p className="mt-8 text-center text-sm leading-relaxed text-body">
             Do not worry if you cannot bring everything listed above. Our team
             will guide you through the process and help you gather any additional
             information needed.

@@ -63,9 +63,9 @@ export default function GalleryClient() {
         <div
           key={section.anchor}
           id={section.anchor}
-          className="rounded-lg bg-white p-6 shadow-sm"
+          className="bg-cream p-6 shadow-sm"
         >
-          <h3 className="text-lg font-bold text-[#32373c] border-b border-gray-200 pb-3 mb-4">
+          <h3 className="font-heading text-lg font-bold text-heading border-b border-peach pb-3 mb-4">
             {section.title}
           </h3>
           <ul className="space-y-2">
@@ -73,7 +73,7 @@ export default function GalleryClient() {
               <li key={proc.label}>
                 <Link
                   href={proc.href}
-                  className="block text-sm text-[#4054b2] transition-colors hover:text-[#1f385f] hover:underline"
+                  className="block text-sm text-primary transition-colors hover:text-heading hover:underline"
                 >
                   {proc.label}
                 </Link>

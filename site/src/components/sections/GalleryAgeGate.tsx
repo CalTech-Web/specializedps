@@ -89,17 +89,17 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
         {/* Modal card */}
         <div className="w-full max-w-md animate-fade-in rounded-2xl bg-white p-8 shadow-2xl sm:p-10">
           {/* Icon */}
-          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#f5f5f5]">
-            <ShieldCheck className="h-8 w-8 text-[#4054b2]" strokeWidth={1.8} />
+          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
+            <ShieldCheck className="h-8 w-8 text-primary" strokeWidth={1.8} />
           </div>
 
           {/* Heading */}
-          <h2 className="text-center text-2xl font-bold text-[#32373c] sm:text-[1.65rem]">
+          <h2 className="text-center font-heading text-2xl font-bold text-heading sm:text-[1.65rem]">
             Age Verification Required
           </h2>
 
           {/* Description */}
-          <p className="mt-3 text-center text-[0.938rem] leading-relaxed text-gray-500">
+          <p className="mt-3 text-center text-[0.938rem] leading-relaxed text-body">
             Our before and after gallery contains medical images of surgical
             procedures. You must be at least 18 years of age to view this
             content. Please enter your birth year to continue.
@@ -109,7 +109,7 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
           <div className="mt-7">
             <label
               htmlFor="birth-year"
-              className="mb-1.5 block text-sm font-semibold text-[#32373c]"
+              className="mb-1.5 block text-sm font-semibold text-heading"
             >
               Year of Birth
             </label>
@@ -121,7 +121,7 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
                 setError("");
               }}
               onKeyDown={handleKeyDown}
-              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-[0.938rem] text-[#32373c] shadow-sm transition-colors focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/20"
+              className="w-full rounded-lg border border-peach bg-white px-4 py-3 text-[0.938rem] text-heading shadow-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
             >
               <option value="">Select your birth year</option>
               {yearOptions.map((y) => (
@@ -142,13 +142,13 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
           {/* Submit button */}
           <button
             onClick={handleVerify}
-            className="mt-6 w-full rounded-full bg-[#32373c] px-6 py-3.5 text-[0.938rem] font-semibold text-white shadow-sm transition-all hover:bg-[#1f385f] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/40 focus:ring-offset-2 active:scale-[0.98]"
+            className="mt-6 w-full border-2 border-primary bg-primary px-6 py-3.5 text-[0.938rem] font-bold text-white shadow-sm transition-all hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 active:scale-[0.98]"
           >
             Verify & View Gallery
           </button>
 
           {/* Disclaimer */}
-          <p className="mt-5 text-center text-xs leading-relaxed text-gray-400">
+          <p className="mt-5 text-center text-xs leading-relaxed text-body/70">
             By proceeding, you confirm that you are 18 years of age or older
             and consent to viewing medical before and after imagery.
           </p>

@@ -22,6 +22,12 @@ function doctorForLocation(loc: string): string {
   return "";
 }
 
+const inputClasses =
+  "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[80px] px-[25px] text-base text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30";
+
+const selectClasses =
+  "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[80px] px-[25px] text-base text-heading focus:outline-none focus:ring-2 focus:ring-primary/30";
+
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     location: "",
@@ -117,15 +123,15 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-lg border border-green-200 bg-green-50 p-8 text-center">
-        <h3 className="text-xl font-bold text-[#32373c]">Thank You!</h3>
-        <p className="mt-2 text-gray-600">
+      <div className="bg-peach-light p-8 text-center">
+        <h3 className="font-heading text-xl font-bold text-heading">Thank You!</h3>
+        <p className="mt-2 text-body">
           Your message has been received. Our team will get back to you shortly.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-semibold text-[#4054b2] hover:text-[#1f385f]"
+          className="mt-6 text-sm font-semibold text-primary hover:text-heading"
         >
           Send Another Message
         </button>
@@ -134,18 +140,18 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form onSubmit={handleSubmit} noValidate className="space-y-5 bg-peach-light p-8 sm:p-10">
       {/* Location */}
       <div>
-        <label htmlFor="contact-location" className="block text-sm font-medium text-[#32373c]">
+        <label htmlFor="contact-location" className="block text-sm font-medium text-heading mb-2">
           Location <span className="text-red-500">*</span>
         </label>
         <select
           id="contact-location"
           value={formData.location}
           onChange={(e) => handleLocationChange(e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
-            errors.location ? "border-red-400" : "border-gray-300"
+          className={`${selectClasses} ${
+            errors.location ? "ring-2 ring-red-400" : ""
           }`}
         >
           <option value="">Select a location</option>
@@ -160,14 +166,14 @@ export default function ContactForm() {
       {/* Doctor (conditional) */}
       {formData.location && (
         <div>
-          <label htmlFor="contact-doctor" className="block text-sm font-medium text-[#32373c]">
+          <label htmlFor="contact-doctor" className="block text-sm font-medium text-heading mb-2">
             Doctor
           </label>
           <select
             id="contact-doctor"
             value={formData.doctor}
             onChange={(e) => handleChange("doctor", e.target.value)}
-            className="mt-1.5 block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+            className={selectClasses}
           >
             {formData.location === "NJ" && (
               <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
@@ -181,7 +187,7 @@ export default function ContactForm() {
 
       {/* Name */}
       <div>
-        <label htmlFor="contact-name" className="block text-sm font-medium text-[#32373c]">
+        <label htmlFor="contact-name" className="block text-sm font-medium text-heading mb-2">
           Your Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -189,8 +195,8 @@ export default function ContactForm() {
           type="text"
           value={formData.name}
           onChange={(e) => handleChange("name", e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
-            errors.name ? "border-red-400" : "border-gray-300"
+          className={`${inputClasses} ${
+            errors.name ? "ring-2 ring-red-400" : ""
           }`}
           placeholder="Full name"
         />
@@ -201,7 +207,7 @@ export default function ContactForm() {
 
       {/* Phone */}
       <div>
-        <label htmlFor="contact-phone" className="block text-sm font-medium text-[#32373c]">
+        <label htmlFor="contact-phone" className="block text-sm font-medium text-heading mb-2">
           Your Phone <span className="text-red-500">*</span>
         </label>
         <input
@@ -209,8 +215,8 @@ export default function ContactForm() {
           type="tel"
           value={formData.phone}
           onChange={(e) => handleChange("phone", e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
-            errors.phone ? "border-red-400" : "border-gray-300"
+          className={`${inputClasses} ${
+            errors.phone ? "ring-2 ring-red-400" : ""
           }`}
           placeholder="(123) 456-7890"
         />
@@ -221,7 +227,7 @@ export default function ContactForm() {
 
       {/* Email */}
       <div>
-        <label htmlFor="contact-email" className="block text-sm font-medium text-[#32373c]">
+        <label htmlFor="contact-email" className="block text-sm font-medium text-heading mb-2">
           Email Address <span className="text-red-500">*</span>
         </label>
         <input
@@ -229,8 +235,8 @@ export default function ContactForm() {
           type="email"
           value={formData.email}
           onChange={(e) => handleChange("email", e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
-            errors.email ? "border-red-400" : "border-gray-300"
+          className={`${inputClasses} ${
+            errors.email ? "ring-2 ring-red-400" : ""
           }`}
           placeholder="you@example.com"
         />
@@ -241,7 +247,7 @@ export default function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="contact-message" className="block text-sm font-medium text-[#32373c]">
+        <label htmlFor="contact-message" className="block text-sm font-medium text-heading mb-2">
           Message <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -249,8 +255,8 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={(e) => handleChange("message", e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
-            errors.message ? "border-red-400" : "border-gray-300"
+          className={`block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] px-[25px] py-5 text-base text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30 ${
+            errors.message ? "ring-2 ring-red-400" : ""
           }`}
           placeholder="How can we help you?"
         />
@@ -261,7 +267,7 @@ export default function ContactForm() {
 
       {/* Error banner */}
       {status === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+        <div className="border border-red-200 bg-red-50 p-4 text-sm text-red-700">
           Something went wrong. Please try again or call our office directly.
         </div>
       )}
@@ -270,7 +276,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-[#32373c] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#1f385f] disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full bg-primary border-2 border-primary px-6 py-6 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Request an Appointment"}
       </button>

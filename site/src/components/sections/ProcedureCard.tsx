@@ -17,25 +17,25 @@ export default function ProcedureCard({ procedure }: ProcedureCardProps) {
   return (
     <Link
       href={`/services/${procedure.categorySlug}/${procedure.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="group block overflow-hidden border border-peach bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
     >
       {/* Category badge */}
-      <span className="inline-block rounded-full bg-[#1a2332]/5 px-3 py-1 text-xs font-medium text-[#1a2332]">
+      <span className="inline-block bg-secondary px-3 py-1 text-xs font-medium text-heading">
         {categoryLabel}
       </span>
 
       {/* Procedure name */}
-      <h3 className="mt-4 text-lg font-bold text-[#1a2332] transition-colors group-hover:text-[#c9a96e]">
+      <h3 className="mt-4 font-heading text-lg font-bold text-heading transition-colors group-hover:text-primary">
         {procedure.shortName ?? procedure.name}
       </h3>
 
       {/* Short description */}
-      <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-600">
+      <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-body">
         {procedure.description}
       </p>
 
       {/* Learn more indicator */}
-      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] transition-colors group-hover:text-[#b8954f]">
+      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors group-hover:text-heading">
         Learn More
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -30,9 +30,9 @@ export default function GalleryPage() {
       {/* Age-gated gallery content */}
       <GalleryAgeGate>
         {/* Gallery Category Hub */}
-        <section className="bg-[#f5f5f5] py-16">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2 className="mb-8 text-center text-3xl font-bold text-[#32373c]">
+        <section className="bg-secondary py-20 sm:py-24">
+          <div className="mx-auto max-w-[1320px] px-6">
+            <h2 className="mb-10 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
               Browse by Category
             </h2>
             <GalleryClient />
@@ -42,14 +42,16 @@ export default function GalleryPage() {
         {/* Before & After Images by Category */}
         {groupedItems
           .filter((group) => group.items.length > 0)
-          .map((group) => (
+          .map((group, groupIndex) => (
             <section
               key={group.slug}
               id={group.slug}
-              className="bg-white py-16 even:bg-[#f5f5f5]"
+              className={`py-20 sm:py-24 ${
+                groupIndex % 2 === 0 ? "bg-white" : "bg-peach-light"
+              }`}
             >
-              <div className="mx-auto max-w-7xl px-6">
-                <h2 className="mb-10 text-3xl font-bold text-[#32373c]">
+              <div className="mx-auto max-w-[1320px] px-6">
+                <h2 className="mb-12 font-heading text-3xl font-bold text-heading">
                   {group.label}
                 </h2>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,21 +69,21 @@ export default function GalleryPage() {
           ))}
 
         {/* Patient Privacy Notice */}
-        <section className="bg-[#f5f5f5] py-16">
+        <section className="bg-cream py-20 sm:py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <div className="rounded-2xl border border-gray-200 bg-white p-10">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-[#fb8e28]" />
-              <h2 className="text-2xl font-bold text-[#32373c]">
+            <div className="bg-peach-light p-10">
+              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-primary" />
+              <h2 className="font-heading text-2xl font-bold text-heading">
                 Patient Privacy & Consent
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
+              <p className="mt-4 text-base leading-relaxed text-body">
                 All before and after photos are shared with the explicit written
                 consent of our patients. We are deeply committed to protecting
                 patient privacy and will only display images that patients have
                 approved. Photos are presented for educational purposes and to
                 help prospective patients understand potential outcomes.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-gray-500">
+              <p className="mt-4 text-sm leading-relaxed text-body/70">
                 Individual results may vary. The photos in our gallery represent
                 real patient outcomes but should not be considered a guarantee of
                 specific results. During your consultation, your surgeon will

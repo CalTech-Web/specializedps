@@ -41,32 +41,32 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Accommodation Assistance */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <Building2 className="h-8 w-8 text-[#4054b2]" />
-                <h2 className="text-3xl font-bold text-[#32373c]">
+                <Building2 className="h-8 w-8 text-primary" />
+                <h2 className="font-heading text-3xl font-bold text-heading">
                   Accommodation Assistance
                 </h2>
               </div>
-              <p className="mb-6 text-base leading-relaxed text-gray-600">
+              <p className="mb-6 text-base leading-relaxed text-body">
                 We understand that finding comfortable lodging near our offices
                 is important, especially when you are recovering from a
                 procedure. Our team can recommend nearby hotels and
                 extended-stay options that are convenient to both our New Jersey
                 and New York locations.
               </p>
-              <p className="text-base leading-relaxed text-gray-600">
+              <p className="text-base leading-relaxed text-body">
                 Many of our recommended accommodations offer quiet, comfortable
                 rooms suited for post-operative recovery, with easy access to
                 dining, pharmacies, and our office for follow-up visits.
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
+            <div className="rounded-xl border border-secondary bg-white p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
                 What We Help With
               </h3>
               <ul className="space-y-4">
@@ -77,8 +77,8 @@ export default function TravelingPatientsPage() {
                   "Coordination of your stay timeline with your surgical and follow-up schedule",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                    <span className="text-base leading-relaxed text-gray-700">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-body">
                       {item}
                     </span>
                   </li>
@@ -93,8 +93,8 @@ export default function TravelingPatientsPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="order-2 rounded-xl border border-gray-200 bg-gray-50 p-8 lg:order-1">
-              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
+            <div className="order-2 rounded-xl border border-secondary bg-peach-light p-8 lg:order-1">
+              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
                 Getting Here
               </h3>
               <ul className="space-y-4">
@@ -106,8 +106,8 @@ export default function TravelingPatientsPage() {
                   "We can provide directions and transportation tips specific to your travel plans",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                    <span className="text-base leading-relaxed text-gray-700">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-body">
                       {item}
                     </span>
                   </li>
@@ -117,18 +117,18 @@ export default function TravelingPatientsPage() {
 
             <div className="order-1 lg:order-2">
               <div className="mb-4 flex items-center gap-3">
-                <Car className="h-8 w-8 text-[#4054b2]" />
-                <h2 className="text-3xl font-bold text-[#32373c]">
+                <Car className="h-8 w-8 text-primary" />
+                <h2 className="font-heading text-3xl font-bold text-heading">
                   Transportation Options
                 </h2>
               </div>
-              <p className="mb-6 text-base leading-relaxed text-gray-600">
+              <p className="mb-6 text-base leading-relaxed text-body">
                 Getting to and from our offices is straightforward. Both
                 locations are conveniently situated near major highways, airports,
                 and public transportation, making travel as simple as possible
                 for out-of-state patients.
               </p>
-              <p className="text-base leading-relaxed text-gray-600">
+              <p className="text-base leading-relaxed text-body">
                 Please remember that you will need someone to drive you home
                 after any surgical procedure. If you are traveling alone, our
                 team can help coordinate transportation arrangements for the day
@@ -140,24 +140,24 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Out-of-State Insurance */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-[#4054b2]" />
-                <h2 className="text-3xl font-bold text-[#32373c]">
+                <ShieldCheck className="h-8 w-8 text-primary" />
+                <h2 className="font-heading text-3xl font-bold text-heading">
                   Out-of-State Insurance
                 </h2>
               </div>
-              <p className="mb-6 text-base leading-relaxed text-gray-600">
+              <p className="mb-6 text-base leading-relaxed text-body">
                 If you are traveling from another state for a reconstructive
                 procedure, our insurance team can help you understand your
                 coverage options. As an out-of-network provider, we work with
                 patients across the country and are experienced in navigating
                 insurance plans from many different states and carriers.
               </p>
-              <p className="text-base leading-relaxed text-gray-600">
+              <p className="text-base leading-relaxed text-body">
                 For breast reconstruction patients, the Women&apos;s Health and
                 Cancer Rights Act (WHCRA) is a federal law that applies
                 regardless of which state you live in. Our team will verify
@@ -166,8 +166,8 @@ export default function TravelingPatientsPage() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
+            <div className="rounded-xl border border-secondary bg-white p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
                 Insurance Support for Travelers
               </h3>
               <ul className="space-y-4">
@@ -179,8 +179,8 @@ export default function TravelingPatientsPage() {
                   "Clear cost estimates provided before your visit",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                    <span className="text-base leading-relaxed text-gray-700">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-body">
                       {item}
                     </span>
                   </li>
@@ -230,13 +230,13 @@ export default function TravelingPatientsPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-center"
+                className="rounded-xl border border-secondary bg-peach-light p-6 text-center"
               >
-                <item.icon className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
-                <h3 className="text-base font-bold text-[#32373c]">
+                <item.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
+                <h3 className="font-heading text-base font-bold text-heading">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                <p className="mt-2 text-sm leading-relaxed text-body">
                   {item.description}
                 </p>
               </div>
@@ -246,7 +246,7 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Office Locations Quick Reference */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             eyebrow="Our Locations"
@@ -255,54 +255,54 @@ export default function TravelingPatientsPage() {
           />
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
+            <div className="rounded-xl border border-secondary bg-white p-8">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-[#4054b2]" />
-                <h3 className="text-xl font-bold text-[#32373c]">
+                <Plane className="h-6 w-6 text-primary" />
+                <h3 className="font-heading text-xl font-bold text-heading">
                   New Jersey Office
                 </h3>
               </div>
-              <p className="text-base leading-relaxed text-gray-700">
+              <p className="text-base leading-relaxed text-body">
                 264 Millburn Ave
                 <br />
                 Millburn, NJ 07041
               </p>
-              <p className="mt-3 text-base text-gray-700">
+              <p className="mt-3 text-base text-body">
                 <span className="font-semibold">Phone:</span>{" "}
                 <a
                   href="tel:9735610900"
-                  className="text-[#4054b2] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   (973) 561-0900
                 </a>
               </p>
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-body">
                 Nearest airports: Newark Liberty (EWR), LaGuardia (LGA)
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
+            <div className="rounded-xl border border-secondary bg-white p-8">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-[#4054b2]" />
-                <h3 className="text-xl font-bold text-[#32373c]">
+                <Plane className="h-6 w-6 text-primary" />
+                <h3 className="font-heading text-xl font-bold text-heading">
                   New York Office
                 </h3>
               </div>
-              <p className="text-base leading-relaxed text-gray-700">
+              <p className="text-base leading-relaxed text-body">
                 500 Mamaroneck Ave, Suite 211
                 <br />
                 Harrison, NY 10528
               </p>
-              <p className="mt-3 text-base text-gray-700">
+              <p className="mt-3 text-base text-body">
                 <span className="font-semibold">Phone:</span>{" "}
                 <a
                   href="tel:9148740900"
-                  className="text-[#4054b2] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   (914) 874-0900
                 </a>
               </p>
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-body">
                 Nearest airports: Westchester County (HPN), JFK, LaGuardia
                 (LGA)
               </p>

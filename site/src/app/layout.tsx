@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "900"],
+  weight: ["400", "500", "700"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Specialized Plastic Surgery | Board-Certified Plastic Surgeons in NJ & NY",
+    default:
+      "Specialized Plastic Surgery | Board-Certified Plastic Surgeons in NJ & NY",
     template: "%s | Specialized Plastic Surgery",
   },
   description:
@@ -34,7 +41,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://specializedplasticsurgery.com",
     siteName: "Specialized Plastic Surgery",
-    title: "Specialized Plastic Surgery | Board-Certified Plastic Surgeons in NJ & NY",
+    title:
+      "Specialized Plastic Surgery | Board-Certified Plastic Surgeons in NJ & NY",
     description:
       "Board-certified plastic surgeons specializing in breast reconstruction, aesthetic surgery, and body contouring.",
   },
@@ -47,7 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourceSans.variable} antialiased`}>
+      <body
+        className={`${dmSans.variable} ${playfair.variable} antialiased`}
+      >
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

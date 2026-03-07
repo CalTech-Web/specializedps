@@ -44,6 +44,12 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
 const SITE_ID = "specializedplasticsurgery";
 
+const modalInputClasses =
+  "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[56px] px-[20px] text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30";
+
+const modalSelectClasses =
+  "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[56px] px-[20px] text-sm text-heading focus:outline-none focus:ring-2 focus:ring-primary/30";
+
 export function AppointmentModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -113,35 +119,35 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg rounded-lg bg-white p-8 shadow-xl"
+        className="relative w-full max-w-lg bg-white p-8 shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#32373c]"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-body transition-colors hover:bg-peach hover:text-heading"
         >
           <X className="h-5 w-5" />
         </button>
 
-        <h2 className="text-2xl font-bold text-[#32373c]">
+        <h2 className="font-heading text-2xl font-bold text-heading">
           Request an Appointment
         </h2>
-        <p className="mt-1 text-sm text-gray-600">
+        <p className="mt-1 text-sm text-body">
           Fill out the form below and our team will reach out to confirm your appointment.
         </p>
 
         {status === "success" ? (
-          <div className="mt-6 rounded-lg border border-green-200 bg-green-50 p-6 text-center">
-            <h3 className="text-lg font-bold text-[#32373c]">Thank You!</h3>
-            <p className="mt-2 text-sm text-gray-600">
+          <div className="mt-6 bg-peach-light p-6 text-center">
+            <h3 className="font-heading text-lg font-bold text-heading">Thank You!</h3>
+            <p className="mt-2 text-sm text-body">
               Your request has been received. We will contact you shortly.
             </p>
             <button
               type="button"
               onClick={onClose}
-              className="mt-4 rounded-full bg-[#32373c] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#1f385f]"
+              className="mt-4 border-2 border-primary bg-primary px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white hover:text-primary"
             >
               Close
             </button>
@@ -150,14 +156,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
           <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
             {/* Location */}
             <div>
-              <label htmlFor="modal-location" className="block text-sm font-medium text-[#32373c]">
+              <label htmlFor="modal-location" className="block text-sm font-medium text-heading mb-1.5">
                 Location
               </label>
               <select
                 id="modal-location"
                 value={formData.location}
                 onChange={(e) => handleLocationChange(e.target.value)}
-                className="mt-1 block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                className={modalSelectClasses}
               >
                 <option value="">Select a location</option>
                 <option value="NJ">Northern New Jersey Office</option>
@@ -168,14 +174,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
             {/* Doctor (conditional) */}
             {formData.location && (
               <div>
-                <label htmlFor="modal-doctor" className="block text-sm font-medium text-[#32373c]">
+                <label htmlFor="modal-doctor" className="block text-sm font-medium text-heading mb-1.5">
                   Doctor
                 </label>
                 <select
                   id="modal-doctor"
                   value={formData.doctor}
                   onChange={(e) => handleChange("doctor", e.target.value)}
-                  className="mt-1 block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                  className={modalSelectClasses}
                 >
                   {formData.location === "NJ" && (
                     <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
@@ -189,7 +195,7 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
 
             {/* Name */}
             <div>
-              <label htmlFor="modal-name" className="block text-sm font-medium text-[#32373c]">
+              <label htmlFor="modal-name" className="block text-sm font-medium text-heading mb-1.5">
                 Your Name
               </label>
               <input
@@ -197,14 +203,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
                 type="text"
                 value={formData.name}
                 onChange={(e) => handleChange("name", e.target.value)}
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                className={modalInputClasses}
                 placeholder="Full name"
               />
             </div>
 
             {/* Phone */}
             <div>
-              <label htmlFor="modal-phone" className="block text-sm font-medium text-[#32373c]">
+              <label htmlFor="modal-phone" className="block text-sm font-medium text-heading mb-1.5">
                 Your Phone
               </label>
               <input
@@ -212,14 +218,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => handleChange("phone", e.target.value)}
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                className={modalInputClasses}
                 placeholder="(123) 456-7890"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label htmlFor="modal-email" className="block text-sm font-medium text-[#32373c]">
+              <label htmlFor="modal-email" className="block text-sm font-medium text-heading mb-1.5">
                 Email Address
               </label>
               <input
@@ -227,14 +233,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                className={modalInputClasses}
                 placeholder="you@example.com"
               />
             </div>
 
             {/* Message */}
             <div>
-              <label htmlFor="modal-message" className="block text-sm font-medium text-[#32373c]">
+              <label htmlFor="modal-message" className="block text-sm font-medium text-heading mb-1.5">
                 Message
               </label>
               <textarea
@@ -242,14 +248,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
                 rows={4}
                 value={formData.message}
                 onChange={(e) => handleChange("message", e.target.value)}
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+                className="block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] px-[20px] py-4 text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30"
                 placeholder="How can we help you?"
               />
             </div>
 
             {/* Error */}
             {status === "error" && (
-              <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+              <div className="border border-red-200 bg-red-50 p-3 text-sm text-red-700">
                 Something went wrong. Please try again or call our office directly.
               </div>
             )}
@@ -258,7 +264,7 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full rounded-full bg-[#32373c] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#1f385f] disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full border-2 border-primary bg-primary px-6 py-4 text-base font-bold text-white transition-colors hover:bg-white hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : "Request an Appointment"}
             </button>

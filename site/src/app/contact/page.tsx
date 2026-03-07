@@ -66,13 +66,13 @@ export default function ContactPage() {
       />
 
       {/* Form Section */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-blog-bg py-24 sm:py-28">
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-center text-3xl font-bold text-[#32373c]">
+            <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
               Send Us a Message
             </h2>
-            <p className="mt-4 text-center text-lg text-gray-600">
+            <p className="mt-4 text-center text-lg text-body">
               Fill out the form below and our team will get back to you
               promptly.
             </p>
@@ -84,33 +84,35 @@ export default function ContactPage() {
       </section>
 
       {/* Location Info */}
-      <section className="bg-[#f5f5f5] py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-10 text-center text-3xl font-bold text-[#32373c]">
+      <section className="bg-white py-24 sm:py-28">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <h2 className="mb-12 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Our Locations
           </h2>
           <div className="grid gap-8 md:grid-cols-2">
             {locations.map((loc) => (
               <div
                 key={loc.key}
-                className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm"
+                className="border border-peach bg-peach-light p-8 shadow-sm"
               >
-                <h3 className="text-xl font-bold text-[#32373c]">
+                <h3 className="font-heading text-xl font-bold text-heading">
                   {loc.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-[#4054b2]">
+                <p className="mt-1 text-sm font-medium text-primary">
                   {loc.surgeon}
                 </p>
 
                 <div className="mt-6 space-y-4">
                   {/* Address */}
                   <div className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#fb8e28]" />
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
+                      <MapPin className="h-4 w-4 text-white" />
+                    </div>
                     <a
                       href={loc.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                      className="text-sm text-body transition-colors hover:text-primary"
                     >
                       {loc.address}
                     </a>
@@ -118,10 +120,12 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 shrink-0 text-[#fb8e28]" />
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
+                      <Phone className="h-4 w-4 text-white" />
+                    </div>
                     <a
                       href={`tel:${loc.phoneRaw}`}
-                      className="text-sm font-semibold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                      className="text-sm font-semibold text-primary transition-colors hover:text-heading"
                     >
                       {loc.phone}
                     </a>
@@ -129,10 +133,12 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 shrink-0 text-[#fb8e28]" />
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
+                      <Mail className="h-4 w-4 text-white" />
+                    </div>
                     <a
                       href={`mailto:${loc.email}`}
-                      className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                      className="text-sm text-body transition-colors hover:text-primary"
                     >
                       {loc.email}
                     </a>
@@ -140,18 +146,22 @@ export default function ContactPage() {
 
                   {/* Hours */}
                   <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 shrink-0 text-[#fb8e28]" />
-                    <span className="text-sm text-gray-600">{loc.hours}</span>
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
+                      <Clock className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-sm text-body">{loc.hours}</span>
                   </div>
 
                   {/* Instagram */}
                   <div className="flex items-center gap-3">
-                    <Instagram className="h-5 w-5 shrink-0 text-[#fb8e28]" />
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
+                      <Instagram className="h-4 w-4 text-white" />
+                    </div>
                     <a
                       href={loc.instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
+                      className="text-sm text-body transition-colors hover:text-primary"
                     >
                       {loc.instagram}
                     </a>

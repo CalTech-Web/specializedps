@@ -52,7 +52,7 @@ const reviews: Review[] = [
 function StarIcon({ filled }: { filled: boolean }) {
   return (
     <svg
-      className={`h-5 w-5 ${filled ? "text-[#fb8e28]" : "text-gray-300"}`}
+      className={`h-5 w-5 ${filled ? "text-gold" : "text-gray-300"}`}
       fill="currentColor"
       viewBox="0 0 20 20"
       aria-hidden="true"
@@ -75,7 +75,7 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="bg-[#f5f5f5] py-20">
+    <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center">
@@ -84,7 +84,7 @@ export default function TestimonialSection() {
               <StarIcon key={i} filled />
             ))}
           </div>
-          <h2 className="mt-3 text-3xl font-bold text-[#32373c] sm:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-bold text-heading sm:text-4xl">
             Over 250 Five-Star Reviews
           </h2>
         </div>
@@ -95,7 +95,7 @@ export default function TestimonialSection() {
           <button
             onClick={() => scroll("left")}
             aria-label="Scroll reviews left"
-            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#32373c] shadow-md transition-colors hover:bg-[#32373c] hover:text-white sm:-left-5"
+            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-heading shadow-md transition-colors hover:bg-primary hover:text-white sm:-left-5"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -104,7 +104,7 @@ export default function TestimonialSection() {
           <button
             onClick={() => scroll("right")}
             aria-label="Scroll reviews right"
-            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#32373c] shadow-md transition-colors hover:bg-[#32373c] hover:text-white sm:-right-5"
+            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-heading shadow-md transition-colors hover:bg-primary hover:text-white sm:-right-5"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -117,7 +117,7 @@ export default function TestimonialSection() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="w-[320px] flex-shrink-0 snap-start rounded-lg bg-white p-6 shadow-sm"
+                className="w-[320px] flex-shrink-0 snap-start bg-white p-6 shadow-sm border border-peach"
               >
                 {/* Stars */}
                 <div className="flex gap-0.5">
@@ -127,16 +127,16 @@ export default function TestimonialSection() {
                 </div>
 
                 {/* Review text */}
-                <p className="mt-4 text-sm leading-relaxed text-gray-600 line-clamp-5">
+                <p className="mt-4 text-sm leading-relaxed text-body line-clamp-5">
                   {review.text}
                 </p>
 
                 {/* Reviewer */}
-                <div className="mt-4 border-t border-gray-100 pt-4">
-                  <p className="text-sm font-semibold text-[#32373c]">
+                <div className="mt-4 border-t border-peach pt-4">
+                  <p className="text-sm font-bold text-heading">
                     {review.name}
                   </p>
-                  <p className="mt-0.5 text-xs text-gray-500">
+                  <p className="mt-0.5 text-xs text-body">
                     {review.date}
                   </p>
                 </div>

@@ -37,7 +37,7 @@ export default function ERASPage() {
             centered
           />
           <div className="mt-8 space-y-6 text-center">
-            <p className="text-lg leading-relaxed text-gray-600">
+            <p className="text-lg leading-relaxed text-body">
               ERAS is a comprehensive, evidence-based protocol designed to
               optimize every phase of your surgical experience. Developed from
               decades of clinical research, ERAS combines advanced nutritional
@@ -45,7 +45,7 @@ export default function ERASPage() {
               post-operative care to reduce complications, minimize discomfort,
               and accelerate your recovery.
             </p>
-            <p className="text-lg leading-relaxed text-gray-600">
+            <p className="text-lg leading-relaxed text-body">
               At Specialized Plastic Surgery, we integrate ERAS protocols into
               every procedure we perform. This means your body is better prepared
               for surgery, your time in recovery is shorter, and your overall
@@ -57,7 +57,7 @@ export default function ERASPage() {
       </section>
 
       {/* Three Phases */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="The Protocol"
@@ -71,19 +71,19 @@ export default function ERASPage() {
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
-                    <Apple className="h-5 w-5 text-[#4054b2]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Apple className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 1
                     </p>
-                    <h3 className="text-2xl font-bold text-[#32373c]">
+                    <h3 className="font-heading text-2xl font-bold text-heading">
                       Before Surgery
                     </h3>
                   </div>
                 </div>
-                <p className="mb-6 text-base leading-relaxed text-gray-600">
+                <p className="mb-6 text-base leading-relaxed text-body">
                   Preparation begins weeks before your procedure. We focus on
                   optimizing your body&apos;s nutritional status and overall
                   health so you enter the operating room in the best possible
@@ -91,7 +91,7 @@ export default function ERASPage() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-white p-8">
+              <div className="rounded-xl border border-secondary bg-white p-8">
                 <ul className="space-y-4">
                   {[
                     "Comprehensive nutritional screening and personalized dietary guidance",
@@ -102,8 +102,8 @@ export default function ERASPage() {
                     "Pre-operative counseling to set clear expectations and reduce anxiety",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                      <span className="text-base leading-relaxed text-gray-700">
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-base leading-relaxed text-body">
                         {item}
                       </span>
                     </li>
@@ -114,7 +114,7 @@ export default function ERASPage() {
 
             {/* Phase 2: During Surgery */}
             <div className="grid items-start gap-10 lg:grid-cols-2">
-              <div className="order-2 rounded-xl border border-gray-200 bg-white p-8 lg:order-1">
+              <div className="order-2 rounded-xl border border-secondary bg-white p-8 lg:order-1">
                 <ul className="space-y-4">
                   {[
                     "Opioid-sparing anesthesia protocols using regional nerve blocks and local anesthetics",
@@ -125,8 +125,8 @@ export default function ERASPage() {
                     "Techniques that reduce surgical stress response and inflammation",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                      <span className="text-base leading-relaxed text-gray-700">
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-base leading-relaxed text-body">
                         {item}
                       </span>
                     </li>
@@ -136,19 +136,19 @@ export default function ERASPage() {
 
               <div className="order-1 lg:order-2">
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
-                    <Syringe className="h-5 w-5 text-[#4054b2]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Syringe className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 2
                     </p>
-                    <h3 className="text-2xl font-bold text-[#32373c]">
+                    <h3 className="font-heading text-2xl font-bold text-heading">
                       During Surgery
                     </h3>
                   </div>
                 </div>
-                <p className="mb-6 text-base leading-relaxed text-gray-600">
+                <p className="mb-6 text-base leading-relaxed text-body">
                   During your procedure, our surgical and anesthesia teams use
                   advanced techniques designed to minimize your body&apos;s
                   stress response, reduce the need for opioid medications, and
@@ -161,19 +161,19 @@ export default function ERASPage() {
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
-                    <Activity className="h-5 w-5 text-[#4054b2]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Activity className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 3
                     </p>
-                    <h3 className="text-2xl font-bold text-[#32373c]">
+                    <h3 className="font-heading text-2xl font-bold text-heading">
                       After Surgery
                     </h3>
                   </div>
                 </div>
-                <p className="mb-6 text-base leading-relaxed text-gray-600">
+                <p className="mb-6 text-base leading-relaxed text-body">
                   Recovery is where ERAS truly makes a difference. Our
                   structured approach to post-operative care prioritizes early
                   mobility, effective pain management with fewer narcotics, and
@@ -181,7 +181,7 @@ export default function ERASPage() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-white p-8">
+              <div className="rounded-xl border border-secondary bg-white p-8">
                 <ul className="space-y-4">
                   {[
                     "Early mobility encouraged within hours of surgery to improve circulation",
@@ -192,8 +192,8 @@ export default function ERASPage() {
                     "Nutritional guidance for the recovery period to support tissue repair",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
-                      <span className="text-base leading-relaxed text-gray-700">
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-base leading-relaxed text-body">
                         {item}
                       </span>
                     </li>
@@ -256,13 +256,13 @@ export default function ERASPage() {
             ].map((benefit, index) => (
               <div
                 key={index}
-                className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center"
+                className="rounded-xl border border-secondary bg-peach-light p-8 text-center"
               >
-                <benefit.icon className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
-                <h3 className="text-lg font-bold text-[#32373c]">
+                <benefit.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
+                <h3 className="font-heading text-lg font-bold text-heading">
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                <p className="mt-2 text-sm leading-relaxed text-body">
                   {benefit.description}
                 </p>
               </div>

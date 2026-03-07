@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "outline" | "round" | "gold";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,17 +14,21 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#32373c] text-white hover:bg-[#1f385f] border border-[#32373c] hover:border-[#1f385f]",
+    "bg-primary text-white border-2 border-primary rounded-none px-7 py-2.5 font-bold text-lg hover:bg-white hover:text-primary",
   secondary:
-    "bg-[#4054b2] text-white hover:bg-[#354499] border border-[#4054b2] hover:border-[#354499]",
+    "bg-heading text-white border-2 border-heading rounded-none px-10 py-6 font-medium text-lg hover:bg-white hover:text-heading",
+  round:
+    "bg-primary text-white rounded-[40px] px-10 py-6 font-medium text-lg border-2 border-primary hover:bg-white hover:text-primary",
+  gold:
+    "bg-gold text-heading rounded-[40px] px-10 py-6 font-medium text-lg border-2 border-gold hover:bg-white hover:text-primary",
   outline:
-    "bg-transparent text-[#32373c] border border-[#32373c] hover:bg-[#32373c] hover:text-white",
+    "bg-transparent border-2 border-primary text-primary rounded-none px-7 py-2.5 font-bold text-lg hover:bg-primary hover:text-white",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm",
-  md: "px-6 py-2.5 text-base",
-  lg: "px-8 py-3.5 text-lg",
+  md: "",
+  lg: "px-10 py-6 text-lg",
 };
 
 export default function Button({
@@ -36,9 +40,9 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center font-medium rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#4054b2]/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer",
+    "inline-flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer",
     variantStyles[variant],
-    sizeStyles[size],
+    size !== "md" && sizeStyles[size],
     className
   );
 
