@@ -17,7 +17,7 @@ export default function ProcedureCard({ procedure }: ProcedureCardProps) {
   return (
     <Link
       href={`/services/${procedure.categorySlug}/${procedure.slug}`}
-      className="group block overflow-hidden border border-peach bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="group block overflow-hidden border border-peach bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:border-primary"
     >
       {/* Category badge */}
       <span className="inline-block bg-secondary px-3 py-1 text-xs font-medium text-heading">

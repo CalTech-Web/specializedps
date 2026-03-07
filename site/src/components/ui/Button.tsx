@@ -40,7 +40,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer",
+    "inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer hover:shadow-md",
     variantStyles[variant],
     size !== "md" && sizeStyles[size],
     className

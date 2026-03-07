@@ -117,7 +117,7 @@ export default function TestimonialSection() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="w-[320px] flex-shrink-0 snap-start bg-white p-6 shadow-sm border border-peach"
+                className="w-[320px] flex-shrink-0 snap-start border-l-4 border-l-primary bg-white p-6 shadow-sm"
               >
                 {/* Stars */}
                 <div className="flex gap-0.5">
@@ -132,7 +132,7 @@ export default function TestimonialSection() {
                 </p>
 
                 {/* Reviewer */}
-                <div className="mt-4 border-t border-peach pt-4">
+                <div className="mt-4 border-t border-gray-100 pt-4">
                   <p className="text-sm font-bold text-heading">
                     {review.name}
                   </p>

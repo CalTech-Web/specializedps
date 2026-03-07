@@ -206,7 +206,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Gallery CTA ───────── */}
-      <section className="bg-primary py-20 sm:py-24">
+      <section className="bg-heading py-20 sm:py-24">
         <div className="mx-auto max-w-[1320px] px-6 text-center">
           <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Explore Our Before &amp; After Gallery
@@ -242,8 +242,8 @@ export default function HomePage() {
                   key={item.title}
                   className="bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg"
                 >
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center bg-peach-light">
-                    <Icon className="h-8 w-8 text-primary" />
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-heading">
+                    <Icon className="h-8 w-8 text-gold" />
                   </div>
                   <h3 className="mt-5 font-heading text-lg font-bold text-heading">
                     {item.title}
