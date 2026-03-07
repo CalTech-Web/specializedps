@@ -102,6 +102,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <HeroSection
+        backgroundImage="/images/hero/about-hero.jpg"
         title="Where Expertise Meets Compassion"
         subtitle="Board-certified plastic surgeons in New Jersey and Westchester, NY, specializing in breast reconstruction, aesthetic surgery, and body contouring with a patient-centered approach."
         ctaText="Schedule a Consultation"

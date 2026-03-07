@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 interface HeroSectionProps {
@@ -23,12 +24,17 @@ export default function HeroSection({
   return (
     <section
       className="relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden bg-[#1a2332]"
-      style={
-        backgroundImage
-          ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }
-          : undefined
-      }
     >
+      {backgroundImage && (
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      )}
       {backgroundImage && overlay && (
         <div className="absolute inset-0 bg-[#1a2332]/75" />
       )}

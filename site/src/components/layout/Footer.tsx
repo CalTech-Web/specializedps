@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
@@ -43,6 +44,15 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Locations Section */}
           <div>
+            <Link href="/">
+              <Image
+                src="/images/logos/white-logo.webp"
+                alt="Specialized Plastic Surgery"
+                width={220}
+                height={55}
+                className="mb-6 h-12 w-auto"
+              />
+            </Link>
             <h3 className="mb-8 text-xl font-bold text-white">Our Locations</h3>
             <div className="grid gap-8 sm:grid-cols-2">
               {/* NJ Location */}

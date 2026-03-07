@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { navigation, type NavItem } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
@@ -78,11 +79,14 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex-shrink-0 text-xl font-bold tracking-tight text-[#1a2332] lg:text-2xl"
-        >
-          {siteConfig.name}
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/images/logos/black-logo.webp"
+            alt="Specialized Plastic Surgery"
+            width={200}
+            height={50}
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -217,12 +221,14 @@ export default function Header() {
         <div className="fixed inset-0 top-0 z-40 bg-white lg:hidden">
           {/* Mobile Header */}
           <div className="flex items-center justify-between border-b border-gray-100 px-4 py-4 sm:px-6">
-            <Link
-              href="/"
-              onClick={closeMobile}
-              className="text-xl font-bold tracking-tight text-[#1a2332]"
-            >
-              {siteConfig.name}
+            <Link href="/" onClick={closeMobile}>
+              <Image
+                src="/images/logos/black-logo.webp"
+                alt="Specialized Plastic Surgery"
+                width={200}
+                height={50}
+                className="h-10 w-auto"
+              />
             </Link>
             <button
               className="inline-flex items-center justify-center rounded-md p-2 text-[#1a2332]"

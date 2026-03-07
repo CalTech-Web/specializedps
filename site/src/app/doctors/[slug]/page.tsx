@@ -4,6 +4,7 @@ import { doctors } from "@/data/doctors";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Image from "next/image";
 import {
   GraduationCap,
   ShieldCheck,
@@ -55,6 +56,30 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
         title={doctor.name}
         subtitle={`${doctor.title} | ${doctor.credentials} | ${doctor.location}`}
       />
+
+      {/* Doctor Portrait */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+            <div className="relative h-80 w-64 shrink-0 overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src={doctor.image}
+                alt={doctor.name}
+                fill
+                className="object-cover object-top"
+                sizes="256px"
+                priority
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-[#1a2332]">{doctor.name}</h2>
+              <p className="mt-1 text-lg font-medium text-[#c9a96e]">{doctor.title}</p>
+              <p className="mt-1 text-gray-500">{doctor.credentials} | {doctor.location}</p>
+              <p className="mt-4 text-lg leading-relaxed text-gray-600">{doctor.philosophy}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Education Timeline */}
       <section className="bg-white py-20">

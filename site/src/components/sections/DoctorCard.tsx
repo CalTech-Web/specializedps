@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Doctor } from "@/data/doctors";
 
@@ -5,17 +6,7 @@ interface DoctorCardProps {
   doctor: Doctor;
 }
 
-function getInitials(name: string): string {
-  return name
-    .replace(/^Dr\.\s*/, "")
-    .split(" ")
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
-}
-
 export default function DoctorCard({ doctor }: DoctorCardProps) {
-  const initials = getInitials(doctor.name);
 
   const highlights: string[] = [
     ...doctor.boardCertifications.slice(0, 2),
@@ -24,11 +15,15 @@ export default function DoctorCard({ doctor }: DoctorCardProps) {
 
   return (
     <div className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-lg">
-      {/* Photo placeholder */}
-      <div className="flex h-72 items-center justify-center bg-gradient-to-br from-[#1a2332] to-[#2a3a52]">
-        <span className="text-5xl font-semibold tracking-wide text-[#c9a96e]">
-          {initials}
-        </span>
+      {/* Photo */}
+      <div className="relative h-72 overflow-hidden bg-gradient-to-br from-[#1a2332] to-[#2a3a52]">
+        <Image
+          src={doctor.image}
+          alt={doctor.name}
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
       </div>
 
       {/* Content */}

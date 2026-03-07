@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { doctors } from "@/data/doctors";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -41,6 +42,7 @@ export default function AboutPage() {
   return (
     <>
       <HeroSection
+        backgroundImage="/images/hero/about-hero.jpg"
         title="About Specialized Plastic Surgery"
         subtitle="Two board-certified surgeons, one shared mission: combining unparalleled expertise with personalized care to deliver exceptional results."
         ctaText="Meet Our Surgeons"
@@ -132,8 +134,18 @@ export default function AboutPage() {
             {doctors.map((doctor) => (
               <div
                 key={doctor.slug}
-                className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
+                className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
               >
+                <div className="relative h-64 bg-gradient-to-br from-[#1a2332] to-[#2a3a52]">
+                  <Image
+                    src={doctor.image}
+                    alt={doctor.name}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-8">
                 <h3 className="text-2xl font-bold text-[#1a2332]">
                   {doctor.name}
                 </h3>
@@ -184,6 +196,7 @@ export default function AboutPage() {
                     <path d="m12 5 7 7-7 7" />
                   </svg>
                 </Link>
+              </div>
               </div>
             ))}
           </div>
