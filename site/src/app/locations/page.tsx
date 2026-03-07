@@ -70,41 +70,41 @@ export default function LocationsPage() {
               <div className="space-y-6">
                 {/* Contact Info */}
                 <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h3 className="text-lg font-bold text-[#1a2332]">
+                  <h3 className="text-lg font-bold text-[#32373c]">
                     Contact Information
                   </h3>
                   <div className="mt-4 space-y-3">
                     <div className="flex items-start gap-3">
-                      <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                       <a
                         href={loc.mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gray-600 transition-colors hover:text-[#c9a96e]"
+                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
                       >
                         {loc.address}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <Phone className="h-5 w-5 shrink-0 text-[#4054b2]" />
                       <a
                         href={`tel:${loc.phoneRaw}`}
-                        className="text-sm text-gray-600 transition-colors hover:text-[#c9a96e]"
+                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
                       >
                         {loc.phone}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <Mail className="h-5 w-5 shrink-0 text-[#4054b2]" />
                       <a
                         href={`mailto:${loc.email}`}
-                        className="text-sm text-gray-600 transition-colors hover:text-[#c9a96e]"
+                        className="text-sm text-gray-600 transition-colors hover:text-[#4054b2]"
                       >
                         {loc.email}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Clock className="h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <Clock className="h-5 w-5 shrink-0 text-[#4054b2]" />
                       <span className="text-sm text-gray-600">
                         {loc.hours}, Sat-Sun Closed
                       </span>
@@ -115,8 +115,8 @@ export default function LocationsPage() {
                 {/* Services */}
                 <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-2">
-                    <Stethoscope className="h-5 w-5 text-[#c9a96e]" />
-                    <h3 className="text-lg font-bold text-[#1a2332]">
+                    <Stethoscope className="h-5 w-5 text-[#4054b2]" />
+                    <h3 className="text-lg font-bold text-[#32373c]">
                       Services Offered
                     </h3>
                   </div>
@@ -126,7 +126,7 @@ export default function LocationsPage() {
                         key={service}
                         className="flex items-start gap-2 text-sm text-gray-600"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                         {service}
                       </li>
                     ))}

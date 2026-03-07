@@ -39,8 +39,8 @@ export default function InsurancePage() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 Insurance Verification
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -49,8 +49,8 @@ export default function InsurancePage() {
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <FileText className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <FileText className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 Claims Assistance
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -59,8 +59,8 @@ export default function InsurancePage() {
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <Scale className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <Scale className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 Appeals Support
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -77,10 +77,10 @@ export default function InsurancePage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#c9a96e]">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
                 Federal Law
               </p>
-              <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
+              <h2 className="text-3xl font-bold text-[#32373c] sm:text-4xl">
                 Women&apos;s Health and Cancer Rights Act (WHCRA)
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-gray-600">
@@ -99,7 +99,7 @@ export default function InsurancePage() {
             </div>
 
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 What WHCRA Covers
               </h3>
               <ul className="space-y-4">
@@ -110,7 +110,7 @@ export default function InsurancePage() {
                   "Treatment of physical complications at all stages of mastectomy, including lymphedema",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -135,8 +135,8 @@ export default function InsurancePage() {
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8">
               <div className="mb-4 flex items-center gap-3">
-                <HeartPulse className="h-6 w-6 text-[#c9a96e]" />
-                <h3 className="text-xl font-bold text-[#1a2332]">
+                <HeartPulse className="h-6 w-6 text-[#4054b2]" />
+                <h3 className="text-xl font-bold text-[#32373c]">
                   Breast Reduction
                 </h3>
               </div>
@@ -156,7 +156,7 @@ export default function InsurancePage() {
                     key={index}
                     className="flex items-start gap-3 text-gray-700"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                     <span className="text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -165,8 +165,8 @@ export default function InsurancePage() {
 
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8">
               <div className="mb-4 flex items-center gap-3">
-                <HeartPulse className="h-6 w-6 text-[#c9a96e]" />
-                <h3 className="text-xl font-bold text-[#1a2332]">
+                <HeartPulse className="h-6 w-6 text-[#4054b2]" />
+                <h3 className="text-xl font-bold text-[#32373c]">
                   Body Contouring After Weight Loss
                 </h3>
               </div>
@@ -187,7 +187,7 @@ export default function InsurancePage() {
                     key={index}
                     className="flex items-start gap-3 text-gray-700"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#d4a0a0]" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#fb8e28]" />
                     <span className="text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -209,10 +209,10 @@ export default function InsurancePage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="relative rounded-xl border border-gray-200 bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                <ClipboardList className="h-5 w-5 text-[#c9a96e]" />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                <ClipboardList className="h-5 w-5 text-[#4054b2]" />
               </div>
-              <h3 className="mb-3 text-lg font-bold text-[#1a2332]">
+              <h3 className="mb-3 text-lg font-bold text-[#32373c]">
                 Step 1: Authorization
               </h3>
               <p className="text-sm leading-relaxed text-gray-600">
@@ -223,10 +223,10 @@ export default function InsurancePage() {
             </div>
 
             <div className="relative rounded-xl border border-gray-200 bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                <FileText className="h-5 w-5 text-[#c9a96e]" />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                <FileText className="h-5 w-5 text-[#4054b2]" />
               </div>
-              <h3 className="mb-3 text-lg font-bold text-[#1a2332]">
+              <h3 className="mb-3 text-lg font-bold text-[#32373c]">
                 Step 2: Claims Submission
               </h3>
               <p className="text-sm leading-relaxed text-gray-600">
@@ -237,10 +237,10 @@ export default function InsurancePage() {
             </div>
 
             <div className="relative rounded-xl border border-gray-200 bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                <PhoneCall className="h-5 w-5 text-[#c9a96e]" />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                <PhoneCall className="h-5 w-5 text-[#4054b2]" />
               </div>
-              <h3 className="mb-3 text-lg font-bold text-[#1a2332]">
+              <h3 className="mb-3 text-lg font-bold text-[#32373c]">
                 Step 3: Appeals
               </h3>
               <p className="text-sm leading-relaxed text-gray-600">
@@ -252,11 +252,11 @@ export default function InsurancePage() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl border border-[#c9a96e]/20 bg-white p-6 text-center">
+          <div className="mt-10 rounded-xl border border-[#4054b2]/20 bg-white p-6 text-center">
             <div className="flex items-center justify-center gap-3">
-              <AlertCircle className="h-5 w-5 text-[#c9a96e]" />
+              <AlertCircle className="h-5 w-5 text-[#4054b2]" />
               <p className="text-base leading-relaxed text-gray-700">
-                <span className="font-semibold text-[#1a2332]">
+                <span className="font-semibold text-[#32373c]">
                   Free insurance verification
                 </span>{" "}
                 is available for all breast reconstruction and medically

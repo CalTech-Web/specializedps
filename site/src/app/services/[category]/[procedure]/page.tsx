@@ -1,12 +1,16 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   procedures,
   getProcedureBySlug,
   getCategoryBySlug,
 } from "@/data/procedures";
+import { doctors } from "@/data/doctors";
+import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
+import { Phone, MapPin } from "lucide-react";
 
 interface PageProps {
   params: Promise<{ category: string; procedure: string }>;
@@ -38,9 +42,12 @@ export default async function ProcedurePage({ params }: PageProps) {
   if (!proc) notFound();
 
   const cat = getCategoryBySlug(category);
+  const njDoctor = doctors.find((d) => d.locationKey === "nj");
+  const nyDoctor = doctors.find((d) => d.locationKey === "ny");
 
   return (
     <>
+      {/* Hero */}
       <HeroSection
         title={proc.name}
         subtitle={proc.heroDescription}
@@ -48,21 +55,18 @@ export default async function ProcedurePage({ params }: PageProps) {
         ctaLink="/contact"
       />
 
-      {/* About This Procedure */}
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#c9a96e]">
-            {cat?.name}
-          </p>
-          <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
-            About This Procedure
+      {/* What Is [Procedure]? */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-3xl font-bold text-[#32373c]">
+            What Is {proc.name}?
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-gray-600">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
             {proc.description}
           </p>
           {proc.procedureDuration && (
             <p className="mt-4 text-base text-gray-600">
-              <span className="font-semibold text-[#1a2332]">
+              <span className="font-semibold text-[#32373c]">
                 Typical Procedure Duration:
               </span>{" "}
               {proc.procedureDuration}
@@ -72,50 +76,58 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
+      <section className="bg-[#f5f5f5] py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-3xl font-bold text-[#32373c]">
             Benefits
           </h2>
-          <ul className="mt-8 space-y-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {proc.benefits.map((benefit, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c9a96e"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="mt-0.5 shrink-0"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="text-lg text-gray-700">{benefit}</span>
-              </li>
+              <div
+                key={i}
+                className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fb8e28]/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fb8e28"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <p className="text-base font-medium leading-relaxed text-[#32373c]">
+                  {benefit}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      {/* Are You a Candidate? */}
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
-            Are You a Candidate?
+      {/* Candidacy */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-3xl font-bold text-[#32373c]">
+            Who is a Good Candidate?
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 max-w-3xl text-lg text-gray-600">
             You may be a good candidate for this procedure if you meet the
             following criteria:
           </p>
-          <ul className="mt-8 space-y-3">
+          <ul className="mt-8 max-w-3xl space-y-3">
             {proc.candidateCriteria.map((criterion, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#c9a96e]" />
-                <span className="text-lg text-gray-700">{criterion}</span>
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#fb8e28]" />
+                <span className="text-base leading-relaxed text-gray-700">
+                  {criterion}
+                </span>
               </li>
             ))}
           </ul>
@@ -124,22 +136,20 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Techniques */}
       {proc.techniques && proc.techniques.length > 0 && (
-        <section className="bg-gray-50 py-20">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
-              Techniques
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
+        <section className="bg-[#f5f5f5] py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <h2 className="text-3xl font-bold text-[#32373c]">Techniques</h2>
+            <p className="mt-4 max-w-3xl text-lg text-gray-600">
               Our surgeons use a variety of approaches tailored to your unique
               anatomy and goals:
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {proc.techniques.map((technique, i) => (
                 <div
                   key={i}
-                  className="rounded-xl border border-gray-200 bg-white p-5"
+                  className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm"
                 >
-                  <p className="font-semibold text-[#1a2332]">{technique}</p>
+                  <p className="font-semibold text-[#32373c]">{technique}</p>
                 </div>
               ))}
             </div>
@@ -147,17 +157,13 @@ export default async function ProcedurePage({ params }: PageProps) {
         </section>
       )}
 
-      {/* Recovery Timeline */}
-      <section
-        className={
-          proc.techniques && proc.techniques.length > 0 ? "py-20" : "bg-gray-50 py-20"
-        }
-      >
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
+      {/* Recovery */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-3xl font-bold text-[#32373c]">
             Recovery Timeline
           </h2>
-          <div className="mt-6 rounded-xl border border-gray-200 bg-white p-8">
+          <div className="mt-6 max-w-3xl rounded-lg border border-gray-200 bg-[#f5f5f5] p-8">
             <p className="text-lg leading-relaxed text-gray-700">
               {proc.recoveryTimeline}
             </p>
@@ -167,12 +173,12 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Insurance Coverage */}
       {proc.insuranceCoverage && (
-        <section className="py-20">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-[#1a2332] sm:text-4xl">
+        <section className="bg-[#f5f5f5] py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <h2 className="text-3xl font-bold text-[#32373c]">
               Insurance Coverage
             </h2>
-            <div className="mt-6 rounded-xl border border-[#c9a96e]/30 bg-[#c9a96e]/5 p-8">
+            <div className="mt-6 max-w-3xl rounded-lg border border-[#fb8e28]/30 bg-[#fb8e28]/5 p-8">
               <p className="text-lg leading-relaxed text-gray-700">
                 {proc.insuranceCoverage}
               </p>
@@ -181,6 +187,77 @@ export default async function ProcedurePage({ params }: PageProps) {
         </section>
       )}
 
+      {/* Doctors Section */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-10 text-center text-3xl font-bold text-[#32373c]">
+            Our Surgeons
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* NJ Doctor */}
+            {njDoctor && (
+              <div className="rounded-lg border border-gray-200 bg-[#f5f5f5] p-8 shadow-sm">
+                <Link
+                  href={`/doctors/${njDoctor.slug}`}
+                  className="text-xl font-bold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                >
+                  {njDoctor.name}, {njDoctor.credentials}
+                </Link>
+                <p className="mt-1 text-sm font-medium text-gray-500">
+                  {njDoctor.title}
+                </p>
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 shrink-0 text-[#fb8e28]" />
+                    {siteConfig.locations.nj.address}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 shrink-0 text-[#fb8e28]" />
+                    <a
+                      href={`tel:${siteConfig.locations.nj.phoneRaw}`}
+                      className="text-sm font-semibold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                    >
+                      {siteConfig.locations.nj.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* NY Doctor */}
+            {nyDoctor && (
+              <div className="rounded-lg border border-gray-200 bg-[#f5f5f5] p-8 shadow-sm">
+                <Link
+                  href={`/doctors/${nyDoctor.slug}`}
+                  className="text-xl font-bold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                >
+                  {nyDoctor.name}, {nyDoctor.credentials}
+                </Link>
+                <p className="mt-1 text-sm font-medium text-gray-500">
+                  {nyDoctor.title}
+                </p>
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 shrink-0 text-[#fb8e28]" />
+                    {siteConfig.locations.ny.address}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 shrink-0 text-[#fb8e28]" />
+                    <a
+                      href={`tel:${siteConfig.locations.ny.phoneRaw}`}
+                      className="text-sm font-semibold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                    >
+                      {siteConfig.locations.ny.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <CTABanner />
     </>
   );

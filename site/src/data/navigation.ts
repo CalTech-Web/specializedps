@@ -5,6 +5,7 @@ export interface NavItem {
 }
 
 export const navigation: NavItem[] = [
+  { label: "Home", href: "/" },
   {
     label: "Doctors",
     children: [
@@ -12,6 +13,23 @@ export const navigation: NavItem[] = [
       { label: "Dr. Michael Sosin", href: "/doctors/michael-sosin" },
     ],
   },
+  {
+    label: "Locations",
+    children: [
+      { label: "New Jersey", href: "/locations#nj" },
+      { label: "New York", href: "/locations#ny" },
+    ],
+  },
+  {
+    label: "About Us",
+    children: [
+      { label: "Our Team", href: "/team" },
+      { label: "Financing", href: "/financing" },
+      { label: "Insurance", href: "/insurance" },
+      { label: "ERAS Protocol", href: "/eras" },
+    ],
+  },
+  { label: "Gallery", href: "/gallery" },
   {
     label: "Services",
     children: [
@@ -66,23 +84,6 @@ export const navigation: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Locations",
-    children: [
-      { label: "New Jersey", href: "/locations#nj" },
-      { label: "New York", href: "/locations#ny" },
-    ],
-  },
-  {
-    label: "About",
-    children: [
-      { label: "About Us", href: "/about" },
-      { label: "Our Team", href: "/team" },
-      { label: "Financing", href: "/financing" },
-      { label: "Insurance", href: "/insurance" },
-      { label: "ERAS Protocol", href: "/eras" },
-    ],
-  },
-  { label: "Gallery", href: "/gallery" },
   { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
 ];

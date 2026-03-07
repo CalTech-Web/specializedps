@@ -1,35 +1,33 @@
 import Link from "next/link";
-import { Phone } from "lucide-react";
-import Button from "@/components/ui/Button";
 
 interface CTABannerProps {
   heading?: string;
   subtext?: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
 
 export default function CTABanner({
-  heading = "Ready to Take the Next Step?",
+  heading = "Discover the Difference of Personalized Aesthetic Solutions",
   subtext = "Schedule your personalized consultation with one of our board-certified plastic surgeons today.",
+  ctaText = "Schedule Consultation",
+  ctaLink = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="bg-[#1a2332] py-16 sm:py-20">
+    <section className="bg-[#1f385f] py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           {heading}
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-300">
+        <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
           {subtext}
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="/contact" variant="primary" size="lg">
-            Schedule Consultation
-          </Button>
+        <div className="mt-8">
           <Link
-            href="tel:9735610900"
-            className="inline-flex items-center gap-2 rounded-md border border-white/30 px-8 py-3.5 text-lg font-medium text-white transition-colors duration-200 hover:bg-white/10"
+            href={ctaLink}
+            className="inline-block rounded-full bg-[#32373c] px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#4054b2] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            <Phone className="h-5 w-5" />
-            (973) 561-0900
+            {ctaText}
           </Link>
         </div>
       </div>

@@ -71,14 +71,14 @@ export default function ERASPage() {
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                    <Apple className="h-5 w-5 text-[#c9a96e]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                    <Apple className="h-5 w-5 text-[#4054b2]" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#c9a96e]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
                       Phase 1
                     </p>
-                    <h3 className="text-2xl font-bold text-[#1a2332]">
+                    <h3 className="text-2xl font-bold text-[#32373c]">
                       Before Surgery
                     </h3>
                   </div>
@@ -102,7 +102,7 @@ export default function ERASPage() {
                     "Pre-operative counseling to set clear expectations and reduce anxiety",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                       <span className="text-base leading-relaxed text-gray-700">
                         {item}
                       </span>
@@ -125,7 +125,7 @@ export default function ERASPage() {
                     "Techniques that reduce surgical stress response and inflammation",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                       <span className="text-base leading-relaxed text-gray-700">
                         {item}
                       </span>
@@ -136,14 +136,14 @@ export default function ERASPage() {
 
               <div className="order-1 lg:order-2">
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                    <Syringe className="h-5 w-5 text-[#c9a96e]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                    <Syringe className="h-5 w-5 text-[#4054b2]" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#c9a96e]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
                       Phase 2
                     </p>
-                    <h3 className="text-2xl font-bold text-[#1a2332]">
+                    <h3 className="text-2xl font-bold text-[#32373c]">
                       During Surgery
                     </h3>
                   </div>
@@ -161,14 +161,14 @@ export default function ERASPage() {
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                    <Activity className="h-5 w-5 text-[#c9a96e]" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4054b2]/10">
+                    <Activity className="h-5 w-5 text-[#4054b2]" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-[#c9a96e]">
+                    <p className="text-sm font-semibold uppercase tracking-widest text-[#4054b2]">
                       Phase 3
                     </p>
-                    <h3 className="text-2xl font-bold text-[#1a2332]">
+                    <h3 className="text-2xl font-bold text-[#32373c]">
                       After Surgery
                     </h3>
                   </div>
@@ -192,7 +192,7 @@ export default function ERASPage() {
                     "Nutritional guidance for the recovery period to support tissue repair",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                       <span className="text-base leading-relaxed text-gray-700">
                         {item}
                       </span>
@@ -258,8 +258,8 @@ export default function ERASPage() {
                 key={index}
                 className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center"
               >
-                <benefit.icon className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-                <h3 className="text-lg font-bold text-[#1a2332]">
+                <benefit.icon className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+                <h3 className="text-lg font-bold text-[#32373c]">
                   {benefit.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">

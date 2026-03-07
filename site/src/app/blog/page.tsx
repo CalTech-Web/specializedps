@@ -40,14 +40,14 @@ export default function BlogPage() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 {/* Image placeholder */}
-                <div className="flex h-48 items-center justify-center bg-[#1a2332]">
+                <div className="flex h-48 items-center justify-center bg-[#1f385f]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
                     height="48"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#c9a96e"
+                    stroke="#4054b2"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -60,12 +60,12 @@ export default function BlogPage() {
 
                 <div className="flex flex-1 flex-col p-6">
                   {/* Category badge */}
-                  <span className="inline-block w-fit rounded-full bg-[#c9a96e]/10 px-3 py-1 text-xs font-medium text-[#c9a96e]">
+                  <span className="inline-block w-fit rounded-full bg-[#4054b2]/10 px-3 py-1 text-xs font-medium text-[#4054b2]">
                     {post.category}
                   </span>
 
                   {/* Title */}
-                  <h2 className="mt-3 text-lg font-bold text-[#1a2332] transition-colors group-hover:text-[#c9a96e]">
+                  <h2 className="mt-3 text-lg font-bold text-[#32373c] transition-colors group-hover:text-[#4054b2]">
                     {post.title}
                   </h2>
 
@@ -80,7 +80,7 @@ export default function BlogPage() {
                   </p>
 
                   {/* Read more */}
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] transition-colors group-hover:text-[#b8954f]">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#4054b2] transition-colors group-hover:text-[#32373c]">
                     Read More
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

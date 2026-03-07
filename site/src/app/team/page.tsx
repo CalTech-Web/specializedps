@@ -91,15 +91,15 @@ export default function TeamPage() {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1a2332] to-[#2a3a52]">
-                    <span className="text-lg font-semibold text-[#c9a96e]">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1f385f] to-[#32373c]">
+                    <span className="text-lg font-semibold text-[#4054b2]">
                       {getInitials(member.name)}
                     </span>
                   </div>
                 )}
                 <div>
-                  <h3 className="font-bold text-[#1a2332]">{member.name}</h3>
-                  <p className="text-sm text-[#c9a96e]">{member.role}</p>
+                  <h3 className="font-bold text-[#32373c]">{member.name}</h3>
+                  <p className="text-sm text-[#4054b2]">{member.role}</p>
                   <p className="mt-0.5 text-xs text-gray-500">
                     {member.location}
                   </p>

@@ -2,20 +2,12 @@
 
 import { useState, type FormEvent } from "react";
 
-const procedureOptions = [
-  { group: "Face", items: ["Facelift", "Neck Lift", "Rhinoplasty", "Blepharoplasty (Eyelid Surgery)", "Otoplasty (Ear Surgery)", "Chin Liposuction"] },
-  { group: "Aesthetic Breast", items: ["Breast Augmentation", "Breast Lift", "Breast Reduction", "Breast Implant Removal", "Gynecomastia"] },
-  { group: "Breast Reconstruction", items: ["Natural Tissue Flap Reconstruction", "Implant-Based Reconstruction", "Oncoplastic Breast Reduction", "Resensation", "Revision Breast Reconstruction", "Specialized Reconstruction Procedures"] },
-  { group: "Body", items: ["Liposuction", "Lipo 360", "Brazilian Butt Lift", "Tummy Tuck", "Mommy Makeover", "Body Lift", "Thigh Lift", "Arm Lift"] },
-];
-
 interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
   location: string;
-  procedure: string;
+  doctor: string;
+  name: string;
+  phone: string;
+  email: string;
   message: string;
 }
 
@@ -24,14 +16,19 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
 const SITE_ID = "specializedplasticsurgery";
 
+function doctorForLocation(loc: string): string {
+  if (loc === "NJ") return "Dr. Michael Sosin";
+  if (loc === "NY") return "Dr. Chris Devulapalli";
+  return "";
+}
+
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
     location: "",
-    procedure: "",
+    doctor: "",
+    name: "",
+    phone: "",
+    email: "",
     message: "",
   });
 
@@ -41,8 +38,7 @@ export default function ContactForm() {
   function validate(): boolean {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
 
-    if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
-    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!formData.name.trim()) newErrors.name = "Name is required.";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -80,12 +76,11 @@ export default function ContactForm() {
 
       setStatus("success");
       setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
         location: "",
-        procedure: "",
+        doctor: "",
+        name: "",
+        phone: "",
+        email: "",
         message: "",
       });
       setErrors({});
@@ -94,10 +89,7 @@ export default function ContactForm() {
     }
   }
 
-  function handleChange(
-    field: keyof FormData,
-    value: string
-  ) {
+  function handleChange(field: keyof FormData, value: string) {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => {
@@ -108,17 +100,32 @@ export default function ContactForm() {
     }
   }
 
+  function handleLocationChange(value: string) {
+    setFormData((prev) => ({
+      ...prev,
+      location: value,
+      doctor: doctorForLocation(value),
+    }));
+    if (errors.location) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next.location;
+        return next;
+      });
+    }
+  }
+
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
-        <h3 className="text-xl font-bold text-[#1a2332]">Thank You!</h3>
+      <div className="rounded-lg border border-green-200 bg-green-50 p-8 text-center">
+        <h3 className="text-xl font-bold text-[#32373c]">Thank You!</h3>
         <p className="mt-2 text-gray-600">
           Your message has been received. Our team will get back to you shortly.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-semibold text-[#c9a96e] hover:text-[#b8954f]"
+          className="mt-6 text-sm font-semibold text-[#4054b2] hover:text-[#1f385f]"
         >
           Send Another Message
         </button>
@@ -127,159 +134,134 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-6">
-      {/* Name row */}
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-[#1a2332]">
-            First Name <span className="text-[#d4a0a0]">*</span>
-          </label>
-          <input
-            id="firstName"
-            type="text"
-            value={formData.firstName}
-            onChange={(e) => handleChange("firstName", e.target.value)}
-            className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#1a2332] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-              errors.firstName ? "border-[#d4a0a0]" : "border-gray-300"
-            }`}
-            placeholder="First name"
-          />
-          {errors.firstName && (
-            <p className="mt-1 text-xs text-[#d4a0a0]">{errors.firstName}</p>
-          )}
-        </div>
-
-        <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-[#1a2332]">
-            Last Name <span className="text-[#d4a0a0]">*</span>
-          </label>
-          <input
-            id="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={(e) => handleChange("lastName", e.target.value)}
-            className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#1a2332] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-              errors.lastName ? "border-[#d4a0a0]" : "border-gray-300"
-            }`}
-            placeholder="Last name"
-          />
-          {errors.lastName && (
-            <p className="mt-1 text-xs text-[#d4a0a0]">{errors.lastName}</p>
-          )}
-        </div>
+    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Location */}
+      <div>
+        <label htmlFor="contact-location" className="block text-sm font-medium text-[#32373c]">
+          Location <span className="text-red-500">*</span>
+        </label>
+        <select
+          id="contact-location"
+          value={formData.location}
+          onChange={(e) => handleLocationChange(e.target.value)}
+          className={`mt-1.5 block w-full rounded-lg border bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
+            errors.location ? "border-red-400" : "border-gray-300"
+          }`}
+        >
+          <option value="">Select a location</option>
+          <option value="NJ">Northern New Jersey Office</option>
+          <option value="NY">Westchester New York Office</option>
+        </select>
+        {errors.location && (
+          <p className="mt-1 text-xs text-red-500">{errors.location}</p>
+        )}
       </div>
 
-      {/* Email and phone row */}
-      <div className="grid gap-6 sm:grid-cols-2">
+      {/* Doctor (conditional) */}
+      {formData.location && (
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[#1a2332]">
-            Email <span className="text-[#d4a0a0]">*</span>
+          <label htmlFor="contact-doctor" className="block text-sm font-medium text-[#32373c]">
+            Doctor
           </label>
-          <input
-            id="email"
-            type="email"
-            value={formData.email}
-            onChange={(e) => handleChange("email", e.target.value)}
-            className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#1a2332] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-              errors.email ? "border-[#d4a0a0]" : "border-gray-300"
-            }`}
-            placeholder="you@example.com"
-          />
-          {errors.email && (
-            <p className="mt-1 text-xs text-[#d4a0a0]">{errors.email}</p>
-          )}
+          <select
+            id="contact-doctor"
+            value={formData.doctor}
+            onChange={(e) => handleChange("doctor", e.target.value)}
+            className="mt-1.5 block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-[#32373c] focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30"
+          >
+            {formData.location === "NJ" && (
+              <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
+            )}
+            {formData.location === "NY" && (
+              <option value="Dr. Chris Devulapalli">Dr. Chris Devulapalli</option>
+            )}
+          </select>
         </div>
+      )}
 
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-[#1a2332]">
-            Phone <span className="text-[#d4a0a0]">*</span>
-          </label>
-          <input
-            id="phone"
-            type="tel"
-            value={formData.phone}
-            onChange={(e) => handleChange("phone", e.target.value)}
-            className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#1a2332] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-              errors.phone ? "border-[#d4a0a0]" : "border-gray-300"
-            }`}
-            placeholder="(123) 456-7890"
-          />
-          {errors.phone && (
-            <p className="mt-1 text-xs text-[#d4a0a0]">{errors.phone}</p>
-          )}
-        </div>
+      {/* Name */}
+      <div>
+        <label htmlFor="contact-name" className="block text-sm font-medium text-[#32373c]">
+          Your Name <span className="text-red-500">*</span>
+        </label>
+        <input
+          id="contact-name"
+          type="text"
+          value={formData.name}
+          onChange={(e) => handleChange("name", e.target.value)}
+          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
+            errors.name ? "border-red-400" : "border-gray-300"
+          }`}
+          placeholder="Full name"
+        />
+        {errors.name && (
+          <p className="mt-1 text-xs text-red-500">{errors.name}</p>
+        )}
       </div>
 
-      {/* Location and procedure row */}
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <label htmlFor="location" className="block text-sm font-medium text-[#1a2332]">
-            Preferred Location <span className="text-[#d4a0a0]">*</span>
-          </label>
-          <select
-            id="location"
-            value={formData.location}
-            onChange={(e) => handleChange("location", e.target.value)}
-            className={`mt-1.5 block w-full rounded-lg border bg-white px-4 py-2.5 text-sm text-[#1a2332] focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-              errors.location ? "border-[#d4a0a0]" : "border-gray-300"
-            }`}
-          >
-            <option value="">Select a location</option>
-            <option value="NJ">Millburn, NJ</option>
-            <option value="NY">Harrison, NY (Westchester)</option>
-          </select>
-          {errors.location && (
-            <p className="mt-1 text-xs text-[#d4a0a0]">{errors.location}</p>
-          )}
-        </div>
+      {/* Phone */}
+      <div>
+        <label htmlFor="contact-phone" className="block text-sm font-medium text-[#32373c]">
+          Your Phone <span className="text-red-500">*</span>
+        </label>
+        <input
+          id="contact-phone"
+          type="tel"
+          value={formData.phone}
+          onChange={(e) => handleChange("phone", e.target.value)}
+          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
+            errors.phone ? "border-red-400" : "border-gray-300"
+          }`}
+          placeholder="(123) 456-7890"
+        />
+        {errors.phone && (
+          <p className="mt-1 text-xs text-red-500">{errors.phone}</p>
+        )}
+      </div>
 
-        <div>
-          <label htmlFor="procedure" className="block text-sm font-medium text-[#1a2332]">
-            Procedure of Interest
-          </label>
-          <select
-            id="procedure"
-            value={formData.procedure}
-            onChange={(e) => handleChange("procedure", e.target.value)}
-            className="mt-1.5 block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-[#1a2332] focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50"
-          >
-            <option value="">Select a procedure (optional)</option>
-            {procedureOptions.map((group) => (
-              <optgroup key={group.group} label={group.group}>
-                {group.items.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
-        </div>
+      {/* Email */}
+      <div>
+        <label htmlFor="contact-email" className="block text-sm font-medium text-[#32373c]">
+          Email Address <span className="text-red-500">*</span>
+        </label>
+        <input
+          id="contact-email"
+          type="email"
+          value={formData.email}
+          onChange={(e) => handleChange("email", e.target.value)}
+          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
+            errors.email ? "border-red-400" : "border-gray-300"
+          }`}
+          placeholder="you@example.com"
+        />
+        {errors.email && (
+          <p className="mt-1 text-xs text-red-500">{errors.email}</p>
+        )}
       </div>
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#1a2332]">
-          Message <span className="text-[#d4a0a0]">*</span>
+        <label htmlFor="contact-message" className="block text-sm font-medium text-[#32373c]">
+          Message <span className="text-red-500">*</span>
         </label>
         <textarea
-          id="message"
+          id="contact-message"
           rows={5}
           value={formData.message}
           onChange={(e) => handleChange("message", e.target.value)}
-          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#1a2332] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 ${
-            errors.message ? "border-[#d4a0a0]" : "border-gray-300"
+          className={`mt-1.5 block w-full rounded-lg border px-4 py-2.5 text-sm text-[#32373c] placeholder:text-gray-400 focus:border-[#4054b2] focus:outline-none focus:ring-2 focus:ring-[#4054b2]/30 ${
+            errors.message ? "border-red-400" : "border-gray-300"
           }`}
           placeholder="How can we help you?"
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-[#d4a0a0]">{errors.message}</p>
+          <p className="mt-1 text-xs text-red-500">{errors.message}</p>
         )}
       </div>
 
       {/* Error banner */}
       {status === "error" && (
-        <div className="rounded-lg border border-[#d4a0a0]/30 bg-[#d4a0a0]/10 p-4 text-sm text-[#1a2332]">
+        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
           Something went wrong. Please try again or call our office directly.
         </div>
       )}
@@ -288,9 +270,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-lg bg-[#c9a96e] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#1a2332] transition-colors hover:bg-[#b8954f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a96e] disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-[#32373c] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#1f385f] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending..." : "Send Message"}
+        {status === "submitting" ? "Sending..." : "Request an Appointment"}
       </button>
     </form>
   );

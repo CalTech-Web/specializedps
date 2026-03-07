@@ -1,121 +1,129 @@
 import Link from "next/link";
-import {
-  Award,
-  Shield,
-  Heart,
-  MapPin,
-  FileCheck,
-  BookOpen,
-} from "lucide-react";
+import Image from "next/image";
+import { Award, Shield, UserCheck, ShieldCheck } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import DoctorCard from "@/components/sections/DoctorCard";
 import TestimonialSection from "@/components/sections/TestimonialSection";
-import FAQSection from "@/components/sections/FAQSection";
 import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { doctors } from "@/data/doctors";
-import {
-  serviceCategories,
-  getProceduresByCategory,
-  type ProcedureCategory,
-} from "@/data/procedures";
+import { serviceCategories } from "@/data/procedures";
 
-const faqs = [
-  {
-    question: "What procedures do you offer at Specialized Plastic Surgery?",
-    answer:
-      "We offer a wide range of cosmetic and reconstructive procedures, including breast augmentation, breast reconstruction, body contouring, facelifts, tummy tucks, liposuction, rhinoplasty, and more across our NJ and NY locations.",
-  },
-  {
-    question: "Is the consultation free?",
-    answer:
-      "Consultation fees vary depending on the procedure. Please contact us to confirm details and schedule your appointment. Breast reconstruction and insurance-related consultations include free insurance verification.",
-  },
-  {
-    question: "How long is the recovery after surgery?",
-    answer:
-      "Recovery times vary by procedure. Generally, patients can expect 1-2 weeks for initial healing, with full results visible in a few months. Our ERAS protocols help accelerate recovery.",
-  },
-  {
-    question: "Are the results permanent?",
-    answer:
-      "While many procedures offer long-lasting results, maintaining a healthy lifestyle can help prolong your outcomes. Liposuction permanently removes fat cells, and breast implants typically last 10-20 years or longer.",
-  },
-  {
-    question: "Do you accept insurance for plastic surgery procedures?",
-    answer:
-      "We are an out-of-network provider with most major carriers. Breast reconstruction is covered by law under WHCRA. Breast reduction and certain body contouring procedures may be covered when medically necessary. Our team handles the entire insurance process.",
-  },
-  {
-    question: "Are the procedures safe?",
-    answer:
-      "All our procedures are performed by board-certified surgeons using the latest techniques and safety protocols. Our NY office features an AAAASF-accredited private surgical suite. We follow ERAS (Enhanced Recovery After Surgery) protocols for optimal safety and comfort.",
-  },
-  {
-    question: "How do I know which procedure is right for me?",
-    answer:
-      "Our surgeons provide personalized consultations to assess your goals, anatomy, and options, ensuring the best approach for your needs. We take the time to listen to your concerns and develop customized treatment plans.",
-  },
-];
+const categoryDescriptions: Record<string, string> = {
+  face: "Rejuvenate your appearance with expert facial procedures, including facelifts, rhinoplasty, eyelid surgery, and more.",
+  "aesthetic-breast":
+    "Enhance your silhouette with breast augmentation, lifts, reductions, and implant removal tailored to your goals.",
+  "breast-reconstruction":
+    "Compassionate, advanced reconstruction for breast cancer patients using microsurgical and implant-based techniques.",
+  body: "Sculpt and contour your body with liposuction, tummy tucks, mommy makeovers, Brazilian butt lifts, and more.",
+};
 
 const differentiators = [
   {
     icon: Award,
-    title: "Board-Certified Surgeons",
+    title: "Experienced, Board-Certified Surgeons",
     description:
-      "Both surgeons are certified by the American Board of Plastic Surgery, recognized as Castle Connolly Top Doctors, and trained at elite institutions.",
+      "Both surgeons are certified by the American Board of Plastic Surgery, recognized as Castle Connolly Top Doctors, and trained at elite institutions including Georgetown, Johns Hopkins, and NYU.",
   },
   {
     icon: Shield,
-    title: "AAAASF-Accredited Facility",
+    title: "Comprehensive Care Options",
     description:
-      "Our NY office features a private, accredited surgical suite that meets the highest standards of safety and patient comfort.",
+      "From advanced microsurgical breast reconstruction to cosmetic procedures, we offer the full spectrum of plastic surgery under one roof at two convenient locations.",
   },
   {
-    icon: Heart,
-    title: "Patient-First Philosophy",
+    icon: UserCheck,
+    title: "Personalized Consultations",
     description:
-      "Every treatment plan is personalized to your goals, anatomy, and lifestyle, because no two patients are the same.",
+      "Every treatment plan is customized to your unique goals, anatomy, and lifestyle. We take the time to listen and develop a plan that is right for you.",
   },
   {
-    icon: MapPin,
-    title: "Two Convenient Locations",
+    icon: ShieldCheck,
+    title: "Commitment to Safety",
     description:
-      "Offices in Millburn, NJ and Harrison, NY (Westchester) serving the greater tri-state area, with support for traveling patients.",
-  },
-  {
-    icon: FileCheck,
-    title: "Insurance Advocacy",
-    description:
-      "Our dedicated team handles insurance authorization, claims submission, and appeals for breast reconstruction and medically necessary procedures.",
-  },
-  {
-    icon: BookOpen,
-    title: "90+ Publications",
-    description:
-      "Our surgeons have contributed over 90 peer-reviewed publications and 8 book chapters, advancing the field of plastic and reconstructive surgery.",
+      "Our NY office features an AAAASF-accredited private surgical suite, and we follow ERAS protocols for faster, safer, and more comfortable recovery.",
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero Section */}
       <HeroSection
-        backgroundImage="/images/hero/about-hero.jpg"
-        title="Where Expertise Meets Compassion"
-        subtitle="Board-certified plastic surgeons in New Jersey and Westchester, NY, specializing in breast reconstruction, aesthetic surgery, and body contouring with a patient-centered approach."
-        ctaText="Schedule a Consultation"
+        backgroundImage="/images/misc/sps-center.jpg"
+        title="Your Destination for Plastic Surgery in New York and New Jersey"
+        subtitle="World-class expertise in aesthetic and reconstructive plastic surgery, delivered with personalized care by board-certified surgeons."
+        ctaText="Request an Appointment"
         ctaLink="/contact"
+        secondaryCtaText="Find Your Procedure"
+        secondaryCtaLink="/services"
       />
 
-      {/* Our Surgeons */}
-      <section className="py-20">
+      {/* Welcome Section */}
+      <section className="py-16">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-3xl font-bold text-[#32373c] sm:text-4xl">
+            Welcome to Specialized Plastic Surgery
+          </h2>
+          <p className="mt-2 text-lg font-medium text-[#4054b2]">
+            Aesthetic and Reconstructive Procedures in New York and New Jersey
+          </p>
+          <p className="mt-6 text-base leading-relaxed text-[#333333]">
+            At Specialized Plastic Surgery, our board-certified plastic surgeons
+            combine years of advanced training with a genuine commitment to
+            patient-centered care. Whether you are exploring cosmetic
+            enhancement or need expert reconstructive surgery, our team provides
+            personalized treatment plans designed to help you look and feel your
+            best. With offices in Millburn, NJ and Harrison, NY, we proudly
+            serve patients throughout the tri-state area.
+          </p>
+          <Link
+            href="/about"
+            className="mt-6 inline-block text-sm font-semibold text-[#4054b2] underline underline-offset-4 transition-colors hover:text-[#1f385f]"
+          >
+            Learn More About Us
+          </Link>
+        </div>
+      </section>
+
+      {/* Procedure Categories */}
+      <section className="bg-[#f5f5f5] py-16">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
-            eyebrow="Meet Your Surgeons"
-            title="Our Surgeons"
-            subtitle="Two board-certified plastic surgeons with complementary expertise across reconstructive and aesthetic surgery, trained at Georgetown, Johns Hopkins, and NYU."
+            title="Our Procedures"
+            subtitle="Explore our full range of aesthetic and reconstructive plastic surgery services."
+            centered
+          />
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {serviceCategories.map((category) => (
+              <div
+                key={category.slug}
+                className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <h3 className="text-xl font-bold text-[#32373c]">
+                  {category.name}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  {categoryDescriptions[category.slug] ?? category.description}
+                </p>
+                <Link
+                  href={`/services/${category.slug}`}
+                  className="mt-4 inline-block text-sm font-semibold text-[#4054b2] transition-colors hover:text-[#1f385f]"
+                >
+                  View Procedures &rarr;
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Doctors */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionHeading
+            title="Meet Our Expert Surgeons"
+            subtitle="Two board-certified plastic surgeons with complementary expertise, dedicated to delivering exceptional results with personalized care."
             centered
           />
           <div className="grid gap-8 sm:grid-cols-2">
@@ -126,92 +134,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Services */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <SectionHeading
-            eyebrow="What We Offer"
-            title="Our Services"
-            subtitle="From facial rejuvenation to advanced microsurgical breast reconstruction, our practice covers the full spectrum of plastic surgery."
-            centered
-          />
-          <div className="grid gap-8 sm:grid-cols-2">
-            {serviceCategories.map((category) => {
-              const procs = getProceduresByCategory(
-                category.slug as ProcedureCategory
-              );
-              return (
-                <Link
-                  key={category.slug}
-                  href={`/services/${category.slug}`}
-                  className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <h3 className="text-2xl font-bold text-[#1a2332] transition-colors group-hover:text-[#c9a96e]">
-                    {category.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    {category.description}
-                  </p>
-                  <ul className="mt-5 space-y-2">
-                    {procs.map((proc) => (
-                      <li
-                        key={proc.slug}
-                        className="flex items-start gap-2 text-sm text-gray-600"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
-                        {proc.shortName ?? proc.name}
-                      </li>
-                    ))}
-                  </ul>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] transition-colors group-hover:text-[#b8954f]">
-                    Explore {category.name} Procedures
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transition-transform group-hover:translate-x-0.5"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="m12 5 7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
+      {/* Gallery CTA */}
+      <section className="bg-[#1f385f] py-16">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            Explore Our Before &amp; After Gallery
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
+            See real results from our patients. Browse before and after photos
+            across breast, body, and facial procedures to help visualize what is
+            possible for you.
+          </p>
+          <Link
+            href="/gallery"
+            className="mt-8 inline-block rounded-full bg-[#32373c] px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#4054b2]"
+          >
+            Explore Gallery
+          </Link>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <TestimonialSection />
-
-      {/* Why Choose Us */}
-      <section className="py-20">
+      {/* The Specialized Difference */}
+      <section className="py-16">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
-            eyebrow="Why Choose Us"
-            title="What Sets Us Apart"
-            subtitle="A dual-surgeon practice combining fellowship-trained microsurgical expertise with a genuine commitment to personalized patient care."
+            title="The Specialized Difference"
+            subtitle="What sets our practice apart and why patients trust us with their care."
             centered
           />
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {differentiators.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+                  className="rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#1a2332]">
-                    <Icon className="h-6 w-6 text-[#c9a96e]" />
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#1f385f]">
+                    <Icon className="h-7 w-7 text-white" />
                   </div>
-                  <h3 className="mt-4 text-lg font-bold text-[#1a2332]">
+                  <h3 className="mt-4 text-lg font-bold text-[#32373c]">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -224,10 +186,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <FAQSection faqs={faqs} />
+      {/* Reviews */}
+      <TestimonialSection />
 
-      {/* CTA */}
+      {/* Final CTA */}
       <CTABanner />
     </>
   );

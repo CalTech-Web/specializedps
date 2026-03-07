@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,13 +14,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#c9a96e] text-white hover:bg-[#b8954f] border border-[#c9a96e]",
+    "bg-[#32373c] text-white hover:bg-[#1f385f] border border-[#32373c] hover:border-[#1f385f]",
   secondary:
-    "bg-[#1a2332] text-white hover:bg-[#2a3a52] border border-[#1a2332]",
+    "bg-[#4054b2] text-white hover:bg-[#354499] border border-[#4054b2] hover:border-[#354499]",
   outline:
-    "bg-transparent text-[#1a2332] border border-[#1a2332] hover:bg-[#1a2332] hover:text-white",
-  ghost:
-    "bg-transparent text-[#1a2332] border border-transparent hover:bg-[#1a2332]/5",
+    "bg-transparent text-[#32373c] border border-[#32373c] hover:bg-[#32373c] hover:text-white",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -38,7 +36,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#c9a96e]/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer",
+    "inline-flex items-center justify-center font-medium rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#4054b2]/50 focus:ring-offset-2 whitespace-nowrap cursor-pointer",
     variantStyles[variant],
     sizeStyles[size],
     className

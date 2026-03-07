@@ -37,8 +37,8 @@ export default function FinancingPage() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <DollarSign className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <DollarSign className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 All-Inclusive Quotes
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -47,8 +47,8 @@ export default function FinancingPage() {
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 No Hidden Fees
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -57,8 +57,8 @@ export default function FinancingPage() {
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 bg-gray-50 p-8 text-center">
-              <Calculator className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-              <h3 className="text-lg font-bold text-[#1a2332]">
+              <Calculator className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+              <h3 className="text-lg font-bold text-[#32373c]">
                 Flexible Plans
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -76,8 +76,8 @@ export default function FinancingPage() {
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <CreditCard className="h-8 w-8 text-[#c9a96e]" />
-                <h2 className="text-3xl font-bold text-[#1a2332]">
+                <CreditCard className="h-8 w-8 text-[#4054b2]" />
+                <h2 className="text-3xl font-bold text-[#32373c]">
                   CareCredit
                 </h2>
               </div>
@@ -97,7 +97,7 @@ export default function FinancingPage() {
             </div>
 
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 CareCredit Highlights
               </h3>
               <ul className="space-y-4">
@@ -110,7 +110,7 @@ export default function FinancingPage() {
                   "Apply online or in our office before your procedure",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -127,7 +127,7 @@ export default function FinancingPage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div className="order-2 rounded-xl border border-gray-200 bg-gray-50 p-8 lg:order-1">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 Cherry Highlights
               </h3>
               <ul className="space-y-4">
@@ -140,7 +140,7 @@ export default function FinancingPage() {
                   "No prepayment penalties or hidden fees",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -151,8 +151,8 @@ export default function FinancingPage() {
 
             <div className="order-1 lg:order-2">
               <div className="mb-4 flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-[#c9a96e]" />
-                <h2 className="text-3xl font-bold text-[#1a2332]">
+                <ShieldCheck className="h-8 w-8 text-[#4054b2]" />
+                <h2 className="text-3xl font-bold text-[#32373c]">
                   Cherry Payments
                 </h2>
               </div>
@@ -184,10 +184,10 @@ export default function FinancingPage() {
             centered
           />
 
-          <div className="mt-12 rounded-2xl border border-[#c9a96e]/20 bg-white p-10 text-center shadow-sm">
+          <div className="mt-12 rounded-2xl border border-[#4054b2]/20 bg-white p-10 text-center shadow-sm">
             <div className="mb-6 flex items-center justify-center gap-3">
-              <Clock className="h-7 w-7 text-[#c9a96e]" />
-              <h3 className="text-2xl font-bold text-[#1a2332]">
+              <Clock className="h-7 w-7 text-[#4054b2]" />
+              <h3 className="text-2xl font-bold text-[#32373c]">
                 $9,000 Procedure
               </h3>
             </div>
@@ -199,24 +199,24 @@ export default function FinancingPage() {
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl bg-gray-50 p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-[#c9a96e]">
+                <p className="text-sm font-semibold uppercase tracking-wider text-[#4054b2]">
                   12 Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-[#1a2332]">~$750</p>
+                <p className="mt-2 text-3xl font-bold text-[#32373c]">~$750</p>
                 <p className="mt-1 text-sm text-gray-500">per month</p>
               </div>
-              <div className="rounded-xl border-2 border-[#c9a96e] bg-[#c9a96e]/5 p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-[#c9a96e]">
+              <div className="rounded-xl border-2 border-[#4054b2] bg-[#4054b2]/5 p-6">
+                <p className="text-sm font-semibold uppercase tracking-wider text-[#4054b2]">
                   24 Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-[#1a2332]">~$375</p>
+                <p className="mt-2 text-3xl font-bold text-[#32373c]">~$375</p>
                 <p className="mt-1 text-sm text-gray-500">per month</p>
               </div>
               <div className="rounded-xl bg-gray-50 p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-[#c9a96e]">
+                <p className="text-sm font-semibold uppercase tracking-wider text-[#4054b2]">
                   48+ Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-[#1a2332]">~$180</p>
+                <p className="mt-2 text-3xl font-bold text-[#32373c]">~$180</p>
                 <p className="mt-1 text-sm text-gray-500">per month</p>
               </div>
             </div>

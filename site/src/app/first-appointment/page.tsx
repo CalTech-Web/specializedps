@@ -121,11 +121,11 @@ export default function FirstAppointmentPage() {
                 key={index}
                 className="flex items-start gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#c9a96e]/10">
-                  <tip.icon className="h-5 w-5 text-[#c9a96e]" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#4054b2]/10">
+                  <tip.icon className="h-5 w-5 text-[#4054b2]" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#1a2332]">
+                  <h3 className="text-base font-bold text-[#32373c]">
                     {tip.title}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-gray-600">
@@ -147,7 +147,7 @@ export default function FirstAppointmentPage() {
             centered
           />
 
-          <div className="mt-12 rounded-2xl border border-[#c9a96e]/20 bg-white p-10">
+          <div className="mt-12 rounded-2xl border border-[#4054b2]/20 bg-white p-10">
             <ul className="grid gap-4 sm:grid-cols-2">
               {[
                 "Photo ID (driver's license or passport)",
@@ -162,7 +162,7 @@ export default function FirstAppointmentPage() {
                 "A supportive friend or family member (optional)",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                   <span className="text-base leading-relaxed text-gray-700">
                     {item}
                   </span>

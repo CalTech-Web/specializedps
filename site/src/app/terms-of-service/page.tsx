@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <section className="bg-[#1a2332] py-20 sm:py-24">
+      <section className="bg-[#1f385f] py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-            <span className="bg-gradient-to-r from-[#c9a96e] to-[#e2c891] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4054b2] to-[#fb8e28] bg-clip-text text-transparent">
               Terms of Service
             </span>
           </h1>
@@ -34,7 +34,7 @@ export default function TermsOfServicePage() {
 
             {/* Acceptance of Terms */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Acceptance of Terms
               </h2>
               <p className="mt-4 text-gray-700">
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
 
             {/* Use of Website */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Use of Website
               </h2>
               <p className="mt-4 text-gray-700">
@@ -61,28 +61,28 @@ export default function TermsOfServicePage() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Use the website in any way that could disable, overburden, or
                     impair its functionality
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Attempt to gain unauthorized access to any portion of the
                     website or its related systems
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Use any automated means to access the website or collect
                     information from it
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Reproduce, distribute, or create derivative works from
                     website content without written permission
@@ -93,10 +93,10 @@ export default function TermsOfServicePage() {
 
             {/* Medical Disclaimer */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Medical Disclaimer
               </h2>
-              <div className="mt-4 rounded-xl border border-[#c9a96e]/30 bg-[#c9a96e]/5 p-6">
+              <div className="mt-4 rounded-xl border border-[#4054b2]/30 bg-[#4054b2]/5 p-6">
                 <p className="text-gray-700">
                   The content on this website is provided for general
                   informational purposes only and does not constitute medical
@@ -125,7 +125,7 @@ export default function TermsOfServicePage() {
 
             {/* Intellectual Property */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Intellectual Property
               </h2>
               <p className="mt-4 text-gray-700">
@@ -145,7 +145,7 @@ export default function TermsOfServicePage() {
 
             {/* Limitation of Liability */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Limitation of Liability
               </h2>
               <p className="mt-4 text-gray-700">
@@ -172,13 +172,13 @@ export default function TermsOfServicePage() {
 
             {/* Contact */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">Contact</h2>
+              <h2 className="text-2xl font-bold text-[#32373c]">Contact</h2>
               <p className="mt-4 text-gray-700">
                 If you have any questions about these Terms of Service, please
                 contact us:
               </p>
               <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <p className="font-semibold text-[#1a2332]">
+                <p className="font-semibold text-[#32373c]">
                   {siteConfig.name}
                 </p>
                 <p className="mt-2 text-gray-700">
@@ -192,7 +192,7 @@ export default function TermsOfServicePage() {
                 </p>
               </div>
               <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <p className="font-semibold text-[#1a2332]">
+                <p className="font-semibold text-[#32373c]">
                   {siteConfig.name}
                 </p>
                 <p className="mt-2 text-gray-700">

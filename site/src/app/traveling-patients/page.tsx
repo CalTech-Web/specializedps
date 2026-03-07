@@ -46,8 +46,8 @@ export default function TravelingPatientsPage() {
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <Building2 className="h-8 w-8 text-[#c9a96e]" />
-                <h2 className="text-3xl font-bold text-[#1a2332]">
+                <Building2 className="h-8 w-8 text-[#4054b2]" />
+                <h2 className="text-3xl font-bold text-[#32373c]">
                   Accommodation Assistance
                 </h2>
               </div>
@@ -66,7 +66,7 @@ export default function TravelingPatientsPage() {
             </div>
 
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 What We Help With
               </h3>
               <ul className="space-y-4">
@@ -77,7 +77,7 @@ export default function TravelingPatientsPage() {
                   "Coordination of your stay timeline with your surgical and follow-up schedule",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -94,7 +94,7 @@ export default function TravelingPatientsPage() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div className="order-2 rounded-xl border border-gray-200 bg-gray-50 p-8 lg:order-1">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 Getting Here
               </h3>
               <ul className="space-y-4">
@@ -106,7 +106,7 @@ export default function TravelingPatientsPage() {
                   "We can provide directions and transportation tips specific to your travel plans",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -117,8 +117,8 @@ export default function TravelingPatientsPage() {
 
             <div className="order-1 lg:order-2">
               <div className="mb-4 flex items-center gap-3">
-                <Car className="h-8 w-8 text-[#c9a96e]" />
-                <h2 className="text-3xl font-bold text-[#1a2332]">
+                <Car className="h-8 w-8 text-[#4054b2]" />
+                <h2 className="text-3xl font-bold text-[#32373c]">
                   Transportation Options
                 </h2>
               </div>
@@ -145,8 +145,8 @@ export default function TravelingPatientsPage() {
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-[#c9a96e]" />
-                <h2 className="text-3xl font-bold text-[#1a2332]">
+                <ShieldCheck className="h-8 w-8 text-[#4054b2]" />
+                <h2 className="text-3xl font-bold text-[#32373c]">
                   Out-of-State Insurance
                 </h2>
               </div>
@@ -167,7 +167,7 @@ export default function TravelingPatientsPage() {
             </div>
 
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <h3 className="mb-6 text-xl font-bold text-[#1a2332]">
+              <h3 className="mb-6 text-xl font-bold text-[#32373c]">
                 Insurance Support for Travelers
               </h3>
               <ul className="space-y-4">
@@ -179,7 +179,7 @@ export default function TravelingPatientsPage() {
                   "Clear cost estimates provided before your visit",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#c9a96e]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#4054b2]" />
                     <span className="text-base leading-relaxed text-gray-700">
                       {item}
                     </span>
@@ -232,8 +232,8 @@ export default function TravelingPatientsPage() {
                 key={index}
                 className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-center"
               >
-                <item.icon className="mx-auto mb-4 h-8 w-8 text-[#c9a96e]" />
-                <h3 className="text-base font-bold text-[#1a2332]">
+                <item.icon className="mx-auto mb-4 h-8 w-8 text-[#4054b2]" />
+                <h3 className="text-base font-bold text-[#32373c]">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -257,8 +257,8 @@ export default function TravelingPatientsPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-gray-200 bg-white p-8">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-[#c9a96e]" />
-                <h3 className="text-xl font-bold text-[#1a2332]">
+                <Plane className="h-6 w-6 text-[#4054b2]" />
+                <h3 className="text-xl font-bold text-[#32373c]">
                   New Jersey Office
                 </h3>
               </div>
@@ -271,7 +271,7 @@ export default function TravelingPatientsPage() {
                 <span className="font-semibold">Phone:</span>{" "}
                 <a
                   href="tel:9735610900"
-                  className="text-[#c9a96e] hover:underline"
+                  className="text-[#4054b2] hover:underline"
                 >
                   (973) 561-0900
                 </a>
@@ -283,8 +283,8 @@ export default function TravelingPatientsPage() {
 
             <div className="rounded-xl border border-gray-200 bg-white p-8">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-[#c9a96e]" />
-                <h3 className="text-xl font-bold text-[#1a2332]">
+                <Plane className="h-6 w-6 text-[#4054b2]" />
+                <h3 className="text-xl font-bold text-[#32373c]">
                   New York Office
                 </h3>
               </div>
@@ -297,7 +297,7 @@ export default function TravelingPatientsPage() {
                 <span className="font-semibold">Phone:</span>{" "}
                 <a
                   href="tel:9148740900"
-                  className="text-[#c9a96e] hover:underline"
+                  className="text-[#4054b2] hover:underline"
                 >
                   (914) 874-0900
                 </a>

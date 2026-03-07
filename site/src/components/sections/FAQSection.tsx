@@ -20,23 +20,23 @@ export default function FAQSection({
   return (
     <section className="py-20">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center text-3xl font-bold text-[#1a2332] sm:text-4xl">
+        <h2 className="text-center text-3xl font-bold text-[#32373c] sm:text-4xl">
           {heading}
         </h2>
 
-        <Accordion.Root type="single" collapsible className="mt-12 space-y-4">
+        <Accordion.Root type="single" collapsible className="mt-12 divide-y divide-gray-200">
           {faqs.map((faq, index) => (
             <Accordion.Item
               key={index}
               value={`faq-${index}`}
-              className="overflow-hidden rounded-xl border border-gray-200 bg-white"
+              className={index % 2 === 0 ? "bg-[#f5f5f5]" : "bg-white"}
             >
               <Accordion.Header>
-                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-[#1a2332] transition-colors hover:text-[#c9a96e]">
+                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-[#32373c] transition-colors hover:text-[#4054b2]">
                   {faq.question}
                   <ChevronDown
                     size={20}
-                    className="shrink-0 text-[#c9a96e] transition-transform duration-300 group-data-[state=open]:rotate-180"
+                    className="shrink-0 text-[#32373c] transition-transform duration-300 group-data-[state=open]:rotate-180"
                   />
                 </Accordion.Trigger>
               </Accordion.Header>

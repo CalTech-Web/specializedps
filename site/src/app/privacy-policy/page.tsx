@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-[#1a2332] py-20 sm:py-24">
+      <section className="bg-[#1f385f] py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-            <span className="bg-gradient-to-r from-[#c9a96e] to-[#e2c891] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4054b2] to-[#fb8e28] bg-clip-text text-transparent">
               Privacy Policy
             </span>
           </h1>
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Information Collection */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Information Collection
               </h2>
               <p className="mt-4 text-gray-700">
@@ -44,25 +44,25 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Fill out a contact form or consultation request
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Schedule an appointment by phone, email, or online
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Subscribe to our newsletter or promotional communications
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Interact with our website, including through cookies and
                     analytics tools
@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
 
             {/* How We Use Information */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 How We Use Information
               </h2>
               <p className="mt-4 text-gray-700">
@@ -88,31 +88,31 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Respond to your inquiries and schedule consultations
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Provide information about our services and procedures
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Send appointment reminders and follow-up communications
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Improve our website and services based on usage patterns
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Comply with legal obligations and regulatory requirements
                   </span>
@@ -122,7 +122,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Information Sharing */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Information Sharing
               </h2>
               <p className="mt-4 text-gray-700">
@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     With trusted service providers who assist in operating our
                     website and conducting our business, provided they agree to
@@ -140,13 +140,13 @@ export default function PrivacyPolicyPage() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     When required by law, regulation, or legal process
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     To protect the rights, property, or safety of our practice,
                     patients, or others
@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Data Security */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Data Security
               </h2>
               <p className="mt-4 text-gray-700">
@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Your Rights */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">
+              <h2 className="text-2xl font-bold text-[#32373c]">
                 Your Rights
               </h2>
               <p className="mt-4 text-gray-700">
@@ -187,31 +187,31 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Access the personal information we hold about you
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Request correction of inaccurate or incomplete data
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Request deletion of your personal information
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Opt out of marketing communications at any time
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96e]" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4054b2]" />
                   <span className="text-gray-700">
                     Request a copy of your personal data in a portable format
                   </span>
@@ -225,13 +225,13 @@ export default function PrivacyPolicyPage() {
 
             {/* Contact */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1a2332]">Contact</h2>
+              <h2 className="text-2xl font-bold text-[#32373c]">Contact</h2>
               <p className="mt-4 text-gray-700">
                 If you have questions or concerns about this Privacy Policy or
                 how we handle your personal information, please contact us:
               </p>
               <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <p className="font-semibold text-[#1a2332]">
+                <p className="font-semibold text-[#32373c]">
                   {siteConfig.name}
                 </p>
                 <p className="mt-2 text-gray-700">
@@ -245,7 +245,7 @@ export default function PrivacyPolicyPage() {
                 </p>
               </div>
               <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <p className="font-semibold text-[#1a2332]">
+                <p className="font-semibold text-[#32373c]">
                   {siteConfig.name}
                 </p>
                 <p className="mt-2 text-gray-700">
