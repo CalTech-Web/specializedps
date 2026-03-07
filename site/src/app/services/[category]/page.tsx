@@ -50,7 +50,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       />
 
       {/* Procedures Grid */}
-      <section className="bg-cream py-24 sm:py-28">
+      <section className="bg-cream py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Our {cat.name} Procedures

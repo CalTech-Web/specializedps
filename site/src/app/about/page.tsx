@@ -82,7 +82,7 @@ export default function AboutPage() {
       />
 
       {/* ───────── Welcome Section ───────── */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
@@ -90,7 +90,7 @@ export default function AboutPage() {
               <span>Our Story</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Welcome to Specialized Plastic Surgery
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-body">
@@ -122,19 +122,19 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── Founders / Doctors ───────── */}
-      <section className="bg-secondary py-24 sm:py-28">
+      <section className="bg-secondary py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
               <span>Our Founders</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               A Passion for Transformation
             </h2>
           </div>
-          <p className="mx-auto mb-12 max-w-3xl text-center text-base leading-relaxed text-body">
+          <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-relaxed text-body">
             Dr. Sosin and Dr. Devulapalli first met during their surgical
             training at Georgetown University, where they developed a shared
             mission to provide expert, compassionate surgical care that puts the
@@ -174,15 +174,15 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── Services Grid ───────── */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
               <span>Our Services</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               What We Offer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-body">
@@ -219,7 +219,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── Patient Care ───────── */}
-      <section className="bg-peach-light py-24 sm:py-28">
+      <section className="bg-peach-light py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
@@ -227,7 +227,7 @@ export default function AboutPage() {
               <span>Your Experience</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Our Approach to Patient Care
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-body">
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── Expertise and Training ───────── */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
@@ -266,7 +266,7 @@ export default function AboutPage() {
               <span>Our Credentials</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Expertise and Training
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-body">
@@ -294,7 +294,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───────── Why Choose Us ───────── */}
-      <section className="bg-secondary py-24 sm:py-28">
+      <section className="bg-secondary py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl">
             <div className="mb-10 text-center">
@@ -303,7 +303,7 @@ export default function AboutPage() {
                 <span>The Difference</span>
                 <span className="inline-block h-[1.5px] w-20 bg-primary" />
               </p>
-              <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+              <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
                 Why Choose Specialized Plastic Surgery?
               </h2>
             </div>

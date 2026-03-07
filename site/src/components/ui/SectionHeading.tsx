@@ -20,7 +20,7 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-12",
+        "mb-8",
         centered && "text-center",
         className
       )}
@@ -41,7 +41,7 @@ export default function SectionHeading({
       )}
 
       {/* Title */}
-      <h2 className="font-heading text-5xl font-bold text-heading leading-[1.1] lg:text-6xl">
+      <h2 className="font-heading text-3xl font-bold text-heading leading-[1.1] sm:text-4xl">
         {title}
       </h2>
 

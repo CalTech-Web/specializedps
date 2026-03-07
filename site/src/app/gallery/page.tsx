@@ -30,7 +30,7 @@ export default function GalleryPage() {
       {/* Age-gated gallery content */}
       <GalleryAgeGate>
         {/* Gallery Category Hub */}
-        <section className="bg-secondary py-20 sm:py-24">
+        <section className="bg-secondary py-16 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <h2 className="mb-10 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
               Browse by Category
@@ -46,12 +46,12 @@ export default function GalleryPage() {
             <section
               key={group.slug}
               id={group.slug}
-              className={`py-20 sm:py-24 ${
+              className={`py-16 sm:py-20 ${
                 groupIndex % 2 === 0 ? "bg-white" : "bg-peach-light"
               }`}
             >
               <div className="mx-auto max-w-[1320px] px-6">
-                <h2 className="mb-12 font-heading text-3xl font-bold text-heading">
+                <h2 className="mb-8 font-heading text-3xl font-bold text-heading">
                   {group.label}
                 </h2>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -69,7 +69,7 @@ export default function GalleryPage() {
           ))}
 
         {/* Patient Privacy Notice */}
-        <section className="bg-cream py-20 sm:py-24">
+        <section className="bg-cream py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <div className="bg-peach-light p-10">
               <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-primary" />

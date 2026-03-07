@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer>
       {/* ============ Footer Top ============ */}
-      <div className="bg-heading pt-[120px] pb-[65px]">
+      <div className="bg-heading pt-16 pb-12">
         <div className="mx-auto max-w-[1320px] px-4">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {/* Column 1: About Us */}

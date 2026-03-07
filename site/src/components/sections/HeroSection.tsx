@@ -36,8 +36,8 @@ export default function HeroSection({
         />
         {overlay && <div className="absolute inset-0 bg-black/50" />}
 
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center sm:py-32">
-          <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 text-center sm:py-24">
+          <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
             {title}
           </h1>
 
@@ -72,9 +72,9 @@ export default function HeroSection({
 
   /* ---------- Homepage hero (no background image) ---------- */
   return (
-    <section className="bg-secondary py-24 sm:py-32">
+    <section className="bg-secondary py-16 sm:py-24">
       <div className="mx-auto max-w-5xl px-6 text-center">
-        <h1 className="font-heading text-5xl font-bold leading-[1.1] text-heading sm:text-6xl lg:text-7xl">
+        <h1 className="font-heading text-4xl font-bold leading-[1.1] text-heading sm:text-5xl">
           {title}
         </h1>
 

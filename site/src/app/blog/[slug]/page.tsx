@@ -118,12 +118,12 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       {/* Article header */}
-      <section className="bg-heading py-20 sm:py-28">
+      <section className="bg-heading py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <span className="inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-medium text-gold">
             {post.category}
           </span>
-          <h1 className="font-heading mt-6 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="font-heading mt-6 text-3xl font-bold leading-tight text-white sm:text-4xl">
             {post.title}
           </h1>
           <p className="mt-4 text-secondary">{formatDate(post.date)}</p>

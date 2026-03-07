@@ -58,14 +58,14 @@ export default function HomePage() {
     <>
       {/* ───────── Hero Section ───────── */}
       <section className="bg-secondary">
-        <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:gap-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
           {/* Left column */}
           <div>
             <p className="mb-4 flex items-center gap-5 text-base font-medium tracking-wide text-primary">
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
               <span>Plastic Surgery in NY and NJ</span>
             </p>
-            <h1 className="font-heading text-5xl font-bold leading-[1.08] text-heading sm:text-6xl lg:text-7xl">
+            <h1 className="font-heading text-4xl font-bold leading-[1.08] text-heading sm:text-5xl">
               Your Destination for Plastic Surgery in New York and New Jersey
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-body sm:text-xl">
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Welcome / About Section ───────── */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
@@ -112,7 +112,7 @@ export default function HomePage() {
               <span>Who We Are</span>
               <span className="inline-block h-[1.5px] w-20 bg-primary" />
             </p>
-            <h2 className="font-heading text-4xl font-bold text-heading sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Welcome to Specialized Plastic Surgery
             </h2>
             <p className="mt-3 text-lg font-medium text-primary">
@@ -139,7 +139,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Procedure Categories ───────── */}
-      <section className="bg-peach-light py-24 sm:py-28">
+      <section className="bg-peach-light py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             title="Our Procedures"
@@ -189,7 +189,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Meet Our Doctors ───────── */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             title="Meet Our Expert Surgeons"
@@ -206,9 +206,9 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Gallery CTA ───────── */}
-      <section className="bg-heading py-20 sm:py-24">
+      <section className="bg-heading py-12 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6 text-center">
-          <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
             Explore Our Before &amp; After Gallery
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/85">
@@ -226,7 +226,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────── The Specialized Difference ───────── */}
-      <section className="bg-warm-grey py-24 sm:py-28">
+      <section className="bg-warm-grey py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             title="The Specialized Difference"

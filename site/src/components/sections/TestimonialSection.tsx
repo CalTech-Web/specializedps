@@ -75,7 +75,7 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center">

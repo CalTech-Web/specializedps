@@ -56,7 +56,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       />
 
       {/* What Is [Procedure]? */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
             What Is {proc.name}?
@@ -76,7 +76,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Benefits */}
-      <section className="bg-cream py-24 sm:py-28">
+      <section className="bg-cream py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Benefits
@@ -100,7 +100,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Candidacy */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
             Who is a Good Candidate?
@@ -124,7 +124,7 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Techniques */}
       {proc.techniques && proc.techniques.length > 0 && (
-        <section className="bg-secondary py-24 sm:py-28">
+        <section className="bg-secondary py-16 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Techniques
@@ -148,7 +148,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       )}
 
       {/* Recovery */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
             Recovery Timeline
@@ -163,7 +163,7 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Insurance Coverage */}
       {proc.insuranceCoverage && (
-        <section className="bg-cream py-24 sm:py-28">
+        <section className="bg-cream py-16 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Insurance Coverage
@@ -199,9 +199,9 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Doctors Section */}
-      <section className="bg-peach-light py-24 sm:py-28">
+      <section className="bg-peach-light py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="mb-12 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
+          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Our Surgeons
           </h2>
           <div className="grid gap-8 md:grid-cols-2">

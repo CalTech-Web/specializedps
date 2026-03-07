@@ -66,7 +66,7 @@ export default function ContactPage() {
       />
 
       {/* Form Section */}
-      <section className="bg-blog-bg py-24 sm:py-28">
+      <section className="bg-blog-bg py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -84,9 +84,9 @@ export default function ContactPage() {
       </section>
 
       {/* Location Info */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="mb-12 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
+          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
             Our Locations
           </h2>
           <div className="grid gap-8 md:grid-cols-2">

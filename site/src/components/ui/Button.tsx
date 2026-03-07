@@ -14,15 +14,15 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-white border-2 border-primary rounded-none px-7 py-2.5 font-bold text-lg hover:bg-white hover:text-primary",
+    "bg-primary text-white border-2 border-primary rounded-md px-7 py-2.5 font-bold text-lg hover:bg-white hover:text-primary",
   secondary:
-    "bg-heading text-white border-2 border-heading rounded-none px-10 py-6 font-medium text-lg hover:bg-white hover:text-heading",
+    "bg-heading text-white border-2 border-heading rounded-md px-10 py-6 font-medium text-lg hover:bg-white hover:text-heading",
   round:
     "bg-primary text-white rounded-[40px] px-10 py-6 font-medium text-lg border-2 border-primary hover:bg-white hover:text-primary",
   gold:
     "bg-gold text-heading rounded-[40px] px-10 py-6 font-medium text-lg border-2 border-gold hover:bg-white hover:text-primary",
   outline:
-    "bg-transparent border-2 border-primary text-primary rounded-none px-7 py-2.5 font-bold text-lg hover:bg-primary hover:text-white",
+    "bg-transparent border-2 border-primary text-primary rounded-md px-7 py-2.5 font-bold text-lg hover:bg-primary hover:text-white",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
