@@ -14,7 +14,7 @@ export default function CTABanner({
   ctaLink = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="bg-primary py-16 sm:py-20">
+    <section className="bg-heading py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
           {heading}

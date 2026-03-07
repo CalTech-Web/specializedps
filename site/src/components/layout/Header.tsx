@@ -65,7 +65,7 @@ export default function Header() {
     <>
       {/* ============ Single Row Header ============ */}
       <header
-        className={`sticky top-0 z-50 w-full bg-primary transition-all duration-400 ${
+        className={`sticky top-0 z-50 w-full bg-heading transition-all duration-400 ${
           scrolled ? "shadow-lg animate-slide-down" : ""
         }`}
       >
