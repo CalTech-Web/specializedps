@@ -10,7 +10,7 @@ export default function DoctorCard({ doctor }: DoctorCardProps) {
   return (
     <Link
       href={`/doctors/${doctor.slug}`}
-      className="group block overflow-hidden border-b-4 border-b-transparent bg-white transition-all duration-300 hover:border-b-primary hover:shadow-xl"
+      className="group block overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       {/* Photo, full width, no border radius */}
       <div className="relative h-80 overflow-hidden bg-cream">

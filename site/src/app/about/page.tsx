@@ -85,10 +85,10 @@ export default function AboutPage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Our Story</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Welcome to Specialized Plastic Surgery
@@ -113,7 +113,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/team"
-              className="mt-10 inline-block border-2 border-primary bg-primary px-7 py-3 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary"
+              className="mt-10 inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
             >
               Learn More
             </Link>
@@ -125,10 +125,10 @@ export default function AboutPage() {
       <section className="bg-secondary py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mb-8 text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Our Founders</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               A Passion for Transformation
@@ -177,10 +177,10 @@ export default function AboutPage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mb-8 text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Our Services</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               What We Offer
@@ -203,7 +203,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={service.name}
-                  className={`${bgColors[index % bgColors.length]} p-8 transition-shadow duration-300 hover:shadow-lg`}
+                  className={`${bgColors[index % bgColors.length]} rounded-lg border-t-4 border-t-primary p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
                 >
                   <h3 className="font-heading text-xl font-bold text-heading">
                     {service.name}
@@ -222,10 +222,10 @@ export default function AboutPage() {
       <section className="bg-peach-light py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Your Experience</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Our Approach to Patient Care
@@ -249,7 +249,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/services"
-              className="mt-10 inline-block border-2 border-primary bg-primary px-7 py-3 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary"
+              className="mt-10 inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
             >
               View Services
             </Link>
@@ -261,10 +261,10 @@ export default function AboutPage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Our Credentials</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Expertise and Training
@@ -298,10 +298,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl">
             <div className="mb-10 text-center">
-              <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-                <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+                <span className="inline-block h-[2px] w-12 bg-primary" />
                 <span>The Difference</span>
-                <span className="inline-block h-[1.5px] w-20 bg-primary" />
+                <span className="inline-block h-[2px] w-12 bg-primary" />
               </p>
               <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
                 Why Choose Specialized Plastic Surgery?
@@ -323,7 +323,7 @@ export default function AboutPage() {
             <div className="mt-12 text-center">
               <Link
                 href="/contact"
-                className="inline-block border-2 border-primary bg-primary px-7 py-3 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary"
+                className="inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
               >
                 Contact Us
               </Link>

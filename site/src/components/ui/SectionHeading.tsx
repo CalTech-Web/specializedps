@@ -27,13 +27,13 @@ export default function SectionHeading({
     >
       {/* Subtitle with decorative line */}
       {subtitle && (
-        <p className="mb-4 flex items-center gap-5 text-primary font-medium text-base tracking-wide">
+        <p className="mb-3 flex items-center gap-4 text-primary font-semibold text-sm uppercase tracking-[0.15em]">
           {centered && <span className="flex-1" />}
-          <span className="inline-block w-20 h-[1.5px] bg-primary" />
+          <span className="inline-block w-12 h-[2px] bg-primary" />
           <span>{subtitle}</span>
           {centered && (
             <>
-              <span className="inline-block w-20 h-[1.5px] bg-primary" />
+              <span className="inline-block w-12 h-[2px] bg-primary" />
               <span className="flex-1" />
             </>
           )}

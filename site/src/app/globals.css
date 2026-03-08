@@ -51,11 +51,16 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), Georgia, serif;
   color: var(--heading);
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 a, button, input, select, textarea, li {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+img {
+  image-rendering: auto;
 }
 
 @keyframes fade-in {

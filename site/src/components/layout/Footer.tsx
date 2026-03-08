@@ -24,12 +24,12 @@ export default function Footer() {
   return (
     <footer>
       {/* ============ Footer Top ============ */}
-      <div className="bg-heading pt-16 pb-12">
+      <div className="border-t-4 border-t-primary bg-heading pt-14 pb-10">
         <div className="mx-auto max-w-[1320px] px-4">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {/* Column 1: About Us */}
             <div>
-              <h4 className="mb-8 font-heading text-[24px] font-bold text-white">
+              <h4 className="mb-6 font-heading text-lg font-bold text-white">
                 About Us
               </h4>
               <p className="mb-6 text-[16px] leading-relaxed text-white/70">
@@ -72,7 +72,7 @@ export default function Footer() {
 
             {/* Column 2: Our Services */}
             <div>
-              <h4 className="mb-8 font-heading text-[24px] font-bold text-white">
+              <h4 className="mb-6 font-heading text-lg font-bold text-white">
                 Our Services
               </h4>
               <ul className="space-y-3">
@@ -92,7 +92,7 @@ export default function Footer() {
 
             {/* Column 3: Quick Links */}
             <div>
-              <h4 className="mb-8 font-heading text-[24px] font-bold text-white">
+              <h4 className="mb-6 font-heading text-lg font-bold text-white">
                 Quick Links
               </h4>
               <ul className="space-y-3">
@@ -112,7 +112,7 @@ export default function Footer() {
 
             {/* Column 4: Office Hours */}
             <div>
-              <h4 className="mb-8 font-heading text-[24px] font-bold text-white">
+              <h4 className="mb-6 font-heading text-lg font-bold text-white">
                 Office Hours
               </h4>
 

@@ -25,7 +25,7 @@ export default function CTABanner({
         <div className="mt-8">
           <Link
             href={ctaLink}
-            className="inline-block border-2 border-gold bg-gold px-7 py-2.5 text-lg font-bold text-heading transition-colors hover:bg-transparent hover:text-white hover:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="inline-block rounded-md border-2 border-gold bg-gold px-7 py-2.5 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             {ctaText}
           </Link>

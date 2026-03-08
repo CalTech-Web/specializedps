@@ -61,28 +61,28 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
           {/* Left column */}
           <div>
-            <p className="mb-4 flex items-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Plastic Surgery in NY and NJ</span>
             </p>
             <h1 className="font-heading text-4xl font-bold leading-[1.08] text-heading sm:text-5xl">
               Your Destination for Plastic Surgery in New York and New Jersey
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-body sm:text-xl">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-body sm:text-lg">
               World-class expertise in aesthetic and reconstructive plastic
               surgery, delivered with personalized care by board-certified
               surgeons.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-block border-2 border-primary bg-primary px-7 py-3 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary"
+                className="inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
               >
                 Request an Appointment
               </Link>
               <Link
                 href="/services"
-                className="inline-block border-2 border-primary bg-transparent px-7 py-3 text-lg font-bold text-primary transition-colors hover:bg-primary hover:text-white"
+                className="inline-block rounded-md border-2 border-primary bg-transparent px-7 py-3 text-base font-bold text-primary transition-all hover:bg-primary hover:text-white hover:shadow-md"
               >
                 Find Your Procedure
               </Link>
@@ -90,7 +90,7 @@ export default function HomePage() {
           </div>
 
           {/* Right column */}
-          <div className="relative h-[400px] overflow-hidden sm:h-[500px] lg:h-[560px]">
+          <div className="relative h-[400px] overflow-hidden rounded-lg shadow-2xl sm:h-[500px] lg:h-[560px]">
             <Image
               src="/images/misc/sps-center.jpg"
               alt="Specialized Plastic Surgery center"
@@ -99,6 +99,7 @@ export default function HomePage() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-heading/20 via-transparent to-transparent" />
           </div>
         </div>
       </section>
@@ -107,18 +108,18 @@ export default function HomePage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 flex items-center justify-center gap-5 text-base font-medium tracking-wide text-primary">
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+            <p className="mb-3 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <span className="inline-block h-[2px] w-12 bg-primary" />
               <span>Who We Are</span>
-              <span className="inline-block h-[1.5px] w-20 bg-primary" />
+              <span className="inline-block h-[2px] w-12 bg-primary" />
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
               Welcome to Specialized Plastic Surgery
             </h2>
-            <p className="mt-3 text-lg font-medium text-primary">
+            <p className="mt-2 text-base font-medium text-primary">
               Aesthetic and Reconstructive Procedures in New York and New Jersey
             </p>
-            <p className="mt-6 text-base leading-relaxed text-body">
+            <p className="mt-5 text-base leading-relaxed text-body">
               At Specialized Plastic Surgery, our board-certified plastic
               surgeons combine years of advanced training with a genuine
               commitment to patient-centered care. Whether you are exploring
@@ -130,7 +131,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/about"
-              className="mt-8 inline-block border-2 border-primary bg-primary px-7 py-3 text-lg font-bold text-white transition-colors hover:bg-white hover:text-primary"
+              className="mt-7 inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
             >
               Learn More About Us
             </Link>
@@ -152,7 +153,7 @@ export default function HomePage() {
               <Link
                 key={category.slug}
                 href={`/services/${category.slug}`}
-                className="group block overflow-hidden bg-white transition-shadow duration-300 hover:shadow-xl"
+                className="group block overflow-hidden rounded-lg border-t-4 border-t-primary bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* Category image */}
                 <div className="relative h-56 overflow-hidden bg-cream">
@@ -218,7 +219,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/gallery"
-            className="mt-10 inline-block border-2 border-white bg-white px-7 py-3 text-lg font-bold text-primary transition-colors hover:bg-transparent hover:text-white"
+            className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-7 py-3 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md"
           >
             Explore Gallery
           </Link>
@@ -240,7 +241,7 @@ export default function HomePage() {
               return (
                 <div
                   key={item.title}
-                  className="bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg"
+                  className="rounded-lg border-t-4 border-t-primary bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-heading">
                     <Icon className="h-8 w-8 text-gold" />

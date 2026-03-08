@@ -75,7 +75,7 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-secondary py-16">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center">
@@ -90,7 +90,7 @@ export default function TestimonialSection() {
         </div>
 
         {/* Carousel */}
-        <div className="relative mt-12">
+        <div className="relative mt-10">
           {/* Left arrow */}
           <button
             onClick={() => scroll("left")}
@@ -117,7 +117,7 @@ export default function TestimonialSection() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="w-[320px] flex-shrink-0 snap-start border-l-4 border-l-primary bg-white p-6 shadow-sm"
+                className="w-[320px] flex-shrink-0 snap-start rounded-lg border-l-4 border-l-primary bg-white p-6 shadow-md"
               >
                 {/* Stars */}
                 <div className="flex gap-0.5">
