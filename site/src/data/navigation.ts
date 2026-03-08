@@ -29,7 +29,23 @@ export const navigation: NavItem[] = [
       { label: "ERAS Protocol", href: "/eras" },
     ],
   },
-  { label: "Gallery", href: "/gallery" },
+  {
+    label: "Gallery",
+    href: "/gallery",
+    children: [
+      { label: "Otoplasty", href: "/gallery/otoplasty" },
+      { label: "Blepharoplasty", href: "/gallery/blepharoplasty" },
+      { label: "Tummy Tuck", href: "/gallery/tummy-tuck" },
+      { label: "Liposuction", href: "/gallery/liposuction" },
+      { label: "Brazilian Butt Lift", href: "/gallery/bbl" },
+      { label: "Breast Augmentation", href: "/gallery/breast-augmentation" },
+      { label: "Breast Lift", href: "/gallery/breast-lift" },
+      { label: "Breast Reduction", href: "/gallery/breast-reduction" },
+      { label: "DIEP Flap", href: "/gallery/diep-flap" },
+      { label: "Oncoplastic Reduction", href: "/gallery/oncoplastic-reduction" },
+      { label: "Implant Reconstruction", href: "/gallery/implant-reconstruction" },
+    ],
+  },
   {
     label: "Services",
     children: [
