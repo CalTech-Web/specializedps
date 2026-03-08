@@ -46,7 +46,7 @@ export default function Footer() {
       </div>
 
       {/* ============ Instagram Photo Strip ============ */}
-      <div className="grid grid-cols-3 sm:grid-cols-6">
+      <div className="mt-8 grid grid-cols-3 sm:grid-cols-6">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i} className="relative aspect-square overflow-hidden">
             <Image
@@ -77,7 +77,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2!2d-74.3096!3d40.7261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ad3f97b0c68f%3A0x0!2s264+Millburn+Ave%2C+Millburn%2C+NJ+07041!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="200"
+                height="300"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -89,7 +89,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.8!2d-73.7244!3d40.9686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2940cbb55f8f5%3A0x0!2s500+Mamaroneck+Ave+Suite+211%2C+Harrison%2C+NY+10528!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="200"
+                height="300"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -99,10 +99,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Logo + Locations Row */}
-          <div className="grid items-start gap-8 sm:grid-cols-3">
+          {/* Center Logo */}
+          <div className="mb-10 flex justify-center">
+            <Image
+              src="/images/logos/black-logo.webp"
+              alt="Specialized Plastic Surgery"
+              width={220}
+              height={55}
+              className="h-12 w-auto"
+            />
+          </div>
+
+          {/* Locations Row */}
+          <div className="grid items-start gap-8 sm:grid-cols-2">
             {/* NJ Location */}
-            <div className="text-center sm:text-left">
+            <div className="text-center">
               <h4 className="font-heading text-base font-bold text-heading">
                 New Jersey Location
               </h4>
@@ -114,14 +125,14 @@ export default function Footer() {
               <div className="mt-2 space-y-1">
                 <Link
                   href={`mailto:${nj.email}`}
-                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary sm:justify-start"
+                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
                 >
                   <Mail className="h-3.5 w-3.5" />
                   {nj.email}
                 </Link>
                 <Link
                   href={`tel:${nj.phoneRaw}`}
-                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary sm:justify-start"
+                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
                 >
                   <Phone className="h-3.5 w-3.5" />
                   {nj.phone}
@@ -137,19 +148,8 @@ export default function Footer() {
               </Link>
             </div>
 
-            {/* Center Logo */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/logos/black-logo.webp"
-                alt="Specialized Plastic Surgery"
-                width={220}
-                height={55}
-                className="h-12 w-auto"
-              />
-            </div>
-
             {/* NY Location */}
-            <div className="text-center sm:text-right">
+            <div className="text-center">
               <h4 className="font-heading text-base font-bold text-heading">
                 New York Location
               </h4>
@@ -161,17 +161,17 @@ export default function Footer() {
               <div className="mt-2 space-y-1">
                 <Link
                   href={`mailto:${ny.email}`}
-                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary sm:justify-end"
+                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
                 >
-                  {ny.email}
                   <Mail className="h-3.5 w-3.5" />
+                  {ny.email}
                 </Link>
                 <Link
                   href={`tel:${ny.phoneRaw}`}
-                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary sm:justify-end"
+                  className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
                 >
-                  {ny.phone}
                   <Phone className="h-3.5 w-3.5" />
+                  {ny.phone}
                 </Link>
               </div>
               <Link

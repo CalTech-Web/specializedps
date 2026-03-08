@@ -126,7 +126,7 @@ export default function GalleryPage() {
                   />
                 </div>
                 {/* SPS Lobby overlay */}
-                <div className="absolute -bottom-6 right-0 w-60 overflow-hidden shadow-2xl sm:-bottom-10 sm:right-4 sm:w-72 lg:right-[-2rem]">
+                <div className="animate-float absolute -bottom-6 right-0 w-60 overflow-hidden shadow-2xl sm:-bottom-10 sm:right-4 sm:w-72 lg:right-[-2rem]">
                   <div className="relative aspect-[16/10] overflow-hidden border-4 border-white">
                     <Image
                       src="/images/gallery-page/sps-center.jpg"
@@ -185,32 +185,37 @@ export default function GalleryPage() {
             }}
           />
           <div className="relative mx-auto max-w-[1320px] px-6">
-            <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.25em] text-heading/70">
+            <p className="mb-10 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-heading/70">
               Credentials You Can Trust:
             </p>
-            <div className="flex flex-wrap items-center justify-between gap-6">
-              {[
-                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
-                { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },
-                { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", h: 64 },
-                { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", h: 64 },
-                { src: "/images/credentials/microsurgery.webp", alt: "American Society for Reconstructive Microsurgery", h: 64 },
-                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
-              ].map((badge, i) => (
-                <div
-                  key={i}
-                  className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-                >
-                  <Image
-                    src={badge.src}
-                    alt={badge.alt}
-                    width={badge.h * 1.5}
-                    height={badge.h}
-                    className="object-contain"
-                    style={{ height: badge.h, width: "auto" }}
-                  />
-                </div>
-              ))}
+            <div className="overflow-hidden">
+              <div className="animate-marquee flex w-max items-center gap-16">
+                {[
+                  { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
+                  { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },
+                  { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", h: 64 },
+                  { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", h: 64 },
+                  { src: "/images/credentials/microsurgery.webp", alt: "American Society for Reconstructive Microsurgery", h: 64 },
+                  { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
+                  { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },
+                  { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", h: 64 },
+                  { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", h: 64 },
+                  { src: "/images/credentials/microsurgery.webp", alt: "American Society for Reconstructive Microsurgery", h: 64 },
+                  { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
+                  { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },
+                ].map((badge, i) => (
+                  <div key={i} className="shrink-0">
+                    <Image
+                      src={badge.src}
+                      alt={badge.alt}
+                      width={badge.h * 1.5}
+                      height={badge.h}
+                      className="object-contain"
+                      style={{ height: badge.h, width: "auto" }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -265,7 +270,7 @@ export default function GalleryPage() {
               backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.2,
+              opacity: 0.4,
             }}
           />
           <div className="relative mx-auto max-w-2xl px-6">

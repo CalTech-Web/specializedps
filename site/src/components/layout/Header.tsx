@@ -215,17 +215,31 @@ export default function Header() {
                 onMouseEnter={() => handleMouseEnter(item.label)}
                 onMouseLeave={handleMouseLeave}
               >
-                <button
-                  className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
-                  aria-expanded={activeDropdown === item.label}
-                >
-                  {item.label}
-                  <ChevronDown
-                    className={`h-3 w-3 transition-transform duration-200 ${
-                      activeDropdown === item.label ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={`h-3 w-3 transition-transform duration-200 ${
+                        activeDropdown === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </Link>
+                ) : (
+                  <button
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                    aria-expanded={activeDropdown === item.label}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={`h-3 w-3 transition-transform duration-200 ${
+                        activeDropdown === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                )}
 
                 <div
                   className={`absolute left-0 top-full z-50 pt-0 transition-all duration-200 ${
