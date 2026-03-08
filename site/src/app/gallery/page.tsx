@@ -22,7 +22,7 @@ export default function GalleryPage() {
   return (
     <>
       {/* ───────── Section 1: Hero ───────── */}
-      <section className="relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden bg-heading">
+      <section className="relative flex min-h-[75vh] w-full items-end justify-center overflow-hidden bg-heading">
         <Image
           src="/images/gallery-page/hero.webp"
           alt="Gallery"
@@ -31,12 +31,12 @@ export default function GalleryPage() {
           className="object-cover object-top"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-heading/30 via-heading/10 to-heading/40" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
-          <h1 className="font-heading text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+        <div className="absolute inset-0 bg-gradient-to-t from-heading/70 via-heading/20 to-transparent" />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 pb-16 pt-32 text-center sm:pb-20">
+          <h1 className="font-heading text-5xl font-bold text-white sm:text-6xl lg:text-7xl">
             Gallery
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-relaxed text-white/90 sm:text-base">
+          <p className="mx-auto mt-8 max-w-3xl text-sm leading-[1.8] text-white/85 sm:text-[15px]">
             Welcome to our Before and After Gallery, showcasing photographs that
             illustrate the outcomes of various surgical procedures. These
             examples are provided to help those considering cosmetic or
@@ -52,23 +52,25 @@ export default function GalleryPage() {
 
       <GalleryAgeGate>
         {/* ───────── Section 2: Category Grid ───────── */}
-        <section className="bg-white py-16 sm:py-20">
+        <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-[1320px] px-6">
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
               {galleryGroups.map((group) => {
                 const categories = galleryCategories.filter(
                   (cat) => cat.group === group
                 );
 
                 return (
-                  <div key={group}>
+                  <div key={group} className="group">
                     {/* Category image */}
-                    <div className="relative mb-6 aspect-[4/5] overflow-hidden">
+                    <div className="relative mb-8 aspect-[4/5] overflow-hidden">
                       <Image
-                        src={categoryImages[group] ?? "/images/misc/sps-center.jpg"}
+                        src={
+                          categoryImages[group] ?? "/images/misc/sps-center.jpg"
+                        }
                         alt={group}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
@@ -77,15 +79,15 @@ export default function GalleryPage() {
                     <h2 className="font-heading text-2xl font-bold uppercase tracking-wide text-heading">
                       {group}
                     </h2>
-                    <div className="mt-2 h-[1px] w-12 bg-body/30" />
+                    <div className="mt-3 h-[1px] w-10 bg-primary" />
 
                     {/* Procedure links */}
-                    <ul className="mt-4 space-y-2.5">
+                    <ul className="mt-5 space-y-3">
                       {categories.map((cat) => (
                         <li key={cat.slug}>
                           <Link
                             href={`/gallery/${cat.slug}`}
-                            className="text-sm text-body transition-colors hover:text-primary"
+                            className="inline-block text-[15px] text-body transition-colors hover:text-primary"
                           >
                             {cat.label}
                           </Link>
@@ -100,21 +102,21 @@ export default function GalleryPage() {
         </section>
 
         {/* ───────── Section 3: Before & After with Parallax ───────── */}
-        <section className="relative overflow-hidden bg-white">
+        <section className="relative overflow-hidden">
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              opacity: 0.35,
             }}
           />
-          <div className="relative mx-auto max-w-[1320px] px-6 py-16 sm:py-20">
-            <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
-              {/* Left: Images with parallax effect */}
+          <div className="relative mx-auto max-w-[1320px] px-6 py-20 sm:py-28">
+            <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
+              {/* Left: Images */}
               <div className="relative flex-1">
-                {/* Woman image */}
-                <div className="relative aspect-[3/4] w-full max-w-md overflow-hidden">
+                <div className="relative aspect-[3/4] w-full max-w-lg overflow-hidden shadow-2xl">
                   <Image
                     src="/images/gallery-page/ba-woman.jpg"
                     alt="Patient consultation"
@@ -123,27 +125,23 @@ export default function GalleryPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                {/* SPS Lobby overlay (parallax) */}
-                <div
-                  className="absolute -bottom-8 -right-4 w-64 overflow-hidden rounded-sm shadow-xl sm:-bottom-12 sm:right-8 sm:w-80"
-                  style={{ transform: "translateZ(0)" }}
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                {/* SPS Lobby overlay */}
+                <div className="absolute -bottom-6 right-0 w-60 overflow-hidden shadow-2xl sm:-bottom-10 sm:right-4 sm:w-72 lg:right-[-2rem]">
+                  <div className="relative aspect-[16/10] overflow-hidden border-4 border-white">
                     <Image
                       src="/images/gallery-page/sps-center.jpg"
                       alt="SPS Center lobby"
                       fill
                       className="object-cover"
-                      sizes="320px"
-                      style={{ objectPosition: "center" }}
+                      sizes="288px"
                     />
-                    <div className="absolute bottom-4 left-4">
+                    <div className="absolute bottom-3 left-3">
                       <Image
                         src="/images/logos/black-logo.webp"
                         alt="Specialized Plastic Surgery"
-                        width={180}
-                        height={45}
-                        className="h-8 w-auto sm:h-10"
+                        width={160}
+                        height={40}
+                        className="h-7 w-auto drop-shadow-md sm:h-9"
                       />
                     </div>
                   </div>
@@ -151,14 +149,14 @@ export default function GalleryPage() {
               </div>
 
               {/* Right: Text content */}
-              <div className="flex-1 pt-12 lg:pt-0">
-                <p className="mb-4 inline-block bg-heading px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white">
+              <div className="flex-1 pt-8 lg:pt-0">
+                <span className="mb-5 inline-block bg-heading px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-white">
                   Before and After Gallery
-                </p>
-                <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-heading sm:text-4xl">
+                </span>
+                <h2 className="font-heading text-3xl font-bold uppercase leading-[1.15] text-heading sm:text-4xl lg:text-[2.75rem]">
                   Specialized Plastic Surgery
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-body">
+                <p className="mt-8 text-[15px] leading-[1.85] text-body">
                   Discover the transformative results achieved at Specialized
                   Plastic Surgery through our Before and After gallery. Our
                   expert surgeons specialize in aesthetic and reconstructive
@@ -176,35 +174,40 @@ export default function GalleryPage() {
         </section>
 
         {/* ───────── Credentials Bar ───────── */}
-        <section className="relative overflow-hidden py-12">
+        <section className="relative overflow-hidden border-t border-body/10 py-14">
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              opacity: 0.25,
             }}
           />
           <div className="relative mx-auto max-w-[1320px] px-6">
-            <p className="mb-8 text-xs font-semibold uppercase tracking-[0.2em] text-heading">
+            <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.25em] text-heading/70">
               Credentials You Can Trust:
             </p>
-            <div className="flex flex-wrap items-center gap-8 sm:gap-12">
+            <div className="flex flex-wrap items-center justify-between gap-6">
               {[
-                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", w: 90 },
-                { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", w: 80 },
-                { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", w: 130 },
-                { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", w: 110 },
-                { src: "/images/credentials/microsurgery.webp", alt: "American Society for Reconstructive Microsurgery", w: 90 },
-                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", w: 90 },
+                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
+                { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },
+                { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", h: 64 },
+                { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", h: 64 },
+                { src: "/images/credentials/microsurgery.webp", alt: "American Society for Reconstructive Microsurgery", h: 64 },
+                { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
               ].map((badge, i) => (
-                <div key={i} className="opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <div
+                  key={i}
+                  className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                >
                   <Image
                     src={badge.src}
                     alt={badge.alt}
-                    width={badge.w}
-                    height={badge.w}
-                    className="h-16 w-auto object-contain sm:h-20"
+                    width={badge.h * 1.5}
+                    height={badge.h}
+                    className="object-contain"
+                    style={{ height: badge.h, width: "auto" }}
                   />
                 </div>
               ))}
@@ -214,9 +217,9 @@ export default function GalleryPage() {
 
         {/* ───────── Section 4: Safety & Comfort ───────── */}
         <section className="bg-secondary">
-          <div className="mx-auto flex max-w-[1320px] flex-col lg:flex-row">
+          <div className="mx-auto flex max-w-[1400px] flex-col lg:flex-row">
             {/* Left: Image */}
-            <div className="relative min-h-[400px] flex-1 lg:min-h-0">
+            <div className="relative min-h-[450px] flex-1 lg:min-h-[550px]">
               <Image
                 src="/images/gallery-page/safety.jpg"
                 alt="Patient safety and comfort"
@@ -226,15 +229,15 @@ export default function GalleryPage() {
               />
             </div>
             {/* Right: Text */}
-            <div className="flex flex-1 flex-col justify-center px-8 py-16 sm:px-12 lg:px-16">
-              <p className="mb-4 inline-block self-start bg-heading px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white">
+            <div className="flex flex-1 flex-col justify-center px-8 py-16 sm:px-14 lg:px-20 lg:py-20">
+              <span className="mb-5 inline-block self-start bg-heading px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-white">
                 Advanced Aesthetic and Reconstructive Procedures in New York and
                 New Jersey
-              </p>
-              <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-heading sm:text-4xl">
+              </span>
+              <h2 className="font-heading text-3xl font-bold uppercase leading-[1.15] text-heading sm:text-4xl">
                 A Commitment to Safety and Comfort
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-body">
+              <p className="mt-8 text-[15px] leading-[1.85] text-body">
                 Your safety and comfort are our top priorities. We adhere to the
                 highest standards of care in a state-of-the-art facility,
                 ensuring that all procedures are performed in a safe and sterile
@@ -242,10 +245,10 @@ export default function GalleryPage() {
                 experience as comfortable as possible, providing support and
                 guidance every step of the way.
               </p>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-block rounded-md border-2 border-heading bg-transparent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
+                  className="inline-block border-2 border-heading bg-transparent px-10 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
                 >
                   Contact Us Today!
                 </Link>
@@ -255,38 +258,37 @@ export default function GalleryPage() {
         </section>
 
         {/* ───────── Section 5: Contact Form ───────── */}
-        <section className="relative overflow-hidden py-16 sm:py-20">
+        <section className="relative overflow-hidden py-20 sm:py-28">
           <div
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              opacity: 0.2,
             }}
           />
-          <div className="relative mx-auto max-w-3xl px-6">
-            <div className="mb-3 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-body">
-                Join Us on Your Journey
-              </p>
-            </div>
-            <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
+          <div className="relative mx-auto max-w-2xl px-6">
+            <p className="text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-body/70">
+              Join Us on Your Journey
+            </p>
+            <h2 className="mt-4 text-center font-heading text-2xl font-bold uppercase leading-[1.2] text-heading sm:text-3xl">
               Take the Next Step and Schedule an Appointment Today
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-relaxed text-body">
+            <p className="mx-auto mt-8 max-w-xl text-center text-sm leading-[1.8] text-body">
               At Specialized Plastic Surgery, we are passionate about helping our
               patients achieve their desired outcomes through personalized care
               and expertise. Whether you are considering breast reconstruction,
               seeking aesthetic enhancements, or exploring options for body
               contouring, we are here to guide you every step of the way.
             </p>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-body">
+            <p className="mx-auto mt-4 max-w-xl text-center text-sm leading-[1.8] text-body">
               Contact us today to schedule a consultation and take the first step
               toward realizing your goals. Experience the difference at
               Specialized Plastic Surgery, where your journey to transformation
               begins.
             </p>
-            <div className="mt-10">
+            <div className="mt-12">
               <ContactForm />
             </div>
           </div>
