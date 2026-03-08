@@ -74,21 +74,25 @@ export default function Header() {
       {/* ============ Row 2: Logo Bar (Navy) ============ */}
       <div className="bg-heading">
         <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4">
-          {/* Left: Phone Numbers stacked */}
-          <div className="hidden flex-col gap-1 lg:flex">
+          {/* Left: Call Buttons */}
+          <div className="hidden items-center gap-3 lg:flex">
             <Link
               href={`tel:${ny.phoneRaw}`}
-              className="flex items-center gap-2 text-[13px] text-white/80 transition-colors hover:text-white"
+              className="flex items-center gap-2 rounded-md border border-white/30 px-4 py-2 text-[12px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span className="font-medium">{ny.phone} NY</span>
+              <span className="font-bold uppercase tracking-wide">Call Now</span>
+              <span className="text-white/60">|</span>
+              <span className="font-medium">NY {ny.phone}</span>
             </Link>
             <Link
               href={`tel:${nj.phoneRaw}`}
-              className="flex items-center gap-2 text-[13px] text-white/80 transition-colors hover:text-white"
+              className="flex items-center gap-2 rounded-md border border-white/30 px-4 py-2 text-[12px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span className="font-medium">{nj.phone} NJ</span>
+              <span className="font-bold uppercase tracking-wide">Call Now</span>
+              <span className="text-white/60">|</span>
+              <span className="font-medium">NJ {nj.phone}</span>
             </Link>
           </div>
 
