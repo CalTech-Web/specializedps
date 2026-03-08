@@ -85,7 +85,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href={`tel:${siteConfig.locations.ny.phoneRaw}`}
-              className="flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 text-[13px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-5 py-3 text-[13px] text-white backdrop-blur-md transition-all hover:border-white/40 hover:bg-white/20 hover:shadow-lg"
             >
               <Phone className="h-4 w-4" />
               <span className="font-bold uppercase tracking-wide">Call Now</span>
@@ -94,7 +94,7 @@ export default function HomePage() {
             </Link>
             <Link
               href={`tel:${siteConfig.locations.nj.phoneRaw}`}
-              className="flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 text-[13px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-5 py-3 text-[13px] text-white backdrop-blur-md transition-all hover:border-white/40 hover:bg-white/20 hover:shadow-lg"
             >
               <Phone className="h-4 w-4" />
               <span className="font-bold uppercase tracking-wide">Call Now</span>
