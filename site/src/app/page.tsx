@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Award, Shield, UserCheck, ShieldCheck } from "lucide-react";
+import { Award, Shield, UserCheck, ShieldCheck, Phone } from "lucide-react";
+import { siteConfig } from "@/data/site";
 import DoctorCard from "@/components/sections/DoctorCard";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import CTABanner from "@/components/sections/CTABanner";
@@ -81,6 +82,26 @@ export default function HomePage() {
             advanced surgical training, and cutting-edge techniques, delivering
             results with unmatched precision, artistry, and compassionate care.
           </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href={`tel:${siteConfig.locations.ny.phoneRaw}`}
+              className="flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 text-[13px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-bold uppercase tracking-wide">Call Now</span>
+              <span className="text-white/40">|</span>
+              <span className="font-medium">NY {siteConfig.locations.ny.phone}</span>
+            </Link>
+            <Link
+              href={`tel:${siteConfig.locations.nj.phoneRaw}`}
+              className="flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 text-[13px] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-bold uppercase tracking-wide">Call Now</span>
+              <span className="text-white/40">|</span>
+              <span className="font-medium">NJ {siteConfig.locations.nj.phone}</span>
+            </Link>
+          </div>
         </div>
       </section>
 
