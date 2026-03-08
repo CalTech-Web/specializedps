@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Phone, ChevronRight } from "lucide-react";
-import { navigation, type NavItem } from "@/data/navigation";
+import { navigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 
 export default function Header() {
@@ -23,7 +23,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -61,107 +60,93 @@ export default function Header() {
     setActiveMobileSubItem(null);
   };
 
+  const { nj, ny } = siteConfig.locations;
+
   return (
     <>
-      {/* ============ Single Row Header ============ */}
-      <header
-        className={`sticky top-0 z-50 w-full bg-heading transition-all duration-400 ${
-          scrolled ? "shadow-lg animate-slide-down" : ""
-        }`}
-      >
-        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-4 py-3 lg:py-0">
-          {/* Left: Logo */}
-          <Link href="/" className="flex-shrink-0">
+      {/* ============ Row 1: Announcement Bar ============ */}
+      <div className="bg-heading py-2 text-center">
+        <p className="text-[13px] tracking-wide text-white/90">
+          We&apos;re Ready to Help You. Connect with us Today.
+        </p>
+      </div>
+
+      {/* ============ Row 2: Logo Bar (Navy) ============ */}
+      <div className="bg-heading">
+        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4">
+          {/* Left: Phone Numbers stacked */}
+          <div className="hidden flex-col gap-1 lg:flex">
+            <Link
+              href={`tel:${ny.phoneRaw}`}
+              className="flex items-center gap-2 text-[13px] text-white/80 transition-colors hover:text-white"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              <span className="font-medium">{ny.phone} NY</span>
+            </Link>
+            <Link
+              href={`tel:${nj.phoneRaw}`}
+              className="flex items-center gap-2 text-[13px] text-white/80 transition-colors hover:text-white"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              <span className="font-medium">{nj.phone} NJ</span>
+            </Link>
+          </div>
+
+          {/* Center: Logo */}
+          <Link href="/" className="flex-shrink-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
             <Image
               src="/images/logos/white-logo.webp"
               alt="Specialized Plastic Surgery"
-              width={240}
-              height={60}
-              className="h-12 w-auto lg:h-14"
+              width={260}
+              height={65}
+              className="h-12 w-auto lg:h-[60px]"
               priority
             />
           </Link>
 
-          {/* Center: Navigation */}
-          <nav className="hidden items-center lg:flex">
-            {navigation.map((item) => {
-              // Direct link items (no children)
-              if (!item.children) {
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href!}
-                    className="px-6 py-6 font-sans text-[20px] font-medium text-white transition-colors hover:text-white/80"
-                  >
-                    {item.label}
-                  </Link>
-                );
-              }
+          {/* Right: CTA Button */}
+          <div className="hidden lg:block">
+            <Link
+              href="/contact"
+              className="inline-block border border-white/60 px-6 py-2.5 text-[12px] font-bold uppercase tracking-[0.15em] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+            >
+              Request an Appointment
+            </Link>
+          </div>
 
-              // Services mega menu
-              if (item.label === "Services") {
-                return (
-                  <div
-                    key={item.label}
-                    className="relative"
-                    onMouseEnter={() => handleMouseEnter(item.label)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <button
-                      className="inline-flex items-center gap-1.5 px-6 py-6 font-sans text-[20px] font-medium text-white transition-colors hover:text-white/80"
-                      aria-expanded={activeDropdown === item.label}
-                    >
-                      {item.label}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
+          {/* Mobile: Hamburger */}
+          <button
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 lg:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            <Menu className="h-5 w-5 text-white" />
+          </button>
+        </div>
+      </div>
 
-                    {/* Mega Menu Dropdown */}
-                    <div
-                      className={`absolute left-1/2 top-full z-50 w-[750px] -translate-x-1/2 pt-0 transition-all duration-200 ${
-                        activeDropdown === item.label
-                          ? "visible translate-y-0 opacity-100"
-                          : "invisible -translate-y-2 opacity-0"
-                      }`}
-                    >
-                      <div className="rounded-md bg-white p-6 shadow-[0px_30px_70px_0px_rgba(11,6,70,0.08)]">
-                        <div className="grid grid-cols-4 gap-6">
-                          {item.children!.map((category) => (
-                            <div key={category.label}>
-                              <Link
-                                href={category.href || "#"}
-                                className="mb-3 block text-[14px] font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary"
-                              >
-                                {category.label}
-                              </Link>
-                              <ul className="space-y-1.5">
-                                {category.children?.map((procedure) => (
-                                  <li key={procedure.label}>
-                                    <Link
-                                      href={procedure.href!}
-                                      className="group flex items-center gap-1 text-[14px] text-body transition-all hover:text-primary"
-                                    >
-                                      <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
-                                      <span className="transition-transform duration-200 group-hover:translate-x-1">
-                                        {procedure.label}
-                                      </span>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
+      {/* ============ Row 3: Navigation Bar (Navy, slightly lighter border top) ============ */}
+      <nav
+        className={`hidden w-full border-t border-white/10 bg-heading lg:block ${
+          scrolled ? "sticky top-0 z-50 shadow-lg animate-slide-down" : ""
+        }`}
+      >
+        <div className="mx-auto flex max-w-[1320px] items-center justify-center px-4">
+          {navigation.map((item) => {
+            if (!item.children) {
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href!}
+                  className="px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                >
+                  {item.label}
+                </Link>
+              );
+            }
 
-              // Simple dropdown items (Doctors, Locations, About Us)
+            // Services mega menu
+            if (item.label === "Services") {
               return (
                 <div
                   key={item.label}
@@ -170,81 +155,110 @@ export default function Header() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="inline-flex items-center gap-1.5 px-6 py-6 font-sans text-[20px] font-medium text-white transition-colors hover:text-white/80"
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
                     aria-expanded={activeDropdown === item.label}
                   >
                     {item.label}
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-200 ${
+                      className={`h-3 w-3 transition-transform duration-200 ${
                         activeDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
                   </button>
 
                   <div
-                    className={`absolute left-0 top-full z-50 pt-0 transition-all duration-200 ${
+                    className={`absolute left-1/2 top-full z-50 w-[750px] -translate-x-1/2 pt-0 transition-all duration-200 ${
                       activeDropdown === item.label
                         ? "visible translate-y-0 opacity-100"
                         : "invisible -translate-y-2 opacity-0"
                     }`}
                   >
-                    <div className="w-[200px] rounded-md bg-white py-2 shadow-[0px_30px_70px_0px_rgba(11,6,70,0.08)]">
-                      {item.children!.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href!}
-                          className="group flex items-center gap-1 px-4 py-2.5 text-[14px] text-black transition-all hover:text-primary"
-                        >
-                          <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
-                          <span className="transition-transform duration-200 group-hover:translate-x-1">
-                            {child.label}
-                          </span>
-                        </Link>
-                      ))}
+                    <div className="rounded-b-md bg-white p-6 shadow-xl">
+                      <div className="grid grid-cols-4 gap-6">
+                        {item.children!.map((category) => (
+                          <div key={category.label}>
+                            <Link
+                              href={category.href || "#"}
+                              className="mb-3 block text-[13px] font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary"
+                            >
+                              {category.label}
+                            </Link>
+                            <ul className="space-y-1.5">
+                              {category.children?.map((procedure) => (
+                                <li key={procedure.label}>
+                                  <Link
+                                    href={procedure.href!}
+                                    className="group flex items-center gap-1 text-[13px] text-body transition-all hover:text-primary"
+                                  >
+                                    <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
+                                    <span className="transition-transform duration-200 group-hover:translate-x-1">
+                                      {procedure.label}
+                                    </span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               );
-            })}
-          </nav>
+            }
 
-          {/* Right: Phone CTA (desktop) */}
-          <div className="hidden items-center gap-4 lg:flex">
-            <Link
-              href={`tel:${siteConfig.locations.nj.phoneRaw}`}
-              className="flex items-center gap-3"
-            >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20">
-                <Phone className="h-5 w-5 text-white" />
-              </span>
-              <span className="flex flex-col">
-                <span className="font-sans text-[14px] text-white/80">
-                  Call Us Now
-                </span>
-                <span className="font-sans text-[18px] font-bold text-white">
-                  {siteConfig.locations.nj.phone}
-                </span>
-              </span>
-            </Link>
-          </div>
+            // Simple dropdown items
+            return (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                  aria-expanded={activeDropdown === item.label}
+                >
+                  {item.label}
+                  <ChevronDown
+                    className={`h-3 w-3 transition-transform duration-200 ${
+                      activeDropdown === item.label ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-          {/* Mobile: Hamburger */}
-          <button
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20 lg:hidden"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          >
-            <Menu className="h-6 w-6 text-white" />
-          </button>
+                <div
+                  className={`absolute left-0 top-full z-50 pt-0 transition-all duration-200 ${
+                    activeDropdown === item.label
+                      ? "visible translate-y-0 opacity-100"
+                      : "invisible -translate-y-2 opacity-0"
+                  }`}
+                >
+                  <div className="w-[220px] rounded-b-md bg-white py-2 shadow-xl">
+                    {item.children!.map((child) => (
+                      <Link
+                        key={child.label}
+                        href={child.href!}
+                        className="group flex items-center gap-1 px-4 py-2.5 text-[13px] text-body transition-all hover:text-primary"
+                      >
+                        <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
+                        <span className="transition-transform duration-200 group-hover:translate-x-1">
+                          {child.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </header>
+      </nav>
 
       {/* ============ Mobile Offcanvas Overlay ============ */}
       <div
         className={`fixed inset-0 z-[60] bg-black/50 transition-opacity duration-300 lg:hidden ${
-          mobileOpen
-            ? "visible opacity-100"
-            : "invisible opacity-0"
+          mobileOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         onClick={closeMobile}
       />
@@ -255,7 +269,6 @@ export default function Header() {
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Offcanvas Header */}
         <div className="flex items-center justify-between border-b border-gray-100 px-6 py-5">
           <Link href="/" onClick={closeMobile}>
             <Image
@@ -275,18 +288,27 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Offcanvas Navigation */}
         <nav className="flex-1 overflow-y-auto px-6 pb-8 pt-4">
+          <div className="mb-4 space-y-2 border-b border-gray-100 pb-4">
+            <Link href={`tel:${ny.phoneRaw}`} className="flex items-center gap-2 text-sm text-body">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>{ny.phone} NY</span>
+            </Link>
+            <Link href={`tel:${nj.phoneRaw}`} className="flex items-center gap-2 text-sm text-body">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>{nj.phone} NJ</span>
+            </Link>
+          </div>
+
           <ul className="space-y-0">
             {navigation.map((item) => {
-              // Direct links
               if (!item.children) {
                 return (
                   <li key={item.label} className="border-b border-gray-100">
                     <Link
                       href={item.href!}
                       onClick={closeMobile}
-                      className="block py-3.5 font-sans text-[16px] font-medium text-heading transition-colors hover:text-primary"
+                      className="block py-3.5 font-sans text-[15px] font-medium text-heading transition-colors hover:text-primary"
                     >
                       {item.label}
                     </Link>
@@ -294,14 +316,13 @@ export default function Header() {
                 );
               }
 
-              // Items with children (accordion style)
               const isOpen = activeMobileItem === item.label;
 
               return (
                 <li key={item.label} className="border-b border-gray-100">
                   <button
                     onClick={() => toggleMobileItem(item.label)}
-                    className="flex w-full items-center justify-between py-3.5 font-sans text-[16px] font-medium text-heading transition-colors hover:text-primary"
+                    className="flex w-full items-center justify-between py-3.5 font-sans text-[15px] font-medium text-heading transition-colors hover:text-primary"
                   >
                     {item.label}
                     <ChevronDown
@@ -318,17 +339,13 @@ export default function Header() {
                   >
                     <ul className="space-y-0 pl-3">
                       {item.children!.map((child) => {
-                        // If this child has sub-children (service categories)
                         if (child.children && child.children.length > 0) {
-                          const isSubOpen =
-                            activeMobileSubItem === child.label;
+                          const isSubOpen = activeMobileSubItem === child.label;
                           return (
                             <li key={child.label}>
                               <button
-                                onClick={() =>
-                                  toggleMobileSubItem(child.label)
-                                }
-                                className="flex w-full items-center justify-between py-2.5 font-sans text-[15px] font-semibold text-heading transition-colors hover:text-primary"
+                                onClick={() => toggleMobileSubItem(child.label)}
+                                className="flex w-full items-center justify-between py-2.5 font-sans text-[14px] font-semibold text-heading transition-colors hover:text-primary"
                               >
                                 {child.label}
                                 <ChevronDown
@@ -348,7 +365,7 @@ export default function Header() {
                                       <Link
                                         href={procedure.href!}
                                         onClick={closeMobile}
-                                        className="block py-2 font-sans text-[14px] text-body transition-colors hover:text-primary"
+                                        className="block py-2 font-sans text-[13px] text-body transition-colors hover:text-primary"
                                       >
                                         {procedure.label}
                                       </Link>
@@ -360,13 +377,12 @@ export default function Header() {
                           );
                         }
 
-                        // Simple child link
                         return (
                           <li key={child.label}>
                             <Link
                               href={child.href!}
                               onClick={closeMobile}
-                              className="block py-2.5 font-sans text-[14px] text-body transition-colors hover:text-primary"
+                              className="block py-2.5 font-sans text-[13px] text-body transition-colors hover:text-primary"
                             >
                               {child.label}
                             </Link>
@@ -381,14 +397,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Offcanvas CTA */}
         <div className="border-t border-gray-100 px-6 py-5">
           <Link
             href="/contact"
             onClick={closeMobile}
-            className="flex w-full items-center justify-center rounded-md bg-primary px-6 py-3.5 font-sans text-[16px] font-semibold text-white transition-colors hover:bg-primary/90"
+            className="flex w-full items-center justify-center rounded-md bg-primary px-6 py-3.5 font-sans text-[15px] font-semibold text-white transition-colors hover:bg-primary/90"
           >
-            Contact Us
+            Request an Appointment
           </Link>
         </div>
       </div>

@@ -57,50 +57,36 @@ export default function HomePage() {
   return (
     <>
       {/* ───────── Hero Section ───────── */}
-      <section className="bg-secondary">
-        <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
-          {/* Left column */}
-          <div>
-            <p className="mb-3 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-              <span className="inline-block h-[2px] w-12 bg-primary" />
-              <span>Plastic Surgery in NY and NJ</span>
-            </p>
-            <h1 className="font-heading text-4xl font-bold leading-[1.08] text-heading sm:text-5xl">
-              Your Destination for Plastic Surgery in New York and New Jersey
-            </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-body sm:text-lg">
-              World-class expertise in aesthetic and reconstructive plastic
-              surgery, delivered with personalized care by board-certified
-              surgeons.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
-              >
-                Request an Appointment
-              </Link>
-              <Link
-                href="/services"
-                className="inline-block rounded-md border-2 border-primary bg-transparent px-7 py-3 text-base font-bold text-primary transition-all hover:bg-primary hover:text-white hover:shadow-md"
-              >
-                Find Your Procedure
-              </Link>
-            </div>
-          </div>
+      <section className="relative flex min-h-[75vh] w-full items-center justify-center overflow-hidden bg-heading">
+        <Image
+          src="/images/misc/sps-center.jpg"
+          alt="Specialized Plastic Surgery center"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-heading/40" />
 
-          {/* Right column */}
-          <div className="relative h-[400px] overflow-hidden rounded-lg shadow-2xl sm:h-[500px] lg:h-[560px]">
-            <Image
-              src="/images/misc/sps-center.jpg"
-              alt="Specialized Plastic Surgery center"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-heading/20 via-transparent to-transparent" />
-          </div>
+        <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
+          <h1 className="font-heading text-4xl font-bold italic uppercase leading-[1.2] text-white sm:text-5xl lg:text-[3.5rem]">
+            Your Destination for Plastic Surgery in New York and New Jersey
+          </h1>
+          <p className="mx-auto mt-8 max-w-4xl text-[15px] leading-relaxed text-white/90 sm:text-base">
+            At Specialized Plastic Surgery, we offer world-class expertise,
+            advanced surgical training, and cutting-edge techniques, delivering
+            results with unmatched precision, artistry, and compassionate care.
+          </p>
+        </div>
+
+        {/* Financing badge */}
+        <div className="absolute bottom-6 right-6 z-10 hidden items-center gap-2 rounded-full bg-gold px-5 py-2.5 sm:flex">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-heading">
+            Pay Over Time
+          </span>
+          <span className="text-[10px] text-heading/70">
+            No Hard Credit Checks &bull; 0% APR Options
+          </span>
         </div>
       </section>
 
