@@ -58,14 +58,18 @@ export default function HomePage() {
     <>
       {/* ───────── Hero Section ───────── */}
       <section className="relative flex min-h-[75vh] w-full items-center justify-center overflow-hidden bg-heading">
-        <Image
-          src="/images/misc/sps-center.jpg"
-          alt="Specialized Plastic Surgery center"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src="https://specializedplasticsurgery.com/wp-content/uploads/2025/09/new-header-sps-video.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div className="absolute inset-0 bg-heading/40" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
@@ -77,16 +81,6 @@ export default function HomePage() {
             advanced surgical training, and cutting-edge techniques, delivering
             results with unmatched precision, artistry, and compassionate care.
           </p>
-        </div>
-
-        {/* Financing badge */}
-        <div className="absolute bottom-6 right-6 z-10 hidden items-center gap-2 rounded-full bg-gold px-5 py-2.5 sm:flex">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-heading">
-            Pay Over Time
-          </span>
-          <span className="text-[10px] text-heading/70">
-            No Hard Credit Checks &bull; 0% APR Options
-          </span>
         </div>
       </section>
 
