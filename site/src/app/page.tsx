@@ -73,7 +73,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-heading/40" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
-          <h1 className="font-heading text-4xl font-bold italic uppercase leading-[1.2] text-white sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="font-heading text-4xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[3.5rem]">
             Your Destination for Plastic Surgery in New York and New Jersey
           </h1>
           <p className="mx-auto mt-8 max-w-4xl text-[15px] leading-relaxed text-white/90 sm:text-base">
