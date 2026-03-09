@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer>
       {/* ============ Video CTA Section ============ */}
-      <div className="relative flex min-h-[50vh] items-center justify-center overflow-hidden">
+      <div className="relative flex min-h-[500px] items-center justify-center overflow-hidden">
         <video
           autoPlay
           muted

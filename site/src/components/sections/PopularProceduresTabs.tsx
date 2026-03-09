@@ -1,0 +1,80 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { popularProcedures } from "@/data/popular-procedures";
+import { CircleDot } from "lucide-react";
+
+export default function PopularProceduresTabs() {
+  const [activeTab, setActiveTab] = useState(0);
+  const active = popularProcedures[activeTab];
+
+  return (
+    <section className="bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-[1320px] px-6">
+        <h2 className="mb-12 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl lg:text-5xl">
+          Popular Procedures
+        </h2>
+
+        <div className="grid min-h-[450px] overflow-hidden rounded-lg shadow-lg lg:grid-cols-2">
+          {/* Left: Text content */}
+          <div className="relative flex flex-col justify-center p-10 sm:p-14">
+            <div
+              className="absolute inset-0 opacity-15"
+              style={{
+                backgroundImage:
+                  "url('/images/gallery-page/marble-bg.webp')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <div className="relative">
+              <h3 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+                {active.name}
+              </h3>
+              <p className="mt-6 text-sm leading-relaxed text-body">
+                {active.description}
+              </p>
+              <Link
+                href={active.href}
+                className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-heading transition-all hover:bg-heading hover:text-white"
+              >
+                View Details
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="relative hidden min-h-[400px] lg:block">
+            <Image
+              src={active.image}
+              alt={active.name}
+              fill
+              className="object-cover"
+              sizes="50vw"
+            />
+          </div>
+        </div>
+
+        {/* Tab bar */}
+        <div className="mt-6 flex flex-wrap justify-center gap-1">
+          {popularProcedures.map((proc, i) => (
+            <button
+              key={proc.id}
+              onClick={() => setActiveTab(i)}
+              className={`flex items-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-wider transition-all sm:px-6 ${
+                i === activeTab
+                  ? "bg-heading text-white"
+                  : "bg-warm-grey text-heading hover:bg-heading/10"
+              }`}
+            >
+              <CircleDot className="h-3.5 w-3.5" />
+              {proc.tabLabel}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
