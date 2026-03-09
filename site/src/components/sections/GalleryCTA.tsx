@@ -12,11 +12,11 @@ export default function GalleryCTA() {
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-heading/60" />
+      <div className="absolute inset-0 bg-heading/40" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1320px] px-6 py-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-end px-6 py-20">
+        <div className="max-w-xl">
           <p className="inline-block bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
             Photo Gallery
           </p>
