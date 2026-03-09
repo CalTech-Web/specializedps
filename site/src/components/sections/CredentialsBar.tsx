@@ -20,14 +20,12 @@ export default function CredentialsBar() {
           backgroundPosition: "center",
         }}
       />
-      <div className="relative mx-auto flex max-w-[1320px] items-center gap-10 px-6">
-        {/* Left: Label */}
-        <p className="flex-shrink-0 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
+      <div className="relative mx-auto max-w-[1320px] px-6">
+        <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
           Credentials You Can Trust:
         </p>
 
-        {/* Right: Scrolling logos */}
-        <div className="min-w-0 flex-1 overflow-hidden">
+        <div className="overflow-hidden">
           <div className="flex items-center gap-16 animate-marquee">
             {credentials.map((cred, i) => (
               <div key={i} className="flex-shrink-0">

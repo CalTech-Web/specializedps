@@ -6,17 +6,17 @@ import Image from "next/image";
 const categories = [
   {
     name: "Breast",
-    image: "/images/gallery-page/sps-building.jpg",
+    image: "/images/categories/breast.jpg",
     href: "/services/aesthetic-breast",
   },
   {
     name: "Face",
-    image: "/images/gallery-page/sps-building.jpg",
+    image: "/images/categories/face.jpg",
     href: "/services/face",
   },
   {
     name: "Body",
-    image: "/images/gallery-page/sps-building.jpg",
+    image: "/images/categories/body.jpg",
     href: "/services/body",
   },
   {
