@@ -19,21 +19,21 @@ export default function PopularProceduresTabs() {
 
         {/* Overlapping layout: image behind, text panel on top */}
         <div className="relative min-h-[500px] sm:min-h-[550px]">
-          {/* Background image — full width */}
-          <div className="absolute inset-0 overflow-hidden rounded-lg">
+          {/* Image — right 50% */}
+          <div className="absolute right-0 top-0 bottom-0 w-full overflow-hidden rounded-lg lg:w-[50%]">
             <Image
               key={active.id}
               src={active.image}
               alt={active.name}
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 1320px"
+              sizes="(max-width: 1024px) 100vw, 660px"
             />
           </div>
 
-          {/* Text panel overlapping on the left */}
+          {/* Text panel — left 60%, overlapping 10% over the image */}
           <div className="relative flex min-h-[500px] items-center sm:min-h-[550px]">
-            <div className="relative w-full p-6 sm:p-0 lg:w-[55%]">
+            <div className="relative w-full p-6 sm:p-0 lg:w-[60%]">
               <div className="relative overflow-hidden rounded-lg shadow-xl">
                 <div
                   className="absolute inset-0"
