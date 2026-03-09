@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   CreditCard,
@@ -230,11 +229,6 @@ export default function FinancingPage() {
           </div>
         </div>
       </section>
-
-      <CTABanner
-        heading="Questions About Financing?"
-        subtext="Our team is here to help you explore payment options and find the plan that works best for you."
-      />
     </>
   );
 }

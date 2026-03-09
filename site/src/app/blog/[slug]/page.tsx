@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts, getBlogPostBySlug } from "@/data/blog-posts";
-import CTABanner from "@/components/sections/CTABanner";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -162,8 +161,6 @@ export default async function BlogPostPage({ params }: PageProps) {
           </Link>
         </div>
       </section>
-
-      <CTABanner />
     </>
   );
 }

@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import { doctors } from "@/data/doctors";
 
 export const metadata: Metadata = {
@@ -331,9 +330,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* ───────── Final CTA ───────── */}
-      <CTABanner />
     </>
   );
 }

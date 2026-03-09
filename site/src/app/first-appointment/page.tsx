@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   CheckCircle,
@@ -178,11 +177,6 @@ export default function FirstAppointmentPage() {
           </p>
         </div>
       </section>
-
-      <CTABanner
-        heading="Ready to Schedule Your Consultation?"
-        subtext="Take the first step today. Our team will make sure you feel welcomed, informed, and confident from the moment you walk in."
-      />
     </>
   );
 }

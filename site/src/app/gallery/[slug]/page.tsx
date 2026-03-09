@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import GalleryAgeGate from "@/components/sections/GalleryAgeGate";
 import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
 import {
@@ -153,11 +152,6 @@ export default async function GalleryProcedurePage({ params }: Props) {
           </div>
         </section>
       </GalleryAgeGate>
-
-      <CTABanner
-        heading="Want to See What's Possible?"
-        subtext="Schedule a consultation to discuss your goals and view additional photos during your visit."
-      />
     </>
   );
 }

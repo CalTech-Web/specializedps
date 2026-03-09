@@ -3,7 +3,6 @@ import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQSection from "@/components/sections/FAQSection";
-import CTABanner from "@/components/sections/CTABanner";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -175,9 +174,6 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <FAQSection faqs={contactFaqs} />
-
-      {/* CTA Banner */}
-      <CTABanner />
     </>
   );
 }

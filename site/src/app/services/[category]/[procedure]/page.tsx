@@ -9,7 +9,6 @@ import {
 import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import { Phone, MapPin, CheckCircle, Images } from "lucide-react";
 
 interface PageProps {
@@ -267,9 +266,6 @@ export default async function ProcedurePage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <CTABanner />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   Apple,
@@ -270,11 +269,6 @@ export default function ERASPage() {
           </div>
         </div>
       </section>
-
-      <CTABanner
-        heading="Experience the ERAS Difference"
-        subtext="Schedule a consultation to learn how our enhanced recovery protocols can make your surgical experience safer and more comfortable."
-      />
     </>
   );
 }

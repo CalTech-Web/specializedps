@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   ShieldCheck,
@@ -266,11 +265,6 @@ export default function InsurancePage() {
           </div>
         </div>
       </section>
-
-      <CTABanner
-        heading="Need Help With Insurance?"
-        subtext="Our dedicated insurance team is ready to help verify your benefits and guide you through the process."
-      />
     </>
   );
 }

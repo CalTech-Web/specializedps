@@ -198,16 +198,22 @@ export default function Footer() {
           }}
         />
         <div className="relative mx-auto max-w-[1320px] px-6 text-center">
-          <p className="text-sm text-body/60">
-            &copy; 2026 Specialized Plastic Surgery | All Rights Reserved.
-            Designed by{" "}
+          <p className="flex items-center justify-center gap-1.5 text-sm text-body/60">
+            <span>&copy; 2026 Specialized Plastic Surgery | All Rights Reserved.</span>
+            <span>Designed by</span>
             <Link
               href="https://caltechweb.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-body/60 transition-colors hover:text-primary"
+              className="inline-flex items-center transition-opacity hover:opacity-70"
             >
-              CalTech Web
+              <Image
+                src="/images/logos/caltechweb-logo.png"
+                alt="CalTech Web"
+                width={100}
+                height={34}
+                className="h-5 w-auto"
+              />
             </Link>
           </p>
         </div>

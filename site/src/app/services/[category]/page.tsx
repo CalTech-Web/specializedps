@@ -8,7 +8,6 @@ import {
   type ProcedureCategory,
 } from "@/data/procedures";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -95,9 +94,6 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Bottom CTA */}
-      <CTABanner />
     </>
   );
 }

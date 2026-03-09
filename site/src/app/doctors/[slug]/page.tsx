@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
-import CTABanner from "@/components/sections/CTABanner";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Calendar, Quote, ChevronRight } from "lucide-react";
@@ -348,11 +347,6 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
           </div>
         </div>
       </section>
-
-      <CTABanner
-        heading={`Schedule a Consultation with ${doctor.name}`}
-        subtext="Take the first step toward achieving your goals. Contact our office to book a personalized consultation."
-      />
     </>
   );
 }

@@ -4,7 +4,6 @@ import { Award, Shield, UserCheck, ShieldCheck, Phone } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import DoctorCard from "@/components/sections/DoctorCard";
 import TestimonialSection from "@/components/sections/TestimonialSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { doctors } from "@/data/doctors";
 import { serviceCategories } from "@/data/procedures";
@@ -262,9 +261,6 @@ export default function HomePage() {
 
       {/* ───────── Testimonials ───────── */}
       <TestimonialSection />
-
-      {/* ───────── Final CTA ───────── */}
-      <CTABanner />
     </>
   );
 }

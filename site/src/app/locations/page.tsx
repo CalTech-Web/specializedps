@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock, Stethoscope } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/data/site";
 
@@ -151,9 +150,6 @@ export default function LocationsPage() {
           </div>
         </section>
       ))}
-
-      {/* CTA */}
-      <CTABanner />
     </>
   );
 }

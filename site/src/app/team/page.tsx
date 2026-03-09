@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import DoctorCard from "@/components/sections/DoctorCard";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { doctors } from "@/data/doctors";
 import Image from "next/image";
@@ -109,9 +108,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <CTABanner />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   Building2,
@@ -310,11 +309,6 @@ export default function TravelingPatientsPage() {
           </div>
         </div>
       </section>
-
-      <CTABanner
-        heading="Planning Your Visit From Out of Town?"
-        subtext="Contact our team to start planning your trip. We will help coordinate every detail so your experience is smooth and stress-free."
-      />
     </>
   );
 }
