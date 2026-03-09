@@ -6,8 +6,9 @@ const credentials = [
   { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", width: 140, height: 60 },
   { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", width: 120, height: 100 },
   { src: "/images/credentials/microsurgery.webp", alt: "American Society Reconstructive Microsurgery", width: 100, height: 100 },
-  { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", width: 100, height: 100 },
 ];
+
+const credentialsLoop = [...credentials, ...[...credentials].reverse()];
 
 export default function CredentialsBar() {
   return (
@@ -21,13 +22,13 @@ export default function CredentialsBar() {
         }}
       />
       <div className="relative mx-auto max-w-[1320px] px-6">
-        <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
+        <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
           Credentials You Can Trust:
         </p>
 
         <div className="overflow-hidden">
           <div className="flex items-center gap-16 animate-marquee">
-            {credentials.map((cred, i) => (
+            {credentialsLoop.map((cred, i) => (
               <div key={i} className="flex-shrink-0">
                 <Image
                   src={cred.src}
@@ -38,7 +39,7 @@ export default function CredentialsBar() {
                 />
               </div>
             ))}
-            {credentials.map((cred, i) => (
+            {credentialsLoop.map((cred, i) => (
               <div key={`dup-${i}`} className="flex-shrink-0">
                 <Image
                   src={cred.src}

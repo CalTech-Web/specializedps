@@ -21,7 +21,7 @@ const categories = [
   },
   {
     name: "Non-Surgical",
-    image: "/images/gallery-page/sps-building.jpg",
+    image: "/images/categories/non-surgical.jpg",
     href: "/contact",
   },
 ];

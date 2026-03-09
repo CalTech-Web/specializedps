@@ -39,12 +39,12 @@ export default function PopularProceduresTabs() {
                   className="absolute inset-0"
                   style={{
                     backgroundImage:
-                      "url('/images/procedures/tab-bg.jpg')",
+                      "url('/images/procedures/tab-panel-bg.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="relative bg-white/85 p-10 sm:p-14">
+                <div className="relative p-10 sm:p-14">
                   <h3 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
                     {active.name}
                   </h3>
