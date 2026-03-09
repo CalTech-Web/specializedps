@@ -8,8 +8,6 @@ const credentials = [
   { src: "/images/credentials/microsurgery.webp", alt: "American Society Reconstructive Microsurgery", width: 100, height: 100 },
 ];
 
-const credentialsLoop = [...credentials, ...[...credentials].reverse()];
-
 export default function CredentialsBar() {
   return (
     <section className="relative overflow-hidden py-10 sm:py-14">
@@ -25,32 +23,18 @@ export default function CredentialsBar() {
         <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
           Credentials You Can Trust:
         </p>
-
-        <div className="overflow-hidden">
-          <div className="flex items-center gap-16 animate-marquee">
-            {credentialsLoop.map((cred, i) => (
-              <div key={i} className="flex-shrink-0">
-                <Image
-                  src={cred.src}
-                  alt={cred.alt}
-                  width={cred.width}
-                  height={cred.height}
-                  className="h-16 w-auto sm:h-20"
-                />
-              </div>
-            ))}
-            {credentialsLoop.map((cred, i) => (
-              <div key={`dup-${i}`} className="flex-shrink-0">
-                <Image
-                  src={cred.src}
-                  alt={cred.alt}
-                  width={cred.width}
-                  height={cred.height}
-                  className="h-16 w-auto sm:h-20"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-wrap items-center justify-between gap-8">
+          {credentials.map((cred, i) => (
+            <div key={i}>
+              <Image
+                src={cred.src}
+                alt={cred.alt}
+                width={cred.width}
+                height={cred.height}
+                className="h-16 w-auto sm:h-20"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

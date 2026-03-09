@@ -74,7 +74,7 @@ export default function WhyChooseSection() {
           </div>
 
           {/* 2x2 grid with spacing for center logo */}
-          <div className="grid gap-x-28 gap-y-14 sm:grid-cols-2">
+          <div className="grid gap-x-40 gap-y-20 sm:grid-cols-2">
             {features.map((item) => {
               const Icon = item.icon;
               return (
