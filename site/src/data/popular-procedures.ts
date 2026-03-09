@@ -50,7 +50,7 @@ export const popularProcedures: PopularProcedure[] = [
     tabLabel: "Liposuction",
     description:
       "Liposuction at Specialized Plastic Surgery targets and removes stubborn fat deposits to sculpt and contour your body. Using advanced techniques, our skilled surgeons help refine areas such as the abdomen, hips, thighs, and more, giving you a smoother, more balanced silhouette and renewed confidence.",
-    image: "/images/gallery/liposuction/case1-after.jpg",
+    image: "/images/procedures/liposuction-tab.jpg",
     href: "/services/body/liposuction",
   },
   {

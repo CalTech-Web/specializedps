@@ -39,7 +39,7 @@ export default function PopularProceduresTabs() {
                   className="absolute inset-0"
                   style={{
                     backgroundImage:
-                      "url('/images/gallery-page/marble-bg.webp')",
+                      "url('/images/procedures/tab-bg.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
