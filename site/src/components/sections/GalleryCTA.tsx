@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function GalleryCTA() {
   return (
-    <section className="relative flex min-h-[500px] items-center overflow-hidden">
+    <section className="relative flex h-[500px] items-center overflow-hidden">
       {/* Background image */}
       <Image
         src="/images/procedures/consultation-bg.jpg"
@@ -15,8 +15,8 @@ export default function GalleryCTA() {
       <div className="absolute inset-0 bg-heading/40" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-end px-6 py-20">
-        <div className="max-w-xl">
+      <div className="relative z-10 ml-auto w-full max-w-[1320px] px-6 py-20">
+        <div className="ml-auto max-w-md">
           <p className="inline-block bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
             Photo Gallery
           </p>
