@@ -17,43 +17,49 @@ export default function PopularProceduresTabs() {
           Popular Procedures
         </h2>
 
-        <div className="grid min-h-[450px] overflow-hidden rounded-lg shadow-lg lg:grid-cols-2">
-          {/* Left: Text content */}
-          <div className="relative flex flex-col justify-center p-10 sm:p-14">
-            <div
-              className="absolute inset-0 opacity-15"
-              style={{
-                backgroundImage:
-                  "url('/images/gallery-page/marble-bg.webp')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-            <div className="relative">
-              <h3 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
-                {active.name}
-              </h3>
-              <p className="mt-6 text-sm leading-relaxed text-body">
-                {active.description}
-              </p>
-              <Link
-                href={active.href}
-                className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-heading transition-all hover:bg-heading hover:text-white"
-              >
-                View Details
-              </Link>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div className="relative hidden min-h-[400px] lg:block">
+        {/* Overlapping layout: image behind, text panel on top */}
+        <div className="relative min-h-[500px] sm:min-h-[550px]">
+          {/* Background image — full width */}
+          <div className="absolute inset-0 overflow-hidden rounded-lg">
             <Image
+              key={active.id}
               src={active.image}
               alt={active.name}
               fill
               className="object-cover"
-              sizes="50vw"
+              sizes="(max-width: 1024px) 100vw, 1320px"
             />
+          </div>
+
+          {/* Text panel overlapping on the left */}
+          <div className="relative flex min-h-[500px] items-center sm:min-h-[550px]">
+            <div className="relative w-full p-6 sm:p-0 lg:w-[55%]">
+              <div className="relative overflow-hidden rounded-lg shadow-xl">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage:
+                      "url('/images/gallery-page/marble-bg.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
+                <div className="relative bg-white/85 p-10 sm:p-14">
+                  <h3 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+                    {active.name}
+                  </h3>
+                  <p className="mt-6 text-sm leading-relaxed text-body">
+                    {active.description}
+                  </p>
+                  <Link
+                    href={active.href}
+                    className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-heading transition-all hover:bg-heading hover:text-white"
+                  >
+                    View Details
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

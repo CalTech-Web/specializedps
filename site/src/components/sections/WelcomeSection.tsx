@@ -1,9 +1,30 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function WelcomeSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowH = window.innerHeight;
+      if (rect.bottom > 0 && rect.top < windowH) {
+        const progress = (windowH - rect.top) / (windowH + rect.height);
+        setOffset((progress - 0.5) * 80);
+      }
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden py-20 sm:py-24">
+    <section ref={sectionRef} className="relative overflow-hidden py-20 sm:py-24">
       <div
         className="absolute inset-0 opacity-20"
         style={{
@@ -12,18 +33,25 @@ export default function WelcomeSection() {
           backgroundPosition: "center",
         }}
       />
-      <div className="relative mx-auto grid max-w-[1320px] items-center gap-12 px-6 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-[1320px] items-center px-6 lg:grid-cols-2" style={{ gap: "200px" }}>
+        {/* Left: Building image with parallax */}
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
-          <Image
-            src="/images/gallery-page/sps-center.jpg"
-            alt="Specialized Plastic Surgery Center"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
-          />
+          <div
+            className="absolute inset-0"
+            style={{ transform: `translateY(${offset}px)` }}
+          >
+            <Image
+              src="/images/gallery-page/sps-building.jpg"
+              alt="Specialized Plastic Surgery Center"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+          </div>
         </div>
 
+        {/* Right: Text content */}
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Welcome to Specialized Plastic Surgery

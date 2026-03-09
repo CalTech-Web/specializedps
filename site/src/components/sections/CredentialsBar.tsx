@@ -20,22 +20,38 @@ export default function CredentialsBar() {
           backgroundPosition: "center",
         }}
       />
-      <div className="relative mx-auto max-w-[1320px] px-6">
-        <p className="mb-8 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
+      <div className="relative mx-auto flex max-w-[1320px] items-center gap-10 px-6">
+        {/* Left: Label */}
+        <p className="flex-shrink-0 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
           Credentials You Can Trust:
         </p>
-        <div className="flex flex-wrap items-center justify-between gap-8">
-          {credentials.map((cred, i) => (
-            <div key={i} className="flex-shrink-0">
-              <Image
-                src={cred.src}
-                alt={cred.alt}
-                width={cred.width}
-                height={cred.height}
-                className="h-16 w-auto opacity-70 grayscale sm:h-20"
-              />
-            </div>
-          ))}
+
+        {/* Right: Scrolling logos */}
+        <div className="min-w-0 flex-1 overflow-hidden">
+          <div className="flex items-center gap-16 animate-marquee">
+            {credentials.map((cred, i) => (
+              <div key={i} className="flex-shrink-0">
+                <Image
+                  src={cred.src}
+                  alt={cred.alt}
+                  width={cred.width}
+                  height={cred.height}
+                  className="h-16 w-auto sm:h-20"
+                />
+              </div>
+            ))}
+            {credentials.map((cred, i) => (
+              <div key={`dup-${i}`} className="flex-shrink-0">
+                <Image
+                  src={cred.src}
+                  alt={cred.alt}
+                  width={cred.width}
+                  height={cred.height}
+                  className="h-16 w-auto sm:h-20"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

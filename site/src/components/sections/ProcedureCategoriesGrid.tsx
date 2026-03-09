@@ -6,22 +6,22 @@ import Image from "next/image";
 const categories = [
   {
     name: "Breast",
-    image: "/images/gallery-page/breast.webp",
+    image: "/images/gallery-page/sps-building.jpg",
     href: "/services/aesthetic-breast",
   },
   {
     name: "Face",
-    image: "/images/gallery-page/face.jpg",
+    image: "/images/gallery-page/sps-building.jpg",
     href: "/services/face",
   },
   {
     name: "Body",
-    image: "/images/gallery-page/body.jpg",
+    image: "/images/gallery-page/sps-building.jpg",
     href: "/services/body",
   },
   {
     name: "Non-Surgical",
-    image: "/images/gallery-page/footer-cta.jpg",
+    image: "/images/gallery-page/sps-building.jpg",
     href: "/contact",
   },
 ];
