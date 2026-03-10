@@ -8,6 +8,7 @@ export const navigation: NavItem[] = [
   { label: "Home", href: "/" },
   {
     label: "Doctors",
+    href: "/doctors",
     children: [
       { label: "Dr. Chris Devulapalli", href: "/doctors/chris-devulapalli" },
       { label: "Dr. Michael Sosin", href: "/doctors/michael-sosin" },
@@ -15,6 +16,7 @@ export const navigation: NavItem[] = [
   },
   {
     label: "Locations",
+    href: "/locations",
     children: [
       { label: "New Jersey", href: "/locations#nj" },
       { label: "New York", href: "/locations#ny" },
@@ -22,6 +24,7 @@ export const navigation: NavItem[] = [
   },
   {
     label: "About Us",
+    href: "/about",
     children: [
       { label: "Our Team", href: "/team" },
       { label: "Financing", href: "/financing" },
