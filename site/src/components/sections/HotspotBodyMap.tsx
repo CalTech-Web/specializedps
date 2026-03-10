@@ -38,10 +38,12 @@ export default function HotspotBodyMap() {
               }}
               title={spot.label}
             >
-              {/* Pulse ring */}
-              <span className="absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/40 animate-hotspot-pulse" />
-              {/* Dot */}
-              <span className="relative block h-4 w-4 rounded-full border-2 border-white bg-primary shadow-lg transition-transform group-hover:scale-125" />
+              <span className="relative flex h-4 w-4 items-center justify-center">
+                {/* Pulse ring */}
+                <span className="absolute h-4 w-4 rounded-full bg-primary/40 animate-hotspot-pulse" />
+                {/* Dot */}
+                <span className="relative block h-4 w-4 rounded-full border-2 border-white bg-primary shadow-lg transition-transform group-hover:scale-125" />
+              </span>
               {/* Label tooltip */}
               <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-heading px-2 py-1 text-xs font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">
                 {spot.label}
