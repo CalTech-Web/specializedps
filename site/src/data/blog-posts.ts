@@ -27,6 +27,7 @@ export function getFeaturedImage(post: BlogPost): string {
 export const blogPosts: BlogPost[] = [
   {
     slug: "silicone-vs-saline-breast-implants",
+    featuredImage: "/images/blog/silicone-vs-saline.jpg",
     title: "Silicone vs Saline Breast Implants: Which Is Right for You?",
     date: "2026-02-24",
     excerpt:
@@ -60,6 +61,7 @@ Dr. Devulapalli evaluates tissue thickness, chest width, existing breast volume,
   },
   {
     slug: "how-long-do-breast-implants-last",
+    featuredImage: "/images/blog/how-long-implants-last.jpg",
     title: "How Long Do Breast Implants Last?",
     date: "2026-02-24",
     excerpt:
@@ -91,6 +93,7 @@ Schedule a consultation if you have concerns about your current implants.`,
   },
   {
     slug: "do-i-need-a-breast-lift-with-implants",
+    featuredImage: "/images/blog/breast-lift-with-implants.jpg",
     title: "Do I Need a Breast Lift with Implants?",
     date: "2026-02-24",
     excerpt:
@@ -127,6 +130,7 @@ During your consultation, your surgeon will assess your anatomy and recommend th
   },
   {
     slug: "what-size-breast-implants-should-i-get",
+    featuredImage: "/images/blog/what-size-implants.jpg",
     title: "What Size Breast Implants Should I Get?",
     date: "2026-02-24",
     excerpt:
@@ -158,6 +162,7 @@ Your surgeon will guide you through sizing during your consultation, using measu
   },
   {
     slug: "round-vs-teardrop-breast-implants",
+    featuredImage: "/images/blog/round-vs-teardrop.jpg",
     title: "Round vs Teardrop Breast Implants: Which Shape Is Right?",
     date: "2026-02-24",
     excerpt:
@@ -181,6 +186,7 @@ Your surgeon will recommend the best option based on your anatomy, goals, and ti
   },
   {
     slug: "over-vs-under-muscle-breast-implants",
+    featuredImage: "/images/blog/over-vs-under-muscle.jpg",
     title: "Over vs Under Muscle Breast Implants: Placement Options Explained",
     date: "2026-02-24",
     excerpt:
@@ -204,6 +210,7 @@ Your surgeon will recommend the best placement based on your tissue thickness, i
   },
   {
     slug: "breast-augmentation-westchester-ny",
+    featuredImage: "/images/blog/breast-aug-westchester.jpg",
     title: "Breast Augmentation in Westchester, NY",
     date: "2026-02-21",
     excerpt:
@@ -227,6 +234,7 @@ Schedule a consultation to discuss your breast augmentation goals with Dr. Devul
   },
   {
     slug: "bbl-in-westchester-ny",
+    featuredImage: "/images/blog/bbl-westchester.jpg",
     title: "BBL in Westchester, NY: Your Guide to Brazilian Butt Lift",
     date: "2026-02-17",
     excerpt:
@@ -256,6 +264,7 @@ Contact us to learn more about BBL options at our Westchester office.`,
   },
   {
     slug: "lipo-360-in-westchester-ny",
+    featuredImage: "/images/blog/lipo-360-westchester.jpg",
     title: "Lipo 360 in Westchester, NY: Complete Midsection Sculpting",
     date: "2026-02-11",
     excerpt:
@@ -285,6 +294,7 @@ Lipo 360 is not simply fat removal. It is advanced, artistic body contouring tha
   },
   {
     slug: "chin-liposuction-in-westchester-ny",
+    featuredImage: "/images/blog/chin-lipo-westchester.jpg",
     title: "Chin Liposuction in Westchester, NY: Permanent Double Chin Removal",
     date: "2026-02-11",
     excerpt:
@@ -308,6 +318,7 @@ Schedule a consultation with Dr. Devulapalli at our Westchester office.`,
   },
   {
     slug: "holiday-season-plastic-surgery",
+    featuredImage: "/images/blog/holiday-season.jpeg",
     title: "Why the Holiday Season Is the Perfect Time for Plastic Surgery",
     date: "2025-12-17",
     excerpt:
@@ -335,6 +346,7 @@ Start the new year with renewed confidence. Contact us to schedule your consulta
   },
   {
     slug: "breast-cancer-awareness-month-recap",
+    featuredImage: "/images/blog/breast-cancer-recap.jpg",
     title: "Breast Cancer Awareness Month Recap",
     date: "2025-10-27",
     excerpt:
@@ -354,6 +366,7 @@ Contact us to learn about your options.`,
   },
   {
     slug: "blepharoplasty-in-westchester-ny",
+    featuredImage: "/images/blog/blepharoplasty-westchester.jpg",
     title: "Blepharoplasty in Westchester, NY: Refresh Your Look",
     date: "2025-09-01",
     excerpt:
@@ -382,6 +395,7 @@ $4,500 to $10,000 depending on the extent of surgery, covering surgeon fees, ane
   },
   {
     slug: "summer-confidence-boost",
+    featuredImage: "/images/blog/summer-confidence.jpg",
     title: "Summer Confidence Boost: Top Procedures for the Season",
     date: "2025-07-01",
     excerpt:
@@ -409,6 +423,7 @@ Contact us to discuss which procedures can help you achieve your summer goals.`,
   },
   {
     slug: "breast-reduction-covered-by-insurance",
+    featuredImage: "/images/blog/breast-reduction-insurance.jpg",
     title: "Breast Reduction Covered by Insurance: What You Need to Know",
     date: "2025-06-01",
     excerpt:
@@ -441,6 +456,7 @@ If insurance denies coverage, we offer flexible financing options through CareCr
   },
   {
     slug: "introducing-motiva-implants",
+    featuredImage: "/images/blog/motiva-implants.jpg",
     title: "Introducing Motiva: The Pinnacle of Breast Implant Innovation",
     date: "2025-05-01",
     excerpt:
@@ -470,6 +486,7 @@ Ask about Motiva during your consultation.`,
   },
   {
     slug: "summer-ready-plastic-surgery",
+    featuredImage: "/images/blog/summer-ready.jpg",
     title: "Summer-Ready: Why Now Is the Best Time for a Tummy Tuck, Liposuction, or Breast Augmentation",
     date: "2025-04-01",
     excerpt:
@@ -493,6 +510,7 @@ Plan your procedure now and be fully healed for fall events and holiday photos.`
   },
   {
     slug: "meet-the-experts",
+    featuredImage: "/images/blog/meet-the-experts.jpg",
     title: "Meet the Experts Behind Specialized Plastic Surgery",
     date: "2025-03-01",
     excerpt:
@@ -516,6 +534,7 @@ Schedule a consultation at either our NJ or NY location.`,
   },
   {
     slug: "restoring-what-matters",
+    featuredImage: "/images/blog/restoring-what-matters.jpg",
     title: "Restoring What Matters: Sensation Recovery with Resensation",
     date: "2025-02-01",
     excerpt:
@@ -541,6 +560,7 @@ If you are considering breast reconstruction or are unhappy with your current re
   },
   {
     slug: "a-mommy-makeover",
+    featuredImage: "/images/blog/mommy-makeover.jpg",
     title: "A Mommy Makeover: What Procedures Are Involved?",
     date: "2024-12-13",
     excerpt:
@@ -572,6 +592,7 @@ Contact us to discuss your mommy makeover goals.`,
   },
   {
     slug: "celebrating-breast-cancer-awareness-month",
+    featuredImage: "/images/blog/celebrating-awareness.jpg",
     title: "Celebrating Breast Cancer Awareness Month",
     date: "2024-10-01",
     excerpt:
@@ -596,6 +617,7 @@ At Specialized Plastic Surgery, we are dedicated to supporting breast cancer pat
   },
   {
     slug: "wrapping-up-breast-cancer-awareness-month",
+    featuredImage: "/images/blog/wrapping-up-awareness.jpg",
     title: "Wrapping Up Breast Cancer Awareness Month",
     date: "2024-10-31",
     excerpt:
@@ -619,6 +641,7 @@ Thank you to everyone who participated in making this October a month of awarene
   },
   {
     slug: "breast-augmentation-with-lift-harrison-ny",
+    featuredImage: "/images/blog/aug-lift-harrison.jpg",
     title: "Breast Augmentation with Lift (Mastopexy) in Harrison, NY",
     date: "2024-09-01",
     excerpt:
@@ -642,6 +665,7 @@ Schedule a consultation at our Harrison, NY office to learn more.`,
   },
   {
     slug: "dual-plane-technique-explained",
+    featuredImage: "/images/blog/dual-plane-explained.png",
     title: "Breast Augmentation with Lift: The Dual Plane Technique",
     date: "2024-08-01",
     excerpt:
@@ -668,6 +692,7 @@ Consult with Dr. Devulapalli to learn if the dual plane technique is right for y
   },
   {
     slug: "high-profile-implants-dual-plane",
+    featuredImage: "/images/blog/high-profile-dual-plane.jpg",
     title: "High Profile Breast Implants with the Dual Plane Technique",
     date: "2024-07-01",
     excerpt:
@@ -695,6 +720,7 @@ Schedule a consultation at our Westchester office.`,
   },
   {
     slug: "breast-implant-removal-lift-fat-grafting",
+    featuredImage: "/images/blog/implant-removal-lift.jpg",
     title: "Breast Implant Removal with Lift and Fat Grafting",
     date: "2024-06-01",
     excerpt:
