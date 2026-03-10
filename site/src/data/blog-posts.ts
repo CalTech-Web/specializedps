@@ -5,6 +5,23 @@ export interface BlogPost {
   excerpt: string;
   category: string;
   content: string;
+  featuredImage?: string;
+}
+
+/** Map categories to default featured images */
+const categoryImages: Record<string, string> = {
+  "Breast Augmentation": "/images/categories/breast.jpg",
+  "Breast": "/images/categories/breast.jpg",
+  "Breast Reconstruction": "/images/categories/breast.jpg",
+  "Body Contouring": "/images/categories/body.jpg",
+  "Face": "/images/categories/face.jpg",
+  "General": "/images/hero/about-hero.jpg",
+  "Community": "/images/hero/team-hero.jpg",
+  "About": "/images/hero/team-hero.jpg",
+};
+
+export function getFeaturedImage(post: BlogPost): string {
+  return post.featuredImage || categoryImages[post.category] || "/images/hero/about-hero.jpg";
 }
 
 export const blogPosts: BlogPost[] = [

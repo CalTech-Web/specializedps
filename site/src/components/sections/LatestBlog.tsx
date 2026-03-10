@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { blogPosts } from "@/data/blog-posts";
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
+import { blogPosts, getFeaturedImage } from "@/data/blog-posts";
 
 export default function LatestBlog() {
   const latest = [...blogPosts]
@@ -26,8 +26,13 @@ export default function LatestBlog() {
               href={`/blog/${post.slug}`}
               className="group overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex h-48 items-center justify-center bg-cream">
-                <BookOpen className="h-12 w-12 text-primary/30" />
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={getFeaturedImage(post)}
+                  alt={post.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="p-6">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">

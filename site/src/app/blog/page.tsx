@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/data/blog-posts";
+import Image from "next/image";
+import { blogPosts, getFeaturedImage } from "@/data/blog-posts";
 import HeroSection from "@/components/sections/HeroSection";
 
 export const metadata: Metadata = {
@@ -39,23 +40,14 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-secondary bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
               >
-                {/* Image placeholder */}
-                <div className="flex h-48 items-center justify-center bg-heading">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#CD5F37"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="opacity-50"
-                  >
-                    <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                    <circle cx="12" cy="13" r="3" />
-                  </svg>
+                {/* Featured image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={getFeaturedImage(post)}
+                    alt={post.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
