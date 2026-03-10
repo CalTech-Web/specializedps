@@ -156,9 +156,9 @@ export default function Header() {
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <button
+                  <Link
+                    href={item.href!}
                     className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
-                    aria-expanded={activeDropdown === item.label}
                   >
                     {item.label}
                     <ChevronDown
@@ -166,7 +166,7 @@ export default function Header() {
                         activeDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
-                  </button>
+                  </Link>
 
                   <div
                     className={`absolute left-1/2 top-full z-50 w-[750px] -translate-x-1/2 pt-0 transition-all duration-200 ${

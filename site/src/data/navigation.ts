@@ -51,6 +51,7 @@ export const navigation: NavItem[] = [
   },
   {
     label: "Services",
+    href: "/services",
     children: [
       {
         label: "Face",
@@ -103,6 +104,6 @@ export const navigation: NavItem[] = [
       },
     ],
   },
-  { label: "Educational Resources", href: "/blog" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
 ];
