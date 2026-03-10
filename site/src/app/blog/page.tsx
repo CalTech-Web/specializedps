@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { blogPosts, getFeaturedImage } from "@/data/blog-posts";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Educational Resources | Specialized Plastic Surgery",
   description:
     "Read the latest articles on plastic surgery, breast reconstruction, body contouring, and aesthetic procedures from Specialized Plastic Surgery.",
 };
@@ -27,20 +29,23 @@ export default function BlogPage() {
   return (
     <>
       <HeroSection
-        title="Blog"
+        title="Educational Resources"
         subtitle="Insights, education, and updates from our board-certified plastic surgeons on the latest in aesthetic and reconstructive surgery."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Educational Resources" },
+        ]}
       />
 
-      <section className="bg-peach-light py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {sortedPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-secondary bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                {/* Featured image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={getFeaturedImage(post)}
@@ -51,44 +56,25 @@ export default function BlogPage() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  {/* Category badge */}
-                  <span className="inline-block w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  <span className="inline-block w-fit rounded-sm bg-primary/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
                     {post.category}
                   </span>
 
-                  {/* Title */}
                   <h2 className="font-heading mt-3 text-lg font-bold text-heading transition-colors group-hover:text-primary">
                     {post.title}
                   </h2>
 
-                  {/* Date */}
-                  <p className="mt-2 text-sm text-body">
+                  <p className="mt-2 text-sm text-body/60">
                     {formatDate(post.date)}
                   </p>
 
-                  {/* Excerpt */}
                   <p className="mt-3 line-clamp-3 flex-1 text-sm leading-relaxed text-body">
                     {post.excerpt}
                   </p>
 
-                  {/* Read more */}
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors group-hover:text-heading">
                     Read More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transition-transform group-hover:translate-x-0.5"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="m12 5 7 7-7 7" />
-                    </svg>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </Link>
@@ -96,6 +82,8 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

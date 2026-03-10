@@ -100,6 +100,6 @@ export const navigation: NavItem[] = [
       },
     ],
   },
-  { label: "Blog", href: "/blog" },
+  { label: "Educational Resources", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
 ];
