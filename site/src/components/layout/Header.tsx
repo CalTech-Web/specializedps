@@ -173,27 +173,27 @@ export default function Header() {
                         : "invisible -translate-y-2 opacity-0"
                     }`}
                   >
-                    <div className="rounded-b-md bg-white p-6 shadow-xl">
-                      <div className="grid grid-cols-4 gap-6">
+                    <div className="overflow-hidden rounded-b-lg bg-white shadow-xl ring-1 ring-black/5">
+                      <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                      <div className="grid grid-cols-4 gap-6 p-6">
                         {item.children!.map((category) => (
                           <div key={category.label}>
                             <Link
                               href={category.href || "#"}
-                              className="mb-3 block text-[13px] font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary"
+                              className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary"
                             >
+                              <span className="h-1 w-1 rounded-full bg-primary" />
                               {category.label}
                             </Link>
-                            <ul className="space-y-1.5">
+                            <ul className="space-y-0.5">
                               {category.children?.map((procedure) => (
                                 <li key={procedure.label}>
                                   <Link
                                     href={procedure.href!}
-                                    className="group flex items-center gap-1 text-[13px] text-body transition-all hover:text-primary"
+                                    className="group flex items-center gap-2 rounded px-2 py-1.5 text-[13px] text-body transition-all hover:bg-warm-grey hover:text-primary"
                                   >
-                                    <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
-                                    <span className="transition-transform duration-200 group-hover:translate-x-1">
-                                      {procedure.label}
-                                    </span>
+                                    <ChevronRight className="h-3 w-3 text-primary/0 transition-all duration-200 group-hover:text-primary" />
+                                    {procedure.label}
                                   </Link>
                                 </li>
                               ))}
@@ -207,7 +207,10 @@ export default function Header() {
               );
             }
 
-            // Simple dropdown items
+            // Gallery uses a wider 2-column layout
+            const isGallery = item.label === "Gallery";
+
+            // Standard dropdown items
             return (
               <div
                 key={item.label}
@@ -242,25 +245,26 @@ export default function Header() {
                 )}
 
                 <div
-                  className={`absolute left-0 top-full z-50 pt-0 transition-all duration-200 ${
+                  className={`absolute ${isGallery ? "right-0" : "left-0"} top-full z-50 pt-0 transition-all duration-200 ${
                     activeDropdown === item.label
                       ? "visible translate-y-0 opacity-100"
                       : "invisible -translate-y-2 opacity-0"
                   }`}
                 >
-                  <div className="w-[220px] rounded-b-md bg-white py-2 shadow-xl">
-                    {item.children!.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href!}
-                        className="group flex items-center gap-1 px-4 py-2.5 text-[13px] text-body transition-all hover:text-primary"
-                      >
-                        <ChevronRight className="h-3 w-3 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-primary" />
-                        <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  <div className={`overflow-hidden rounded-b-lg bg-white shadow-xl ring-1 ring-black/5 ${isGallery ? "w-[420px]" : "w-[240px]"}`}>
+                    <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                    <div className={`p-3 ${isGallery ? "grid grid-cols-2 gap-x-1" : ""}`}>
+                      {item.children!.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href!}
+                          className="group flex items-center gap-2 rounded px-3 py-2.5 text-[13px] text-body transition-all hover:bg-warm-grey hover:text-primary"
+                        >
+                          <ChevronRight className="h-3 w-3 text-primary/0 transition-all duration-200 group-hover:text-primary" />
                           {child.label}
-                        </span>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
