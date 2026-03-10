@@ -40,7 +40,7 @@ export default function BeforeAfterDragSlider() {
   );
 
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
         <div className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">

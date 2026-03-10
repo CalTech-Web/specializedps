@@ -24,7 +24,7 @@ export default function WelcomeSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden py-20 sm:py-24">
+    <section ref={sectionRef} className="relative overflow-hidden py-14 sm:py-16">
       <div
         className="absolute inset-0 opacity-20"
         style={{
@@ -33,7 +33,7 @@ export default function WelcomeSection() {
           backgroundPosition: "center",
         }}
       />
-      <div className="relative mx-auto grid max-w-[1320px] items-center px-6 lg:grid-cols-2" style={{ gap: "200px" }}>
+      <div className="relative mx-auto grid max-w-[1320px] items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
         {/* Left: Building image with parallax */}
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
           <div

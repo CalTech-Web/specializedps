@@ -10,7 +10,7 @@ const credentials = [
 
 export default function CredentialsBar() {
   return (
-    <section className="relative overflow-hidden py-10 sm:py-14">
+    <section className="relative overflow-hidden py-8 sm:py-10">
       <div
         className="absolute inset-0 opacity-20"
         style={{

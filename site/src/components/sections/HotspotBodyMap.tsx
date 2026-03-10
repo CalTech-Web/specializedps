@@ -6,7 +6,7 @@ import { bodyHotspots } from "@/data/hotspots";
 
 export default function HotspotBodyMap() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20">
+    <section className="relative overflow-hidden py-14 sm:py-16">
       <div
         className="absolute inset-0 opacity-20"
         style={{

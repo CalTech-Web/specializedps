@@ -8,9 +8,9 @@ export default function LatestBlog() {
     .slice(0, 3);
 
   return (
-    <section className="bg-blog-bg py-16 sm:py-20">
+    <section className="bg-blog-bg py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
-        <div className="mb-10 text-center">
+        <div className="mb-8 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             From Our Blog
           </p>

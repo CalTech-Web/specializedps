@@ -46,7 +46,7 @@ export default function Footer() {
       </div>
 
       {/* ============ Instagram Photo Strip ============ */}
-      <div className="mt-8 grid grid-cols-3 sm:grid-cols-6">
+      <div className="grid grid-cols-3 sm:grid-cols-6">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i} className="relative aspect-square overflow-hidden">
             <Image
@@ -61,7 +61,7 @@ export default function Footer() {
       </div>
 
       {/* ============ Footer Bottom: Maps & Locations ============ */}
-      <div className="relative overflow-hidden bg-white py-12">
+      <div className="relative overflow-hidden bg-white py-10">
         <div
           className="absolute inset-0 opacity-20"
           style={{

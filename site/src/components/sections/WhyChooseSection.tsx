@@ -30,7 +30,7 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="relative bg-heading py-20 sm:py-28">
+    <section className="relative bg-heading py-14 sm:py-16">
       {/* Subtle pattern overlay */}
       <div
         className="absolute inset-0 opacity-5"
@@ -58,7 +58,7 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Features 2x2 grid with center logo */}
-        <div className="relative mt-16 lg:mt-20">
+        <div className="relative mt-10 lg:mt-12">
           {/* Center logo — absolutely positioned */}
           <div className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 lg:flex items-center justify-center">
             <div className="flex items-center justify-center rounded-full border border-white/[0.08] bg-heading px-10 py-6 shadow-[0_0_100px_rgba(201,169,110,0.1)]">
@@ -101,7 +101,7 @@ export default function WhyChooseSection() {
         </div>
 
         {/* Decorative bottom line */}
-        <div className="mx-auto mt-16 h-px w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        <div className="mx-auto mt-10 h-px w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       </div>
     </section>
   );

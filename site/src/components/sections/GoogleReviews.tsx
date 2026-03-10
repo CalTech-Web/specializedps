@@ -50,7 +50,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function GoogleReviews() {
   return (
-    <section className="bg-warm-grey py-16 sm:py-20">
+    <section className="bg-warm-grey py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           {doctorReviews.map((doc) => (

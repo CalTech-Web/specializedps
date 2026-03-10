@@ -4,9 +4,9 @@ import { doctors } from "@/data/doctors";
 
 export default function DoctorsShowcase() {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
-        <h2 className="mb-10 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl">
+        <h2 className="mb-8 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl">
           Meet Our Doctors
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
