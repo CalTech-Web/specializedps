@@ -25,6 +25,7 @@ export default function InsurancePage() {
       <HeroSection
         title="Insurance Information"
         subtitle="Our dedicated team helps you navigate insurance coverage so you can focus on your care and recovery."
+        backgroundImage="/images/hero/SPS-Image-127.jpg"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Insurance" }]}
       />
 

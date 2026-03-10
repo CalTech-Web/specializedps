@@ -119,6 +119,7 @@ export default function FirstAppointmentPage() {
       <HeroSection
         title="Preparing for Your First Appointment"
         subtitle="Your consultation is the first step toward achieving your goals. Here is how to make the most of your visit."
+        backgroundImage="/images/hero/SPS-Image-130.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Patient Resources", href: "/patient-resources" },

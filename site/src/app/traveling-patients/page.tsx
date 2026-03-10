@@ -27,6 +27,7 @@ export default function TravelingPatientsPage() {
       <HeroSection
         title="Traveling Patients"
         subtitle="We welcome patients from across the country and are here to make your experience as seamless and comfortable as possible."
+        backgroundImage="/images/hero/SPS-Image-116.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Traveling Patients" },

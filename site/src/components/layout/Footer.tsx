@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import AppointmentButton from "@/components/ui/AppointmentButton";
 
 export default function Footer() {
   const { nj, ny } = siteConfig.locations;
@@ -36,12 +37,11 @@ export default function Footer() {
             first step towards a confident, revitalized you. Your transformation
             starts here.
           </p>
-          <Link
-            href="/contact"
+          <AppointmentButton
             className="mt-8 inline-block rounded-md border-2 border-white bg-transparent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-heading"
           >
             Request an Appointment
-          </Link>
+          </AppointmentButton>
         </div>
       </div>
 

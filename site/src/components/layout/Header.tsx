@@ -6,8 +6,10 @@ import Image from "next/image";
 import { Menu, X, ChevronDown, Phone, ChevronRight } from "lucide-react";
 import { navigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
+import { useAppointmentModal } from "@/components/sections/AppointmentModal";
 
 export default function Header() {
+  const { open: openAppointment } = useAppointmentModal();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -106,12 +108,12 @@ export default function Header() {
 
           {/* Right: CTA Button */}
           <div className="hidden lg:block">
-            <Link
-              href="/contact"
+            <button
+              onClick={() => openAppointment()}
               className="inline-block border border-white/60 px-6 py-2.5 text-[12px] font-bold uppercase tracking-[0.15em] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
             >
               Request an Appointment
-            </Link>
+            </button>
           </div>
 
           {/* Mobile: Hamburger */}
@@ -415,13 +417,12 @@ export default function Header() {
         </nav>
 
         <div className="border-t border-gray-100 px-6 py-5">
-          <Link
-            href="/contact"
-            onClick={closeMobile}
+          <button
+            onClick={() => { closeMobile(); openAppointment(); }}
             className="flex w-full items-center justify-center rounded-md bg-primary px-6 py-3.5 font-sans text-[15px] font-semibold text-white transition-colors hover:bg-primary/90"
           >
             Request an Appointment
-          </Link>
+          </button>
         </div>
       </div>
     </>

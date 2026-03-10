@@ -31,6 +31,7 @@ export default function BlogPage() {
       <HeroSection
         title="Educational Resources"
         subtitle="Insights, education, and updates from our board-certified plastic surgeons on the latest in aesthetic and reconstructive surgery."
+        backgroundImage="/images/hero/SPS-Image-115.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Educational Resources" },

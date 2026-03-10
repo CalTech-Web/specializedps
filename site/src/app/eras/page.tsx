@@ -26,6 +26,7 @@ export default function ERASPage() {
       <HeroSection
         title="Enhanced Recovery After Surgery"
         subtitle="A patient-centered, evidence-based approach to surgical care that helps you heal faster, feel better, and return to your life sooner."
+        backgroundImage="/images/hero/SPS-Image-131.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "ERAS" },

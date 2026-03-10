@@ -13,8 +13,14 @@ import { X } from "lucide-react";
 /* ------------------------------------------------------------------ */
 /*  Context so any button in the tree can open the modal               */
 /* ------------------------------------------------------------------ */
+export interface DoctorPreset {
+  doctor: string;
+  location: string;
+  recipientEmail: string;
+}
+
 interface AppointmentModalContextValue {
-  open: () => void;
+  open: (preset?: DoctorPreset) => void;
   close: () => void;
 }
 
@@ -52,14 +58,21 @@ const modalSelectClasses =
 
 export function AppointmentModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [preset, setPreset] = useState<DoctorPreset | undefined>();
 
-  const open = useCallback(() => setIsOpen(true), []);
-  const close = useCallback(() => setIsOpen(false), []);
+  const open = useCallback((p?: DoctorPreset) => {
+    setPreset(p);
+    setIsOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setIsOpen(false);
+    setPreset(undefined);
+  }, []);
 
   return (
     <AppointmentModalContext.Provider value={{ open, close }}>
       {children}
-      {isOpen && <AppointmentModalOverlay onClose={close} />}
+      {isOpen && <AppointmentModalOverlay onClose={close} preset={preset} />}
     </AppointmentModalContext.Provider>
   );
 }
@@ -67,10 +80,10 @@ export function AppointmentModalProvider({ children }: { children: ReactNode }) 
 /* ------------------------------------------------------------------ */
 /*  Modal overlay + form                                               */
 /* ------------------------------------------------------------------ */
-function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
+function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; preset?: DoctorPreset }) {
   const [formData, setFormData] = useState<FormData>({
-    location: "",
-    doctor: "",
+    location: preset?.location ?? "",
+    doctor: preset?.doctor ?? "",
     name: "",
     phone: "",
     email: "",
@@ -101,10 +114,14 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
     setStatus("submitting");
 
     try {
+      const payload: Record<string, string> = { site_id: SITE_ID, ...formData };
+      if (preset?.recipientEmail) {
+        payload.recipientEmail = preset.recipientEmail;
+      }
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: SITE_ID, ...formData }),
+        body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");
@@ -132,7 +149,7 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
         </button>
 
         <h2 className="font-heading text-2xl font-bold text-heading">
-          Request an Appointment
+          {preset ? `Book with ${preset.doctor}` : "Request an Appointment"}
         </h2>
         <p className="mt-1 text-sm text-body">
           Fill out the form below and our team will reach out to confirm your appointment.
@@ -154,43 +171,46 @@ function AppointmentModalOverlay({ onClose }: { onClose: () => void }) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
-            {/* Location */}
-            <div>
-              <label htmlFor="modal-location" className="block text-sm font-medium text-heading mb-1.5">
-                Location
-              </label>
-              <select
-                id="modal-location"
-                value={formData.location}
-                onChange={(e) => handleLocationChange(e.target.value)}
-                className={modalSelectClasses}
-              >
-                <option value="">Select a location</option>
-                <option value="NJ">Northern New Jersey Office</option>
-                <option value="NY">Westchester New York Office</option>
-              </select>
-            </div>
+            {/* Location & Doctor — hidden when preset */}
+            {!preset && (
+              <>
+                <div>
+                  <label htmlFor="modal-location" className="block text-sm font-medium text-heading mb-1.5">
+                    Location
+                  </label>
+                  <select
+                    id="modal-location"
+                    value={formData.location}
+                    onChange={(e) => handleLocationChange(e.target.value)}
+                    className={modalSelectClasses}
+                  >
+                    <option value="">Select a location</option>
+                    <option value="NJ">Northern New Jersey Office</option>
+                    <option value="NY">Westchester New York Office</option>
+                  </select>
+                </div>
 
-            {/* Doctor (conditional) */}
-            {formData.location && (
-              <div>
-                <label htmlFor="modal-doctor" className="block text-sm font-medium text-heading mb-1.5">
-                  Doctor
-                </label>
-                <select
-                  id="modal-doctor"
-                  value={formData.doctor}
-                  onChange={(e) => handleChange("doctor", e.target.value)}
-                  className={modalSelectClasses}
-                >
-                  {formData.location === "NJ" && (
-                    <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
-                  )}
-                  {formData.location === "NY" && (
-                    <option value="Dr. Chris Devulapalli">Dr. Chris Devulapalli</option>
-                  )}
-                </select>
-              </div>
+                {formData.location && (
+                  <div>
+                    <label htmlFor="modal-doctor" className="block text-sm font-medium text-heading mb-1.5">
+                      Doctor
+                    </label>
+                    <select
+                      id="modal-doctor"
+                      value={formData.doctor}
+                      onChange={(e) => handleChange("doctor", e.target.value)}
+                      className={modalSelectClasses}
+                    >
+                      {formData.location === "NJ" && (
+                        <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
+                      )}
+                      {formData.location === "NY" && (
+                        <option value="Dr. Chris Devulapalli">Dr. Chris Devulapalli</option>
+                      )}
+                    </select>
+                  </div>
+                )}
+              </>
             )}
 
             {/* Name */}

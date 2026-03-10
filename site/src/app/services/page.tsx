@@ -25,6 +25,7 @@ export default function ServicesPage() {
       <HeroSection
         title="Our Services"
         subtitle="A comprehensive range of cosmetic and reconstructive plastic surgery procedures performed by board-certified surgeons."
+        backgroundImage="/images/hero/SPS-Image-125.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },

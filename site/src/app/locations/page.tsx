@@ -50,6 +50,7 @@ export default function LocationsPage() {
       <HeroSection
         title="Our Locations"
         subtitle="Two convenient offices in New Jersey and Westchester, NY, serving the greater tri-state area with expert plastic and reconstructive surgery."
+        backgroundImage="/images/hero/locations-hero.jpg"
         ctaText="Schedule a Consultation"
         ctaLink="/contact"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Locations" }]}

@@ -51,6 +51,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       <HeroSection
         title={proc.name}
         subtitle={proc.heroDescription}
+        backgroundImage="/images/hero/SPS-Image-125.jpg"
         ctaText="Schedule Consultation"
         ctaLink="/contact"
         breadcrumbs={[

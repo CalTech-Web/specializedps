@@ -63,6 +63,7 @@ export default function ContactPage() {
       <HeroSection
         title="Contact Us"
         subtitle="Ready to take the next step? Schedule a consultation with our board-certified plastic surgeons today."
+        backgroundImage="/images/hero/contact-hero.webp"
         ctaText="Call (973) 561-0900"
         ctaLink="tel:9735610900"
         breadcrumbs={[

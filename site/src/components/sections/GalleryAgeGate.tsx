@@ -1,21 +1,17 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { ShieldCheck } from "lucide-react";
 
 interface GalleryAgeGateProps {
   children: React.ReactNode;
 }
 
-const CURRENT_YEAR = new Date().getFullYear();
-const MIN_AGE = 18;
 const SESSION_KEY = "gallery_age_verified";
 
 export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
   const [verified, setVerified] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [birthYear, setBirthYear] = useState("");
-  const [error, setError] = useState("");
 
   useEffect(() => {
     setMounted(true);
@@ -24,44 +20,9 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
     }
   }, []);
 
-  const handleVerify = useCallback(() => {
-    const year = parseInt(birthYear, 10);
-
-    if (!birthYear || isNaN(year)) {
-      setError("Please enter a valid year.");
-      return;
-    }
-
-    if (year > CURRENT_YEAR || year < 1900) {
-      setError("Please enter a valid birth year.");
-      return;
-    }
-
-    const age = CURRENT_YEAR - year;
-
-    if (age < MIN_AGE) {
-      setError("You must be at least 18 years old to view this content.");
-      return;
-    }
-
-    setError("");
+  function handleYes() {
     setVerified(true);
     sessionStorage.setItem(SESSION_KEY, "true");
-  }, [birthYear]);
-
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "Enter") {
-        handleVerify();
-      }
-    },
-    [handleVerify]
-  );
-
-  // Generate year options from current year down to 1920
-  const yearOptions: number[] = [];
-  for (let y = CURRENT_YEAR; y >= 1920; y--) {
-    yearOptions.push(y);
   }
 
   // Server render and pre-hydration: show blurred with no overlay (prevents flash)
@@ -95,62 +56,36 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
 
           {/* Heading */}
           <h2 className="text-center font-heading text-2xl font-bold text-heading sm:text-[1.65rem]">
-            Age Verification Required
+            Content Advisory
           </h2>
 
           {/* Description */}
           <p className="mt-3 text-center text-[0.938rem] leading-relaxed text-body">
             Our before and after gallery contains medical images of surgical
-            procedures. You must be at least 18 years of age to view this
-            content. Please enter your birth year to continue.
+            procedures. This content is intended for viewers 18 years of age or
+            older. Are you at least 18 years old?
           </p>
 
-          {/* Input */}
-          <div className="mt-7">
-            <label
-              htmlFor="birth-year"
-              className="mb-1.5 block text-sm font-semibold text-heading"
+          {/* Yes / No buttons */}
+          <div className="mt-7 flex gap-3">
+            <button
+              onClick={handleYes}
+              className="flex-1 border-2 border-primary bg-primary px-6 py-3.5 text-[0.938rem] font-bold text-white shadow-sm transition-all hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 active:scale-[0.98]"
             >
-              Year of Birth
-            </label>
-            <select
-              id="birth-year"
-              value={birthYear}
-              onChange={(e) => {
-                setBirthYear(e.target.value);
-                setError("");
-              }}
-              onKeyDown={handleKeyDown}
-              className="w-full rounded-lg border border-peach bg-white px-4 py-3 text-[0.938rem] text-heading shadow-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+              Yes, I&apos;m 18+
+            </button>
+            <button
+              onClick={() => window.history.back()}
+              className="flex-1 border-2 border-gray-200 bg-white px-6 py-3.5 text-[0.938rem] font-bold text-heading shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200/40 focus:ring-offset-2 active:scale-[0.98]"
             >
-              <option value="">Select your birth year</option>
-              {yearOptions.map((y) => (
-                <option key={y} value={y}>
-                  {y}
-                </option>
-              ))}
-            </select>
+              No, Go Back
+            </button>
           </div>
-
-          {/* Error message */}
-          {error && (
-            <p className="mt-3 text-center text-sm font-medium text-red-500">
-              {error}
-            </p>
-          )}
-
-          {/* Submit button */}
-          <button
-            onClick={handleVerify}
-            className="mt-6 w-full border-2 border-primary bg-primary px-6 py-3.5 text-[0.938rem] font-bold text-white shadow-sm transition-all hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 active:scale-[0.98]"
-          >
-            Verify & View Gallery
-          </button>
 
           {/* Disclaimer */}
           <p className="mt-5 text-center text-xs leading-relaxed text-body/70">
-            By proceeding, you confirm that you are 18 years of age or older
-            and consent to viewing medical before and after imagery.
+            By clicking &ldquo;Yes&rdquo;, you confirm that you are 18 years of
+            age or older and consent to viewing medical before and after imagery.
           </p>
         </div>
       </div>

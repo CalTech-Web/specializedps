@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Calendar, Quote, ChevronRight } from "lucide-react";
 import CTABanner from "@/components/sections/CTABanner";
+import AppointmentButton from "@/components/ui/AppointmentButton";
 
 interface DoctorPageProps {
   params: Promise<{ slug: string }>;
@@ -48,13 +49,14 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
       {/* Hero / Breadcrumb */}
       <section className="relative bg-heading py-14 sm:py-16">
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundImage: "url('https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
+        <div className="absolute inset-0 bg-heading/70" />
         <div className="relative z-10 mx-auto max-w-[1320px] px-6">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-white/60">
@@ -295,13 +297,17 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
                 </p>
 
                 {/* Appointment Button */}
-                <Link
-                  href="/contact"
+                <AppointmentButton
                   className="mt-6 flex w-full items-center justify-center gap-2 border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
+                  doctorPreset={{
+                    doctor: doctor.name,
+                    location: doctor.locationKey === "nj" ? "NJ" : "NY",
+                    recipientEmail: siteConfig.locations[doctor.locationKey].email,
+                  }}
                 >
                   <Calendar className="h-4 w-4" />
                   Request an Appointment
-                </Link>
+                </AppointmentButton>
 
                 {/* Phone Numbers */}
                 <div className="mt-8 space-y-5">

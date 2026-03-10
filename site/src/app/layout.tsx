@@ -3,6 +3,7 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { AppointmentModalProvider } from "@/components/sections/AppointmentModal";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -58,9 +59,11 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <AppointmentModalProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </AppointmentModalProvider>
       </body>
     </html>
   );

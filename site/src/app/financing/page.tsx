@@ -23,6 +23,7 @@ export default function FinancingPage() {
       <HeroSection
         title="Financing & Payment Options"
         subtitle="We believe exceptional care should be accessible. Explore flexible payment plans designed to fit your budget."
+        backgroundImage="/images/hero/SPS-Image-129.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Financing" },
