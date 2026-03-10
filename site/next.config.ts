@@ -33,22 +33,8 @@ const nextConfig: NextConfig = {
       { source: "/new-york/", destination: "/locations#ny", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
       { source: "/contact-us/", destination: "/contact", permanent: true },
-      { source: "/dr-chris-new-patient-form", destination: "/contact", permanent: true },
-      { source: "/dr-chris-new-patient-form/", destination: "/contact", permanent: true },
-      { source: "/new-patient-form", destination: "/contact", permanent: true },
-      { source: "/new-patient-form/", destination: "/contact", permanent: true },
-      { source: "/thank-you", destination: "/contact", permanent: true },
-      { source: "/thank-you/", destination: "/contact", permanent: true },
 
       // Info pages
-      { source: "/enhanced-recovery-after-surgery", destination: "/eras", permanent: true },
-      { source: "/enhanced-recovery-after-surgery/", destination: "/eras", permanent: true },
-      { source: "/enhanced-recovery-protocols", destination: "/eras", permanent: true },
-      { source: "/enhanced-recovery-protocols/", destination: "/eras", permanent: true },
-      { source: "/preparing-for-your-first-appointment", destination: "/first-appointment", permanent: true },
-      { source: "/preparing-for-your-first-appointment/", destination: "/first-appointment", permanent: true },
-      { source: "/travelling-to-our-practice", destination: "/traveling-patients", permanent: true },
-      { source: "/travelling-to-our-practice/", destination: "/traveling-patients", permanent: true },
 
       // Breast reconstruction
       { source: "/breast-reconstruction", destination: "/services/breast-reconstruction", permanent: true },
@@ -85,8 +71,6 @@ const nextConfig: NextConfig = {
       { source: "/breast-augmentation-westchester/", destination: "/services/aesthetic-breast/augmentation", permanent: true },
       { source: "/fat-grafting-breast-augmentation", destination: "/services/aesthetic-breast/augmentation", permanent: true },
       { source: "/fat-grafting-breast-augmentation/", destination: "/services/aesthetic-breast/augmentation", permanent: true },
-      { source: "/exclusive-breast-augmentation-pricing", destination: "/services/aesthetic-breast/augmentation", permanent: true },
-      { source: "/exclusive-breast-augmentation-pricing/", destination: "/services/aesthetic-breast/augmentation", permanent: true },
       { source: "/breast-lift", destination: "/services/aesthetic-breast/lift", permanent: true },
       { source: "/breast-lift/", destination: "/services/aesthetic-breast/lift", permanent: true },
       { source: "/breast-reduction", destination: "/services/aesthetic-breast/reduction", permanent: true },
@@ -143,14 +127,6 @@ const nextConfig: NextConfig = {
       { source: "/gallery/brest-lift-mastopexy/", destination: "/gallery", permanent: true },
       { source: "/gallery/abdominoplasty", destination: "/gallery", permanent: true },
       { source: "/gallery/abdominoplasty/", destination: "/gallery", permanent: true },
-      { source: "/gallery/liposuction", destination: "/gallery", permanent: true },
-      { source: "/gallery/liposuction/", destination: "/gallery", permanent: true },
-      { source: "/gallery/bbl", destination: "/gallery", permanent: true },
-      { source: "/gallery/bbl/", destination: "/gallery", permanent: true },
-      { source: "/gallery/blepharoplasty", destination: "/gallery", permanent: true },
-      { source: "/gallery/blepharoplasty/", destination: "/gallery", permanent: true },
-      { source: "/gallery/otoplasty", destination: "/gallery", permanent: true },
-      { source: "/gallery/otoplasty/", destination: "/gallery", permanent: true },
 
       // Blog posts
       { source: "/educational-resources", destination: "/blog", permanent: true },

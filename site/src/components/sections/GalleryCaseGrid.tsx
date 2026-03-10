@@ -76,7 +76,7 @@ export default function GalleryCaseGrid({ cases }: GalleryCaseGridProps) {
       {/* Popup */}
       {openCase !== null && (
         <GalleryCasePopup
-          caseItems={cases[openCase]}
+          item={cases[openCase][0]}
           caseNumber={openCase + 1}
           onClose={() => setOpenCase(null)}
         />

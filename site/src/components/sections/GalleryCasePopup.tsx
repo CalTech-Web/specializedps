@@ -7,22 +7,20 @@ import type { GalleryItem } from "@/data/gallery";
 import { DEFAULT_DOCTOR } from "@/data/gallery";
 
 interface GalleryCasePopupProps {
-  caseItems: GalleryItem[];
+  item: GalleryItem;
   caseNumber: number;
   onClose: () => void;
 }
 
 export default function GalleryCasePopup({
-  caseItems,
+  item,
   caseNumber,
   onClose,
 }: GalleryCasePopupProps) {
-  const [activeView, setActiveView] = useState(0);
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
 
-  const item = caseItems[activeView];
   const doctor = item.doctor ?? DEFAULT_DOCTOR;
 
   const updatePosition = useCallback((clientX: number) => {
@@ -56,11 +54,6 @@ export default function GalleryCasePopup({
     },
     [updatePosition]
   );
-
-  function switchView(index: number) {
-    setActiveView(index);
-    setPosition(50);
-  }
 
   return (
     <div
@@ -132,30 +125,6 @@ export default function GalleryCasePopup({
             </div>
           </div>
 
-          {/* View selector thumbnails (when multiple views) */}
-          {caseItems.length > 1 && (
-            <div className="flex gap-2 bg-gray-50 p-3">
-              {caseItems.map((viewItem, i) => (
-                <button
-                  key={viewItem.id}
-                  onClick={() => switchView(i)}
-                  className={`relative h-16 w-20 overflow-hidden rounded border-2 transition-all ${
-                    i === activeView
-                      ? "border-primary shadow-md"
-                      : "border-transparent opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  <Image
-                    src={viewItem.after}
-                    alt={viewItem.procedureLabel}
-                    fill
-                    className="object-cover"
-                    sizes="80px"
-                  />
-                </button>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* Right: Case details */}
