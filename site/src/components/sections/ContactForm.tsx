@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   location: string;
@@ -12,6 +13,12 @@ interface FormData {
 }
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
+
+interface ContactFormProps {
+  fixedLocation?: string;
+  fixedDoctor?: string;
+  recipientEmail?: string;
+}
 
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
 const SITE_ID = "specializedplasticsurgery";
@@ -34,10 +41,17 @@ const locations = [
 const inputBase =
   "w-full border-b border-body/30 bg-transparent py-3 text-sm text-heading outline-none transition-colors placeholder:text-body/40 focus:border-primary";
 
-export default function ContactForm() {
+export default function ContactForm({
+  fixedLocation,
+  fixedDoctor,
+  recipientEmail,
+}: ContactFormProps = {}) {
+  const router = useRouter();
+  const isFixed = !!(fixedLocation && fixedDoctor);
+
   const [formData, setFormData] = useState<FormData>({
-    location: "",
-    doctor: "",
+    location: fixedLocation ?? "",
+    doctor: fixedDoctor ?? "",
     name: "",
     phone: "",
     email: "",
@@ -53,7 +67,8 @@ export default function ContactForm() {
 
   function validate(): boolean {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
-    if (!formData.location) newErrors.location = "Please select a location.";
+    if (!isFixed && !formData.location)
+      newErrors.location = "Please select a location.";
     if (!formData.name.trim()) newErrors.name = "Name is required.";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
@@ -83,22 +98,14 @@ export default function ContactForm() {
         body: JSON.stringify({
           site_id: SITE_ID,
           ...formData,
-          recipientEmail: selectedLocation?.email,
+          recipientEmail: recipientEmail ?? selectedLocation?.email,
         }),
       });
 
       if (!res.ok) throw new Error("Submission failed");
 
       setStatus("success");
-      setFormData({
-        location: "",
-        doctor: "",
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      setErrors({});
+      router.push("/thank-you");
     } catch {
       setStatus("error");
     }
@@ -131,68 +138,50 @@ export default function ContactForm() {
     }
   }
 
-  if (status === "success") {
-    return (
-      <div className="py-12 text-center">
-        <h3 className="font-heading text-xl font-bold text-heading">
-          Thank You!
-        </h3>
-        <p className="mt-2 text-body">
-          Your message has been received. Our team will get back to you shortly.
-        </p>
-        <button
-          type="button"
-          onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-semibold text-primary hover:text-heading"
-        >
-          Send Another Message
-        </button>
-      </div>
-    );
-  }
-
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-6">
-      {/* Row 1: Location + Doctor (side by side) */}
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
-            Location *
-          </label>
-          <select
-            value={formData.location}
-            onChange={(e) => handleLocationChange(e.target.value)}
-            className={`${inputBase} ${errors.location ? "border-red-400" : ""}`}
-          >
-            <option value="">Select Location</option>
-            {locations.map((loc) => (
-              <option key={loc.value} value={loc.value}>
-                {loc.label}
-              </option>
-            ))}
-          </select>
-          {errors.location && (
-            <p className="mt-1 text-xs text-red-500">{errors.location}</p>
-          )}
-        </div>
-        <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
-            Doctor *
-          </label>
-          <select
-            value={formData.doctor}
-            onChange={(e) => handleChange("doctor", e.target.value)}
-            className={inputBase}
-          >
-            <option value="">Select Doctor</option>
-            {selectedLocation && (
-              <option value={selectedLocation.doctor}>
-                {selectedLocation.doctor}
-              </option>
+      {/* Row 1: Location + Doctor (hidden when fixed) */}
+      {!isFixed && (
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+              Location *
+            </label>
+            <select
+              value={formData.location}
+              onChange={(e) => handleLocationChange(e.target.value)}
+              className={`${inputBase} ${errors.location ? "border-red-400" : ""}`}
+            >
+              <option value="">Select Location</option>
+              {locations.map((loc) => (
+                <option key={loc.value} value={loc.value}>
+                  {loc.label}
+                </option>
+              ))}
+            </select>
+            {errors.location && (
+              <p className="mt-1 text-xs text-red-500">{errors.location}</p>
             )}
-          </select>
+          </div>
+          <div>
+            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+              Doctor *
+            </label>
+            <select
+              value={formData.doctor}
+              onChange={(e) => handleChange("doctor", e.target.value)}
+              className={inputBase}
+            >
+              <option value="">Select Doctor</option>
+              {selectedLocation && (
+                <option value={selectedLocation.doctor}>
+                  {selectedLocation.doctor}
+                </option>
+              )}
+            </select>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Row 2: Name + Phone */}
       <div className="grid gap-5 sm:grid-cols-2">

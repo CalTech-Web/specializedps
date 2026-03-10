@@ -8,6 +8,7 @@ import {
   type ReactNode,
   type FormEvent,
 } from "react";
+import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -81,6 +82,7 @@ export function AppointmentModalProvider({ children }: { children: ReactNode }) 
 /*  Modal overlay + form                                               */
 /* ------------------------------------------------------------------ */
 function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; preset?: DoctorPreset }) {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     location: preset?.location ?? "",
     doctor: preset?.doctor ?? "",
@@ -125,6 +127,8 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");
+      onClose();
+      router.push("/thank-you");
     } catch {
       setStatus("error");
     }

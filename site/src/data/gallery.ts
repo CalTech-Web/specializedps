@@ -4,6 +4,10 @@ export interface GalleryItem {
   procedureLabel: string;
   before: string;
   after: string;
+  caseGroup?: string;
+  doctor?: string;
+  patientAge?: number;
+  procedureDetail?: string;
 }
 
 export interface GalleryCategory {
@@ -136,6 +140,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation with Motiva, Front View",
     before: "/images/gallery/breast-augmentation/case1-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case1-front-after.jpg",
+    caseGroup: "ba-case1",
   },
   {
     id: "ba-1s",
@@ -143,6 +148,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation with Motiva, Side View",
     before: "/images/gallery/breast-augmentation/case1-side-before.jpg",
     after: "/images/gallery/breast-augmentation/case1-side-after.jpg",
+    caseGroup: "ba-case1",
   },
   {
     id: "ba-2",
@@ -150,6 +156,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation, Front View",
     before: "/images/gallery/breast-augmentation/case2-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case2-front-after.jpg",
+    caseGroup: "ba-case2",
   },
   {
     id: "ba-2s",
@@ -157,6 +164,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation, Side View",
     before: "/images/gallery/breast-augmentation/case2-side-before.jpg",
     after: "/images/gallery/breast-augmentation/case2-side-after.jpg",
+    caseGroup: "ba-case2",
   },
   {
     id: "ba-3",
@@ -331,6 +339,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Front View",
     before: "/images/gallery/breast-reconstruction/diep-case1-front-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case1-front-after.jpg",
+    caseGroup: "diep-case1",
   },
   {
     id: "recon-d1s",
@@ -338,6 +347,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Side View",
     before: "/images/gallery/breast-reconstruction/diep-case1-side-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case1-side-after.jpg",
+    caseGroup: "diep-case1",
   },
   {
     id: "recon-d2",
@@ -608,6 +618,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Liposuction, Case 1",
     before: "/images/gallery/liposuction/case1-before.jpg",
     after: "/images/gallery/liposuction/case1-after.jpg",
+    patientAge: 58,
+    procedureDetail: "Bilateral excision with liposuction",
   },
   {
     id: "lipo-chin1",
@@ -615,6 +627,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Chin Liposuction, Case 1",
     before: "/images/gallery/liposuction/chin-case1-before.jpg",
     after: "/images/gallery/liposuction/chin-case1-after.jpg",
+    patientAge: 48,
+    procedureDetail: "Submental liposuction",
   },
   {
     id: "lipo-chin2",
@@ -622,6 +636,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Chin Liposuction, Case 2",
     before: "/images/gallery/liposuction/chin-case2-before.jpg",
     after: "/images/gallery/liposuction/chin-case2-after.jpg",
+    doctor: "Dr. Michael Sosin",
+    procedureDetail: "Submental liposuction with cervicodorsal junction treatment",
   },
   {
     id: "lipo-chinr",
@@ -636,6 +652,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Lipo 360",
     before: "/images/gallery/liposuction/lipo360-before.jpg",
     after: "/images/gallery/liposuction/lipo360-after.jpg",
+    patientAge: 44,
+    procedureDetail: "Flanks liposuction with fat grafting and Renuvion skin tightening",
   },
 
   // === BBL ===
@@ -675,6 +693,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Blepharoplasty",
     before: "/images/gallery/facelift/bleph-case1-before.jpg",
     after: "/images/gallery/facelift/bleph-case1-after.jpg",
+    patientAge: 58,
+    procedureDetail: "Lower blepharoplasty (eyelid surgery)",
   },
 ];
 
@@ -692,3 +712,19 @@ export const galleryGroups = [
   "Aesthetic Breast",
   "Breast Reconstruction",
 ] as const;
+
+export const DEFAULT_DOCTOR = "Dr. Chris Devulapalli";
+
+/** Groups gallery items by case. Multi-view items (front/side) are grouped together. */
+export function getGalleryCases(slug: string): GalleryItem[][] {
+  const items = galleryItems.filter((item) => item.category === slug);
+  const groups = new Map<string, GalleryItem[]>();
+
+  for (const item of items) {
+    const key = item.caseGroup ?? item.id;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(item);
+  }
+
+  return Array.from(groups.values());
+}

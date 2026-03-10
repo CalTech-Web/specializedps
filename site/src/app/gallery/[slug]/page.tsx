@@ -3,12 +3,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 import GalleryAgeGate from "@/components/sections/GalleryAgeGate";
-import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
+import GalleryCaseGrid from "@/components/sections/GalleryCaseGrid";
 import {
   galleryCategories,
-  galleryItems,
   galleryGroups,
   getGalleryCategory,
+  getGalleryCases,
 } from "@/data/gallery";
 import { ChevronRight } from "lucide-react";
 
@@ -36,7 +36,7 @@ export default async function GalleryProcedurePage({ params }: Props) {
   const category = getGalleryCategory(slug);
   if (!category) notFound();
 
-  const items = galleryItems.filter((item) => item.category === slug);
+  const cases = getGalleryCases(slug);
 
   // Get sibling categories in the same group for sidebar navigation
   const siblings = galleryCategories.filter(
@@ -78,17 +78,8 @@ export default async function GalleryProcedurePage({ params }: Props) {
                   {category.description}
                 </p>
 
-                {items.length > 0 ? (
-                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {items.map((item) => (
-                      <BeforeAfterSlider
-                        key={item.id}
-                        before={item.before}
-                        after={item.after}
-                        alt={item.procedureLabel}
-                      />
-                    ))}
-                  </div>
+                {cases.length > 0 ? (
+                  <GalleryCaseGrid cases={cases} />
                 ) : (
                   <p className="text-body">
                     Gallery photos coming soon. Please check back later.
