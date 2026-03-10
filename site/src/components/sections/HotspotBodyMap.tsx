@@ -17,9 +17,9 @@ export default function HotspotBodyMap() {
       />
       <div className="relative mx-auto grid max-w-[1320px] items-center gap-12 px-6 lg:grid-cols-2">
         {/* Left: Body image with hotspots */}
-        <div className="relative mx-auto aspect-[3/5] w-full max-w-md">
+        <div className="relative mx-auto aspect-square w-full max-w-lg">
           <Image
-            src="/images/gallery-page/body.jpg"
+            src="/images/misc/hotspot-body.jpg"
             alt="Procedure areas"
             fill
             className="rounded-lg object-cover"
