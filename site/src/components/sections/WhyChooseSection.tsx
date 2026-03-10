@@ -57,61 +57,10 @@ export default function WhyChooseSection() {
           </p>
         </div>
 
-        {/* Features: left cards | center logo | right cards */}
-        {/* Mobile: stacked grid */}
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:hidden">
-          {features.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.title}
-                className="group rounded-lg border border-white/[0.06] bg-white/[0.03] px-6 py-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="text-[14px] font-bold uppercase tracking-wide text-white">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-[13px] leading-relaxed text-white/55">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Desktop: 25% | 50% | 25% layout */}
-        <div className="mt-20 hidden lg:flex lg:items-center lg:gap-8">
-          {/* Left column — 25% */}
-          <div className="flex w-1/4 flex-col gap-6">
-            {features.slice(0, 2).map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-lg border border-white/[0.06] bg-white/[0.03] px-5 py-5 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="mt-4 text-[13px] font-bold uppercase tracking-wide text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-white/55">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Center logo — 50% */}
-          <div className="flex w-1/2 items-center justify-center">
+        {/* Features 2x2 grid with center logo */}
+        <div className="relative mt-16 lg:mt-20">
+          {/* Center logo — absolutely positioned */}
+          <div className="absolute left-1/2 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 lg:flex items-center justify-center">
             <div className="flex items-center justify-center rounded-full border border-white/[0.08] bg-heading px-10 py-6 shadow-[0_0_100px_rgba(201,169,110,0.1)]">
               <Image
                 src="/images/logos/white-logo.webp"
@@ -123,24 +72,28 @@ export default function WhyChooseSection() {
             </div>
           </div>
 
-          {/* Right column — 25% */}
-          <div className="flex w-1/4 flex-col gap-6">
-            {features.slice(2, 4).map((item) => {
+          {/* 2x2 grid */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:gap-x-48 lg:gap-y-14">
+            {features.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
                   className="group rounded-lg border border-white/[0.06] bg-white/[0.03] px-5 py-5 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                    <Icon className="h-5 w-5 text-primary" />
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-[13px] font-bold uppercase tracking-wide text-white">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-[13px] leading-relaxed text-white/55">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="mt-4 text-[13px] font-bold uppercase tracking-wide text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-white/55">
-                    {item.description}
-                  </p>
                 </div>
               );
             })}
