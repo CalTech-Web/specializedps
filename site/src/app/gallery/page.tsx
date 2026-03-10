@@ -114,37 +114,16 @@ export default function GalleryPage() {
           />
           <div className="relative mx-auto max-w-[1320px] px-6 py-20 sm:py-28">
             <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
-              {/* Left: Images */}
+              {/* Left: Image */}
               <div className="relative flex-1">
                 <div className="relative aspect-[3/4] w-full max-w-lg overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/gallery-page/ba-woman.jpg"
-                    alt="Patient consultation"
+                    src="/images/gallery-page/sps-center-hero.jpg"
+                    alt="Specialized Plastic Surgery Center"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                </div>
-                {/* SPS Lobby overlay */}
-                <div className="animate-float absolute -bottom-6 right-0 w-60 overflow-hidden shadow-2xl sm:-bottom-10 sm:right-4 sm:w-72 lg:right-[-2rem]">
-                  <div className="relative aspect-[16/10] overflow-hidden border-4 border-white">
-                    <Image
-                      src="/images/gallery-page/sps-center.jpg"
-                      alt="SPS Center lobby"
-                      fill
-                      className="object-cover"
-                      sizes="288px"
-                    />
-                    <div className="absolute bottom-3 left-3">
-                      <Image
-                        src="/images/logos/black-logo.webp"
-                        alt="Specialized Plastic Surgery"
-                        width={160}
-                        height={40}
-                        className="h-7 w-auto drop-shadow-md sm:h-9"
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
 

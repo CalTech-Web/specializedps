@@ -141,6 +141,8 @@ export const galleryItems: GalleryItem[] = [
     before: "/images/gallery/breast-augmentation/case1-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case1-front-after.jpg",
     caseGroup: "ba-case1",
+    patientAge: 48,
+    procedureDetail: "Breast augmentation with Motiva implants",
   },
   {
     id: "ba-1s",
@@ -149,57 +151,72 @@ export const galleryItems: GalleryItem[] = [
     before: "/images/gallery/breast-augmentation/case1-side-before.jpg",
     after: "/images/gallery/breast-augmentation/case1-side-after.jpg",
     caseGroup: "ba-case1",
+    patientAge: 48,
+    procedureDetail: "Breast augmentation with Motiva implants",
   },
   {
     id: "ba-2",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation, Front View",
+    procedureLabel: "Breast Augmentation with Motiva, Front View",
     before: "/images/gallery/breast-augmentation/case2-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case2-front-after.jpg",
     caseGroup: "ba-case2",
+    patientAge: 28,
+    procedureDetail: "Breast augmentation with Motiva implants",
   },
   {
     id: "ba-2s",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation, Side View",
+    procedureLabel: "Breast Augmentation with Motiva, Side View",
     before: "/images/gallery/breast-augmentation/case2-side-before.jpg",
     after: "/images/gallery/breast-augmentation/case2-side-after.jpg",
     caseGroup: "ba-case2",
+    patientAge: 28,
+    procedureDetail: "Breast augmentation with Motiva implants",
   },
   {
     id: "ba-3",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation with Motiva, Case 2",
+    procedureLabel: "Breast Augmentation with Motiva",
     before: "/images/gallery/breast-augmentation/case3-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case3-front-after.jpg",
+    patientAge: 35,
+    procedureDetail: "Breast augmentation with Motiva implants",
   },
   {
     id: "ba-4",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation, Side View",
+    procedureLabel: "Breast Augmentation with Silicone Implants",
     before: "/images/gallery/breast-augmentation/case4-side-before.jpg",
     after: "/images/gallery/breast-augmentation/case4-side-after.jpg",
+    patientAge: 26,
+    procedureDetail: "Primary breast augmentation with silicone implants",
   },
   {
     id: "ba-5",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation, Front View",
+    procedureLabel: "Explantation and Revision Mastopexy",
     before: "/images/gallery/breast-augmentation/case5-front-before.jpg",
     after: "/images/gallery/breast-augmentation/case5-front-after.jpg",
+    patientAge: 59,
+    procedureDetail: "Explantation, revision mastopexy, and exchange of silicone implants",
   },
   {
     id: "ba-6",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation",
+    procedureLabel: "Subpectoral Breast Augmentation and Mastopexy",
     before: "/images/gallery/breast-augmentation/case6-before.jpg",
     after: "/images/gallery/breast-augmentation/case6-after.jpg",
+    patientAge: 27,
+    procedureDetail: "Primary subpectoral breast augmentation and mastopexy",
   },
   {
     id: "ba-7",
     category: "breast-augmentation",
-    procedureLabel: "Breast Augmentation with Motiva",
+    procedureLabel: "Mastopexy (Breast Lift)",
     before: "/images/gallery/breast-augmentation/case7-before.jpg",
     after: "/images/gallery/breast-augmentation/case7-after.jpg",
+    procedureDetail: "Mastopexy (breast lift)",
   },
   {
     id: "ba-ft",
@@ -207,6 +224,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation with Fat Transfer",
     before: "/images/gallery/breast-augmentation/fat-transfer-before.jpg",
     after: "/images/gallery/breast-augmentation/fat-transfer-after.jpg",
+    procedureDetail: "Breast augmentation with fat transfer",
   },
 
   // === Breast Lift ===
@@ -216,6 +234,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Lift (Mastopexy), Case 1",
     before: "/images/gallery/breast-lift/case1-before.jpg",
     after: "/images/gallery/breast-lift/case1-after.jpg",
+    procedureDetail: "Breast implant removal (explant) with breast lift and fat grafting for volume restoration",
   },
   {
     id: "bl-2",
@@ -223,6 +242,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Lift (Mastopexy), Case 2",
     before: "/images/gallery/breast-lift/case2-before.jpg",
     after: "/images/gallery/breast-lift/case2-after.jpg",
+    patientAge: 29,
+    procedureDetail: "Subglandular augmentation and mastopexy",
   },
   {
     id: "bl-3",
@@ -251,6 +272,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation with Lift",
     before: "/images/gallery/breast-lift/aug-masto-case1-before.jpg",
     after: "/images/gallery/breast-lift/aug-masto-case1-after.jpg",
+    procedureDetail: "Breast implant removal (explant) with breast lift and fat grafting",
   },
   {
     id: "bl-am2",
@@ -258,6 +280,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Breast Augmentation with Lift, Case 2",
     before: "/images/gallery/breast-lift/aug-masto-case2-before.jpg",
     after: "/images/gallery/breast-lift/aug-masto-case2-after.jpg",
+    patientAge: 29,
+    procedureDetail: "Subglandular augmentation with mastopexy",
   },
 
   // === Breast Reduction ===
@@ -340,6 +364,8 @@ export const galleryItems: GalleryItem[] = [
     before: "/images/gallery/breast-reconstruction/diep-case1-front-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case1-front-after.jpg",
     caseGroup: "diep-case1",
+    patientAge: 43,
+    procedureDetail: "Bilateral nipple sparing mastectomy and DIEP flap reconstruction",
   },
   {
     id: "recon-d1s",
@@ -348,6 +374,8 @@ export const galleryItems: GalleryItem[] = [
     before: "/images/gallery/breast-reconstruction/diep-case1-side-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case1-side-after.jpg",
     caseGroup: "diep-case1",
+    patientAge: 43,
+    procedureDetail: "Bilateral nipple sparing mastectomy and DIEP flap reconstruction",
   },
   {
     id: "recon-d2",
@@ -355,6 +383,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 2",
     before: "/images/gallery/breast-reconstruction/diep-case2-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case2-after.jpg",
+    patientAge: 38,
+    procedureDetail: "DIEP flap reconstruction with high-definition liposuction, body contouring, and nipple/areolar medical tattooing",
   },
   {
     id: "recon-d3",
@@ -362,6 +392,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 3",
     before: "/images/gallery/breast-reconstruction/diep-case3-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case3-after.jpg",
+    patientAge: 38,
+    procedureDetail: "Bilateral nipple sparing mastectomy with staged reconstruction, tissue expander placement, radiation, then autologous reconstruction",
   },
   {
     id: "recon-d4",
@@ -369,6 +401,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 4",
     before: "/images/gallery/breast-reconstruction/diep-case4-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case4-after.jpg",
+    patientAge: 45,
+    procedureDetail: "Bilateral nipple sparing mastectomy and DIEP flap reconstruction",
   },
   {
     id: "recon-d5",
@@ -376,6 +410,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 5",
     before: "/images/gallery/breast-reconstruction/diep-case5-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case5-after.jpg",
+    patientAge: 47,
+    procedureDetail: "Bilateral nipple sparing mastectomy with staged reconstruction, tissue expander placement, DIEP flap, HD liposuction and abdominal contouring",
   },
   {
     id: "recon-d6",
@@ -383,6 +419,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 6",
     before: "/images/gallery/breast-reconstruction/diep-case6-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case6-after.jpg",
+    patientAge: 41,
+    procedureDetail: "Bilateral non-nipple sparing mastectomy and immediate DIEP flap reconstruction",
   },
   {
     id: "recon-d7",
@@ -391,6 +429,8 @@ export const galleryItems: GalleryItem[] = [
     before:
       "/images/gallery/breast-reconstruction/diep-case7-front-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case7-front-after.jpg",
+    patientAge: 41,
+    procedureDetail: "Bilateral nipple sparing mastectomy with staged reconstruction, tissue expander placement, DIEP flap, HD liposuction and abdominal contouring",
   },
   {
     id: "recon-d8",
@@ -398,6 +438,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 8",
     before: "/images/gallery/breast-reconstruction/diep-case8-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case8-after.jpg",
+    patientAge: 38,
+    procedureDetail: "Bilateral non-nipple sparing mastectomy and immediate DIEP flap reconstruction",
   },
   {
     id: "recon-d9",
@@ -405,6 +447,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 9",
     before: "/images/gallery/breast-reconstruction/diep-case9-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case9-after.jpg",
+    patientAge: 30,
+    procedureDetail: "Bilateral nipple sparing mastectomy and immediate DIEP flap reconstruction",
   },
   {
     id: "recon-d10",
@@ -413,6 +457,8 @@ export const galleryItems: GalleryItem[] = [
     before:
       "/images/gallery/breast-reconstruction/diep-case10-v1-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case10-v1-after.jpg",
+    patientAge: 41,
+    procedureDetail: "Bilateral nipple sparing mastectomy and immediate DIEP flap reconstruction",
   },
   {
     id: "recon-d11",
@@ -420,6 +466,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 11",
     before: "/images/gallery/breast-reconstruction/diep-case11-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case11-after.jpg",
+    patientAge: 60,
+    procedureDetail: "Left side nipple sparing mastectomy with staged autologous DIEP flap reconstruction, right side matching mastopexy, nipple reconstruction using autologous skin graft",
   },
   {
     id: "recon-d12",
@@ -428,6 +476,7 @@ export const galleryItems: GalleryItem[] = [
     before:
       "/images/gallery/breast-reconstruction/diep-case12-v1-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case12-v1-after.jpg",
+    procedureDetail: "Bilateral nipple sparing mastectomy and DIEP flap reconstruction",
   },
   {
     id: "recon-d13",
@@ -435,6 +484,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "DIEP Flap Reconstruction, Case 13",
     before: "/images/gallery/breast-reconstruction/diep-case13-before.jpg",
     after: "/images/gallery/breast-reconstruction/diep-case13-after.jpg",
+    patientAge: 49,
+    procedureDetail: "Bilateral nipple sparing mastectomy and DIEP flap reconstruction",
   },
   {
     id: "recon-d14",
@@ -444,6 +495,7 @@ export const galleryItems: GalleryItem[] = [
       "/images/gallery/breast-reconstruction/diep-case14-front-before.jpg",
     after:
       "/images/gallery/breast-reconstruction/diep-case14-front-after.jpg",
+    procedureDetail: "DIEP flap reconstruction",
   },
 
   // === Breast Reconstruction: Oncoplastic ===
@@ -453,6 +505,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 1",
     before: "/images/gallery/breast-reconstruction/onco-case1-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case1-after.jpg",
+    patientAge: 66,
+    procedureDetail: "Oncoplastic reduction with liposuction and fat grafting to the breast",
   },
   {
     id: "recon-o2",
@@ -460,6 +514,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 2",
     before: "/images/gallery/breast-reconstruction/onco-case2-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case2-after.jpg",
+    procedureDetail: "Lumpectomy, oncoplastic reduction and matching procedure",
   },
   {
     id: "recon-o3",
@@ -467,6 +522,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 3",
     before: "/images/gallery/breast-reconstruction/onco-case3-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case3-after.jpg",
+    patientAge: 53,
+    procedureDetail: "Lumpectomy, oncoplastic reduction and matching procedure",
   },
   {
     id: "recon-o5",
@@ -474,6 +531,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 5",
     before: "/images/gallery/breast-reconstruction/onco-case5-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case5-after.jpg",
+    procedureDetail: "Oncoplastic reduction",
   },
   {
     id: "recon-o6",
@@ -481,6 +539,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 6",
     before: "/images/gallery/breast-reconstruction/onco-case6-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case6-after.jpg",
+    procedureDetail: "Oncoplastic reduction",
   },
   {
     id: "recon-o7",
@@ -488,6 +547,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Oncoplastic Reduction, Case 7",
     before: "/images/gallery/breast-reconstruction/onco-case7-before.jpg",
     after: "/images/gallery/breast-reconstruction/onco-case7-after.jpg",
+    procedureDetail: "Oncoplastic reduction",
   },
   {
     id: "recon-o8",
@@ -497,6 +557,7 @@ export const galleryItems: GalleryItem[] = [
       "/images/gallery/breast-reconstruction/onco-case8-front-before.jpg",
     after:
       "/images/gallery/breast-reconstruction/onco-case8-front-after.jpg",
+    procedureDetail: "Oncoplastic reduction",
   },
 
   // === Breast Reconstruction: Implant-Based ===
@@ -506,6 +567,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Implant-Based Reconstruction, Case 1",
     before: "/images/gallery/breast-reconstruction/implant-case1-before.jpg",
     after: "/images/gallery/breast-reconstruction/implant-case1-after.jpg",
+    patientAge: 45,
+    procedureDetail: "Implant-based reconstruction",
   },
   {
     id: "recon-i2",
@@ -513,6 +576,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Implant-Based Reconstruction, Case 2",
     before: "/images/gallery/breast-reconstruction/implant-case2-before.jpg",
     after: "/images/gallery/breast-reconstruction/implant-case2-after.jpg",
+    patientAge: 44,
+    procedureDetail: "Bilateral nipple sparing mastectomy and 2-staged expander/implant reconstruction",
   },
   {
     id: "recon-i3",
@@ -522,6 +587,8 @@ export const galleryItems: GalleryItem[] = [
       "/images/gallery/breast-reconstruction/implant-case3-side-before.jpg",
     after:
       "/images/gallery/breast-reconstruction/implant-case3-side-after.jpg",
+    patientAge: 47,
+    procedureDetail: "Bilateral nipple and nerve sparing mastectomy with immediate/direct to implant reconstruction with high profile silicone implants",
   },
   {
     id: "recon-i4",
@@ -531,6 +598,8 @@ export const galleryItems: GalleryItem[] = [
       "/images/gallery/breast-reconstruction/implant-case4-front-before.jpg",
     after:
       "/images/gallery/breast-reconstruction/implant-case4-front-after.jpg",
+    patientAge: 50,
+    procedureDetail: "Bilateral nipple sparing mastectomy with direct-to-implant reconstruction",
   },
 
   // === Breast Reconstruction: TDAP ===
@@ -540,6 +609,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "TDAP Flap Reconstruction, Case 1",
     before: "/images/gallery/breast-reconstruction/tdap-case1-before.jpg",
     after: "/images/gallery/breast-reconstruction/tdap-case1-after.jpg",
+    procedureDetail: "Autologous reconstruction with TDAP flaps",
   },
   {
     id: "recon-t2",
@@ -547,6 +617,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "TDAP Flap Reconstruction, Case 2",
     before: "/images/gallery/breast-reconstruction/tdap-case2-before.jpg",
     after: "/images/gallery/breast-reconstruction/tdap-case2-after.jpg",
+    procedureDetail: "Autologous reconstruction with TDAP flaps",
   },
 
   // === Breast Reconstruction: Delayed ===
@@ -556,6 +627,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Delayed Breast Reconstruction",
     before: "/images/gallery/breast-reconstruction/delayed-case1-before.jpg",
     after: "/images/gallery/breast-reconstruction/delayed-case1-after.jpg",
+    procedureDetail: "Delayed breast reconstruction with DIEP flap",
   },
 
   // === Breast Reconstruction: Male ===
@@ -565,6 +637,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Male Breast Cancer Reconstruction",
     before: "/images/gallery/breast-reconstruction/male-bc-case1-before.jpg",
     after: "/images/gallery/breast-reconstruction/male-bc-case1-after.jpg",
+    procedureDetail: "Mastectomy and contouring of the chest with liposuction and fat grafting",
   },
 
   // === Tummy Tuck ===
@@ -574,6 +647,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Abdominoplasty, Case 1",
     before: "/images/gallery/tummy-tuck/case1-before.jpg",
     after: "/images/gallery/tummy-tuck/case1-after.jpg",
+    procedureDetail: "Abdominoplasty",
   },
   {
     id: "tt-2",
@@ -581,6 +655,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Abdominoplasty, Case 2",
     before: "/images/gallery/tummy-tuck/case2-before.jpg",
     after: "/images/gallery/tummy-tuck/case2-after.jpg",
+    patientAge: 46,
+    procedureDetail: "Abdominoplasty",
   },
   {
     id: "tt-3",
@@ -588,6 +664,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Abdominoplasty, Case 3",
     before: "/images/gallery/tummy-tuck/case3-before.jpg",
     after: "/images/gallery/tummy-tuck/case3-after.jpg",
+    procedureDetail: "Abdominoplasty",
   },
   {
     id: "tt-4",
@@ -595,13 +672,16 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Abdominoplasty, Case 4",
     before: "/images/gallery/tummy-tuck/case4-before.jpg",
     after: "/images/gallery/tummy-tuck/case4-after.jpg",
+    procedureDetail: "Abdominoplasty",
   },
   {
     id: "tt-5",
     category: "tummy-tuck",
-    procedureLabel: "Abdominoplasty, Case 5",
+    procedureLabel: "Mini Abdominoplasty, Case 5",
     before: "/images/gallery/tummy-tuck/case5-before.jpg",
     after: "/images/gallery/tummy-tuck/case5-after.jpg",
+    patientAge: 45,
+    procedureDetail: "Mini abdominoplasty",
   },
   {
     id: "tt-6",
@@ -609,6 +689,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Abdominoplasty, Case 6",
     before: "/images/gallery/tummy-tuck/case6-before.jpg",
     after: "/images/gallery/tummy-tuck/case6-after.jpg",
+    procedureDetail: "Abdominoplasty",
   },
 
   // === Liposuction ===
@@ -663,6 +744,8 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Brazilian Butt Lift, Case 1",
     before: "/images/gallery/bbl/case1-before.jpg",
     after: "/images/gallery/bbl/case1-after.jpg",
+    patientAge: 44,
+    procedureDetail: "Liposuction of the flanks with fat grafting to hips/buttocks and Renuvion skin tightening",
   },
   {
     id: "bbl-2",
@@ -670,6 +753,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Brazilian Butt Lift, Case 2",
     before: "/images/gallery/bbl/case2-before.jpg",
     after: "/images/gallery/bbl/case2-after.jpg",
+    procedureDetail: "Brazilian butt lift",
   },
   {
     id: "bbl-3",
@@ -677,6 +761,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Brazilian Butt Lift, Case 3",
     before: "/images/gallery/bbl/case3-before.jpg",
     after: "/images/gallery/bbl/case3-after.jpg",
+    procedureDetail: "Brazilian butt lift",
   },
 
   // === Face ===
