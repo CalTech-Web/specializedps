@@ -190,9 +190,8 @@ export default function Header() {
                                 <li key={procedure.label}>
                                   <Link
                                     href={procedure.href!}
-                                    className="group flex items-center gap-2 rounded px-2 py-1.5 text-[13px] text-body transition-all hover:bg-warm-grey hover:text-primary"
+                                    className="block rounded py-1.5 text-[13px] text-body transition-all hover:text-primary"
                                   >
-                                    <ChevronRight className="h-3 w-3 text-primary/0 transition-all duration-200 group-hover:text-primary" />
                                     {procedure.label}
                                   </Link>
                                 </li>
