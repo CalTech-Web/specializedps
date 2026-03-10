@@ -77,7 +77,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2!2d-74.3096!3d40.7261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ad3f97b0c68f%3A0x0!2s264+Millburn+Ave%2C+Millburn%2C+NJ+07041!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="300"
+                height="500"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -89,7 +89,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.8!2d-73.7244!3d40.9686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2940cbb55f8f5%3A0x0!2s500+Mamaroneck+Ave+Suite+211%2C+Harrison%2C+NY+10528!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="300"
+                height="500"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -99,19 +99,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center Logo */}
-          <div className="mb-10 flex justify-center">
-            <Image
-              src="/images/logos/black-logo.webp"
-              alt="Specialized Plastic Surgery"
-              width={220}
-              height={55}
-              className="h-12 w-auto"
-            />
-          </div>
-
-          {/* Locations Row */}
-          <div className="grid items-start gap-8 sm:grid-cols-2">
+          {/* Locations Row: NJ | Logo | NY */}
+          <div className="grid items-start gap-8 sm:grid-cols-[1fr_auto_1fr]">
             {/* NJ Location */}
             <div className="text-center">
               <h4 className="font-heading text-base font-bold text-heading">
@@ -146,6 +135,17 @@ export default function Footer() {
               >
                 {nj.instagram}
               </Link>
+            </div>
+
+            {/* Center Logo */}
+            <div className="flex items-center justify-center self-center">
+              <Image
+                src="/images/logos/black-logo.webp"
+                alt="Specialized Plastic Surgery"
+                width={220}
+                height={55}
+                className="h-12 w-auto"
+              />
             </div>
 
             {/* NY Location */}
@@ -188,33 +188,21 @@ export default function Footer() {
       </div>
 
       {/* ============ Copyright ============ */}
-      <div className="relative overflow-hidden py-4">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="relative mx-auto max-w-[1320px] px-6 text-center">
-          <p className="flex items-center justify-center gap-1.5 text-sm text-body/60">
-            <span>&copy; 2026 Specialized Plastic Surgery | All Rights Reserved.</span>
-            <span>Designed by</span>
+      <div className="bg-heading py-4">
+        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6">
+          <p className="text-sm text-white/70">
+            Built by{" "}
             <Link
               href="https://caltechweb.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center transition-opacity hover:opacity-70"
+              className="font-semibold text-white/90 underline decoration-white/30 underline-offset-2 transition-colors hover:text-white hover:decoration-white/60"
             >
-              <Image
-                src="/images/logos/caltechweb-logo.png"
-                alt="CalTech Web"
-                width={100}
-                height={34}
-                className="h-5 w-auto"
-              />
+              CalTech Web
             </Link>
+          </p>
+          <p className="text-sm text-white/70">
+            &copy; 2026 Specialized Plastic Surgery | All Rights Reserved.
           </p>
         </div>
       </div>

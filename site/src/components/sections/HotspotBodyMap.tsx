@@ -39,7 +39,7 @@ export default function HotspotBodyMap() {
               title={spot.label}
             >
               {/* Pulse ring */}
-              <span className="absolute inset-0 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/40 animate-hotspot-pulse" />
+              <span className="absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/40 animate-hotspot-pulse" />
               {/* Dot */}
               <span className="relative block h-4 w-4 rounded-full border-2 border-white bg-primary shadow-lg transition-transform group-hover:scale-125" />
               {/* Label tooltip */}
