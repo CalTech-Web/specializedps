@@ -5,6 +5,7 @@ import { siteConfig } from "@/data/site";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Calendar, Quote, ChevronRight } from "lucide-react";
+import CTABanner from "@/components/sections/CTABanner";
 
 interface DoctorPageProps {
   params: Promise<{ slug: string }>;
@@ -45,8 +46,15 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
   return (
     <>
       {/* Hero / Breadcrumb */}
-      <section className="relative bg-heading py-16 sm:py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-heading/95 to-heading/80" />
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
         <div className="relative z-10 mx-auto max-w-[1320px] px-6">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-white/60">
@@ -54,7 +62,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <Link href="/about" className="transition-colors hover:text-white">
+            <Link href="/doctors" className="transition-colors hover:text-white">
               Our Surgeons
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
@@ -68,10 +76,11 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
             {doctor.title} | {doctor.credentials} | {doctor.location}
           </p>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Main Content: 2-Column Layout */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
             {/* Main Content (Left) */}
@@ -226,7 +235,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
 
               {/* Quote */}
               {doctor.quote && (
-                <div className="mt-14 bg-peach-light p-8">
+                <div className="mt-14 rounded-lg border border-gray-100 bg-warm-grey p-8">
                   <Quote className="mb-4 h-8 w-8 text-primary" />
                   <blockquote className="text-lg leading-relaxed text-body italic">
                     &ldquo;{doctor.quote}&rdquo;
@@ -257,7 +266,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
 
               {/* Notable Achievement */}
               {doctor.notableAchievement && (
-                <div className="mt-14 bg-heading p-8">
+                <div className="mt-14 rounded-lg bg-heading p-8">
                   <h3 className="font-heading text-xl font-bold text-white">
                     Notable Achievement
                   </h3>
@@ -276,7 +285,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
 
             {/* Sidebar (Right) */}
             <aside className="lg:sticky lg:top-24 lg:self-start">
-              <div className="bg-secondary p-8">
+              <div className="rounded-lg border border-gray-100 bg-warm-grey p-8">
                 <h3 className="font-heading text-xl font-bold text-heading">
                   Schedule a Consultation
                 </h3>
@@ -323,7 +332,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
                 </div>
 
                 {/* Practice Info */}
-                <div className="mt-8 border-t border-peach pt-6">
+                <div className="mt-8 border-t border-gray-200 pt-6">
                   <h4 className="text-sm font-bold text-heading">
                     Practice Information
                   </h4>
@@ -347,6 +356,8 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

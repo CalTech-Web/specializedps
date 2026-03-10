@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import DoctorCard from "@/components/sections/DoctorCard";
 import SectionHeading from "@/components/ui/SectionHeading";
+import CTABanner from "@/components/sections/CTABanner";
 import { doctors } from "@/data/doctors";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Our Team",
+  title: "Our Team | Specialized Plastic Surgery",
+  description:
+    "Meet the board-certified plastic surgeons and dedicated support staff at Specialized Plastic Surgery.",
 };
 
 interface TeamMember {
@@ -45,11 +48,15 @@ export default function TeamPage() {
         subtitle="A dedicated team of professionals committed to providing exceptional patient care at every step of your journey."
         ctaText="Schedule a Consultation"
         ctaLink="/contact"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Our Team" },
+        ]}
       />
 
       {/* Surgeons */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Our Surgeons"
             title="Board-Certified Plastic Surgeons"
@@ -65,22 +72,31 @@ export default function TeamPage() {
       </section>
 
       {/* Team Members */}
-      <section className="bg-peach-light py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="The Team Behind the Scenes"
             title="Our Support Staff"
-            subtitle="From your first phone call to your final follow-up, our team ensures a seamless, supportive experience."
+            description="From your first phone call to your final follow-up, our team ensures a seamless, supportive experience."
             centered
+            light
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="flex items-center gap-4 rounded-2xl border border-secondary bg-white p-5 shadow-sm"
+                className="group flex items-center gap-4 rounded-lg border border-white/[0.06] bg-white/[0.03] p-5 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
               >
                 {member.image ? (
-                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary/30">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -90,16 +106,16 @@ export default function TeamPage() {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-heading">
-                    <span className="text-lg font-semibold text-white">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <span className="text-lg font-semibold text-primary">
                       {getInitials(member.name)}
                     </span>
                   </div>
                 )}
                 <div>
-                  <h3 className="font-heading font-bold text-heading">{member.name}</h3>
+                  <h3 className="font-heading font-bold text-white">{member.name}</h3>
                   <p className="text-sm text-primary">{member.role}</p>
-                  <p className="mt-0.5 text-xs text-body">
+                  <p className="mt-0.5 text-xs text-white/50">
                     {member.location}
                   </p>
                 </div>
@@ -108,6 +124,8 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

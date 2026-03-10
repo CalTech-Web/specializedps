@@ -3,10 +3,14 @@ import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQSection from "@/components/sections/FAQSection";
+import CTABanner from "@/components/sections/CTABanner";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Specialized Plastic Surgery",
+  description:
+    "Schedule a consultation with our board-certified plastic surgeons. Offices in Millburn, NJ and Harrison, NY.",
 };
 
 const locations = [
@@ -56,26 +60,27 @@ const contactFaqs = [
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
       <HeroSection
         title="Contact Us"
-        subtitle="Ready For A Consultation?"
+        subtitle="Ready to take the next step? Schedule a consultation with our board-certified plastic surgeons today."
         ctaText="Call (973) 561-0900"
         ctaLink="tel:9735610900"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Contact Us" },
+        ]}
       />
 
       {/* Form Section */}
-      <section className="bg-blog-bg py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-              Send Us a Message
-            </h2>
-            <p className="mt-4 text-center text-lg text-body">
-              Fill out the form below and our team will get back to you
-              promptly.
-            </p>
-            <div className="mt-10">
+            <SectionHeading
+              eyebrow="Get in Touch"
+              title="Send Us a Message"
+              description="Fill out the form below and our team will get back to you promptly."
+            />
+            <div className="mt-8">
               <ContactForm />
             </div>
           </div>
@@ -83,87 +88,95 @@ export default function ContactPage() {
       </section>
 
       {/* Location Info */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Our Locations
-          </h2>
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1320px] px-6">
+          <SectionHeading
+            eyebrow="Visit Us"
+            title="Our Locations"
+            light
+          />
           <div className="grid gap-8 md:grid-cols-2">
             {locations.map((loc) => (
               <div
                 key={loc.key}
-                className="border border-peach bg-peach-light p-8 shadow-sm"
+                className="overflow-hidden rounded-lg border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
               >
-                <h3 className="font-heading text-xl font-bold text-heading">
-                  {loc.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-primary">
-                  {loc.surgeon}
-                </p>
+                <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="p-8">
+                  <h3 className="font-heading text-xl font-bold text-white">
+                    {loc.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-primary">
+                    {loc.surgeon}
+                  </p>
 
-                <div className="mt-6 space-y-4">
-                  {/* Address */}
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
-                      <MapPin className="h-4 w-4 text-white" />
+                  <div className="mt-6 space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <MapPin className="h-4 w-4 text-primary" />
+                      </div>
+                      <a
+                        href={loc.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-white/70 transition-colors hover:text-white"
+                      >
+                        {loc.address}
+                      </a>
                     </div>
-                    <a
-                      href={loc.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-body transition-colors hover:text-primary"
-                    >
-                      {loc.address}
-                    </a>
-                  </div>
 
-                  {/* Phone */}
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
-                      <Phone className="h-4 w-4 text-white" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Phone className="h-4 w-4 text-primary" />
+                      </div>
+                      <a
+                        href={`tel:${loc.phoneRaw}`}
+                        className="text-sm font-semibold text-primary transition-colors hover:text-white"
+                      >
+                        {loc.phone}
+                      </a>
                     </div>
-                    <a
-                      href={`tel:${loc.phoneRaw}`}
-                      className="text-sm font-semibold text-primary transition-colors hover:text-heading"
-                    >
-                      {loc.phone}
-                    </a>
-                  </div>
 
-                  {/* Email */}
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
-                      <Mail className="h-4 w-4 text-white" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Mail className="h-4 w-4 text-primary" />
+                      </div>
+                      <a
+                        href={`mailto:${loc.email}`}
+                        className="text-sm text-white/70 transition-colors hover:text-white"
+                      >
+                        {loc.email}
+                      </a>
                     </div>
-                    <a
-                      href={`mailto:${loc.email}`}
-                      className="text-sm text-body transition-colors hover:text-primary"
-                    >
-                      {loc.email}
-                    </a>
-                  </div>
 
-                  {/* Hours */}
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
-                      <Clock className="h-4 w-4 text-white" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Clock className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-sm text-white/70">{loc.hours}</span>
                     </div>
-                    <span className="text-sm text-body">{loc.hours}</span>
-                  </div>
 
-                  {/* Instagram */}
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-primary">
-                      <Instagram className="h-4 w-4 text-white" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Instagram className="h-4 w-4 text-primary" />
+                      </div>
+                      <a
+                        href={loc.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-white/70 transition-colors hover:text-white"
+                      >
+                        {loc.instagram}
+                      </a>
                     </div>
-                    <a
-                      href={loc.instagramUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-body transition-colors hover:text-primary"
-                    >
-                      {loc.instagram}
-                    </a>
                   </div>
                 </div>
               </div>
@@ -172,8 +185,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <FAQSection faqs={contactFaqs} />
+
+      <CTABanner />
     </>
   );
 }

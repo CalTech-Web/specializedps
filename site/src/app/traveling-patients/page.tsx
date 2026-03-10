@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   Building2,
@@ -22,14 +23,19 @@ export const metadata: Metadata = {
 export default function TravelingPatientsPage() {
   return (
     <>
+      {/* Hero */}
       <HeroSection
         title="Traveling Patients"
         subtitle="We welcome patients from across the country and are here to make your experience as seamless and comfortable as possible."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Traveling Patients" },
+        ]}
       />
 
-      {/* Intro */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl px-6 text-center">
+      {/* Intro / Welcome */}
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Welcome"
             title="Traveling to Our Practice"
@@ -40,32 +46,47 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Accommodation Assistance */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        {/* Marble texture overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Gold accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <Building2 className="h-8 w-8 text-primary" />
-                <h2 className="font-heading text-3xl font-bold text-heading">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Building2 className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-white">
                   Accommodation Assistance
                 </h2>
               </div>
-              <p className="mb-6 text-base leading-relaxed text-body">
+              <p className="mb-6 text-base leading-relaxed text-white/70">
                 We understand that finding comfortable lodging near our offices
                 is important, especially when you are recovering from a
                 procedure. Our team can recommend nearby hotels and
                 extended-stay options that are convenient to both our New Jersey
                 and New York locations.
               </p>
-              <p className="text-base leading-relaxed text-body">
+              <p className="text-base leading-relaxed text-white/70">
                 Many of our recommended accommodations offer quiet, comfortable
                 rooms suited for post-operative recovery, with easy access to
                 dining, pharmacies, and our office for follow-up visits.
               </p>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-white p-8">
-              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
                 What We Help With
               </h3>
               <ul className="space-y-4">
@@ -77,7 +98,7 @@ export default function TravelingPatientsPage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-body">
+                    <span className="text-base leading-relaxed text-white/80">
                       {item}
                     </span>
                   </li>
@@ -89,10 +110,10 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Transportation Options */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="order-2 rounded-xl border border-secondary bg-peach-light p-8 lg:order-1">
+            <div className="order-2 rounded-lg border border-gray-100 bg-white p-8 shadow-sm lg:order-1">
               <h3 className="font-heading mb-6 text-xl font-bold text-heading">
                 Getting Here
               </h3>
@@ -116,7 +137,9 @@ export default function TravelingPatientsPage() {
 
             <div className="order-1 lg:order-2">
               <div className="mb-4 flex items-center gap-3">
-                <Car className="h-8 w-8 text-primary" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Car className="h-5 w-5 text-primary" />
+                </div>
                 <h2 className="font-heading text-3xl font-bold text-heading">
                   Transportation Options
                 </h2>
@@ -139,24 +162,39 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Out-of-State Insurance */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        {/* Marble texture overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Gold accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-primary" />
-                <h2 className="font-heading text-3xl font-bold text-heading">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-white">
                   Out-of-State Insurance
                 </h2>
               </div>
-              <p className="mb-6 text-base leading-relaxed text-body">
+              <p className="mb-6 text-base leading-relaxed text-white/70">
                 If you are traveling from another state for a reconstructive
                 procedure, our insurance team can help you understand your
                 coverage options. As an out-of-network provider, we work with
                 patients across the country and are experienced in navigating
                 insurance plans from many different states and carriers.
               </p>
-              <p className="text-base leading-relaxed text-body">
+              <p className="text-base leading-relaxed text-white/70">
                 For breast reconstruction patients, the Women&apos;s Health and
                 Cancer Rights Act (WHCRA) is a federal law that applies
                 regardless of which state you live in. Our team will verify
@@ -165,8 +203,8 @@ export default function TravelingPatientsPage() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-white p-8">
-              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
                 Insurance Support for Travelers
               </h3>
               <ul className="space-y-4">
@@ -179,7 +217,7 @@ export default function TravelingPatientsPage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-body">
+                    <span className="text-base leading-relaxed text-white/80">
                       {item}
                     </span>
                   </li>
@@ -191,8 +229,8 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Post-Op Care Coordination */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-warm-grey py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Aftercare"
             title="Post-Operative Care Coordination"
@@ -229,9 +267,11 @@ export default function TravelingPatientsPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl border border-secondary bg-peach-light p-6 text-center"
+                className="rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <item.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-heading text-base font-bold text-heading">
                   {item.title}
                 </h3>
@@ -245,8 +285,8 @@ export default function TravelingPatientsPage() {
       </section>
 
       {/* Office Locations Quick Reference */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Our Locations"
             title="Where to Find Us"
@@ -254,9 +294,11 @@ export default function TravelingPatientsPage() {
           />
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="rounded-xl border border-secondary bg-white p-8">
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-primary" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Plane className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-heading text-xl font-bold text-heading">
                   New Jersey Office
                 </h3>
@@ -280,9 +322,11 @@ export default function TravelingPatientsPage() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-white p-8">
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <Plane className="h-6 w-6 text-primary" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Plane className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-heading text-xl font-bold text-heading">
                   New York Office
                 </h3>
@@ -309,6 +353,9 @@ export default function TravelingPatientsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Banner */}
+      <CTABanner />
     </>
   );
 }

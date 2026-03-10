@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import {
   serviceCategories,
   getCategoryBySlug,
@@ -8,6 +9,8 @@ import {
   type ProcedureCategory,
 } from "@/data/procedures";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -27,7 +30,7 @@ export async function generateMetadata({
   if (!cat) return {};
 
   return {
-    title: `${cat.name} Procedures`,
+    title: `${cat.name} Procedures | Specialized Plastic Surgery`,
     description: cat.description,
   };
 }
@@ -46,26 +49,31 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         subtitle={cat.heroDescription}
         ctaText="Schedule Consultation"
         ctaLink="/contact"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Services" },
+          { label: cat.name },
+        ]}
       />
 
       {/* Procedures Grid */}
-      <section className="bg-cream py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Our {cat.name} Procedures
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-body">
-            {cat.description}
-          </p>
+          <SectionHeading
+            eyebrow={cat.name}
+            title={`Our ${cat.name} Procedures`}
+            description={cat.description}
+          />
 
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {procedures.map((procedure) => (
               <Link
                 key={procedure.slug}
                 href={`/services/${procedure.categorySlug}/${procedure.slug}`}
-                className="group border border-peach bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <h3 className="font-heading text-lg font-bold text-heading transition-colors group-hover:text-primary">
+                <div className="h-[2px] w-12 bg-gradient-to-r from-primary via-gold to-primary" />
+                <h3 className="mt-4 font-heading text-lg font-bold text-heading transition-colors group-hover:text-primary">
                   {procedure.shortName ?? procedure.name}
                 </h3>
                 <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-body">
@@ -73,27 +81,15 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
                 </p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-colors group-hover:text-heading">
                   Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform group-hover:translate-x-0.5"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

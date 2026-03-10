@@ -6,8 +6,8 @@ interface SectionHeadingProps {
   description?: string;
   centered?: boolean;
   className?: string;
-  /** @deprecated eyebrow is no longer rendered. Kept for backward compatibility. */
   eyebrow?: string;
+  light?: boolean;
 }
 
 export default function SectionHeading({
@@ -16,6 +16,8 @@ export default function SectionHeading({
   description,
   centered = true,
   className,
+  eyebrow,
+  light = false,
 }: SectionHeadingProps) {
   return (
     <div
@@ -25,15 +27,28 @@ export default function SectionHeading({
         className
       )}
     >
+      {/* Eyebrow badge */}
+      {eyebrow && (
+        <p className={cn(
+          "mb-4 inline-block rounded-sm px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]",
+          light ? "bg-white/10 text-primary" : "bg-primary/20 text-primary"
+        )}>
+          {eyebrow}
+        </p>
+      )}
+
       {/* Subtitle with decorative line */}
       {subtitle && (
-        <p className="mb-3 flex items-center gap-4 text-primary font-semibold text-sm uppercase tracking-[0.15em]">
+        <p className={cn(
+          "mb-3 flex items-center gap-4 font-semibold text-sm uppercase tracking-[0.15em]",
+          light ? "text-primary" : "text-primary"
+        )}>
           {centered && <span className="flex-1" />}
-          <span className="inline-block w-12 h-[2px] bg-primary" />
+          <span className={cn("inline-block w-12 h-[2px]", light ? "bg-primary" : "bg-primary")} />
           <span>{subtitle}</span>
           {centered && (
             <>
-              <span className="inline-block w-12 h-[2px] bg-primary" />
+              <span className={cn("inline-block w-12 h-[2px]", light ? "bg-primary" : "bg-primary")} />
               <span className="flex-1" />
             </>
           )}
@@ -41,7 +56,10 @@ export default function SectionHeading({
       )}
 
       {/* Title */}
-      <h2 className="font-heading text-3xl font-bold text-heading leading-[1.1] sm:text-4xl">
+      <h2 className={cn(
+        "font-heading text-3xl font-bold leading-[1.1] sm:text-4xl",
+        light ? "text-white" : "text-heading"
+      )}>
         {title}
       </h2>
 
@@ -49,7 +67,8 @@ export default function SectionHeading({
       {description && (
         <p
           className={cn(
-            "mt-4 text-lg leading-relaxed text-body",
+            "mt-4 text-lg leading-relaxed",
+            light ? "text-white/70" : "text-body",
             centered && "mx-auto max-w-2xl"
           )}
         >

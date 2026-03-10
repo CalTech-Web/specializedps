@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   CreditCard,
@@ -22,21 +23,27 @@ export default function FinancingPage() {
       <HeroSection
         title="Financing & Payment Options"
         subtitle="We believe exceptional care should be accessible. Explore flexible payment plans designed to fit your budget."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Financing" },
+        ]}
       />
 
       {/* Transparent Pricing */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Our Commitment"
             title="Transparent, Upfront Pricing"
-            subtitle="At Specialized Plastic Surgery, we believe you deserve clarity when it comes to the cost of your care. During your consultation, you will receive a detailed breakdown of all fees, including surgeon fees, anesthesia, facility costs, and any post-operative garments or supplies. There are no hidden charges or surprise bills."
+            description="At Specialized Plastic Surgery, we believe you deserve clarity when it comes to the cost of your care. During your consultation, you will receive a detailed breakdown of all fees, including surgeon fees, anesthesia, facility costs, and any post-operative garments or supplies. There are no hidden charges or surprise bills."
             centered
           />
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <DollarSign className="mx-auto mb-4 h-8 w-8 text-primary" />
+            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <DollarSign className="h-7 w-7 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 All-Inclusive Quotes
               </h3>
@@ -45,8 +52,11 @@ export default function FinancingPage() {
                 and post-operative supplies so you know the full cost upfront.
               </p>
             </div>
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-primary" />
+
+            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <ShieldCheck className="h-7 w-7 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 No Hidden Fees
               </h3>
@@ -55,8 +65,11 @@ export default function FinancingPage() {
                 What you are quoted is what you pay.
               </p>
             </div>
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <Calculator className="mx-auto mb-4 h-8 w-8 text-primary" />
+
+            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <Calculator className="h-7 w-7 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 Flexible Plans
               </h3>
@@ -70,33 +83,55 @@ export default function FinancingPage() {
       </section>
 
       {/* CareCredit */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        {/* Marble texture overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Gold accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
-              <div className="mb-4 flex items-center gap-3">
-                <CreditCard className="h-8 w-8 text-primary" />
-                <h2 className="font-heading text-3xl font-bold text-heading">
-                  CareCredit
-                </h2>
-              </div>
-              <p className="mb-6 text-lg leading-relaxed text-body">
+              <SectionHeading
+                eyebrow="Financing Option"
+                title="CareCredit"
+                centered={false}
+                light
+              />
+              <p className="mb-6 text-lg leading-relaxed text-white/75">
                 CareCredit is a revolving health and wellness credit card
                 accepted at over 266,000 locations nationwide. It gives you the
                 flexibility to use your card again and again for procedures,
                 follow-up treatments, and even everyday health expenses.
               </p>
-              <p className="text-base leading-relaxed text-body">
+              <p className="text-base leading-relaxed text-white/70">
                 CareCredit offers promotional financing periods of 6 to 24
                 months at 0% APR with deferred interest. Longer terms of up to
                 60 months are available at a reduced APR for larger procedures.
                 Please note that CareCredit requires a hard credit check as part
                 of the application process.
               </p>
+
+              <div className="mt-8 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <CreditCard className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-sm leading-relaxed text-white/60">
+                  Apply online or in our office before your procedure date.
+                </p>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-white p-8">
-              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
                 CareCredit Highlights
               </h3>
               <ul className="space-y-4">
@@ -110,7 +145,7 @@ export default function FinancingPage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-body">
+                    <span className="text-base leading-relaxed text-white/80">
                       {item}
                     </span>
                   </li>
@@ -122,10 +157,10 @@ export default function FinancingPage() {
       </section>
 
       {/* Cherry Payments */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="order-2 rounded-xl border border-secondary bg-peach-light p-8 lg:order-1">
+            <div className="order-2 rounded-lg border border-gray-100 bg-white p-8 shadow-sm lg:order-1">
               <h3 className="font-heading mb-6 text-xl font-bold text-heading">
                 Cherry Highlights
               </h3>
@@ -149,12 +184,11 @@ export default function FinancingPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <div className="mb-4 flex items-center gap-3">
-                <ShieldCheck className="h-8 w-8 text-primary" />
-                <h2 className="font-heading text-3xl font-bold text-heading">
-                  Cherry Payments
-                </h2>
-              </div>
+              <SectionHeading
+                eyebrow="Financing Option"
+                title="Cherry Payments"
+                centered={false}
+              />
               <p className="mb-6 text-lg leading-relaxed text-body">
                 Cherry offers fixed installment loans designed specifically for
                 healthcare expenses. Unlike revolving credit, Cherry provides a
@@ -169,58 +203,86 @@ export default function FinancingPage() {
                 for patients who want straightforward, no-surprise payment
                 plans.
               </p>
+
+              <div className="mt-8 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <ShieldCheck className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-sm leading-relaxed text-body">
+                  No hard credit pull means applying will not affect your score.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Payment Example */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-3xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        {/* Marble texture overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Gold accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Payment Example"
             title="See What Your Monthly Payments Could Look Like"
             centered
+            light
           />
 
-          <div className="mt-12 rounded-2xl border border-primary/20 bg-white p-10 text-center shadow-sm">
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-white/[0.06] bg-white/[0.03] p-8 sm:p-10">
             <div className="mb-6 flex items-center justify-center gap-3">
-              <Clock className="h-7 w-7 text-primary" />
-              <h3 className="font-heading text-2xl font-bold text-heading">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <Clock className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-white">
                 $9,000 Procedure
               </h3>
             </div>
-            <p className="mb-8 text-base leading-relaxed text-body">
+
+            <p className="mb-8 text-center text-base leading-relaxed text-white/70">
               Based on a $9,000 all-inclusive procedure cost, here is what your
               estimated monthly payments could look like depending on the
               financing term you choose.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-xl bg-peach-light p-6">
+              <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 text-center">
                 <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                   12 Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-heading">~$750</p>
-                <p className="mt-1 text-sm text-body">per month</p>
+                <p className="mt-2 text-3xl font-bold text-white">~$750</p>
+                <p className="mt-1 text-sm text-white/60">per month</p>
               </div>
-              <div className="rounded-xl border-2 border-primary bg-primary/5 p-6">
+
+              <div className="rounded-lg border border-primary/40 bg-primary/10 p-6 text-center">
                 <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                   24 Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-heading">~$375</p>
-                <p className="mt-1 text-sm text-body">per month</p>
+                <p className="mt-2 text-3xl font-bold text-white">~$375</p>
+                <p className="mt-1 text-sm text-white/60">per month</p>
               </div>
-              <div className="rounded-xl bg-peach-light p-6">
+
+              <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 text-center">
                 <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                   48+ Months
                 </p>
-                <p className="mt-2 text-3xl font-bold text-heading">~$180</p>
-                <p className="mt-1 text-sm text-body">per month</p>
+                <p className="mt-2 text-3xl font-bold text-white">~$180</p>
+                <p className="mt-1 text-sm text-white/60">per month</p>
               </div>
             </div>
 
-            <p className="mt-8 text-xs leading-relaxed text-body/60">
+            <p className="mt-8 text-center text-xs leading-relaxed text-white/40">
               *Estimated payments shown for illustrative purposes only. Actual
               monthly payments may vary based on credit approval, APR, and
               selected financing term. Contact our office for a personalized
@@ -229,6 +291,9 @@ export default function FinancingPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Banner */}
+      <CTABanner />
     </>
   );
 }

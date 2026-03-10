@@ -18,21 +18,26 @@ export default function FAQSection({
   heading = "Frequently Asked Questions",
 }: FAQSectionProps) {
   return (
-    <section className="py-20">
+    <section className="bg-warm-grey py-14 sm:py-16">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-          {heading}
-        </h2>
+        <div className="text-center">
+          <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            FAQ
+          </p>
+          <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
+            {heading}
+          </h2>
+        </div>
 
-        <Accordion.Root type="single" collapsible className="mt-12 divide-y divide-peach">
+        <Accordion.Root type="single" collapsible className="mt-10 divide-y divide-gray-200">
           {faqs.map((faq, index) => (
             <Accordion.Item
               key={index}
               value={`faq-${index}`}
-              className="bg-white"
+              className="bg-transparent"
             >
               <Accordion.Header>
-                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 px-6 py-5 text-left text-lg font-medium text-heading transition-colors hover:text-primary">
+                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-5 text-left text-lg font-medium text-heading transition-colors hover:text-primary">
                   {faq.question}
                   <ChevronDown
                     size={20}
@@ -41,7 +46,7 @@ export default function FAQSection({
                 </Accordion.Trigger>
               </Accordion.Header>
               <Accordion.Content className="overflow-hidden data-[state=closed]:animate-[accordion-up_300ms_ease-out] data-[state=open]:animate-[accordion-down_300ms_ease-out]">
-                <div className="px-6 pb-5 text-base leading-relaxed text-body">
+                <div className="pb-5 text-base leading-relaxed text-body">
                   {faq.answer}
                 </div>
               </Accordion.Content>

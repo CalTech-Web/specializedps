@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   ShieldCheck,
@@ -24,11 +25,12 @@ export default function InsurancePage() {
       <HeroSection
         title="Insurance Information"
         subtitle="Our dedicated team helps you navigate insurance coverage so you can focus on your care and recovery."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Insurance" }]}
       />
 
       {/* Out-of-Network Provider */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Coverage"
             title="Out-of-Network Provider"
@@ -37,8 +39,11 @@ export default function InsurancePage() {
           />
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-primary" />
+            {/* Card 1 */}
+            <div className="group rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <ShieldCheck className="h-6 w-6 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 Insurance Verification
               </h3>
@@ -47,8 +52,12 @@ export default function InsurancePage() {
                 understand your benefits before committing to a procedure.
               </p>
             </div>
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <FileText className="mx-auto mb-4 h-8 w-8 text-primary" />
+
+            {/* Card 2 */}
+            <div className="group rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <FileText className="h-6 w-6 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 Claims Assistance
               </h3>
@@ -57,8 +66,12 @@ export default function InsurancePage() {
                 working to ensure proper documentation and timely filing.
               </p>
             </div>
-            <div className="rounded-xl border border-secondary bg-peach-light p-8 text-center">
-              <Scale className="mx-auto mb-4 h-8 w-8 text-primary" />
+
+            {/* Card 3 */}
+            <div className="group rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                <Scale className="h-6 w-6 text-primary" />
+              </div>
               <h3 className="font-heading text-lg font-bold text-heading">
                 Appeals Support
               </h3>
@@ -72,24 +85,27 @@ export default function InsurancePage() {
       </section>
 
       {/* WHCRA Section */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        {/* Marble overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-                Federal Law
-              </p>
-              <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-                Women&apos;s Health and Cancer Rights Act (WHCRA)
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-body">
-                The Women&apos;s Health and Cancer Rights Act of 1998 is a
-                federal law that protects breast cancer patients who choose to
-                have reconstruction after a mastectomy. If your health insurance
-                covers mastectomy, it is required by law to also cover breast
-                reconstruction.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-body">
+              <SectionHeading
+                eyebrow="Federal Law"
+                title="Women's Health and Cancer Rights Act (WHCRA)"
+                description="The Women's Health and Cancer Rights Act of 1998 is a federal law that protects breast cancer patients who choose to have reconstruction after a mastectomy. If your health insurance covers mastectomy, it is required by law to also cover breast reconstruction."
+                light
+              />
+              <p className="mt-4 text-base leading-relaxed text-white/70">
                 This law applies to most group health plans and individual
                 insurance policies. It ensures that patients have access to the
                 full spectrum of reconstructive options without discrimination or
@@ -97,10 +113,13 @@ export default function InsurancePage() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-white p-8">
-              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
+            {/* Glass-morphism card */}
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
                 What WHCRA Covers
               </h3>
+              {/* Gold gradient bar */}
+              <div className="mb-6 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
               <ul className="space-y-4">
                 {[
                   "Reconstruction of the breast on which the mastectomy was performed",
@@ -110,7 +129,7 @@ export default function InsurancePage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-body">
+                    <span className="text-base leading-relaxed text-white/80">
                       {item}
                     </span>
                   </li>
@@ -122,8 +141,8 @@ export default function InsurancePage() {
       </section>
 
       {/* Medically Necessary Procedures */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Medically Necessary"
             title="Procedures That May Be Covered by Insurance"
@@ -132,9 +151,12 @@ export default function InsurancePage() {
           />
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="rounded-xl border border-secondary bg-peach-light p-8">
+            {/* Breast Reduction card */}
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <HeartPulse className="h-6 w-6 text-primary" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <HeartPulse className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-heading text-xl font-bold text-heading">
                   Breast Reduction
                 </h3>
@@ -151,10 +173,7 @@ export default function InsurancePage() {
                   "Difficulty with physical activity and exercise",
                   "Bra strap grooving and nerve compression",
                 ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 text-body"
-                  >
+                  <li key={index} className="flex items-start gap-3 text-body">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     <span className="text-sm leading-relaxed">{item}</span>
                   </li>
@@ -162,9 +181,12 @@ export default function InsurancePage() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-secondary bg-peach-light p-8">
+            {/* Body Contouring card */}
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <HeartPulse className="h-6 w-6 text-primary" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <HeartPulse className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-heading text-xl font-bold text-heading">
                   Body Contouring After Weight Loss
                 </h3>
@@ -182,10 +204,7 @@ export default function InsurancePage() {
                   "Documented failure of conservative treatment",
                   "Significant functional impairment",
                 ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 text-body"
-                  >
+                  <li key={index} className="flex items-start gap-3 text-body">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                     <span className="text-sm leading-relaxed">{item}</span>
                   </li>
@@ -197,8 +216,8 @@ export default function InsurancePage() {
       </section>
 
       {/* Insurance Process */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="bg-warm-grey py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="How It Works"
             title="Our Insurance Process"
@@ -207,8 +226,9 @@ export default function InsurancePage() {
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="relative rounded-xl border border-secondary bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+            {/* Step 1 */}
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
                 <ClipboardList className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-heading mb-3 text-lg font-bold text-heading">
@@ -221,8 +241,9 @@ export default function InsurancePage() {
               </p>
             </div>
 
-            <div className="relative rounded-xl border border-secondary bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+            {/* Step 2 */}
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
                 <FileText className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-heading mb-3 text-lg font-bold text-heading">
@@ -235,8 +256,9 @@ export default function InsurancePage() {
               </p>
             </div>
 
-            <div className="relative rounded-xl border border-secondary bg-white p-8">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+            {/* Step 3 */}
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
                 <PhoneCall className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-heading mb-3 text-lg font-bold text-heading">
@@ -251,7 +273,7 @@ export default function InsurancePage() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl border border-primary/20 bg-white p-6 text-center">
+          <div className="mt-10 rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm">
             <div className="flex items-center justify-center gap-3">
               <AlertCircle className="h-5 w-5 text-primary" />
               <p className="text-base leading-relaxed text-body">
@@ -265,6 +287,8 @@ export default function InsurancePage() {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

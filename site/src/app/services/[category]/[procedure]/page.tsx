@@ -9,6 +9,8 @@ import {
 import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
+import CTABanner from "@/components/sections/CTABanner";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { Phone, MapPin, CheckCircle, Images } from "lucide-react";
 
 interface PageProps {
@@ -30,7 +32,7 @@ export async function generateMetadata({
   if (!proc) return {};
 
   return {
-    title: proc.name,
+    title: `${proc.name} | Specialized Plastic Surgery`,
     description: proc.heroDescription,
   };
 }
@@ -46,21 +48,28 @@ export default async function ProcedurePage({ params }: PageProps) {
 
   return (
     <>
-      {/* Hero */}
       <HeroSection
         title={proc.name}
         subtitle={proc.heroDescription}
         ctaText="Schedule Consultation"
         ctaLink="/contact"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Services" },
+          { label: cat?.name || "Services", href: `/services/${category}` },
+          { label: proc.shortName ?? proc.name },
+        ]}
       />
 
       {/* What Is [Procedure]? */}
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-            What Is {proc.name}?
-          </h2>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-body">
+          <SectionHeading
+            eyebrow="Overview"
+            title={`What Is ${proc.name}?`}
+            centered={false}
+          />
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-body">
             {proc.description}
           </p>
           {proc.procedureDuration && (
@@ -75,21 +84,31 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Benefits */}
-      <section className="bg-cream py-16 sm:py-20">
-        <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Benefits
-          </h2>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1320px] px-6">
+          <SectionHeading
+            eyebrow="Advantages"
+            title="Benefits"
+            light
+          />
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {proc.benefits.map((benefit, i) => (
               <div
                 key={i}
-                className="bg-peach-light p-6 shadow-sm"
+                className="group rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center bg-primary/10">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
-                <p className="font-heading text-base font-semibold leading-relaxed text-heading">
+                <p className="font-heading text-base font-semibold leading-relaxed text-white">
                   {benefit}
                 </p>
               </div>
@@ -99,19 +118,23 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Candidacy */}
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Who is a Good Candidate?
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg text-body">
+          <SectionHeading
+            eyebrow="Am I a Candidate?"
+            title="Who is a Good Candidate?"
+            centered={false}
+          />
+          <p className="mt-2 max-w-3xl text-lg text-body">
             You may be a good candidate for this procedure if you meet the
             following criteria:
           </p>
-          <ul className="mt-8 max-w-3xl space-y-4">
+          <ul className="mt-6 max-w-3xl space-y-4">
             {proc.candidateCriteria.map((criterion, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 mt-0.5">
+                  <CheckCircle className="h-3.5 w-3.5 text-primary" />
+                </div>
                 <span className="text-base leading-relaxed text-body">
                   {criterion}
                 </span>
@@ -123,22 +146,22 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Techniques */}
       {proc.techniques && proc.techniques.length > 0 && (
-        <section className="bg-secondary py-16 sm:py-20">
+        <section className="bg-warm-grey py-14 sm:py-16">
           <div className="mx-auto max-w-[1320px] px-6">
-            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-              Techniques
-            </h2>
-            <p className="mt-4 max-w-3xl text-lg text-body">
-              Our surgeons use a variety of approaches tailored to your unique
-              anatomy and goals:
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <SectionHeading
+              eyebrow="Our Approach"
+              title="Techniques"
+              description="Our surgeons use a variety of approaches tailored to your unique anatomy and goals."
+              centered={false}
+            />
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {proc.techniques.map((technique, i) => (
                 <div
                   key={i}
-                  className="border border-peach bg-white p-5 shadow-sm"
+                  className="rounded-lg border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <p className="font-semibold text-heading">{technique}</p>
+                  <div className="h-[2px] w-8 bg-gradient-to-r from-primary to-gold" />
+                  <p className="mt-3 font-semibold text-heading">{technique}</p>
                 </div>
               ))}
             </div>
@@ -147,12 +170,14 @@ export default async function ProcedurePage({ params }: PageProps) {
       )}
 
       {/* Recovery */}
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Recovery Timeline
-          </h2>
-          <div className="mt-6 max-w-3xl bg-peach-light p-8">
+          <SectionHeading
+            eyebrow="What to Expect"
+            title="Recovery Timeline"
+            centered={false}
+          />
+          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-warm-grey p-8">
             <p className="text-lg leading-relaxed text-body">
               {proc.recoveryTimeline}
             </p>
@@ -162,12 +187,14 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Insurance Coverage */}
       {proc.insuranceCoverage && (
-        <section className="bg-cream py-16 sm:py-20">
+        <section className="bg-warm-grey py-14 sm:py-16">
           <div className="mx-auto max-w-[1320px] px-6">
-            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-              Insurance Coverage
-            </h2>
-            <div className="mt-6 max-w-3xl border-l-4 border-primary bg-peach-light p-8">
+            <SectionHeading
+              eyebrow="Coverage"
+              title="Insurance Coverage"
+              centered={false}
+            />
+            <div className="mt-4 max-w-3xl rounded-lg border-l-4 border-primary bg-white p-8 shadow-sm">
               <p className="text-lg leading-relaxed text-body">
                 {proc.insuranceCoverage}
               </p>
@@ -177,20 +204,28 @@ export default async function ProcedurePage({ params }: PageProps) {
       )}
 
       {/* Gallery Link */}
-      <section className="bg-primary py-16">
-        <div className="mx-auto max-w-[1320px] px-6 text-center">
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1320px] px-6 text-center">
           <div className="flex items-center justify-center gap-3">
-            <Images className="h-7 w-7 text-white" />
+            <Images className="h-7 w-7 text-primary" />
             <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
               See Real Patient Results
             </h2>
           </div>
-          <p className="mx-auto mt-3 max-w-xl text-base text-white/80">
+          <p className="mx-auto mt-3 max-w-xl text-base text-white/70">
             Browse our before and after gallery to see transformative outcomes from our board-certified surgeons.
           </p>
           <Link
             href="/gallery"
-            className="mt-6 inline-block border-2 border-white bg-white px-7 py-3 text-lg font-bold text-primary transition-colors hover:bg-transparent hover:text-white"
+            className="mt-6 inline-block rounded-md border-2 border-gold bg-gold px-7 py-3 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md"
           >
             View Gallery
           </Link>
@@ -198,18 +233,18 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Doctors Section */}
-      <section className="bg-peach-light py-16 sm:py-20">
+      <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
-          <h2 className="mb-8 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
-            Our Surgeons
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            {/* NJ Doctor */}
+          <SectionHeading
+            eyebrow="Meet Your Surgeons"
+            title="Our Surgeons"
+          />
+          <div className="grid gap-6 md:grid-cols-2">
             {njDoctor && (
-              <div className="border border-peach bg-white p-8 shadow-sm">
+              <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <Link
                   href={`/doctors/${njDoctor.slug}`}
-                  className="font-heading text-xl font-bold text-primary transition-colors hover:text-heading"
+                  className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
                 >
                   {njDoctor.name}, {njDoctor.credentials}
                 </Link>
@@ -217,12 +252,16 @@ export default async function ProcedurePage({ params }: PageProps) {
                   {njDoctor.title}
                 </p>
                 <div className="mt-5 space-y-3">
-                  <div className="flex items-center gap-2 text-sm text-body">
-                    <MapPin className="h-4 w-4 shrink-0 text-primary" />
+                  <div className="flex items-center gap-3 text-sm text-body">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                      <MapPin className="h-3.5 w-3.5 text-primary" />
+                    </div>
                     {siteConfig.locations.nj.address}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 shrink-0 text-primary" />
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                      <Phone className="h-3.5 w-3.5 text-primary" />
+                    </div>
                     <a
                       href={`tel:${siteConfig.locations.nj.phoneRaw}`}
                       className="text-sm font-semibold text-primary transition-colors hover:text-heading"
@@ -234,12 +273,11 @@ export default async function ProcedurePage({ params }: PageProps) {
               </div>
             )}
 
-            {/* NY Doctor */}
             {nyDoctor && (
-              <div className="border border-peach bg-white p-8 shadow-sm">
+              <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <Link
                   href={`/doctors/${nyDoctor.slug}`}
-                  className="font-heading text-xl font-bold text-primary transition-colors hover:text-heading"
+                  className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
                 >
                   {nyDoctor.name}, {nyDoctor.credentials}
                 </Link>
@@ -247,12 +285,16 @@ export default async function ProcedurePage({ params }: PageProps) {
                   {nyDoctor.title}
                 </p>
                 <div className="mt-5 space-y-3">
-                  <div className="flex items-center gap-2 text-sm text-body">
-                    <MapPin className="h-4 w-4 shrink-0 text-primary" />
+                  <div className="flex items-center gap-3 text-sm text-body">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                      <MapPin className="h-3.5 w-3.5 text-primary" />
+                    </div>
                     {siteConfig.locations.ny.address}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 shrink-0 text-primary" />
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                      <Phone className="h-3.5 w-3.5 text-primary" />
+                    </div>
                     <a
                       href={`tel:${siteConfig.locations.ny.phoneRaw}`}
                       className="text-sm font-semibold text-primary transition-colors hover:text-heading"
@@ -266,6 +308,8 @@ export default async function ProcedurePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }

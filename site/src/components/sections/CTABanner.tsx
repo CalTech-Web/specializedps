@@ -14,12 +14,25 @@ export default function CTABanner({
   ctaLink = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="bg-heading py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+    <section className="relative bg-heading py-14 sm:py-16">
+      {/* Gold gradient top bar */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+      {/* Marble texture overlay */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-[1320px] px-6 text-center">
         <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
           {heading}
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
+        <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/70">
           {subtext}
         </p>
         <div className="mt-8">
