@@ -191,6 +191,9 @@ export default function Footer() {
       <div className="bg-heading py-4">
         <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6">
           <p className="text-sm text-white/70">
+            &copy; 2026 Specialized Plastic Surgery | All Rights Reserved.
+          </p>
+          <p className="text-sm text-white/70">
             Built by{" "}
             <Link
               href="https://caltechweb.com"
@@ -200,9 +203,6 @@ export default function Footer() {
             >
               CalTech Web
             </Link>
-          </p>
-          <p className="text-sm text-white/70">
-            &copy; 2026 Specialized Plastic Surgery | All Rights Reserved.
           </p>
         </div>
       </div>
