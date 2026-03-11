@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
-import SectionHeading from "@/components/ui/SectionHeading";
 import AppointmentButton from "@/components/ui/AppointmentButton";
 import {
   CheckCircle,
@@ -11,13 +9,10 @@ import {
   CreditCard,
   ShieldCheck,
   Phone,
-  ExternalLink,
   CircleDollarSign,
   FileText,
   Wallet,
   ListChecks,
-  Send,
-  HelpCircle,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -75,7 +70,7 @@ export default function FinancingPage() {
             {/* Left: Image */}
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/images/financing/cherry-woman.webp"
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/home-1-7-1.webp"
                 alt="Cherry Payments financing"
                 width={600}
                 height={800}
@@ -273,15 +268,37 @@ export default function FinancingPage() {
       <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left: CareCredit Image */}
+            {/* Left: CareCredit Image with Branding Overlay */}
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/images/financing/carecredit-promo.webp"
+                src="/images/financing/cherry-woman.webp"
                 alt="Pay over time with CareCredit"
                 width={600}
                 height={800}
                 className="h-auto w-full object-cover"
               />
+              {/* CareCredit branding overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-heading/80 via-heading/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  Pay over time
+                </p>
+                <p className="font-heading text-2xl font-bold text-white sm:text-3xl">
+                  with CareCredit
+                </p>
+                <div className="mt-3 flex items-center gap-2">
+                  <Image
+                    src="/images/financing/carecredit-icon.webp"
+                    alt="CareCredit"
+                    width={40}
+                    height={40}
+                    className="rounded-full"
+                  />
+                  <span className="text-sm text-white/70">
+                    Health & Wellness Credit Card
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Right: CareCredit Content */}
@@ -369,96 +386,106 @@ export default function FinancingPage() {
       {/* ─── Comparison Table: CareCredit vs Cherry ─── */}
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-            Compare Your Options
-          </span>
+          <div className="text-center">
+            <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Compare Your Options
+            </span>
 
-          <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
-            Financing Options: CareCredit vs. Cherry Payments
-          </h2>
+            <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
+              Financing Options: CareCredit vs. Cherry Payments
+            </h2>
 
-          <p className="mt-3 max-w-3xl text-base leading-relaxed text-body">
-            We offer two distinct financing models to give you maximum
-            flexibility based on your credit profile, desired payment terms, and
-            procedure cost.
-          </p>
+            <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-body">
+              We offer two distinct financing models to give you maximum
+              flexibility based on your credit profile, desired payment terms, and
+              procedure cost.
+            </p>
+          </div>
 
-          <div className="mt-10 overflow-x-auto">
-            <table className="w-full min-w-[640px] border-collapse">
-              <thead>
-                <tr>
-                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
-                    Feature
-                  </th>
-                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
-                    CareCredit
-                  </th>
-                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
-                    Cherry Payments
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {/* CareCredit Card */}
+            <div className="rounded-xl border border-gray-200 bg-white shadow-sm">
+              <div className="rounded-t-xl bg-heading px-6 py-5">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+                    <CreditCard className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-bold text-white">CareCredit</h3>
+                    <p className="text-xs text-white/60">Revolving Health &amp; Wellness Credit Card</p>
+                  </div>
+                </div>
+              </div>
+              <div className="divide-y divide-gray-100 px-6">
                 {[
-                  {
-                    feature: "Model",
-                    carecredit:
-                      "Revolving Credit Card (specifically for health & wellness)",
-                    cherry:
-                      "Fixed Installment Loans (Buy Now, Pay Later)",
-                  },
-                  {
-                    feature: "Credit Check",
-                    carecredit: "Hard Credit Check required for final approval",
-                    cherry:
-                      "Soft Credit Check (does not impact credit score)",
-                  },
-                  {
-                    feature: "Payment Structure",
-                    carecredit:
-                      "Minimum monthly payments; balance is revolving",
-                    cherry:
-                      "Fixed monthly installments with transparent, set terms",
-                  },
-                  {
-                    feature: "0% APR Option",
-                    carecredit:
-                      "Deferred Interest Promotions (6-24 months). If the balance is not paid in full by end of the term, interest is charged retroactively from the purchase date.",
-                    cherry:
-                      "True 0% APR Plans for qualified borrowers. Interest is never applied retroactively.",
-                  },
-                  {
-                    feature: "Terms",
-                    carecredit:
-                      "Promotional terms (6-24 months) or longer-term reduced APR options (up to 60 months)",
-                    cherry:
-                      "Flexible terms typically ranging from 3 to 60 months",
-                  },
-                  {
-                    feature: "Usage",
-                    carecredit:
-                      "Reusable for healthcare services at any provider that accepts CareCredit",
-                    cherry:
-                      "Specific to the approved treatment and provider",
-                  },
-                ].map((row, i) => (
-                  <tr
-                    key={i}
-                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}
-                  >
-                    <td className="border border-gray-200 px-5 py-4 text-sm font-semibold text-heading">
-                      {row.feature}
-                    </td>
-                    <td className="border border-gray-200 px-5 py-4 text-sm leading-relaxed text-body">
-                      {row.carecredit}
-                    </td>
-                    <td className="border border-gray-200 px-5 py-4 text-sm leading-relaxed text-body">
-                      {row.cherry}
-                    </td>
-                  </tr>
+                  { label: "Credit Check", value: "Hard credit check required", highlight: false },
+                  { label: "Payment Structure", value: "Minimum monthly payments, revolving balance", highlight: false },
+                  { label: "0% APR Option", value: "Deferred interest (6\u201324 months). If balance is not paid in full by end of term, interest is charged retroactively.", highlight: true },
+                  { label: "Terms Available", value: "Promotional 6\u201324 months or reduced APR up to 60 months", highlight: false },
+                  { label: "Reusable", value: "Yes, at 266,000+ healthcare locations nationwide", highlight: false },
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col gap-1 py-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">{item.label}</span>
+                    <span className={`text-sm leading-relaxed ${item.highlight ? "font-medium text-heading" : "text-body"}`}>
+                      {item.value}
+                    </span>
+                  </div>
                 ))}
-              </tbody>
-            </table>
+              </div>
+              <div className="px-6 pb-6 pt-4">
+                <a
+                  href="https://www.carecredit.com/apply"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-3 text-sm font-bold text-white transition-all hover:bg-transparent hover:text-heading"
+                >
+                  <CreditCard className="h-4 w-4" />
+                  Apply for CareCredit
+                </a>
+              </div>
+            </div>
+
+            {/* Cherry Card */}
+            <div className="rounded-xl border-2 border-primary/30 bg-white shadow-sm">
+              <div className="rounded-t-[10px] bg-heading px-6 py-5">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20">
+                    <CircleDollarSign className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-lg font-bold text-white">Cherry Payments</h3>
+                    <p className="text-xs text-white/60">Fixed Installment Loans (Buy Now, Pay Later)</p>
+                  </div>
+                </div>
+              </div>
+              <div className="divide-y divide-gray-100 px-6">
+                {[
+                  { label: "Credit Check", value: "Soft credit check only, no impact to your score", highlight: false },
+                  { label: "Payment Structure", value: "Fixed monthly installments with transparent, set terms", highlight: false },
+                  { label: "0% APR Option", value: "True 0% APR for qualified borrowers. Interest is never applied retroactively.", highlight: true },
+                  { label: "Terms Available", value: "Flexible terms from 3 to 60 months", highlight: false },
+                  { label: "Reusable", value: "Specific to the approved treatment and provider", highlight: false },
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col gap-1 py-4">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">{item.label}</span>
+                    <span className={`text-sm leading-relaxed ${item.highlight ? "font-medium text-heading" : "text-body"}`}>
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="px-6 pb-6 pt-4">
+                <a
+                  href="https://patient.withcherry.com/prequalify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-3 text-sm font-bold text-heading transition-all hover:bg-transparent hover:text-primary"
+                >
+                  <CircleDollarSign className="h-4 w-4" />
+                  See If You Qualify
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
