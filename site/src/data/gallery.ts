@@ -717,7 +717,6 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Chin Liposuction, Case 2",
     before: "/images/gallery/liposuction/chin-case2-before.jpg",
     after: "/images/gallery/liposuction/chin-case2-after.jpg",
-    doctor: "Dr. Michael Sosin",
     procedureDetail: "Submental liposuction with cervicodorsal junction treatment",
   },
   {
@@ -726,6 +725,7 @@ export const galleryItems: GalleryItem[] = [
     procedureLabel: "Chin Liposuction with Rhinoplasty",
     before: "/images/gallery/liposuction/chin-rhino-before.jpg",
     after: "/images/gallery/liposuction/chin-rhino-after.jpg",
+    doctor: "Dr. Michael Sosin",
   },
   {
     id: "lipo-360",

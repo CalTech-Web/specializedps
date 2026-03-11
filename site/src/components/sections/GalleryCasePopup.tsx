@@ -77,7 +77,7 @@ export default function GalleryCasePopup({
         <div className="relative flex-1 bg-gray-100">
           <div
             ref={containerRef}
-            className="relative aspect-[4/3] w-full cursor-col-resize select-none overflow-hidden"
+            className="relative aspect-square w-full cursor-col-resize select-none overflow-hidden"
             onMouseMove={handleMouseMove}
             onMouseUp={handlePointerUp}
             onMouseLeave={handlePointerUp}
@@ -111,6 +111,14 @@ export default function GalleryCasePopup({
               </div>
             </div>
 
+            {/* Before / After labels */}
+            <span className="absolute left-3 top-3 z-10 rounded bg-heading/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
+              Before
+            </span>
+            <span className="absolute right-3 top-3 z-10 rounded bg-heading/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
+              After
+            </span>
+
             {/* Slider handle */}
             <div
               className="absolute top-0 bottom-0 z-10 w-0.5 cursor-col-resize bg-white shadow-lg"
@@ -134,7 +142,7 @@ export default function GalleryCasePopup({
           </div>
 
           <h3 className="font-heading text-lg font-bold text-heading">
-            {item.procedureLabel}
+            {item.procedureLabel.replace(/,?\s*Case\s*\d+/i, "")}, Case {caseNumber}
           </h3>
 
           <p className="mt-2 text-sm text-primary font-medium">
