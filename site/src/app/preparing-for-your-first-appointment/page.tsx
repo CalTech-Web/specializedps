@@ -149,8 +149,8 @@ export default function PreparingForFirstAppointmentPage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="relative bg-heading py-14 sm:py-16">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+      <section id="contact-form" className="relative bg-white py-14 sm:py-16">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
@@ -158,7 +158,6 @@ export default function PreparingForFirstAppointmentPage() {
               title="Schedule Your First Appointment"
               description="Fill out the form below and our team will reach out to schedule your consultation at your preferred location."
               centered
-              light
             />
             <div className="mt-8">
               <ContactForm />

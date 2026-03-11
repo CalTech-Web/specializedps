@@ -1,111 +1,54 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
-
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import {
-  Plane,
-  Hotel,
+  Building2,
+  Car,
   ShieldCheck,
-  MessageSquare,
   HeartPulse,
   MapPin,
+  Phone,
+  Plane,
   CheckCircle,
+  Video,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Travelling to Our Practice | Specialized Plastic Surgery",
+  title: "Traveling to Our Practice",
   description:
-    "Planning to travel for your procedure? Learn about accommodations, transportation, insurance, and our support for out-of-area patients at Specialized Plastic Surgery.",
+    "Specialized Plastic Surgery welcomes traveling patients from across the country. Learn about accommodation assistance, transportation options, insurance support, and remote follow-up care at our NJ and NY offices.",
 };
-
-const travelSections = [
-  {
-    icon: Hotel,
-    title: "Accommodations",
-    description:
-      "We can recommend comfortable hotels and recovery retreats near both our New Jersey and Westchester, NY offices. Many of our patients prefer to stay close to the office for easy access to pre-operative and follow-up appointments.",
-  },
-  {
-    icon: Plane,
-    title: "Transportation",
-    description:
-      "Both of our offices are conveniently located near major airports and train stations. Our Millburn, NJ office is accessible from Newark Liberty International Airport, while our Harrison, NY office is a short drive from Westchester County Airport and LaGuardia Airport.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Out-of-State Insurance",
-    description:
-      "We work with patients from across the country. If you have out-of-state insurance, our team will verify your benefits and help you understand your coverage before your procedure. We also accept self-pay patients with transparent pricing.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Virtual Consultations",
-    description:
-      "To minimize your travel, we offer virtual consultations via secure video. This allows you to discuss your goals, review options, and plan your procedure before making the trip. Your in-person visit can then be focused on your pre-operative appointment and surgery.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Procedure Day Support",
-    description:
-      "On the day of your procedure, our team will coordinate every detail so you can focus on your recovery. We provide clear pre-operative instructions, post-operative care packages, and direct access to your surgeon for any questions.",
-  },
-  {
-    icon: MapPin,
-    title: "Follow-Up Care",
-    description:
-      "We understand that follow-up visits can be challenging for traveling patients. Depending on your procedure, we may coordinate with a local physician in your area for routine check-ins, supplemented by virtual follow-ups with your surgeon.",
-  },
-];
 
 export default function TravellingToOurPracticePage() {
   return (
     <>
+      {/* Hero */}
       <HeroSection
-        title="Travelling to Our Practice"
-        subtitle="We welcome patients from across the country and beyond. Our team is here to make your experience seamless from the moment you reach out."
+        title="Traveling to Our Practice"
+        subtitle="We welcome patients from across the country and are here to make your experience as seamless and comfortable as possible."
         backgroundImage="/images/hero/SPS-Image-131.jpg"
         ctaText="Schedule Consultation"
         ctaLink="#contact-form"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Travelling to Our Practice" },
+          { label: "Traveling to Our Practice" },
         ]}
       />
 
-      {/* Travel Support Sections */}
+      {/* Intro / Welcome */}
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
-            eyebrow="For Out-of-Area Patients"
-            title="How We Support Travelling Patients"
-            description="From your first virtual consultation to your final follow-up, we coordinate every detail so you can focus on achieving your goals."
+            eyebrow="Welcome"
+            title="Your Journey Starts Here"
+            subtitle="Many patients travel to Specialized Plastic Surgery for the expertise of our board-certified surgeons, our advanced microsurgical techniques, and our patient-centered approach. Whether you are coming from another state or across the country, our team is dedicated to coordinating every detail of your visit so you can focus on your care."
             centered
           />
-
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {travelSections.map((section, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <section.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-heading text-lg font-bold text-heading">
-                  {section.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-body">
-                  {section.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* Accommodation Assistance */}
       <section className="relative bg-heading py-14 sm:py-16">
         <div
           className="absolute inset-0 opacity-5"
@@ -115,45 +58,309 @@ export default function TravellingToOurPracticePage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
         <div className="relative mx-auto max-w-[1320px] px-6">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div>
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Building2 className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-white">
+                  Accommodation Assistance
+                </h2>
+              </div>
+              <p className="mb-6 text-base leading-relaxed text-white/70">
+                We understand that finding comfortable lodging near our offices
+                is important, especially when you are recovering from a
+                procedure. Our team can recommend nearby hotels and
+                extended-stay options that are convenient to both our New Jersey
+                and New York locations.
+              </p>
+              <p className="text-base leading-relaxed text-white/70">
+                Many of our recommended accommodations offer quiet, comfortable
+                rooms suited for post-operative recovery, with easy access to
+                dining, pharmacies, and our office for follow-up visits.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
+                What We Help With
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Recommendations for nearby hotels and extended-stay residences",
+                  "Guidance on proximity to our offices and local amenities",
+                  "Suggestions for recovery-friendly accommodations with quiet environments",
+                  "Coordination of your stay timeline with your surgical and follow-up schedule",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-white/80">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Transportation Options */}
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div className="order-2 rounded-lg border border-gray-100 bg-white p-8 shadow-sm lg:order-1">
+              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
+                Getting Here
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Both offices are easily accessible from major airports, including Newark Liberty (EWR), JFK, LaGuardia (LGA), and Westchester County Airport (HPN)",
+                  "Car rental agencies and ride services are available from all major airports",
+                  "Our New Jersey office in Millburn is accessible via NJ Transit and major highways",
+                  "Our New York office in Harrison is near the Metro-North Harlem line and I-287",
+                  "We can provide directions and transportation tips specific to your travel plans",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-body">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Car className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-heading">
+                  Transportation Options
+                </h2>
+              </div>
+              <p className="mb-6 text-base leading-relaxed text-body">
+                Getting to and from our offices is straightforward. Both
+                locations are conveniently situated near major highways, airports,
+                and public transportation, making travel as simple as possible
+                for out-of-state patients.
+              </p>
+              <p className="text-base leading-relaxed text-body">
+                Please remember that you will need someone to drive you home
+                after any surgical procedure. If you are traveling alone, our
+                team can help coordinate transportation arrangements for the day
+                of your surgery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Out-of-State Insurance */}
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div>
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <ShieldCheck className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-white">
+                  Out-of-State Insurance
+                </h2>
+              </div>
+              <p className="mb-6 text-base leading-relaxed text-white/70">
+                If you are traveling from another state for a reconstructive
+                procedure, our insurance team can help you understand your
+                coverage options. As an out-of-network provider, we work with
+                patients across the country and are experienced in navigating
+                insurance plans from many different states and carriers.
+              </p>
+              <p className="text-base leading-relaxed text-white/70">
+                For breast reconstruction patients, the Women&apos;s Health and
+                Cancer Rights Act (WHCRA) is a federal law that applies
+                regardless of which state you live in. Our team will verify
+                your benefits, handle prior authorization, and submit claims on
+                your behalf.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
+              <h3 className="font-heading mb-6 text-xl font-bold text-white">
+                Insurance Support for Travelers
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Free insurance verification before you travel",
+                  "Prior authorization handled by our dedicated billing team",
+                  "WHCRA coverage applies regardless of your home state",
+                  "Claims submission and appeals support included",
+                  "Clear cost estimates provided before your visit",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base leading-relaxed text-white/80">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Post-Op Care Coordination */}
+      <section className="bg-warm-grey py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
-            eyebrow="Your Journey"
-            title="What to Expect as a Travelling Patient"
-            light
+            eyebrow="Aftercare"
+            title="Post-Operative Care Coordination"
+            subtitle="Your care does not end when you leave our office. We coordinate comprehensive follow-up support to ensure a smooth recovery, no matter where you live."
             centered
           />
-          <div className="mx-auto mt-8 max-w-3xl space-y-4">
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              "Initial virtual consultation to discuss your goals and create a plan",
-              "Pre-operative instructions sent to you in advance",
-              "Accommodation recommendations near your chosen office",
-              "All appointments consolidated to minimize your travel time",
-              "Comprehensive post-operative care package for your recovery",
-              "Virtual follow-up appointments with your surgeon",
-            ].map((item, i) => (
+              {
+                icon: Video,
+                title: "Virtual Follow-Ups",
+                description:
+                  "Telemedicine appointments available for remote post-operative check-ins, so you can connect with your surgeon from home.",
+              },
+              {
+                icon: HeartPulse,
+                title: "Recovery Guidance",
+                description:
+                  "Detailed written and verbal aftercare instructions provided before you travel, covering every stage of your recovery.",
+              },
+              {
+                icon: Phone,
+                title: "Direct Access",
+                description:
+                  "Our team is just a phone call away if you have questions or concerns during your recovery period after returning home.",
+              },
+              {
+                icon: MapPin,
+                title: "Local Provider Coordination",
+                description:
+                  "We can coordinate with your primary care physician or a local provider near your home for any in-person follow-up needs.",
+              },
+            ].map((item, index) => (
               <div
-                key={i}
-                className="flex items-start gap-3 rounded-lg border border-white/[0.06] bg-white/[0.03] p-4"
+                key={index}
+                className="rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <span className="text-base text-white/80">{item}</span>
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-heading">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-body">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Office Locations */}
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <SectionHeading
+            eyebrow="Our Locations"
+            title="Where to Find Us"
+            centered
+          />
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Plane className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-heading">
+                  New Jersey Office
+                </h3>
+              </div>
+              <p className="text-base leading-relaxed text-body">
+                264 Millburn Ave
+                <br />
+                Millburn, NJ 07041
+              </p>
+              <p className="mt-3 text-base text-body">
+                <span className="font-semibold">Phone:</span>{" "}
+                <a
+                  href="tel:9735610900"
+                  className="text-primary hover:underline"
+                >
+                  (973) 561-0900
+                </a>
+              </p>
+              <p className="mt-1 text-sm text-body">
+                Nearest airports: Newark Liberty (EWR), LaGuardia (LGA)
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                  <Plane className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-heading">
+                  New York Office
+                </h3>
+              </div>
+              <p className="text-base leading-relaxed text-body">
+                500 Mamaroneck Ave, Suite 211
+                <br />
+                Harrison, NY 10528
+              </p>
+              <p className="mt-3 text-base text-body">
+                <span className="font-semibold">Phone:</span>{" "}
+                <a
+                  href="tel:9148740900"
+                  className="text-primary hover:underline"
+                >
+                  (914) 874-0900
+                </a>
+              </p>
+              <p className="mt-1 text-sm text-body">
+                Nearest airports: Westchester County (HPN), JFK, LaGuardia
+                (LGA)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
-      <section id="contact-form" className="relative bg-heading py-14 sm:py-16">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+      <section id="contact-form" className="relative bg-white py-14 sm:py-16">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Get Started"
               title="Schedule Your Consultation"
-              description="Let us know you are travelling to our practice and we will help coordinate every detail of your visit."
+              description="Let us know you are traveling to our practice and we will help coordinate every detail of your visit."
               centered
-              light
             />
             <div className="mt-8">
               <ContactForm />
@@ -161,7 +368,6 @@ export default function TravellingToOurPracticePage() {
           </div>
         </div>
       </section>
-
     </>
   );
 }
