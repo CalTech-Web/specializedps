@@ -102,20 +102,23 @@ export default function AboutPage() {
             />
             <div className="mt-6 space-y-5 text-base leading-relaxed text-body">
               <p>
-                Specialized Plastic Surgery was founded in 2020 by Dr. Michael
-                Sosin and Dr. Chris Devulapalli, two board-certified plastic
-                surgeons who met during their training at Georgetown University
-                Hospital. United by a shared passion for both reconstructive and
-                aesthetic plastic surgery, they created a practice that offers
-                the full spectrum of surgical care under one roof.
+                Specialized Plastic Surgery was founded by Dr. Chris Devulapalli
+                and Dr. Michael Sosin, two board-certified plastic surgeons who
+                met during their training at Georgetown University Hospital.
+                United by a shared passion for both reconstructive and aesthetic
+                plastic surgery, they created a practice that offers the full
+                spectrum of surgical care under one roof, serving patients in
+                Westchester, New York and Essex, New Jersey.
               </p>
               <p>
-                With offices in Millburn, NJ and Harrison, NY (Westchester
-                County), the practice serves patients throughout the greater
-                tri-state area and welcomes traveling patients from across the
-                country. Together, the surgeons bring training from Georgetown,
-                Johns Hopkins, and NYU, more than 90 peer-reviewed publications,
-                and recognition as Castle Connolly Top Doctors.
+                The practice combines unparalleled expertise with personalized
+                care to deliver exceptional results. Both surgeons employ
+                advanced techniques and patient-centered approaches, offering
+                reconstructive and aesthetic procedures tailored to individual
+                patient needs. Together, they bring training from Georgetown,
+                Johns Hopkins, and NYU, more than 90 peer-reviewed publications
+                and 8 book chapters, and recognition as Castle Connolly Top
+                Doctors.
               </p>
             </div>
             <Link

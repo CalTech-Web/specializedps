@@ -34,9 +34,9 @@ export default function FinancingPage() {
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
-            eyebrow="Our Commitment"
+            eyebrow="Your Dream Is Accessible"
             title="Transparent, Upfront Pricing"
-            description="At Specialized Plastic Surgery, we believe you deserve clarity when it comes to the cost of your care. During your consultation, you will receive a detailed breakdown of all fees, including surgeon fees, anesthesia, facility costs, and any post-operative garments or supplies. There are no hidden charges or surprise bills."
+            description="We understand that investing in expert surgical care is a major decision. Our practice is dedicated to transparent pricing and a supportive experience, ensuring that financial limitations do not stand in the way of accessing the highest quality care. During your consultation, you will receive a detailed breakdown of all fees, including surgeon fees, anesthesia, facility costs, and any post-operative garments or supplies."
             centered
           />
 

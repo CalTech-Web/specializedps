@@ -70,9 +70,13 @@ export default async function ProcedurePage({ params }: PageProps) {
             title={`What Is ${proc.name}?`}
             centered={false}
           />
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-body">
-            {proc.description}
-          </p>
+          <div className="mt-4 max-w-3xl space-y-4">
+            {proc.description.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="text-lg leading-relaxed text-body">
+                {paragraph}
+              </p>
+            ))}
+          </div>
           {proc.procedureDuration && (
             <p className="mt-4 text-base text-body">
               <span className="font-semibold text-heading">
@@ -178,10 +182,12 @@ export default async function ProcedurePage({ params }: PageProps) {
             title="Recovery Timeline"
             centered={false}
           />
-          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-warm-grey p-8">
-            <p className="text-lg leading-relaxed text-body">
-              {proc.recoveryTimeline}
-            </p>
+          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-warm-grey p-8 space-y-4">
+            {proc.recoveryTimeline.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="text-lg leading-relaxed text-body">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>

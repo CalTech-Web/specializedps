@@ -34,8 +34,8 @@ export default function InsurancePage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Coverage"
-            title="Out-of-Network Provider"
-            subtitle="Specialized Plastic Surgery is an out-of-network provider with most major insurance carriers. While we do not bill insurance directly, our experienced team works closely with you to maximize your benefits and minimize your out-of-pocket costs."
+            title="Out-of-Network Excellence"
+            subtitle="We operate as an out-of-network provider with most major insurance carriers. This allows our board-certified surgeons to maintain complete autonomy over your care, ensuring you receive the highest standard of specialized treatment without the limitations often imposed by restrictive networks. While we are out-of-network, our specialized team excels at maximizing your benefits."
             centered
           />
 
@@ -46,11 +46,12 @@ export default function InsurancePage() {
                 <ShieldCheck className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-bold text-heading">
-                Insurance Verification
+                Submission & Verification
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-body">
-                We offer free insurance verification consultations to help you
-                understand your benefits before committing to a procedure.
+                We prepare and submit all required documentation, including
+                clinical photos, letters of medical necessity, and operative
+                reports, with free insurance verification consultations.
               </p>
             </div>
 
@@ -60,11 +61,12 @@ export default function InsurancePage() {
                 <FileText className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-bold text-heading">
-                Claims Assistance
+                Monitoring & Claims
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-body">
-                Our billing team handles claims submission on your behalf,
-                working to ensure proper documentation and timely filing.
+                We diligently track your pre-authorization status and follow up
+                with your carrier until a decision is reached, then handle
+                claims submission with proper documentation.
               </p>
             </div>
 
@@ -107,10 +109,12 @@ export default function InsurancePage() {
                 light
               />
               <p className="mt-4 text-base leading-relaxed text-white/70">
-                This law applies to most group health plans and individual
-                insurance policies. It ensures that patients have access to the
-                full spectrum of reconstructive options without discrimination or
-                unnecessary barriers.
+                This legislation is a vital step in ensuring that women who have
+                undergone mastectomy due to breast cancer have access to the
+                restorative procedures they need to feel whole again. Our team
+                has an in-depth understanding of the WHCRA and uses it to ensure
+                you receive comprehensive, high-quality reconstructive care you
+                are entitled to, regardless of our out-of-network status.
               </p>
             </div>
 
@@ -163,16 +167,18 @@ export default function InsurancePage() {
                 </h3>
               </div>
               <p className="mb-4 text-base leading-relaxed text-body">
-                Breast reduction surgery may be covered by insurance when it is
-                medically necessary to address chronic symptoms, including:
+                Breast reduction surgery is one of the most common procedures
+                covered by insurance when performed for medical necessity. Our
+                team works with your carrier to demonstrate that non-surgical
+                treatments have failed. Coverage is typically approved for:
               </p>
               <ul className="space-y-2">
                 {[
-                  "Chronic neck, back, and shoulder pain",
-                  "Skin irritation and rashes beneath the breasts",
-                  "Posture problems and skeletal discomfort",
+                  "Chronic, debilitating pain in the neck, back, or shoulders",
+                  "Recurrent skin irritation or rashes (intertrigo) beneath the breast crease",
+                  "Deep grooves or indentations in the shoulders from bra straps",
                   "Difficulty with physical activity and exercise",
-                  "Bra strap grooving and nerve compression",
+                  "Numbness or tingling from nerve compression",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-body">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
@@ -195,7 +201,9 @@ export default function InsurancePage() {
               <p className="mb-4 text-base leading-relaxed text-body">
                 Panniculectomy and certain body contouring procedures may
                 qualify for partial insurance coverage when excess skin causes
-                medical complications, such as:
+                medical complications. For abdominoplasty, repair of significant
+                diastasis recti causing functional issues may be eligible for
+                partial coverage. Conditions include:
               </p>
               <ul className="space-y-2">
                 {[
