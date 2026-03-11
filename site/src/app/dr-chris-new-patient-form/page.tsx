@@ -377,7 +377,7 @@ export default function DrChrisNewPatientFormPage() {
               {/* Doctor image */}
               <div className="relative mt-10 hidden aspect-[16/9] overflow-hidden rounded-lg lg:block">
                 <Image
-                  src="https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-deor-est-243774879-16897750.jpg"
+                  src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg"
                   alt="Dr. Chris Devulapalli consultation"
                   fill
                   className="object-cover"
