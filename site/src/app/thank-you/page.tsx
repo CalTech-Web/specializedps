@@ -55,7 +55,7 @@ export default function ThankYouPage() {
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Locations */}
@@ -76,7 +76,7 @@ export default function ThankYouPage() {
                 key={loc.key}
                 className="overflow-hidden rounded-lg border border-gray-100 bg-warm-grey transition-shadow hover:shadow-lg"
               >
-                <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-8">
                   <h3 className="font-heading text-xl font-bold text-heading">
                     {loc.name}

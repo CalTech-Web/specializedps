@@ -70,7 +70,7 @@ export default function LocationsPage() {
             <div className="space-y-5">
               {/* Contact Info */}
               <div className="rounded-lg border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="gold-shimmer h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-6">
                   <h3 className="font-heading text-lg font-bold text-heading">
                     Contact Information
@@ -125,7 +125,7 @@ export default function LocationsPage() {
 
               {/* Services */}
               <div className="rounded-lg border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="gold-shimmer h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-6">
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
@@ -193,7 +193,7 @@ export default function LocationsPage() {
             <div className="space-y-5">
               {/* Contact Info */}
               <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="gold-shimmer h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-6">
                   <h3 className="font-heading text-lg font-bold text-white">
                     Contact Information
@@ -248,7 +248,7 @@ export default function LocationsPage() {
 
               {/* Services */}
               <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="gold-shimmer h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="h-[2px] rounded-t-lg bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-6">
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">

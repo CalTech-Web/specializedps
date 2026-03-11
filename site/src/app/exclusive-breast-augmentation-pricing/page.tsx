@@ -202,7 +202,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
                   Everything included, no surprises
                 </p>
               </div>
-              <div className="gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+              <div className="h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
               <div className="mt-6 grid gap-5 sm:grid-cols-3">
                 <div className="text-center">
                   <DollarSign className="mx-auto h-6 w-6 text-primary" />

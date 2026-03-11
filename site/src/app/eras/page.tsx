@@ -161,7 +161,7 @@ export default function ERASPage() {
             </div>
 
             {/* Gold gradient bar */}
-            <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+            <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
             {/* Phase 2: During Surgery */}
             <div className="grid items-start gap-10 lg:grid-cols-2">
@@ -241,7 +241,7 @@ export default function ERASPage() {
             </div>
 
             {/* Gold gradient bar */}
-            <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+            <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
             {/* Phase 3: After Surgery */}
             <div className="grid items-start gap-10 lg:grid-cols-2">
@@ -400,7 +400,7 @@ export default function ERASPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/85 to-heading/75" />
 
         {/* Gold gradient top bar */}
-        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -452,7 +452,7 @@ export default function ERASPage() {
         </div>
 
         {/* Gold gradient bottom bar */}
-        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
     </>

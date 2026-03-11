@@ -116,7 +116,7 @@ export default function PreparingForFirstAppointmentPage() {
           <blockquote className="mt-6 font-heading text-2xl font-bold leading-relaxed text-white sm:text-3xl">
             &ldquo;Healing is collaborative. The best outcomes happen when patients and surgeons work together from the very first conversation.&rdquo;
           </blockquote>
-          <div className="gold-shimmer mx-auto mt-6 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
         </div>
       </section>
 

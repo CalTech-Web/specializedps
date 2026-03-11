@@ -60,7 +60,7 @@ export default function FinancingPage() {
             through two trusted partners: CareCredit and Cherry Payments.
           </p>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* ─── Cherry Payments Section ─── */}
@@ -478,7 +478,7 @@ export default function FinancingPage() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
