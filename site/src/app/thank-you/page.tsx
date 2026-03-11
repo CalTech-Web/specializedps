@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
@@ -17,35 +18,44 @@ export default function ThankYouPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-heading py-14 sm:py-20">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+      <section className="relative flex min-h-[450px] items-center overflow-hidden bg-heading sm:min-h-[500px]">
+        <Image
+          src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-1023.jpg"
+          alt="Specialized Plastic Surgery"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
-        <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-            <CheckCircle className="h-10 w-10 text-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-heading/80 via-heading/70 to-heading/90" />
+        <div className="relative z-10 mx-auto max-w-3xl px-6 py-20 text-center">
+          <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold/40 bg-gold/15 shadow-lg shadow-gold/10">
+            <CheckCircle className="h-10 w-10 text-gold" />
           </div>
           <h1 className="font-heading text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Thank You for Reaching Out!
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/80">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/85">
             Your inquiry is important to us. Our team is already reviewing your
             message and will respond as soon as possible. If you need immediate
             assistance, feel free to call either of our offices directly.
           </p>
-          <Link
-            href="/"
-            className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
-          >
-            Back to Homepage
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/"
+              className="inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
+            >
+              Back to Homepage
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block rounded-md border-2 border-white/30 bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:border-white hover:bg-white/10"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Locations */}
