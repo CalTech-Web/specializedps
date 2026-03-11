@@ -32,7 +32,7 @@ export default function ERASPage() {
       <HeroSection
         title="Enhanced Recovery After Surgery (ERAS)"
         subtitle="Enhanced Recovery After Surgery (ERAS) is a patient-centered approach that promotes faster, safer, and more comfortable healing after an operation. At Specialized Plastic Surgery, our team follows proven ERAS steps before, during, and after surgery to reduce stress, prevent complications, and support a smoother recovery."
-        backgroundImage="/images/hero/eras-hero.jpg"
+        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-223.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "ERAS" },
@@ -40,7 +40,7 @@ export default function ERASPage() {
       />
 
       {/* What is ERAS */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
@@ -65,7 +65,7 @@ export default function ERASPage() {
 
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/images/hero/eras-hero.jpg"
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-165.jpg"
                 alt="Patient recovery at Specialized Plastic Surgery"
                 fill
                 className="object-cover"
@@ -77,7 +77,7 @@ export default function ERASPage() {
       </section>
 
       {/* Three Pillars */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         {/* Marble overlay */}
         <div
           className="absolute inset-0 opacity-5"
@@ -109,7 +109,7 @@ export default function ERASPage() {
                     <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 1
                     </p>
-                    <h3 className="font-heading text-2xl font-bold text-white">
+                    <h3 className="font-heading text-xl font-bold text-white">
                       Before Surgery (Preoperative Optimization)
                     </h3>
                   </div>
@@ -123,7 +123,7 @@ export default function ERASPage() {
               <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
                       Nutritional Screening
                     </h4>
@@ -141,7 +141,7 @@ export default function ERASPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
                       Medication Review
                     </h4>
@@ -169,7 +169,7 @@ export default function ERASPage() {
               <div className="order-2 rounded-lg border border-white/[0.06] bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:order-1">
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <Stethoscope className="h-5 w-5 shrink-0 text-primary" />
                       Targeted Anesthesia
                     </h4>
@@ -185,7 +185,7 @@ export default function ERASPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <Syringe className="h-5 w-5 shrink-0 text-primary" />
                       Minimally Invasive Techniques
                     </h4>
@@ -201,7 +201,7 @@ export default function ERASPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <Droplets className="h-5 w-5 shrink-0 text-primary" />
                       Fluid Management
                     </h4>
@@ -229,7 +229,7 @@ export default function ERASPage() {
                     <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 2
                     </p>
-                    <h3 className="font-heading text-2xl font-bold text-white">
+                    <h3 className="font-heading text-xl font-bold text-white">
                       During Surgery (Intraoperative Management)
                     </h3>
                   </div>
@@ -255,7 +255,7 @@ export default function ERASPage() {
                     <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                       Phase 3
                     </p>
-                    <h3 className="font-heading text-2xl font-bold text-white">
+                    <h3 className="font-heading text-xl font-bold text-white">
                       After Surgery (Postoperative Mobilization)
                     </h3>
                   </div>
@@ -269,7 +269,7 @@ export default function ERASPage() {
               <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
                       Early Mobility
                     </h4>
@@ -286,7 +286,7 @@ export default function ERASPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="mb-2 flex items-center gap-2 text-lg font-bold text-white">
+                    <h4 className="font-heading mb-2 flex items-center gap-2 text-lg font-bold text-white">
                       <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
                       Proactive Pain Management
                     </h4>
@@ -311,13 +311,13 @@ export default function ERASPage() {
       </section>
 
       {/* Benefits with Image */}
-      <section className="bg-warm-grey py-14 sm:py-16">
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             {/* Image */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/images/hero/eras-hero.jpg"
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-1005.jpg"
                 alt="Enhanced recovery results at Specialized Plastic Surgery"
                 fill
                 className="object-cover"
@@ -388,40 +388,64 @@ export default function ERASPage() {
         </div>
       </section>
 
-      {/* CTA Section with Form Prompt */}
-      <section className="relative overflow-hidden bg-heading py-14 sm:py-20">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+      {/* CTA Section */}
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        {/* Background image */}
+        <Image
+          src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-223.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/85 to-heading/75" />
 
         {/* Gold gradient top bar */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
-            Ready to Experience High-Quality Care That Prioritizes Your Comfort
-            and Recovery?
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
-            Take control of your healing journey with our Enhanced Recovery
-            Protocols, a proven system designed for faster, safer, and more
-            comfortable recovery.
-          </p>
+        <div className="relative z-10 mx-auto max-w-[1320px] px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            {/* Decorative ornament */}
+            <div className="mx-auto mb-6 flex items-center justify-center gap-3">
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold" />
+              <Heart className="h-5 w-5 text-gold" />
+              <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold" />
+            </div>
+
+            <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
+              Ready to Experience High-Quality Care That Prioritizes Your Comfort
+              and Recovery?
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+              Take control of your healing journey with our Enhanced Recovery
+              Protocols, a proven system designed for faster, safer, and more
+              comfortable recovery.
+            </p>
+          </div>
+
+          {/* Feature highlights */}
+          <div className="mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-4">
+            {[
+              { icon: Zap, label: "Faster Recovery" },
+              { icon: Shield, label: "Fewer Complications" },
+              { icon: Smile, label: "Greater Comfort" },
+            ].map((item) => (
+              <div key={item.label} className="rounded-lg border border-white/10 bg-white/5 px-4 py-5 text-center backdrop-blur-sm">
+                <item.icon className="mx-auto mb-2 h-6 w-6 text-gold" />
+                <p className="text-sm font-semibold text-white/80">{item.label}</p>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="tel:9148740900"
-              className="inline-flex items-center gap-2 rounded-md border-2 border-gold bg-gold px-8 py-3 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md"
+              className="inline-flex items-center gap-2 rounded-md border-2 border-gold bg-gold px-9 py-4 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-lg"
             >
               <Phone className="h-5 w-5" />
               Call Us: (914) 874-0900
             </a>
-            <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-white bg-transparent px-8 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-heading hover:shadow-md">
+            <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-white bg-transparent px-9 py-4 text-base font-bold text-white transition-all hover:bg-white hover:text-heading hover:shadow-lg">
               <Calendar className="h-5 w-5" />
               Schedule a Consultation
             </AppointmentButton>
@@ -429,13 +453,13 @@ export default function ERASPage() {
         </div>
 
         {/* Gold gradient bottom bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       <CTABanner
         heading="Discover the Difference of Personalized Aesthetic Solutions"
         subtext="At Specialized Plastic Surgery, we're dedicated to helping you achieve your aesthetic goals with unparalleled precision and care. Explore our services and experience a transformative journey tailored to your unique needs. Schedule a consultation today and take the first step towards a confident, revitalized you."
-        backgroundImage="/images/hero/eras-hero.jpg"
+        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2025/01/SPS-Image-1023.jpg"
       />
     </>
   );
