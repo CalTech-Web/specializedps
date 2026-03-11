@@ -591,9 +591,10 @@ export const procedures: Procedure[] = [
     name: "Implant-Based Reconstruction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-220.jpg",
     contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/11/SPS-Center-Image.jpg",
     description:
-      "Implant-based reconstruction is a type of breast reconstruction that involves placing an implant beneath the chest muscle or just above it, recreating the shape and appearance of the breast after mastectomy. This approach often involves a two-stage process: first, a temporary tissue expander is placed to gradually stretch the skin and make space for the permanent implant; then, in a second procedure, the tissue expander is removed and the permanent implant is inserted.\n\nImplant-based reconstruction offers several benefits that make it a popular choice for many breast cancer patients. This option typically involves a shorter, less complex surgery and a faster recovery period than natural tissue flap reconstruction. It also allows patients with limited donor tissue to achieve natural-looking results. There are two main types of implants: saline implants (filled with sterile salt water) and silicone implants (filled with silicone gel, providing a softer, more natural look and feel).",
+      "Implant-based reconstruction is a type of breast reconstruction that involves placing an implant beneath the chest muscle or just above it, recreating the shape and appearance of the breast after mastectomy. This approach often involves a two-stage process: first, a temporary tissue expander is placed to gradually stretch the skin and make space for the permanent implant; then, in a second procedure, the tissue expander is removed and the permanent implant is inserted.\n\nImplant-based reconstruction offers several benefits that make it a popular choice for many breast cancer patients. This option typically involves a shorter, less complex surgery and a faster recovery period than natural tissue flap reconstruction. It also allows patients with limited donor tissue to achieve natural-looking results. There are two main types of implants: saline implants (filled with sterile salt water) and silicone implants (filled with silicone gel, providing a softer, more natural look and feel).\n\nAt Specialized Plastic Surgery, our board-certified surgeons bring fellowship-trained microsurgical expertise and a commitment to personalized care. Whether you are a candidate for direct-to-implant reconstruction or a staged approach, we work closely with your oncology team to develop a plan that aligns with your cancer treatment timeline and aesthetic goals.",
     heroDescription:
       "Restore breast shape after mastectomy with advanced implant technology for a quicker recovery and customizable results.",
     benefits: [
@@ -602,6 +603,7 @@ export const procedures: Procedure[] = [
       "Highly customizable with a range of implant sizes, shapes, and profiles",
       "No donor site required, suitable for leaner body types",
       "Versatile options including saline, silicone, and form-stable implants",
+      "Can be performed at the time of mastectomy for immediate reconstruction",
     ],
     candidateCriteria: [
       "Breast cancer patients who have undergone or plan to undergo mastectomy",
@@ -616,11 +618,18 @@ export const procedures: Procedure[] = [
       "Prepectoral placement (above the muscle for less discomfort and distortion)",
       "Subpectoral placement (beneath the chest muscle for additional coverage)",
     ],
+    procedureSteps: [
+      "Coordination with your oncology and surgical team to plan the optimal reconstruction timeline, whether immediate or delayed",
+      "During the first stage, a tissue expander is placed beneath the chest muscle or skin at the time of mastectomy (or in a separate procedure)",
+      "Over several weeks, the tissue expander is gradually filled with saline during office visits to gently stretch the skin and create space",
+      "In a second procedure, the tissue expander is exchanged for the permanent implant of your chosen type, size, and profile",
+      "For direct-to-implant candidates, the permanent implant is placed in a single surgery at the time of mastectomy, eliminating the expansion phase",
+    ],
     procedureDuration: "1-2 hours per breast",
     recoveryTimeline:
-      "Recovery after implant-based reconstruction is generally smoother and shorter than tissue flap reconstruction. Patients can expect an initial healing period of 2-3 weeks, with minor restrictions on lifting and strenuous activity for several more weeks. Regular follow-up appointments monitor healing and ensure implants settle naturally.",
+      "Recovery after implant-based reconstruction is generally smoother and shorter than tissue flap reconstruction. Patients can expect an initial healing period of 2-3 weeks, with minor restrictions on lifting and strenuous activity for several additional weeks. Mild swelling and discomfort are normal and managed through our Enhanced Recovery protocols. Regular follow-up appointments monitor healing and ensure implants settle naturally. Most patients can gradually return to normal activities within 4-6 weeks.",
     insuranceCoverage:
-      "Covered by insurance under WHCRA. Our team handles the pre-authorization process to maximize your benefits.",
+      "Covered by insurance under the Women's Health and Cancer Rights Act of 1998 (WHCRA), which mandates coverage for all stages of breast reconstruction after mastectomy. Our dedicated insurance team handles the entire pre-authorization process to maximize your benefits.",
   },
   {
     slug: "oncoplastic",
