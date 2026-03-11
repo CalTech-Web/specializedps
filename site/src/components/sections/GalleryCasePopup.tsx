@@ -9,13 +9,19 @@ import { DEFAULT_DOCTOR } from "@/data/gallery";
 interface GalleryCasePopupProps {
   item: GalleryItem;
   caseNumber: number;
+  totalCases: number;
   onClose: () => void;
+  onPrev: (() => void) | null;
+  onNext: (() => void) | null;
 }
 
 export default function GalleryCasePopup({
   item,
   caseNumber,
+  totalCases,
   onClose,
+  onPrev,
+  onNext,
 }: GalleryCasePopupProps) {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -128,36 +134,61 @@ export default function GalleryCasePopup({
         </div>
 
         {/* Right: Case details */}
-        <div className="w-full shrink-0 border-t border-gray-100 p-6 lg:w-72 lg:border-l lg:border-t-0 xl:w-80">
-          <div className="mb-4 inline-block rounded bg-heading px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
-            Case {caseNumber}
+        <div className="flex w-full shrink-0 flex-col border-t border-gray-100 lg:w-72 lg:border-l lg:border-t-0 xl:w-80">
+          <div className="flex-1 p-6">
+            <div className="mb-4 inline-block rounded bg-heading px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+              Case {caseNumber}
+            </div>
+
+            <h3 className="font-heading text-lg font-bold text-heading">
+              {item.procedureLabel.replace(/,?\s*Case\s*\d+/i, "")}, Case {caseNumber}
+            </h3>
+
+            <p className="mt-2 text-sm text-primary font-medium">
+              Performed by {doctor}
+            </p>
+
+            {item.patientAge && (
+              <p className="mt-3 text-sm text-body">
+                <span className="font-semibold text-heading">Patient Age:</span>{" "}
+                {item.patientAge}
+              </p>
+            )}
+
+            {item.procedureDetail && (
+              <div className="mt-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                  Procedure Details
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-body">
+                  {item.procedureDetail}
+                </p>
+              </div>
+            )}
           </div>
 
-          <h3 className="font-heading text-lg font-bold text-heading">
-            {item.procedureLabel.replace(/,?\s*Case\s*\d+/i, "")}, Case {caseNumber}
-          </h3>
-
-          <p className="mt-2 text-sm text-primary font-medium">
-            Performed by {doctor}
-          </p>
-
-          {item.patientAge && (
-            <p className="mt-3 text-sm text-body">
-              <span className="font-semibold text-heading">Patient Age:</span>{" "}
-              {item.patientAge}
-            </p>
-          )}
-
-          {item.procedureDetail && (
-            <div className="mt-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-heading">
-                Procedure Details
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-body">
-                {item.procedureDetail}
-              </p>
-            </div>
-          )}
+          {/* Case Navigation */}
+          <div className="flex items-center justify-between border-t border-gray-100 px-6 py-4">
+            <button
+              onClick={onPrev ?? undefined}
+              disabled={!onPrev}
+              className="flex items-center gap-1.5 text-sm font-medium text-heading transition-colors hover:text-primary disabled:opacity-30 disabled:pointer-events-none"
+            >
+              <ChevronLeft className="h-4 w-4" />
+              Previous
+            </button>
+            <span className="text-xs text-body/60">
+              {caseNumber} / {totalCases}
+            </span>
+            <button
+              onClick={onNext ?? undefined}
+              disabled={!onNext}
+              className="flex items-center gap-1.5 text-sm font-medium text-heading transition-colors hover:text-primary disabled:opacity-30 disabled:pointer-events-none"
+            >
+              Next
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -72,7 +72,10 @@ export default function GalleryCaseGrid({ cases }: GalleryCaseGridProps) {
         <GalleryCasePopup
           item={cases[openCase][0]}
           caseNumber={openCase + 1}
+          totalCases={cases.length}
           onClose={() => setOpenCase(null)}
+          onPrev={openCase > 0 ? () => setOpenCase(openCase - 1) : null}
+          onNext={openCase < cases.length - 1 ? () => setOpenCase(openCase + 1) : null}
         />
       )}
     </>
