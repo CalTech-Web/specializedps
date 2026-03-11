@@ -666,26 +666,10 @@ export const procedures: Procedure[] = [
       "Contralateral symmetry reduction to match the treated breast, ensuring balanced size and shape on both sides",
     ],
     procedureSteps: [
-      {
-        title: "Collaborative Surgical Planning",
-        description:
-          "Your breast surgeon and plastic surgeon work together to plan tumor removal and breast reshaping as a coordinated procedure, using imaging and clinical evaluation to design incision patterns that achieve clear margins while preserving the best possible contour.",
-      },
-      {
-        title: "Tumor Excision and Tissue Rearrangement",
-        description:
-          "The breast surgeon removes the cancerous tissue with adequate margins, and the plastic surgeon immediately rearranges the remaining breast tissue to fill the defect, lifting and reshaping the breast using reduction mammoplasty techniques.",
-      },
-      {
-        title: "Contralateral Breast Reduction",
-        description:
-          "When appropriate, the opposite breast is reduced and lifted to match the treated side, ensuring both breasts are symmetrical in size, shape, and position for a balanced, natural appearance.",
-      },
-      {
-        title: "Recovery and Oncologic Follow-Up",
-        description:
-          "After surgery, you will be monitored for healing and follow up with both your oncology team for any additional cancer treatments (such as radiation) and your plastic surgeon to track your cosmetic results and long-term symmetry.",
-      },
+      "Collaborative Surgical Planning: Your breast surgeon and plastic surgeon work together to plan tumor removal and breast reshaping as a coordinated procedure, using imaging and clinical evaluation to design incision patterns that achieve clear margins while preserving the best possible contour.",
+      "Tumor Excision and Tissue Rearrangement: The breast surgeon removes the cancerous tissue with adequate margins, and the plastic surgeon immediately rearranges the remaining breast tissue to fill the defect, lifting and reshaping the breast using reduction mammoplasty techniques.",
+      "Contralateral Breast Reduction: When appropriate, the opposite breast is reduced and lifted to match the treated side, ensuring both breasts are symmetrical in size, shape, and position for a balanced, natural appearance.",
+      "Recovery and Oncologic Follow-Up: After surgery, you will be monitored for healing and follow up with both your oncology team for any additional cancer treatments (such as radiation) and your plastic surgeon to track your cosmetic results and long-term symmetry.",
     ],
     recoveryTimeline:
       "Most patients return to light daily activities within 1-2 weeks. Surgical drains, if placed, are typically removed within the first week. Strenuous exercise and heavy lifting should be avoided for 4-6 weeks. Swelling gradually subsides over 2-3 months, and final breast shape and symmetry continue to refine over 6-12 months. If radiation therapy follows surgery, your surgeon will monitor how healing progresses and may recommend minor adjustments once treatment is complete.",
@@ -823,14 +807,17 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-233.jpg",
+    contentImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-197.jpg",
     description:
-      "Liposuction is a cosmetic surgical procedure that removes unwanted fat from targeted areas of the body. By precisely breaking down and suctioning fat cells, liposuction can provide long-lasting contour improvements in areas such as the abdomen, thighs, hips, arms, and neck. Unlike weight loss, which reduces the size of fat cells, liposuction permanently removes these cells, resulting in a leaner appearance in the treated areas.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons use advanced liposuction techniques to help patients achieve a smoother, more contoured silhouette tailored to each person's aesthetic goals and unique anatomy. Many patients choose liposuction to enhance their natural body contours and renew their confidence when diet and exercise alone cannot address stubborn pockets of fat.",
+      "Liposuction is a cosmetic surgical procedure that removes unwanted fat from targeted areas of the body. By precisely breaking down and suctioning fat cells, liposuction can provide long-lasting contour improvements in areas such as the abdomen, thighs, hips, arms, and neck. Unlike weight loss, which reduces the size of fat cells, liposuction permanently removes these cells, resulting in a leaner appearance in the treated areas.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons use advanced liposuction techniques to help patients achieve a smoother, more contoured silhouette tailored to each person's aesthetic goals and unique anatomy. Many patients choose liposuction to enhance their natural body contours and renew their confidence when diet and exercise alone cannot address stubborn pockets of fat.\n\nOur surgeons employ multiple liposuction technologies, including tumescent, ultrasound-assisted, and power-assisted techniques, selecting the ideal approach based on the treatment area, fat density, and your desired outcome. Combined with our Enhanced Recovery After Surgery (ERAS) protocols, patients experience less discomfort and a faster return to daily activities.",
     heroDescription:
       "Permanently remove stubborn fat deposits and refine your body contours with precision liposuction techniques.",
     benefits: [
       "Targeted, permanent removal of stubborn fat deposits",
       "Refined body contours and improved proportions",
+      "Multiple treatment areas in a single session (abdomen, thighs, hips, arms, neck)",
       "Enhanced clothing fit and comfort",
       "Long-lasting results when maintaining a healthy lifestyle",
       "Boosted self-confidence and body image",
@@ -840,6 +827,7 @@ export const procedures: Procedure[] = [
       "Good skin elasticity for optimal contouring (firmer skin adapts better to new contours)",
       "Non-smoker in good overall health",
       "Desire more defined body contours without significant weight loss",
+      "Realistic expectations about results and committed to maintaining a healthy lifestyle",
     ],
     techniques: [
       "Traditional liposuction (cannula-based fat removal for precise control)",
@@ -847,8 +835,16 @@ export const procedures: Procedure[] = [
       "Ultrasound-assisted liposuction (UAL) for dense or fibrous fat areas",
       "Power-assisted liposuction (PAL) with vibrating cannula for efficiency",
     ],
+    procedureSteps: [
+      "Anesthesia is administered (local with sedation or general) and the target areas are carefully marked to guide sculpting",
+      "A tumescent solution is injected into the treatment area to numb the tissue, minimize bleeding, and facilitate fat removal",
+      "Small, discreet incisions are placed near the target areas, typically just a few millimeters in length",
+      "A thin cannula is inserted through the incisions to precisely break down and suction out the targeted fat deposits",
+      "The surgeon sculpts and contours the area for smooth, natural-looking results, then closes the incisions and applies a compression garment",
+    ],
+    procedureDuration: "1-3 hours depending on the number of areas treated",
     recoveryTimeline:
-      "Compression garments are worn to reduce swelling and help the body adjust to its new contours. Most patients resume light activities within a few days and return to work within 1-2 weeks. Swelling gradually subsides over the following weeks, with full results visible within 1-3 months.",
+      "Compression garments are worn for several weeks to reduce swelling and help the body adjust to its new contours. Most patients resume light activities within a few days and return to work within 1-2 weeks. Mild bruising and swelling are normal and gradually subside over the following weeks. Full results become visible within 1-3 months as the body heals and the skin adapts to the refined contours. Follow-up appointments are scheduled to monitor your progress.",
   },
   {
     slug: "lipo-360",
