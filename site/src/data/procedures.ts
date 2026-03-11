@@ -636,33 +636,61 @@ export const procedures: Procedure[] = [
     name: "Oncoplastic Breast Reduction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
-    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-214.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg",
     description:
-      "Oncoplastic breast reduction (also known as Therapeutic Mammoplasty) is a sophisticated, two-in-one procedure that seamlessly combines the necessary removal of cancerous tissue with immediate breast reduction and reshaping, resulting in both improved health and superior cosmetic symmetry.\n\nInstead of simply removing the tumor and leaving a deformity or \"dent,\" the surgeon utilizes the principles of a cosmetic breast reduction to remove the tumor while ensuring clear margins, while simultaneously lifting and reducing the breast volume. The surrounding breast tissue is meticulously rearranged to immediately fill the void left by the cancer removal, achieving a beautiful, balanced contour. To achieve optimal balance, the surgeon often performs a contralateral breast reduction (a reduction on the healthy, opposite breast) at the same time.",
+      "Oncoplastic breast reduction, also known as Therapeutic Mammoplasty, is a specialized procedure that combines the removal of cancerous breast tissue with immediate cosmetic reshaping. This two-in-one approach allows your surgeon to achieve clear oncologic margins while simultaneously lifting and reducing breast volume, delivering both health outcomes and aesthetic symmetry in a single operation.\n\nRather than leaving a visible deformity or contour irregularity after tumor removal, the surgeon rearranges the surrounding breast tissue to fill the void left by the excision, creating a natural and balanced shape. To achieve optimal symmetry, a contralateral breast reduction (reducing the opposite, healthy breast) is often performed at the same time, so both breasts match in size and proportion.\n\nThis approach is particularly valuable for women with larger breasts who may also benefit from the functional relief of a reduction, addressing chronic back, neck, and shoulder discomfort alongside their cancer treatment.",
     heroDescription:
-      "Combine cancer removal with expert breast reshaping for superior aesthetic outcomes and improved symmetry after lumpectomy.",
+      "Achieving symmetry and confidence after breast cancer through expert oncoplastic reconstruction that combines cancer removal with cosmetic breast reshaping.",
     benefits: [
-      "Superior aesthetic results compared to traditional lumpectomy",
-      "Improved breast symmetry through contralateral reduction",
-      "Functional relief from chronic back, neck, and shoulder pain",
-      "Enhanced psychological confidence during cancer recovery",
-      "Single procedure combining cancer treatment and aesthetic improvement",
+      "Superior aesthetic results compared to traditional lumpectomy alone",
+      "Improved breast symmetry through simultaneous contralateral reduction",
+      "Functional relief from chronic back, neck, and shoulder pain caused by heavy breasts",
+      "Enhanced psychological well-being and body confidence during cancer recovery",
+      "Single combined procedure, reducing the total number of surgeries needed",
+      "Allows larger tumor excisions with better cosmetic outcomes than standard lumpectomy",
     ],
     candidateCriteria: [
-      "Patients requiring a lumpectomy (not full mastectomy)",
-      "Larger tumor size that would otherwise lead to significant breast deformity",
-      "Large or heavy breasts where reduction provides both functional and aesthetic benefit",
-      "Good overall health suitable for combined procedure",
+      "Patients requiring a lumpectomy rather than a full mastectomy",
+      "Women with larger tumors where standard lumpectomy would cause noticeable deformity",
+      "Patients with large or heavy breasts who would benefit from both reduction and cancer treatment",
+      "Good overall health suitable for a combined oncologic and cosmetic procedure",
+      "Women seeking improved symmetry and proportion after breast cancer surgery",
     ],
     techniques: [
-      "Wise Pattern (anchor scar) for larger reductions and significant lifting",
-      "Vertical Pattern (lollipop scar) for moderate reductions with less visible scarring",
-      "Circumareolar approach for very small tumors or minor reshaping",
+      "Wise Pattern (anchor incision) with circumareolar, vertical, and inframammary components, ideal for significant reductions and maximum lifting",
+      "Vertical Pattern (lollipop incision) around the areola and vertically downward, suitable for moderate reductions with less visible scarring",
+      "Circumareolar technique with an incision only around the areola, best for small tumors or minor reshaping with minimal scarring",
+      "Contralateral symmetry reduction to match the treated breast, ensuring balanced size and shape on both sides",
+    ],
+    procedureSteps: [
+      {
+        title: "Collaborative Surgical Planning",
+        description:
+          "Your breast surgeon and plastic surgeon work together to plan tumor removal and breast reshaping as a coordinated procedure, using imaging and clinical evaluation to design incision patterns that achieve clear margins while preserving the best possible contour.",
+      },
+      {
+        title: "Tumor Excision and Tissue Rearrangement",
+        description:
+          "The breast surgeon removes the cancerous tissue with adequate margins, and the plastic surgeon immediately rearranges the remaining breast tissue to fill the defect, lifting and reshaping the breast using reduction mammoplasty techniques.",
+      },
+      {
+        title: "Contralateral Breast Reduction",
+        description:
+          "When appropriate, the opposite breast is reduced and lifted to match the treated side, ensuring both breasts are symmetrical in size, shape, and position for a balanced, natural appearance.",
+      },
+      {
+        title: "Recovery and Oncologic Follow-Up",
+        description:
+          "After surgery, you will be monitored for healing and follow up with both your oncology team for any additional cancer treatments (such as radiation) and your plastic surgeon to track your cosmetic results and long-term symmetry.",
+      },
     ],
     recoveryTimeline:
-      "Return to light activities in 1-2 weeks. Avoid strenuous exercise for 4-6 weeks. Full results become visible over several months as swelling subsides and tissues heal.",
+      "Most patients return to light daily activities within 1-2 weeks. Surgical drains, if placed, are typically removed within the first week. Strenuous exercise and heavy lifting should be avoided for 4-6 weeks. Swelling gradually subsides over 2-3 months, and final breast shape and symmetry continue to refine over 6-12 months. If radiation therapy follows surgery, your surgeon will monitor how healing progresses and may recommend minor adjustments once treatment is complete.",
     insuranceCoverage:
-      "Often covered by insurance as a medically necessary procedure that treats cancer and corrects functional symptoms. Our team specializes in navigating the pre-authorization process, submitting letters of medical necessity, clinical photos, and supporting documentation to maximize your benefits.",
+      "Oncoplastic breast reduction is frequently covered by insurance as a medically necessary cancer treatment procedure. The contralateral breast reduction for symmetry is also typically covered under the Women's Health and Cancer Rights Act (WHCRA). Our team specializes in navigating the pre-authorization process, submitting detailed letters of medical necessity, clinical photographs, and supporting documentation to maximize your insurance benefits and minimize out-of-pocket costs.",
   },
   {
     slug: "resensation",
@@ -749,6 +777,8 @@ export const procedures: Procedure[] = [
     name: "Specialized Reconstruction Procedures",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-243.jpg",
     contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-155.jpg",
     description:
       "Specialized Plastic Surgery offers a comprehensive range of advanced reconstruction procedures beyond traditional breast reconstruction, including aesthetic flat closure, male breast reconstruction, and lymphedema surgery.\n\nAesthetic flat closure is designed for women who choose not to undergo traditional breast mound reconstruction, creating a smooth, even chest contour following mastectomy. Male breast reconstruction restores the chest contour for men who have undergone mastectomy for breast cancer, focusing on achieving a flat, symmetrical, and masculine appearance. Lymphedema surgery addresses chronic swelling through advanced microsurgical techniques such as lymphaticovenous bypass (LVB) and vascularized lymph node transfer (VLNT), providing relief for patients who have not responded to conservative treatment.",
@@ -774,6 +804,11 @@ export const procedures: Procedure[] = [
       "Vascularized lymph node transfer (VLNT)",
       "Fat grafting and scar revision for male reconstruction",
       "3D nipple tattooing for realistic areolar restoration",
+    ],
+    procedureSteps: [
+      "Comprehensive consultation to evaluate your anatomy, medical history, and goals, with a customized surgical plan developed for your specific needs",
+      "The selected procedure is performed using advanced microsurgical techniques, with meticulous attention to symmetry, contour, and natural appearance",
+      "Careful closure and postoperative care instructions are provided, with follow-up appointments to monitor healing and optimize your results",
     ],
     recoveryTimeline:
       "Varies by procedure. Aesthetic flat closure: 1-2 weeks for light activities, 4-6 weeks for full recovery. Male reconstruction: 2-4 weeks initial recovery. Lymphedema surgery: 2-4 weeks for light activities, with compression garments and physical therapy continuing as part of ongoing care.",
