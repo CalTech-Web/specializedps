@@ -33,7 +33,7 @@
   --color-gold: var(--gold);
   --color-blog-bg: var(--blog-bg);
   --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-playfair);
+  --font-heading: var(--font-dm-sans);
 }
 
 body {
