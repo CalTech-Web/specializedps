@@ -355,6 +355,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center">
@@ -559,6 +560,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
@@ -707,6 +709,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
@@ -996,6 +999,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
@@ -1094,6 +1098,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             backgroundPosition: "center",
           }}
         />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-3xl px-6 text-center">
@@ -1167,9 +1172,20 @@ export default function BreastReductionInsuranceWestchesterPage() {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-white/[0.06] pt-6 text-center">
+          <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/[0.06] pt-6 sm:flex-row">
             <p className="text-xs text-white/40">
               &copy; {new Date().getFullYear()} Specialized Plastic Surgery | All Rights Reserved.
+            </p>
+            <p className="text-xs text-white/40">
+              Built by{" "}
+              <a
+                href="https://caltechweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 transition-colors hover:text-primary"
+              >
+                CalTech Web
+              </a>
             </p>
           </div>
         </div>
