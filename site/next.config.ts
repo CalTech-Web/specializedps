@@ -81,8 +81,6 @@ const nextConfig: NextConfig = {
       { source: "/breast-lift/", destination: "/services/aesthetic-breast/lift", permanent: true },
       { source: "/breast-reduction", destination: "/services/aesthetic-breast/reduction", permanent: true },
       { source: "/breast-reduction/", destination: "/services/aesthetic-breast/reduction", permanent: true },
-      { source: "/breast-reduction-covered-by-insurance-in-westchester", destination: "/services/aesthetic-breast/reduction", permanent: true },
-      { source: "/breast-reduction-covered-by-insurance-in-westchester/", destination: "/services/aesthetic-breast/reduction", permanent: true },
       { source: "/breast-reconstruction-coverage", destination: "/insurance", permanent: true },
       { source: "/breast-reconstruction-coverage/", destination: "/insurance", permanent: true },
       { source: "/breast-implant-removal", destination: "/services/aesthetic-breast/implant-removal", permanent: true },
