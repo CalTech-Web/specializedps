@@ -172,7 +172,7 @@ export default function GalleryPage() {
               Credentials You Can Trust:
             </p>
             <div className="overflow-hidden">
-              <div className="animate-marquee flex w-max items-center gap-16">
+              <div className="animate-marquee flex w-max items-center gap-8 sm:gap-16">
                 {[
                   { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", h: 72 },
                   { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", h: 64 },

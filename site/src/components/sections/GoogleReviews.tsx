@@ -129,7 +129,7 @@ function DoctorReviewMarquee({
 
       {/* Marquee container */}
       <div
-        className="relative"
+        className="relative overflow-hidden"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => {
           setPaused(false);
