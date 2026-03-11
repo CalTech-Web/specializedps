@@ -163,7 +163,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           className="object-cover object-top"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-heading/50 via-heading/30 to-heading/70" />
+        <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
