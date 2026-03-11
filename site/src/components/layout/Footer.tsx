@@ -77,7 +77,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2!2d-74.3096!3d40.7261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ad3f97b0c68f%3A0x0!2s264+Millburn+Ave%2C+Millburn%2C+NJ+07041!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="500"
+                height="280"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -89,7 +89,7 @@ export default function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.8!2d-73.7244!3d40.9686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2940cbb55f8f5%3A0x0!2s500+Mamaroneck+Ave+Suite+211%2C+Harrison%2C+NY+10528!5e0!3m2!1sen!2sus!4v1"
                 width="100%"
-                height="500"
+                height="280"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -102,16 +102,16 @@ export default function Footer() {
           {/* Locations Row: NJ | Logo | NY */}
           <div className="grid items-start gap-8 sm:grid-cols-[1fr_auto_1fr]">
             {/* NJ Location */}
-            <div className="text-center">
+            <div className="text-center" style={{ lineHeight: "1.7em" }}>
               <h4 className="font-heading text-base font-bold text-heading">
                 New Jersey Location
               </h4>
-              <p className="mt-2 text-sm font-semibold text-heading">
+              <p className="mt-3 text-sm font-semibold text-heading">
                 {nj.surgeon}
               </p>
-              <p className="mt-1 text-sm text-body">Mon - Fri 9am - 5pm</p>
-              <p className="mt-1 text-sm text-body">{nj.address}</p>
-              <div className="mt-2 space-y-1">
+              <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
+              <p className="mt-2 text-sm text-body">{nj.address}</p>
+              <div className="mt-3 space-y-2">
                 <Link
                   href={`mailto:${nj.email}`}
                   className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
@@ -131,7 +131,7 @@ export default function Footer() {
                 href={nj.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm text-body transition-colors hover:text-primary"
+                className="mt-3 inline-block text-sm text-body transition-colors hover:text-primary"
               >
                 {nj.instagram}
               </Link>
@@ -149,16 +149,16 @@ export default function Footer() {
             </div>
 
             {/* NY Location */}
-            <div className="text-center">
+            <div className="text-center" style={{ lineHeight: "1.7em" }}>
               <h4 className="font-heading text-base font-bold text-heading">
                 New York Location
               </h4>
-              <p className="mt-2 text-sm font-semibold text-heading">
+              <p className="mt-3 text-sm font-semibold text-heading">
                 {ny.surgeon}
               </p>
-              <p className="mt-1 text-sm text-body">Mon - Fri 9am - 5pm</p>
-              <p className="mt-1 text-sm text-body">{ny.address}</p>
-              <div className="mt-2 space-y-1">
+              <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
+              <p className="mt-2 text-sm text-body">{ny.address}</p>
+              <div className="mt-3 space-y-2">
                 <Link
                   href={`mailto:${ny.email}`}
                   className="flex items-center justify-center gap-1.5 text-sm text-body transition-colors hover:text-primary"
@@ -178,7 +178,7 @@ export default function Footer() {
                 href={ny.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm text-body transition-colors hover:text-primary"
+                className="mt-3 inline-block text-sm text-body transition-colors hover:text-primary"
               >
                 {ny.instagram}
               </Link>
