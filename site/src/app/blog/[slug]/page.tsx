@@ -60,7 +60,7 @@ function renderContent(content: string) {
       return (
         <h2
           key={i}
-          className="font-heading mb-4 mt-10 text-2xl font-bold text-heading"
+          className="font-heading mb-4 mt-10 text-xl font-bold text-heading"
         >
           {trimmed.replace(/^## /, "")}
         </h2>
