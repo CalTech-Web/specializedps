@@ -177,7 +177,7 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
           <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
             {/* Location & Doctor — hidden when preset */}
             {!preset && (
-              <>
+              <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label htmlFor="modal-location" className="block text-sm font-medium text-heading mb-1.5">
                     Location
@@ -188,63 +188,61 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
                     onChange={(e) => handleLocationChange(e.target.value)}
                     className={modalSelectClasses}
                   >
-                    <option value="">Select a location</option>
+                    <option value="">Select Location</option>
                     <option value="NJ">Northern New Jersey Office</option>
                     <option value="NY">Westchester New York Office</option>
                   </select>
                 </div>
-
-                {formData.location && (
-                  <div>
-                    <label htmlFor="modal-doctor" className="block text-sm font-medium text-heading mb-1.5">
-                      Doctor
-                    </label>
-                    <select
-                      id="modal-doctor"
-                      value={formData.doctor}
-                      onChange={(e) => handleChange("doctor", e.target.value)}
-                      className={modalSelectClasses}
-                    >
-                      {formData.location === "NJ" && (
-                        <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
-                      )}
-                      {formData.location === "NY" && (
-                        <option value="Dr. Chris Devulapalli">Dr. Chris Devulapalli</option>
-                      )}
-                    </select>
-                  </div>
-                )}
-              </>
+                <div>
+                  <label htmlFor="modal-doctor" className="block text-sm font-medium text-heading mb-1.5">
+                    Doctor
+                  </label>
+                  <select
+                    id="modal-doctor"
+                    value={formData.doctor}
+                    onChange={(e) => handleChange("doctor", e.target.value)}
+                    className={modalSelectClasses}
+                  >
+                    <option value="">Select Doctor</option>
+                    {formData.location === "NJ" && (
+                      <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
+                    )}
+                    {formData.location === "NY" && (
+                      <option value="Dr. Chris Devulapalli">Dr. Chris Devulapalli</option>
+                    )}
+                  </select>
+                </div>
+              </div>
             )}
 
-            {/* Name */}
-            <div>
-              <label htmlFor="modal-name" className="block text-sm font-medium text-heading mb-1.5">
-                Your Name
-              </label>
-              <input
-                id="modal-name"
-                type="text"
-                value={formData.name}
-                onChange={(e) => handleChange("name", e.target.value)}
-                className={modalInputClasses}
-                placeholder="Full name"
-              />
-            </div>
-
-            {/* Phone */}
-            <div>
-              <label htmlFor="modal-phone" className="block text-sm font-medium text-heading mb-1.5">
-                Your Phone
-              </label>
-              <input
-                id="modal-phone"
-                type="tel"
-                value={formData.phone}
-                onChange={(e) => handleChange("phone", e.target.value)}
-                className={modalInputClasses}
-                placeholder="(123) 456-7890"
-              />
+            {/* Name + Phone */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label htmlFor="modal-name" className="block text-sm font-medium text-heading mb-1.5">
+                  Your Name
+                </label>
+                <input
+                  id="modal-name"
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => handleChange("name", e.target.value)}
+                  className={modalInputClasses}
+                  placeholder="Full name"
+                />
+              </div>
+              <div>
+                <label htmlFor="modal-phone" className="block text-sm font-medium text-heading mb-1.5">
+                  Your Phone
+                </label>
+                <input
+                  id="modal-phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => handleChange("phone", e.target.value)}
+                  className={modalInputClasses}
+                  placeholder="(200) 555-0123"
+                />
+              </div>
             </div>
 
             {/* Email */}
@@ -273,7 +271,7 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
                 value={formData.message}
                 onChange={(e) => handleChange("message", e.target.value)}
                 className="block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] px-[20px] py-4 text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30"
-                placeholder="How can we help you?"
+                placeholder="Please tell us what procedure you're interested in"
               />
             </div>
 

@@ -75,25 +75,23 @@ export default function DoctorsContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      {/* Location */}
-      <div>
-        <label htmlFor="contact-location" className="block text-sm font-medium text-heading mb-1.5">
-          Location
-        </label>
-        <select
-          id="contact-location"
-          value={formData.location}
-          onChange={(e) => handleLocationChange(e.target.value)}
-          className={selectClasses}
-        >
-          <option value="">Select a location</option>
-          <option value="NJ">Northern New Jersey Office</option>
-          <option value="NY">Westchester New York Office</option>
-        </select>
-      </div>
-
-      {/* Doctor */}
-      {formData.location && (
+      {/* Row 1: Location + Doctor */}
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="contact-location" className="block text-sm font-medium text-heading mb-1.5">
+            Location
+          </label>
+          <select
+            id="contact-location"
+            value={formData.location}
+            onChange={(e) => handleLocationChange(e.target.value)}
+            className={selectClasses}
+          >
+            <option value="">Select Location</option>
+            <option value="NJ">Northern New Jersey Office</option>
+            <option value="NY">Westchester New York Office</option>
+          </select>
+        </div>
         <div>
           <label htmlFor="contact-doctor" className="block text-sm font-medium text-heading mb-1.5">
             Doctor
@@ -104,6 +102,7 @@ export default function DoctorsContactForm() {
             onChange={(e) => handleChange("doctor", e.target.value)}
             className={selectClasses}
           >
+            <option value="">Select Doctor</option>
             {formData.location === "NJ" && (
               <option value="Dr. Michael Sosin">Dr. Michael Sosin</option>
             )}
@@ -112,36 +111,36 @@ export default function DoctorsContactForm() {
             )}
           </select>
         </div>
-      )}
-
-      {/* Name */}
-      <div>
-        <label htmlFor="contact-name" className="block text-sm font-medium text-heading mb-1.5">
-          Your Name
-        </label>
-        <input
-          id="contact-name"
-          type="text"
-          value={formData.name}
-          onChange={(e) => handleChange("name", e.target.value)}
-          className={inputClasses}
-          placeholder="Full name"
-        />
       </div>
 
-      {/* Phone */}
-      <div>
-        <label htmlFor="contact-phone" className="block text-sm font-medium text-heading mb-1.5">
-          Your Phone
-        </label>
-        <input
-          id="contact-phone"
-          type="tel"
-          value={formData.phone}
-          onChange={(e) => handleChange("phone", e.target.value)}
-          className={inputClasses}
-          placeholder="(123) 456-7890"
-        />
+      {/* Row 2: Name + Phone */}
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="contact-name" className="block text-sm font-medium text-heading mb-1.5">
+            Your Name
+          </label>
+          <input
+            id="contact-name"
+            type="text"
+            value={formData.name}
+            onChange={(e) => handleChange("name", e.target.value)}
+            className={inputClasses}
+            placeholder="Full name"
+          />
+        </div>
+        <div>
+          <label htmlFor="contact-phone" className="block text-sm font-medium text-heading mb-1.5">
+            Your Phone
+          </label>
+          <input
+            id="contact-phone"
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => handleChange("phone", e.target.value)}
+            className={inputClasses}
+            placeholder="(200) 555-0123"
+          />
+        </div>
       </div>
 
       {/* Email */}
@@ -170,7 +169,7 @@ export default function DoctorsContactForm() {
           value={formData.message}
           onChange={(e) => handleChange("message", e.target.value)}
           className="block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] px-[20px] py-4 text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30"
-          placeholder="How can we help you?"
+          placeholder="Please tell us what procedure you're interested in"
         />
       </div>
 
