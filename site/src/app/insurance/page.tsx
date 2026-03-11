@@ -185,7 +185,7 @@ export default function InsurancePage() {
                   className="group rounded-lg border border-gray-200 bg-white shadow-sm"
                   open
                 >
-                  <summary className="flex cursor-pointer items-center justify-between p-5 font-heading text-lg font-bold text-heading transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between p-5 text-lg font-bold text-heading transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
                     <span>Breast Reduction Coverage</span>
                     <ChevronDown className="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" />
                   </summary>
@@ -220,7 +220,7 @@ export default function InsurancePage() {
                 </details>
 
                 <details className="group rounded-lg border border-gray-200 bg-white shadow-sm">
-                  <summary className="flex cursor-pointer items-center justify-between p-5 font-heading text-lg font-bold text-heading transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between p-5 text-lg font-bold text-heading transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
                     <span>Post-Weight Loss Coverage Potential</span>
                     <ChevronDown className="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" />
                   </summary>
