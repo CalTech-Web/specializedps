@@ -203,14 +203,16 @@ export default function ExclusiveBreastAugmentationPricingPage() {
       <FAQSection faqs={faqs} heading="Breast Augmentation FAQ" />
 
       {/* Contact Form */}
-      <section id="contact-form" className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-6">
+      <section id="contact-form" className="relative bg-heading py-14 sm:py-16">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Claim This Offer"
               title="Schedule Your Consultation"
               description="Fill out the form below to schedule your consultation with Dr. Chris Devulapalli and lock in this exclusive pricing."
               centered
+              light
             />
             <div className="mt-8">
               <ContactForm

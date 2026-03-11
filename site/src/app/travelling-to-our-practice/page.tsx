@@ -144,14 +144,16 @@ export default function TravellingToOurPracticePage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-6">
+      <section id="contact-form" className="relative bg-heading py-14 sm:py-16">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Get Started"
               title="Schedule Your Consultation"
               description="Let us know you are travelling to our practice and we will help coordinate every detail of your visit."
               centered
+              light
             />
             <div className="mt-8">
               <ContactForm />

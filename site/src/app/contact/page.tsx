@@ -73,13 +73,15 @@ export default function ContactPage() {
       />
 
       {/* Form Section */}
-      <section className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-6">
+      <section className="relative bg-heading py-14 sm:py-16">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Get in Touch"
               title="Send Us a Message"
               description="Fill out the form below and our team will get back to you promptly."
+              light
             />
             <div className="mt-8">
               <ContactForm />
