@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
-import HeroSection from "@/components/sections/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQSection from "@/components/sections/FAQSection";
@@ -11,6 +10,7 @@ import {
   DollarSign,
   CheckCircle,
   Clock,
+  Mail,
   MapPin,
   ShieldCheck,
   Star,
@@ -89,17 +89,68 @@ export default function ExclusiveBreastAugmentationPricingPage() {
 
   return (
     <>
-      <HeroSection
-        title="Breast Augmentation Special Offer"
-        subtitle="All-inclusive breast augmentation starting at $9,000 with Dr. Chris Devulapalli at our Westchester, NY office."
-        backgroundImage="/images/hero/SPS-Image-129.jpg"
-        ctaText="Claim This Offer"
-        ctaLink="#contact-form"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Breast Augmentation Pricing" },
-        ]}
-      />
+      {/* ── Custom Landing Page Header ── */}
+      <header className="border-b border-gray-100 bg-white">
+        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4">
+          <Link href="/">
+            <Image
+              src="/images/logos/black-logo.webp"
+              alt="Specialized Plastic Surgery"
+              width={200}
+              height={50}
+              className="h-8 w-auto"
+              priority
+            />
+          </Link>
+          <div className="flex items-center gap-4">
+            <a
+              href={`tel:${ny.phoneRaw}`}
+              className="hidden items-center gap-2 text-sm font-bold text-heading transition-colors hover:text-primary sm:flex"
+            >
+              <Phone className="h-4 w-4 text-primary" />
+              {ny.phone}
+            </a>
+            <Link
+              href="#contact-form"
+              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary/90"
+            >
+              Claim This Offer
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* ── Hero ── */}
+      <section className="relative flex min-h-[520px] w-full items-center justify-center overflow-hidden bg-heading">
+        <Image
+          src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg"
+          alt="Breast Augmentation"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+            Westchester, NY
+          </p>
+          <h1 className="font-heading mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Breast Augmentation Special Offer
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85">
+            All-inclusive breast augmentation starting at $9,000 with Dr. Chris
+            Devulapalli at our Westchester, NY office.
+          </p>
+          <Link
+            href="#contact-form"
+            className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
+          >
+            Claim This Offer
+          </Link>
+        </div>
+      </section>
 
       {/* Pricing Highlight */}
       <section className="bg-white py-14 sm:py-20">
@@ -384,6 +435,68 @@ export default function ExclusiveBreastAugmentationPricingPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Custom Landing Page Footer ── */}
+      <footer className="bg-heading py-10">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
+            <div className="text-center sm:text-left">
+              <Image
+                src="/images/logos/white-logo.webp"
+                alt="Specialized Plastic Surgery"
+                width={220}
+                height={50}
+                className="mx-auto sm:mx-0"
+              />
+              <p className="mt-2 text-xs font-bold uppercase tracking-wider text-primary">
+                New York Office
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center gap-1 text-sm text-white/70 sm:items-end">
+              <span>Mon - Fri: 9am - 5PM</span>
+              <span>{ny.address}</span>
+              <a
+                href={`mailto:${ny.email}`}
+                className="transition-colors hover:text-primary"
+              >
+                {ny.email}
+              </a>
+              <a
+                href={`tel:${ny.phoneRaw}`}
+                className="font-bold text-primary transition-colors hover:text-white"
+              >
+                {ny.phone}
+              </a>
+              <a
+                href={ny.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-primary"
+              >
+                @chrisdevulapalliMD
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/[0.06] pt-6 sm:flex-row">
+            <p className="text-xs text-white/40">
+              &copy; {new Date().getFullYear()} Specialized Plastic Surgery | All Rights Reserved.
+            </p>
+            <p className="text-xs text-white/40">
+              Built by{" "}
+              <a
+                href="https://caltechweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 transition-colors hover:text-primary"
+              >
+                CalTech Web
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

@@ -3,9 +3,11 @@
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
+import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
 
 const STANDALONE_ROUTES = [
   "/breast-reduction-covered-by-insurance-in-westchester",
+  "/exclusive-breast-augmentation-pricing",
 ];
 
 export default function LayoutWrapper({
@@ -19,7 +21,12 @@ export default function LayoutWrapper({
   );
 
   if (isStandalone) {
-    return <>{children}</>;
+    return (
+      <>
+        {children}
+        <AccessibilityWidget />
+      </>
+    );
   }
 
   return (
@@ -27,6 +34,7 @@ export default function LayoutWrapper({
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
+      <AccessibilityWidget />
     </>
   );
 }

@@ -126,3 +126,175 @@ img {
 .animate-hotspot-pulse {
   animation: hotspot-pulse 1.5s ease-out infinite;
 }
+
+/* ================================================================== */
+/*  Accessibility Widget Styles                                        */
+/* ================================================================== */
+
+/* ── Font Size Scaling ── */
+html.a11y-fs--2 body { font-size: 14px !important; }
+html.a11y-fs--1 body { font-size: 15px !important; }
+html.a11y-fs-1 body  { font-size: 17px !important; }
+html.a11y-fs-2 body  { font-size: 18px !important; }
+html.a11y-fs-3 body  { font-size: 20px !important; }
+html.a11y-fs-4 body  { font-size: 22px !important; }
+
+html.a11y-fs-3 p,
+html.a11y-fs-3 span,
+html.a11y-fs-3 a,
+html.a11y-fs-3 li,
+html.a11y-fs-4 p,
+html.a11y-fs-4 span,
+html.a11y-fs-4 a,
+html.a11y-fs-4 li {
+  letter-spacing: 0.01em;
+  word-spacing: 0.03em;
+}
+
+/* ── High Contrast ── */
+html.a11y-high-contrast {
+  --body-text: #000000;
+  --heading: #000000;
+}
+
+html.a11y-high-contrast main p,
+html.a11y-high-contrast main span:not(.a11y-widget span),
+html.a11y-high-contrast main a,
+html.a11y-high-contrast main li,
+html.a11y-high-contrast main td,
+html.a11y-high-contrast main label {
+  color: #000000 !important;
+}
+
+html.a11y-high-contrast main h1,
+html.a11y-high-contrast main h2,
+html.a11y-high-contrast main h3,
+html.a11y-high-contrast main h4,
+html.a11y-high-contrast main h5,
+html.a11y-high-contrast main h6 {
+  color: #000000 !important;
+}
+
+html.a11y-high-contrast main img {
+  filter: contrast(1.15);
+}
+
+/* ── Reading Mode ── */
+html.a11y-reading-mode main {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  background: var(--cream);
+}
+
+html.a11y-reading-mode body {
+  background: var(--cream) !important;
+}
+
+html.a11y-reading-mode main p,
+html.a11y-reading-mode main li,
+html.a11y-reading-mode main span {
+  line-height: 1.9 !important;
+  letter-spacing: 0.01em;
+}
+
+html.a11y-reading-mode main h1 { font-size: 2rem !important; margin-bottom: 1rem !important; }
+html.a11y-reading-mode main h2 { font-size: 1.75rem !important; margin-bottom: 0.875rem !important; }
+html.a11y-reading-mode main h3 { font-size: 1.5rem !important; margin-bottom: 0.75rem !important; }
+
+html.a11y-reading-mode main section {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+html.a11y-reading-mode main .grid {
+  display: block !important;
+}
+
+html.a11y-reading-mode main .grid > * + * {
+  margin-top: 1.5rem;
+}
+
+html.a11y-reading-mode main [style*="background-image"] {
+  background-image: none !important;
+  background-color: var(--warm-grey) !important;
+}
+
+/* ── Dyslexia-Friendly Font ── */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff/OpenDyslexic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff/OpenDyslexic-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html.a11y-dyslexia-font body,
+html.a11y-dyslexia-font h1,
+html.a11y-dyslexia-font h2,
+html.a11y-dyslexia-font h3,
+html.a11y-dyslexia-font h4,
+html.a11y-dyslexia-font h5,
+html.a11y-dyslexia-font h6,
+html.a11y-dyslexia-font p,
+html.a11y-dyslexia-font span,
+html.a11y-dyslexia-font a,
+html.a11y-dyslexia-font li,
+html.a11y-dyslexia-font label,
+html.a11y-dyslexia-font input,
+html.a11y-dyslexia-font select,
+html.a11y-dyslexia-font textarea,
+html.a11y-dyslexia-font button {
+  font-family: "OpenDyslexic", Arial, sans-serif !important;
+}
+
+html.a11y-dyslexia-font body {
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+/* ── Highlight Links ── */
+html.a11y-highlight-links main a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
+  color: #0056b3 !important;
+  background-color: rgba(0, 86, 179, 0.08) !important;
+  padding: 1px 3px !important;
+  border-radius: 2px !important;
+}
+
+html.a11y-highlight-links main a:hover {
+  background-color: rgba(0, 86, 179, 0.15) !important;
+}
+
+/* Exclude nav/header/widget links from highlight */
+html.a11y-highlight-links header a,
+html.a11y-highlight-links nav a,
+html.a11y-highlight-links .a11y-widget a {
+  text-decoration: inherit !important;
+  color: inherit !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* Don't apply accessibility overrides to the widget itself */
+.a11y-widget,
+.a11y-widget * {
+  font-size: revert !important;
+  font-family: var(--font-dm-sans), system-ui, sans-serif !important;
+  line-height: revert !important;
+  letter-spacing: revert !important;
+  color: revert !important;
+}

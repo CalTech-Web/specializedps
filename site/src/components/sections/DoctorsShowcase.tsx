@@ -24,14 +24,15 @@ export default function DoctorsShowcase() {
         </div>
 
         <div className="space-y-8">
-          {doctors.map((doctor) => {
+          {doctors.map((doctor, index) => {
             const loc = locationData[doctor.locationKey];
+            const imageRight = index % 2 !== 0;
             return (
               <div
                 key={doctor.slug}
                 className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
               >
-                <div className="flex flex-col md:flex-row">
+                <div className={`flex flex-col ${imageRight ? "md:flex-row-reverse" : "md:flex-row"}`}>
                   {/* Doctor Image */}
                   <div className="relative w-full flex-shrink-0 md:w-[380px] lg:w-[420px]">
                     <div className="relative h-80 md:h-full md:min-h-[480px]">
