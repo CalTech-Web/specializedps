@@ -16,6 +16,7 @@ export interface GalleryCategory {
   group: string;
   description: string;
   thumbnail: string;
+  heroImage?: string;
 }
 
 export const galleryCategories: GalleryCategory[] = [
@@ -27,6 +28,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Ear reshaping surgery to correct protruding or asymmetrical ears, creating a more balanced and natural appearance.",
     thumbnail: "/images/gallery/facelift/otoplasty-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/otoplasty.jpg",
   },
   {
     slug: "blepharoplasty",
@@ -35,6 +37,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Eyelid surgery to remove excess skin and fat, restoring a refreshed and youthful look to the eyes.",
     thumbnail: "/images/gallery/facelift/bleph-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/blepharoplasty.jpg",
   },
   // Body
   {
@@ -44,6 +47,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Abdominoplasty to remove excess skin, eliminate stubborn fat, and tighten weakened muscles for a flatter, more toned abdomen.",
     thumbnail: "/images/gallery/tummy-tuck/case1-after.jpg",
+    heroImage: "/images/gallery-heroes/tummy-tuck.jpg",
   },
   {
     slug: "liposuction",
@@ -52,6 +56,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Precision fat removal to sculpt and refine body contours, including traditional liposuction, Lipo 360, and chin liposuction.",
     thumbnail: "/images/gallery/liposuction/case1-after.jpg",
+    heroImage: "/images/gallery-heroes/liposuction.jpg",
   },
   {
     slug: "bbl",
@@ -60,6 +65,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Buttock enhancement using your own fat transfer for a fuller, more sculpted, and natural looking result.",
     thumbnail: "/images/gallery/bbl/case1-after.jpg",
+    heroImage: "/images/gallery-heroes/bbl.jpg",
   },
   // Aesthetic Breast
   {
@@ -69,6 +75,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Enhance your breast size, shape, and symmetry with saline, silicone, or gummy bear implants tailored to your goals.",
     thumbnail: "/images/gallery/breast-augmentation/case1-front-after.jpg",
+    heroImage: "/images/gallery-heroes/breast-augmentation.jpg",
   },
   {
     slug: "breast-lift",
@@ -77,6 +84,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Mastopexy to elevate and reshape sagging breasts, restoring a more youthful and lifted contour.",
     thumbnail: "/images/gallery/breast-lift/case1-after.jpg",
+    heroImage: "/images/gallery-heroes/breast-lift.jpg",
   },
   {
     slug: "breast-reduction",
@@ -85,6 +93,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Reduce breast volume and reshape for improved proportions, comfort, and relief from back and neck pain.",
     thumbnail: "/images/gallery/breast-reduction/case1-after.jpg",
+    heroImage: "/images/gallery-heroes/breast-reduction.jpg",
   },
   // Breast Reconstruction
   {
@@ -95,6 +104,7 @@ export const galleryCategories: GalleryCategory[] = [
       "Advanced microsurgical breast reconstruction using your own abdominal tissue, preserving muscle for a natural result and faster recovery.",
     thumbnail:
       "/images/gallery/breast-reconstruction/diep-case1-front-after.jpg",
+    heroImage: "/images/gallery-heroes/diep-flap.jpg",
   },
   {
     slug: "oncoplastic-reduction",
@@ -103,6 +113,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Combining cancer surgery with breast reduction techniques to achieve both oncologic safety and improved breast shape.",
     thumbnail: "/images/gallery/breast-reconstruction/onco-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/oncoplastic-reduction.jpg",
   },
   {
     slug: "implant-reconstruction",
@@ -112,6 +123,7 @@ export const galleryCategories: GalleryCategory[] = [
       "Prosthetic breast reconstruction using tissue expanders and implants, offering a reliable option for breast restoration after mastectomy.",
     thumbnail:
       "/images/gallery/breast-reconstruction/implant-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/implant-reconstruction.jpg",
   },
   {
     slug: "tdap-flap",
@@ -120,6 +132,7 @@ export const galleryCategories: GalleryCategory[] = [
     description:
       "Thoracodorsal artery perforator flap reconstruction, an advanced technique using back tissue to restore breast volume and shape.",
     thumbnail: "/images/gallery/breast-reconstruction/tdap-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/tdap-flap.jpg",
   },
   {
     slug: "male-breast-reconstruction",
@@ -129,6 +142,7 @@ export const galleryCategories: GalleryCategory[] = [
       "Specialized reconstruction for male breast cancer patients, restoring chest contour and confidence after mastectomy.",
     thumbnail:
       "/images/gallery/breast-reconstruction/male-bc-case1-after.jpg",
+    heroImage: "/images/gallery-heroes/male-breast-reconstruction.jpg",
   },
 ];
 
