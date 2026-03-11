@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { doctorReviews } from "@/data/reviews";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { Star, X } from "lucide-react";
+import { doctorReviews, type GoogleReview } from "@/data/reviews";
 
 function GoogleLogo() {
   return (
@@ -38,7 +38,7 @@ function StarRating({ rating }: { rating: number }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <Star
           key={i}
-          className={`h-5 w-5 ${i <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          className={`h-4 w-4 ${i <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
         />
       ))}
     </div>
@@ -52,18 +52,14 @@ interface DoctorReviewSliderProps {
 export default function DoctorReviewSlider({
   doctorSlug,
 }: DoctorReviewSliderProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
+  const [selectedReview, setSelectedReview] = useState<GoogleReview | null>(null);
   const doctor = doctorReviews.find((d) => d.doctorSlug === doctorSlug);
 
   if (!doctor) return null;
 
-  function scroll(direction: "left" | "right") {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -320 : 320,
-      behavior: "smooth",
-    });
-  }
+  // Duplicate reviews for seamless loop
+  const reviews = [...doctor.reviews, ...doctor.reviews];
 
   return (
     <div>
@@ -84,43 +80,117 @@ export default function DoctorReviewSlider({
         </div>
       </div>
 
-      {/* Scrollable review cards */}
-      <div className="relative">
-        <button
-          onClick={() => scroll("left")}
-          aria-label="Scroll reviews left"
-          className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white shadow-lg transition-colors hover:bg-primary hover:text-white"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          aria-label="Scroll reviews right"
-          className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white shadow-lg transition-colors hover:bg-primary hover:text-white"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
-
+      {/* Marquee container */}
+      <div
+        className="relative overflow-hidden"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         <div
-          ref={scrollRef}
-          className="flex gap-5 overflow-x-auto scroll-smooth px-1 pb-4 snap-x snap-mandatory"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex gap-4"
+          style={{
+            animation: "scroll-marquee-reviews 30s linear infinite",
+            animationPlayState: paused ? "paused" : "running",
+          }}
         >
-          {doctor.reviews.map((review, i) => (
+          {reviews.map((review, i) => (
             <div
-              key={i}
-              className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
+              key={`${review.name}-${i}`}
+              onClick={() => setSelectedReview(review)}
+              className="w-[300px] flex-shrink-0 cursor-pointer rounded-lg border border-gray-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
             >
               <StarRating rating={review.stars} />
-              <p className="mt-4 text-sm leading-relaxed text-body line-clamp-5">
+              <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">
                 {review.text}
               </p>
-              <div className="mt-4 border-t border-gray-100 pt-4">
+              <div className="mt-3 border-t border-gray-100 pt-3">
                 <p className="text-sm font-bold text-heading">{review.name}</p>
-                <p className="text-xs text-body/60">{review.date}</p>
+                <p className="text-xs text-body/50">{review.date}</p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-warm-grey to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-warm-grey to-transparent" />
+      </div>
+
+      {/* Review Popup */}
+      {selectedReview && (
+        <ReviewPopup
+          review={selectedReview}
+          doctorName={doctor.doctorName}
+          onClose={() => setSelectedReview(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Review Popup                                                       */
+/* ------------------------------------------------------------------ */
+function ReviewPopup({
+  review,
+  doctorName,
+  onClose,
+}: {
+  review: GoogleReview;
+  doctorName: string;
+  onClose: () => void;
+}) {
+  const popupRef = useRef<HTMLDivElement>(null);
+
+  // Close on Escape
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      onClick={onClose}
+    >
+      <div
+        ref={popupRef}
+        className="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          aria-label="Close review"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-body/40 transition-colors hover:bg-warm-grey hover:text-heading"
+        >
+          <X className="h-4 w-4" />
+        </button>
+
+        {/* Reviewer info */}
+        <div>
+          <p className="font-heading text-lg font-bold text-heading">
+            {review.name}
+          </p>
+          <p className="mt-0.5 text-xs text-body/60">
+            Review for {doctorName}
+          </p>
+          <div className="mt-2 flex items-center gap-2">
+            <StarRating rating={review.stars} />
+            <span className="text-xs text-body/50">{review.date}</span>
+          </div>
+        </div>
+
+        {/* Full review text */}
+        <p className="mt-5 text-sm leading-relaxed text-body">{review.text}</p>
+
+        {/* Google attribution */}
+        <div className="mt-5 flex items-center gap-2 border-t border-gray-100 pt-4">
+          <GoogleLogo />
+          <span className="text-xs text-body/40">Verified Review</span>
         </div>
       </div>
     </div>
