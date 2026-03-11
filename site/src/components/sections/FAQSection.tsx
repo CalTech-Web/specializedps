@@ -19,7 +19,8 @@ export default function FAQSection({
 }: FAQSectionProps) {
   return (
     <section className="bg-warm-grey py-14 sm:py-16">
-      <div className="mx-auto max-w-3xl px-6">
+      <div className="mx-auto max-w-[1320px] px-6">
+        <div className="mx-auto max-w-3xl">
         <div className="text-center">
           <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
             FAQ
@@ -53,6 +54,7 @@ export default function FAQSection({
             </Accordion.Item>
           ))}
         </Accordion.Root>
+        </div>
       </div>
     </section>
   );

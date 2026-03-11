@@ -76,7 +76,7 @@ export default function TestimonialSection() {
 
   return (
     <section className="bg-secondary py-16">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1320px] px-6">
         {/* Header */}
         <div className="text-center">
           <div className="flex items-center justify-center gap-1">
