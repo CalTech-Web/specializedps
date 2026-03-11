@@ -12,7 +12,6 @@ import {
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 /* ------------------------------------------------------------------ */
 /*  Context so any button in the tree can open the modal               */
@@ -98,7 +97,6 @@ function getModalImage(preset?: DoctorPreset): string {
 
 function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; preset?: DoctorPreset }) {
   const router = useRouter();
-  const { getToken } = useRecaptcha();
   const honeypotRef = useRef<HTMLInputElement>(null);
   const modalImage = getModalImage(preset);
   const [formData, setFormData] = useState<FormData>({
@@ -140,8 +138,7 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
     setStatus("submitting");
 
     try {
-      const recaptcha_token = await getToken("appointment_modal");
-      const payload: Record<string, string> = { site_id: SITE_ID, ...formData, recaptcha_token };
+      const payload: Record<string, string> = { site_id: SITE_ID, ...formData };
       if (preset?.recipientEmail) {
         payload.recipientEmail = preset.recipientEmail;
       }

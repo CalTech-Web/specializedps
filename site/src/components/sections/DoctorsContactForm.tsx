@@ -2,7 +2,6 @@
 
 import { useState, useRef, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -23,7 +22,6 @@ function doctorForLocation(loc: string): string {
 
 export default function DoctorsContactForm() {
   const router = useRouter();
-  const { getToken } = useRecaptcha();
   const honeypotRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     location: "",
@@ -57,11 +55,10 @@ export default function DoctorsContactForm() {
     setStatus("submitting");
 
     try {
-      const recaptcha_token = await getToken("doctors_contact_form");
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: SITE_ID, ...formData, recaptcha_token }),
+        body: JSON.stringify({ site_id: SITE_ID, ...formData }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");

@@ -2,7 +2,6 @@
 
 import { useState, useRef, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 interface FormData {
   location: string;
@@ -48,7 +47,6 @@ export default function ContactForm({
   recipientEmail,
 }: ContactFormProps = {}) {
   const router = useRouter();
-  const { getToken } = useRecaptcha();
   const honeypotRef = useRef<HTMLInputElement>(null);
   const isFixed = !!(fixedLocation && fixedDoctor);
 
@@ -100,7 +98,6 @@ export default function ContactForm({
     setStatus("submitting");
 
     try {
-      const recaptcha_token = await getToken("contact_form");
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -108,7 +105,6 @@ export default function ContactForm({
           site_id: SITE_ID,
           ...formData,
           recipientEmail: recipientEmail ?? selectedLocation?.email,
-          recaptcha_token,
         }),
       });
 

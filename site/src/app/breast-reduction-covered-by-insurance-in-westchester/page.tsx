@@ -575,7 +575,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                 key={area}
                 className="inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.04] px-5 py-2.5 text-sm text-white/80 transition-colors hover:border-primary/30 hover:bg-primary/10"
               >
-                <MapPin className="h-3.5 w-3.5 text-primary" />
+                <span className="relative flex h-3.5 w-3.5 shrink-0"><span className="absolute inset-0 animate-ping rounded-full bg-primary/40" /><MapPin className="relative h-3.5 w-3.5 text-primary" /></span>
                 {area}
               </span>
             ))}
