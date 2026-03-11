@@ -670,29 +670,40 @@ export const procedures: Procedure[] = [
     shortName: "Nerve Restoration",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
-    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-180.jpg",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-185-1.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-180.jpg",
     description:
-      "Resensation is a revolutionary nerve grafting technique that uses a specially processed nerve allograft to reconnect nerves in the chest to reconstructed breast tissue. This enables the body to rebuild nerve pathways, potentially restoring protective sensation and sensitivity to the nipple and surrounding breast tissue.\n\nDuring surgery, the surgeon identifies severed nerve endings in the chest, places a Resensation nerve allograft to bridge the gap between the severed nerves, and uses microsurgical techniques to connect the graft. The body then naturally regenerates nerves over time, allowing sensation to gradually return. This procedure represents a complete approach to breast reconstruction that addresses both aesthetic and functional restoration.",
+      "Losing nipple sensation is a common concern for women undergoing mastectomy or breast reconstruction surgery. Specialized Plastic Surgery is proud to offer Resensation, a cutting-edge nerve grafting technology designed to preserve or restore protective and erogenous sensation in the chest area after surgery. Using advanced microsurgical techniques, Resensation can help patients achieve not only aesthetic but also functional restoration, enhancing their overall quality of life.\n\nResensation is a revolutionary technique that leverages the body's natural ability to regenerate nerves. During breast reconstruction surgery, a specially processed nerve allograft is used to connect the nerves in the chest to the reconstructed breast. This enables the body to rebuild nerve pathways, potentially restoring protective sensation and sensitivity to the nipple and surrounding breast tissue.\n\nThis innovative approach is ideal for patients who prioritize feeling whole again, not just in appearance but in physical sensation as well. By incorporating Resensation into breast reconstruction, Specialized Plastic Surgery takes a holistic approach to healing that focuses on the functional outcomes of breast reconstruction alongside the aesthetic results.",
     heroDescription:
-      "Restore protective and erogenous sensation to the breast and nipple area after mastectomy using advanced nerve grafting technology.",
+      "Preserve or restore protective and erogenous sensation to the breast and nipple area after mastectomy using cutting-edge nerve grafting technology.",
     benefits: [
-      "Restored protective sensation to help prevent injury",
-      "Potential recovery of erogenous sensation",
-      "Combined aesthetic and functional breast restoration",
-      "Performed during reconstruction surgery with no additional incisions",
-      "Uses proven nerve allograft technology",
+      "Improved quality of life through restored sensation to warmth, touch, and pressure, helping protect the reconstructed breast from injury",
+      "Potential recovery of erogenous sensation to the nipple and surrounding areas, which is key to feeling whole again",
+      "A more complete reconstruction experience that combines both aesthetic and functional restoration",
+      "Performed seamlessly during reconstruction surgery with no additional incisions or recovery time",
+      "Uses proven, specially processed nerve allograft technology backed by clinical research",
+      "Leverages the body's natural ability to regenerate nerves over time",
     ],
     candidateCriteria: [
-      "Patients undergoing mastectomy and breast reconstruction",
-      "Those choosing natural tissue flap reconstruction (such as DIEP flap)",
-      "Committed to advanced microsurgical techniques",
-      "Desire both functional and aesthetic restoration",
+      "Undergoing or planning to undergo mastectomy and breast reconstruction",
+      "Choosing natural tissue flap reconstruction (such as DIEP flap or other tissue flaps)",
+      "Committed to advanced microsurgical techniques performed by fellowship-trained surgeons",
+      "Desire both functional sensation recovery and aesthetic restoration",
+      "Want to prioritize feeling whole again beyond just the visual outcome",
+    ],
+    procedureSteps: [
+      "During the mastectomy, the surgeon carefully identifies the severed nerve endings in the chest area and prepares them for grafting.",
+      "A Resensation nerve allograft is precisely placed to bridge the gap between the chest nerves and the reconstructed breast tissue.",
+      "Using advanced microsurgical techniques, the surgeon connects the allograft to both the chest nerves and the natural tissue flap used in reconstruction.",
+      "Over time, the body naturally integrates the nerve graft, allowing nerves to regenerate and potentially restore sensation to the breast and nipple area.",
     ],
     procedureDuration: "Performed during reconstruction surgery (adds minimal additional time)",
     recoveryTimeline:
-      "Standard reconstruction recovery of 4-6 weeks. Sensation return is gradual and can take up to two years as nerves regenerate along the graft. Regular follow-up appointments track progress and nerve recovery.",
+      "Recovery from Resensation aligns with your overall breast reconstruction recovery. Most patients recover within 4-6 weeks, with light activities resuming earlier as guided by your surgeon.\n\nSensation return is gradual. While some patients notice sensation within months, nerve regeneration is a slow process that can take up to two years. The timeline varies for each individual based on factors such as the extent of surgery and overall health.\n\nSpecialized Plastic Surgery ensures consistent post-operative care, with regular follow-up appointments to track your progress and monitor nerve regeneration throughout your recovery journey.",
     insuranceCoverage:
-      "Covered as part of breast reconstruction under the Women's Health and Cancer Rights Act (WHCRA).",
+      "Covered as part of breast reconstruction under the Women's Health and Cancer Rights Act (WHCRA). Our dedicated insurance team handles authorization, claims submission, and appeals to help maximize your benefits.",
   },
   {
     slug: "revision",
