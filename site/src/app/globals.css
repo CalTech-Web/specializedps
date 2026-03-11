@@ -301,5 +301,4 @@ html.a11y-highlight-links .a11y-widget a {
   font-family: var(--font-dm-sans), system-ui, sans-serif !important;
   line-height: revert !important;
   letter-spacing: revert !important;
-  color: revert !important;
 }

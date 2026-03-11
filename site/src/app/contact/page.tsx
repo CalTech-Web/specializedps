@@ -76,7 +76,7 @@ export default function ContactPage() {
       {/* Form Section */}
       <section className="py-14 sm:py-16" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="mx-auto max-w-[1320px] px-6">
-          <div className="mx-auto max-w-2xl">
+          <div className="mx-auto max-w-4xl">
             <SectionHeading
               eyebrow="Get in Touch"
               title="Send Us a Message"

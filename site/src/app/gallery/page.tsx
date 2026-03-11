@@ -22,7 +22,7 @@ export default function GalleryPage() {
   return (
     <>
       {/* ───────── Section 1: Hero ───────── */}
-      <section className="relative flex h-[400px] w-full items-end justify-center overflow-hidden bg-heading">
+      <section className="relative flex h-[500px] w-full items-end justify-center overflow-hidden bg-heading">
         <Image
           src="/images/gallery-page/hero.webp"
           alt="Gallery"
@@ -122,7 +122,7 @@ export default function GalleryPage() {
               <div className="relative flex-1">
                 <div className="relative aspect-[3/4] w-full max-w-lg overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/gallery-page/sps-center-hero.jpg"
+                    src="https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-alexey-dulin-19422188-31403887.jpg"
                     alt="Specialized Plastic Surgery Center"
                     fill
                     className="object-cover"
@@ -247,7 +247,7 @@ export default function GalleryPage() {
 
         {/* ───────── Section 5: Contact Form ───────── */}
         <section className="overflow-hidden py-14 sm:py-20" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
-          <div className="mx-auto max-w-2xl px-6">
+          <div className="mx-auto max-w-4xl px-6">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-body/70">
               Join Us on Your Journey
             </p>
