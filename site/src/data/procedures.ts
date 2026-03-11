@@ -67,6 +67,8 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription:
       "Transform your silhouette with our body contouring procedures, from liposuction and tummy tucks to comprehensive mommy makeovers.",
     icon: "User",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg",
   },
 ];
 
@@ -755,6 +757,8 @@ export const procedures: Procedure[] = [
     name: "Liposuction",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-197.jpg",
     description:
       "Liposuction is a cosmetic surgical procedure that removes unwanted fat from targeted areas of the body. By precisely breaking down and suctioning fat cells, liposuction can provide long-lasting contour improvements in areas such as the abdomen, thighs, hips, arms, and neck. Unlike weight loss, which reduces the size of fat cells, liposuction permanently removes these cells, resulting in a leaner appearance in the treated areas.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons use advanced liposuction techniques to help patients achieve a smoother, more contoured silhouette tailored to each person's aesthetic goals and unique anatomy. Many patients choose liposuction to enhance their natural body contours and renew their confidence when diet and exercise alone cannot address stubborn pockets of fat.",
     heroDescription:
@@ -786,6 +790,8 @@ export const procedures: Procedure[] = [
     name: "Lipo 360",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg",
     description:
       "Lipo 360 is a powerful body contouring procedure designed to sculpt the entire midsection, creating a slimmer waist, smoother torso, and more defined silhouette. Unlike traditional liposuction that targets only one area, Lipo 360 focuses on shaping the abdomen, flanks, and lower back together to create balanced, natural-looking results.\n\nAt Specialized Plastic Surgery, Lipo 360 is performed with precision, artistic planning, and advanced surgical technique. The goal is not simply to remove fat, but to create refined contours, enhance curves, and deliver a sculpted appearance that aligns with each patient's natural anatomy. By addressing the full circumference of the torso, patients can achieve a more dramatic and harmonious transformation that improves waist-to-hip contrast.",
     heroDescription:
@@ -812,6 +818,8 @@ export const procedures: Procedure[] = [
     shortName: "BBL",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/tengyart-R2yOC6GjUvM-unsplash.jpg",
     description:
       "A Brazilian Butt Lift is a specialized body contouring procedure that combines liposuction with fat transfer to the buttocks to enhance volume and improve body proportions. Instead of implants, this technique uses purified fat harvested from areas such as the abdomen, flanks, lower back, or thighs. The fat is carefully processed and strategically re-injected to create smoother transitions, enhanced projection, and a more defined waist-to-hip ratio.\n\nBecause the procedure uses your own tissue, results look and feel natural while also refining the surrounding contours through sculpting. Choosing a Brazilian Butt Lift means choosing comprehensive body sculpting, not just added fullness. By combining liposuction and fat transfer, this procedure reshapes multiple areas to create striking, balanced curves.",
     heroDescription:
@@ -839,6 +847,8 @@ export const procedures: Procedure[] = [
     shortName: "Abdominoplasty",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-193.jpg",
     description:
       "A tummy tuck, or abdominoplasty, is a surgical procedure that removes excess skin and fat from the abdominal area, tightens weakened or separated muscles, and creates a smoother, more toned midsection. This procedure not only addresses loose skin and unwanted fat, but also repairs underlying abdominal muscles that may have been stretched or damaged, especially after pregnancy.\n\nUnlike liposuction, which primarily removes fat, a tummy tuck improves the contour and firmness of the abdomen by addressing both the skin and muscles. At Specialized Plastic Surgery, our surgeons offer multiple abdominoplasty techniques including full, mini, and extended tummy tucks, selecting the best approach based on each patient's anatomy and goals. Liposuction of the flanks may be combined for additional waist contouring.",
     heroDescription:
@@ -871,6 +881,8 @@ export const procedures: Procedure[] = [
     name: "Mommy Makeover",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-191.jpg",
     description:
       "A mommy makeover is a comprehensive cosmetic procedure designed to help mothers restore their pre-pregnancy shape and boost their confidence. Pregnancy, childbirth, and breastfeeding can bring significant changes to the body, affecting areas like the abdomen, breasts, and more. A mommy makeover combines a range of body-contouring and aesthetic surgeries customized to each individual's needs.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons have helped countless women achieve their aesthetic goals, providing natural-looking results that help them feel like the best versions of themselves. Typically, a mommy makeover includes procedures such as tummy tuck, breast enhancement (lift and/or augmentation), and liposuction, allowing women to address multiple areas in a single surgery for a balanced, youthful appearance.",
     heroDescription:
