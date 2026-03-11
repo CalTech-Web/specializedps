@@ -51,7 +51,7 @@ function StarRating({ rating }: { rating: number }) {
 /* ------------------------------------------------------------------ */
 export default function GoogleReviews() {
   return (
-    <section className="bg-warm-grey py-14 sm:py-20">
+    <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-[1320px] px-6 overflow-hidden">
         <div className="space-y-14">
           {doctorReviews.map((doc) => (
@@ -155,8 +155,8 @@ function DoctorReviewMarquee({
         </div>
 
         {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-warm-grey to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-warm-grey to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent" />
       </div>
 
       {/* Hover popup */}
