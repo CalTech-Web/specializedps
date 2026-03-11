@@ -28,7 +28,7 @@ export const doctors: Doctor[] = [
     location: "Millburn, NJ",
     locationKey: "nj",
     image: "/images/team/dr-sosin.jpg",
-    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-232.jpg",
     education: [
       "Robert Wood Johnson Medical School (Accelerated 7-year BA/MD program)",
       "Georgetown University Hospital (General Surgery Residency)",
