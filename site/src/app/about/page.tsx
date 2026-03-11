@@ -1,7 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Award, UserCheck, Shield, Sparkles, Heart } from "lucide-react";
+import {
+  Award,
+  UserCheck,
+  Shield,
+  Sparkles,
+  Heart,
+  HeartPulse,
+  Target,
+  Scissors,
+  Star,
+  Smile,
+  ClipboardList,
+  ShieldCheck,
+  HeartHandshake,
+  BookOpen,
+  Trophy,
+  GraduationCap,
+} from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -16,33 +33,83 @@ export const metadata: Metadata = {
 const services = [
   {
     name: "Breast Reconstruction",
+    icon: HeartPulse,
     description:
       "Advanced microsurgical and implant-based reconstruction for breast cancer patients, including DIEP flap, oncoplastic reduction, and Resensation nerve restoration.",
   },
   {
     name: "Breast Augmentation",
+    icon: Sparkles,
     description:
       "Enhance your breast size, shape, and symmetry with saline, silicone, or gummy bear implants from leading manufacturers.",
   },
   {
     name: "Liposuction",
+    icon: Target,
     description:
       "Permanently remove stubborn fat deposits and refine your body contours with precision liposuction and Lipo 360 techniques.",
   },
   {
     name: "Tummy Tuck",
+    icon: Scissors,
     description:
       "Achieve a flatter, more toned abdomen by removing excess skin, eliminating stubborn fat, and tightening weakened muscles.",
   },
   {
     name: "Mommy Makeover",
+    icon: Star,
     description:
       "Reclaim your pre-pregnancy confidence with a customized combination of procedures, including tummy tuck, breast lift, and liposuction.",
   },
   {
     name: "Facelift",
+    icon: Smile,
     description:
       "Restore a youthful, refreshed appearance by lifting and repositioning facial tissues to smooth folds, reduce sagging, and restore natural contour.",
+  },
+];
+
+const careFeatures = [
+  {
+    icon: ClipboardList,
+    title: "Personalized Plans",
+    description:
+      "Every treatment plan is built around your unique goals, anatomy, and lifestyle.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "ERAS Protocols",
+    description:
+      "Enhanced recovery protocols for a faster, safer, and more comfortable healing process.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Dedicated Support",
+    description:
+      "Our team guides you from scheduling to follow-up, handling every detail with care.",
+  },
+];
+
+const credentials = [
+  {
+    icon: BookOpen,
+    value: "90+",
+    label: "Peer-Reviewed Publications",
+  },
+  {
+    icon: Trophy,
+    value: "Top Doctors",
+    label: "Castle Connolly Recognized",
+  },
+  {
+    icon: GraduationCap,
+    value: "3",
+    label: "Elite Training Programs",
+  },
+  {
+    icon: Award,
+    value: "1,000+",
+    label: "Procedures Performed",
   },
 ];
 
@@ -155,7 +222,7 @@ export default function AboutPage() {
                 href={`/doctors/${doctor.slug}`}
                 className="group overflow-hidden rounded-lg border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
               >
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-[28rem] sm:h-[34rem] overflow-hidden">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
@@ -180,7 +247,7 @@ export default function AboutPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Our Services"
@@ -188,26 +255,31 @@ export default function AboutPage() {
             description="A comprehensive range of aesthetic and reconstructive plastic surgery procedures."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <div
-                key={service.name}
-                className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="h-[2px] w-12 bg-gradient-to-r from-primary via-gold to-primary" />
-                <h3 className="mt-4 font-heading text-xl font-bold text-heading">
-                  {service.name}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-body">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <div
+                  key={service.name}
+                  className="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-heading">
+                    {service.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-body">
+                    {service.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Patient Care */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -240,9 +312,35 @@ export default function AboutPage() {
                 your results and your well-being.
               </p>
             </div>
+          </div>
+
+          {/* Care Feature Cards */}
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+            {careFeatures.map((feature) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={feature.title}
+                  className="rounded-xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-gold/20 hover:bg-white/10"
+                >
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/20">
+                    <Icon className="h-6 w-6 text-gold" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 text-center">
             <Link
               href="/services"
-              className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-7 py-3 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md"
+              className="inline-block rounded-md border-2 border-gold bg-gold px-7 py-3 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-md"
             >
               View Services
             </Link>
@@ -251,7 +349,7 @@ export default function AboutPage() {
       </section>
 
       {/* Expertise and Training */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
@@ -279,42 +377,59 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+
+          {/* Credential Stats */}
+          <div className="mx-auto mt-12 max-w-4xl rounded-2xl border border-primary/10 bg-cream p-8 sm:p-10">
+            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+              {credentials.map((cred) => {
+                const Icon = cred.icon;
+                return (
+                  <div key={cred.label} className="text-center">
+                    <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <p className="font-heading text-2xl font-bold text-primary sm:text-3xl">
+                      {cred.value}
+                    </p>
+                    <p className="mt-1 text-sm text-body">{cred.label}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-warm-grey py-14 sm:py-16">
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="The Difference"
             title="Why Choose Specialized Plastic Surgery?"
           />
-          <div className="mt-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyChooseUs.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="group relative overflow-hidden rounded-xl border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-[15px] font-bold text-heading">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-body">
-                        {item.description}
-                      </p>
-                    </div>
+                  <div className="absolute top-0 left-0 right-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-primary via-gold to-primary transition-transform duration-300 group-hover:scale-x-100" />
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 transition-colors duration-300 group-hover:bg-primary/15">
+                    <Icon className="h-8 w-8 text-primary" />
                   </div>
+                  <h3 className="font-heading text-lg font-bold text-heading">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-body">
+                    {item.description}
+                  </p>
                 </div>
               );
             })}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-12 text-center">
             <Link
               href="/contact"
               className="inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-base font-bold text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
