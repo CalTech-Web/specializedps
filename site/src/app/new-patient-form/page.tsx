@@ -47,7 +47,7 @@ export default function NewPatientFormPage() {
                 key={loc.key}
                 className="overflow-hidden rounded-lg border border-gray-100 bg-warm-grey transition-shadow hover:shadow-lg"
               >
-                <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-8">
                   <h3 className="font-heading text-xl font-bold text-heading">
                     {loc.name}

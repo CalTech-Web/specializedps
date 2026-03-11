@@ -172,7 +172,7 @@ export default function FirstAppointmentPage() {
         />
 
         {/* Gold accent bar */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading

@@ -77,7 +77,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
             {doctor.title} | {doctor.credentials} | {doctor.location}
           </p>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Main Content: 2-Column Layout */}

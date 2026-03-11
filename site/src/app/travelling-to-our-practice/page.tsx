@@ -58,7 +58,7 @@ export default function TravellingToOurPracticePage() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
@@ -171,7 +171,7 @@ export default function TravellingToOurPracticePage() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">

@@ -132,6 +132,36 @@ img {
   100% { transform: translateX(-50%); }
 }
 
+/* ── Gold Line Shimmer ── */
+@keyframes gold-shimmer {
+  0% { left: -30%; }
+  50% { left: 130%; }
+  100% { left: -30%; }
+}
+
+.gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.6) 60%,
+    transparent 100%
+  );
+  animation: gold-shimmer 4s ease-in-out infinite;
+}
+
 /* ================================================================== */
 /*  Accessibility Widget Styles                                        */
 /* ================================================================== */

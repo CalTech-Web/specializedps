@@ -111,7 +111,7 @@ export default function ContactPage() {
                 key={loc.key}
                 className="overflow-hidden rounded-lg border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
               >
-                <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
                 <div className="p-8">
                   <h3 className="font-heading text-xl font-bold text-white">
                     {loc.name}

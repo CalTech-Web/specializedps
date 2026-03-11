@@ -1,11 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Script from "next/script";
 import Header from "./Header";
 import Footer from "./Footer";
 import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
-import CherryWidget from "@/components/ui/CherryWidget";
 
 const STANDALONE_ROUTES = [
   "/breast-reduction-covered-by-insurance-in-westchester",
@@ -35,7 +33,8 @@ export default function LayoutWrapper({
     <>
       <Header />
       <main className="min-h-screen">{children}</main>
-      <CherryWidget />
+      {/* TODO: Re-enable Cherry widget once production domain is live */}
+      {/* <CherryWidget /> */}
       <Footer />
       <AccessibilityWidget />
     </>

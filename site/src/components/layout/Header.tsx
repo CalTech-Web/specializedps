@@ -176,7 +176,7 @@ export default function Header() {
                     }`}
                   >
                     <div className="overflow-hidden rounded-b-lg bg-white shadow-xl ring-1 ring-black/5">
-                      <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                      <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
                       <div className="grid grid-cols-4 gap-6 p-6">
                         {item.children!.map((category) => (
                           <div key={category.label}>
@@ -253,7 +253,7 @@ export default function Header() {
                   }`}
                 >
                   <div className={`overflow-hidden rounded-b-lg bg-white shadow-xl ring-1 ring-black/5 ${isGallery ? "w-[420px]" : "w-[240px]"}`}>
-                    <div className="h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+                    <div className="gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
                     <div className={`p-3 ${isGallery ? "grid grid-cols-2 gap-x-1" : ""}`}>
                       {item.children!.map((child) => (
                         <Link

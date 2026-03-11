@@ -110,7 +110,7 @@ export default function HeroSection({
         </div>
 
         {/* Bottom gold gradient bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
     );
   }
@@ -160,7 +160,7 @@ export default function HeroSection({
       </div>
 
       {/* Bottom gold gradient bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
     </section>
   );
 }

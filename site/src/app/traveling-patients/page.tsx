@@ -92,7 +92,7 @@ export default function TravelingPatientsPage() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
@@ -281,7 +281,7 @@ export default function TravelingPatientsPage() {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
@@ -314,7 +314,7 @@ export default function TravelingPatientsPage() {
               <h3 className="font-heading mb-6 text-xl font-bold text-white">
                 Insurance Support for Travelers
               </h3>
-              <div className="mb-6 h-[2px] bg-gradient-to-r from-primary via-gold to-transparent" />
+              <div className="mb-6 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-transparent" />
               <ul className="space-y-4">
                 {[
                   "Free insurance verification before you travel",

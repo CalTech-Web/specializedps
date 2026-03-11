@@ -284,7 +284,7 @@ export default function ServicesPage() {
           }}
         />
         <div className="absolute inset-0 bg-heading/80" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-[1320px] px-6 text-center">
           <div className="mx-auto mb-6 h-[2px] w-16 bg-gold" />
@@ -301,7 +301,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
     </>
   );

@@ -141,7 +141,7 @@ export default function InsurancePage() {
                 status.
               </p>
 
-              <div className="mb-6 h-[2px] bg-gradient-to-r from-primary via-gold to-transparent" />
+              <div className="mb-6 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-transparent" />
               <ul className="space-y-3">
                 {[
                   "Reconstruction of the breast on which the mastectomy was performed",

@@ -346,7 +346,7 @@ export default async function ProcedurePage({ params }: PageProps) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/85 to-heading/75" />
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-[1320px] px-6 text-center">
           <div className="mx-auto mb-6 flex items-center justify-center gap-3">
@@ -371,7 +371,7 @@ export default async function ProcedurePage({ params }: PageProps) {
           </p>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Doctors Section */}

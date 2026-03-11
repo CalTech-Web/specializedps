@@ -212,7 +212,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* ── Section 2: Dr. Devulapalli's Philosophy ── */}
@@ -356,7 +356,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
@@ -365,7 +365,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
             Free Consultation &amp; Insurance Verification
           </h2>
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="gold-shimmer mx-auto mt-4 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70">
             Your journey begins with a complimentary consultation and insurance verification. Our team reviews your benefits, determines your eligibility, and guides you through every step of the process at absolutely no cost.
           </p>
@@ -443,7 +443,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                 key={step.step}
                 className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute top-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="mb-5 flex items-center gap-4">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-xl font-bold text-white shadow-md transition-transform duration-300 group-hover:scale-110">
                     {i + 1}
@@ -561,7 +561,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
@@ -710,7 +710,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
@@ -912,7 +912,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                 key={item.title}
                 className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute top-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-all duration-300 group-hover:border-primary/50 group-hover:bg-primary/20 group-hover:scale-110">
                   <item.icon className="h-7 w-7 text-primary" />
                 </div>
@@ -1000,7 +1000,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
@@ -1099,7 +1099,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.08)_0%,transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
+        <div className="absolute top-0 left-0 right-0 gold-shimmer h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
@@ -1108,7 +1108,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
             Ready to Move Past the Pain and Limitations?
           </h2>
-          <div className="mx-auto mt-4 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="gold-shimmer mx-auto mt-4 h-[2px] w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70">
             Many health plans cover breast reduction surgery. We offer a complimentary consultation to start the process of obtaining authorization, which involves submitting documentation like a Letter of Medical Necessity to your insurer. Our experienced team is dedicated to helping you secure approval and maximize your plan&apos;s benefits. Coverage is always subject to your specific plan&apos;s provisions, including deductibles and limitations.
           </p>

@@ -49,7 +49,7 @@ export default function CTABanner({
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
 
       {/* Gold gradient top bar */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="absolute top-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 py-14 sm:py-20">
@@ -109,7 +109,7 @@ export default function CTABanner({
       </div>
 
       {/* Gold gradient bottom bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 gold-shimmer h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
     </section>
   );
 }
