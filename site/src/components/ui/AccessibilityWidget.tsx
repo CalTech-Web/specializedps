@@ -140,7 +140,7 @@ export default function AccessibilityWidget() {
         aria-label="Accessibility Options"
         aria-expanded={open}
         className={cn(
-          "fixed right-4 top-[150px] z-[45] flex h-12 w-12 items-center justify-center",
+          "fixed right-4 bottom-4 z-[45] flex h-12 w-12 items-center justify-center",
           "rounded-full shadow-lg",
           "transition-all duration-300 hover:scale-110",
           "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
@@ -164,9 +164,9 @@ export default function AccessibilityWidget() {
           role="dialog"
           aria-label="Accessibility Settings"
           className={cn(
-            "fixed right-4 top-[210px] z-[45] w-[300px] animate-fade-in",
+            "fixed right-4 bottom-[72px] z-[45] w-[300px] animate-fade-in",
             "rounded-xl bg-white shadow-2xl ring-1 ring-black/10",
-            "max-h-[calc(100vh-230px)] overflow-y-auto"
+            "max-h-[calc(100vh-100px)] overflow-y-auto"
           )}
         >
           {/* Header */}
