@@ -55,7 +55,7 @@ export default function ServicesPage() {
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
               What We Offer
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -143,7 +143,7 @@ export default function ServicesPage() {
         />
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <p className="mb-4 inline-block rounded-sm bg-white/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-4 inline-block rounded-sm bg-white/10 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
               Our Approach
             </p>
             <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
@@ -210,7 +210,7 @@ export default function ServicesPage() {
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-4 inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
               Your Journey
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">

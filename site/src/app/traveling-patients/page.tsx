@@ -488,7 +488,7 @@ export default function TravelingPatientsPage() {
 
           {/* CTA */}
           <div className="mt-12 text-center">
-            <AppointmentButton className="inline-flex items-center gap-2.5 rounded-md border-2 border-primary bg-primary px-9 py-4 text-base font-bold uppercase tracking-wider text-white transition-all hover:bg-transparent hover:text-primary">
+            <AppointmentButton className="inline-flex items-center gap-2.5 rounded-md border-2 border-primary bg-primary px-9 py-4 text-base font-bold tracking-wider text-white transition-all hover:bg-transparent hover:text-primary">
               <Calendar className="h-5 w-5" />
               Schedule Your Consultation
             </AppointmentButton>

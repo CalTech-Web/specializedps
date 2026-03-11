@@ -110,7 +110,7 @@ export default function PreparingForFirstAppointmentPage() {
           }}
         />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-bold tracking-[0.2em] text-primary">
             Our Philosophy
           </p>
           <blockquote className="mt-6 font-heading text-2xl font-bold leading-relaxed text-white sm:text-3xl">

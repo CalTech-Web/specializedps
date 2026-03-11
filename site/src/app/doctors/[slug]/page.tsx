@@ -297,7 +297,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
 
                 {/* Appointment Button */}
                 <AppointmentButton
-                  className="mt-6 flex w-full items-center justify-center gap-2 border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
+                  className="mt-6 flex w-full items-center justify-center gap-2 border-2 border-primary bg-primary px-7 py-3 text-sm font-bold tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
                   doctorPreset={{
                     doctor: doctor.name,
                     location: doctor.locationKey === "nj" ? "NJ" : "NY",
@@ -311,7 +311,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
                 {/* Phone Numbers */}
                 <div className="mt-8 space-y-5">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                    <p className="text-xs font-semibold tracking-wider text-heading">
                       New Jersey Office
                     </p>
                     <a
@@ -323,7 +323,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
                     </a>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                    <p className="text-xs font-semibold tracking-wider text-heading">
                       New York Office
                     </p>
                     <a

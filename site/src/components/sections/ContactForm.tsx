@@ -150,7 +150,7 @@ export default function ContactForm({
       {!isFixed && (
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+            <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
               Location *
             </label>
             <select
@@ -170,7 +170,7 @@ export default function ContactForm({
             )}
           </div>
           <div>
-            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+            <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
               Doctor *
             </label>
             <select
@@ -192,7 +192,7 @@ export default function ContactForm({
       {/* Row 2: Name + Phone */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+          <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
             Your Name *
           </label>
           <input
@@ -206,7 +206,7 @@ export default function ContactForm({
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+          <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
             Your Phone *
           </label>
           <input
@@ -224,7 +224,7 @@ export default function ContactForm({
 
       {/* Row 3: Email */}
       <div>
-        <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+        <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
           Email Address *
         </label>
         <input
@@ -240,7 +240,7 @@ export default function ContactForm({
 
       {/* Row 4: Message */}
       <div>
-        <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-heading">
+        <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
           Message *
         </label>
         <textarea
@@ -270,7 +270,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-md border-2 border-heading bg-transparent px-8 py-3.5 text-xs font-bold uppercase tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white disabled:opacity-50"
+        className="w-full rounded-md border-2 border-heading bg-transparent px-8 py-3.5 text-xs font-bold tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white disabled:opacity-50"
       >
         {status === "submitting" ? "Sending..." : "Request an Appointment"}
       </button>

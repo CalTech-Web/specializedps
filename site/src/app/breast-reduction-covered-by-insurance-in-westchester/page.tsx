@@ -145,7 +145,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
             </a>
             <Link
               href="#contact-form"
-              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary/90"
+              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold tracking-wider text-white transition-colors hover:bg-primary/90"
             >
               Free Consultation
             </Link>
@@ -166,7 +166,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+          <p className="text-xs font-bold tracking-[0.25em] text-primary">
             Westchester, NY
           </p>
           <h1 className="font-heading mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -220,7 +220,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              <p className="text-xs font-bold tracking-[0.2em] text-primary">
                 Dr. Devulapalli&apos;s Philosophy
               </p>
               <h2 className="font-heading mt-3 text-3xl font-bold text-heading sm:text-4xl">
@@ -359,7 +359,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-bold tracking-[0.2em] text-primary">
             No Cost to You
           </p>
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -609,7 +609,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-body">
+                  <p className="text-xs font-bold tracking-wider text-body">
                     Call Now
                   </p>
                   <a
@@ -657,7 +657,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
               </div>
 
               <div className="mt-10 rounded-lg border border-gray-100 bg-warm-grey p-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                <p className="text-xs font-semibold tracking-wider text-heading">
                   Prefer to Reach Us Directly?
                 </p>
                 <div className="mt-3 space-y-2.5">
@@ -799,7 +799,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <MapPin className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                    <p className="text-xs font-semibold tracking-wider text-body/60">
                       Address
                     </p>
                     <p className="mt-1 text-sm font-medium text-heading">
@@ -812,7 +812,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <Phone className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                    <p className="text-xs font-semibold tracking-wider text-body/60">
                       Phone
                     </p>
                     <a
@@ -828,7 +828,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <Mail className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                    <p className="text-xs font-semibold tracking-wider text-body/60">
                       Email
                     </p>
                     <a
@@ -844,7 +844,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <Instagram className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                    <p className="text-xs font-semibold tracking-wider text-body/60">
                       Instagram
                     </p>
                     <a
@@ -862,7 +862,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <Clock className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                    <p className="text-xs font-semibold tracking-wider text-body/60">
                       Hours
                     </p>
                     <p className="mt-1 text-sm text-heading">
@@ -1102,7 +1102,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-bold tracking-[0.2em] text-primary">
             Take the Next Step
           </p>
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -1141,7 +1141,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
                 height={50}
                 className="mx-auto sm:mx-0"
               />
-              <p className="mt-2 text-xs font-bold uppercase tracking-wider text-primary">
+              <p className="mt-2 text-xs font-bold tracking-wider text-primary">
                 New York Office
               </p>
             </div>

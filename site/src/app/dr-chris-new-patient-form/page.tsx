@@ -117,7 +117,7 @@ export default function DrChrisNewPatientFormPage() {
               </div>
               {/* Quick Contact Card Below Photo */}
               <div className="mt-6 rounded-lg border border-gray-100 bg-warm-grey p-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                <p className="text-xs font-semibold tracking-wider text-heading">
                   Westchester Office
                 </p>
                 <div className="mt-3 space-y-2.5">
@@ -265,7 +265,7 @@ export default function DrChrisNewPatientFormPage() {
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Address</p>
+                  <p className="text-xs font-semibold tracking-wider text-white/50">Address</p>
                   <span className="mt-1 block text-sm text-white/80">{ny.address}</span>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function DrChrisNewPatientFormPage() {
                   <Phone className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Phone</p>
+                  <p className="text-xs font-semibold tracking-wider text-white/50">Phone</p>
                   <a
                     href={`tel:${ny.phoneRaw}`}
                     className="mt-1 block text-sm font-semibold text-primary transition-colors hover:text-white"
@@ -288,7 +288,7 @@ export default function DrChrisNewPatientFormPage() {
                   <Mail className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Email</p>
+                  <p className="text-xs font-semibold tracking-wider text-white/50">Email</p>
                   <a
                     href={`mailto:${ny.email}`}
                     className="mt-1 block text-sm text-white/80 transition-colors hover:text-primary"
@@ -302,7 +302,7 @@ export default function DrChrisNewPatientFormPage() {
                   <Clock className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Hours</p>
+                  <p className="text-xs font-semibold tracking-wider text-white/50">Hours</p>
                   <span className="mt-1 block text-sm text-white/80">{ny.hours}</span>
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function DrChrisNewPatientFormPage() {
                   <Instagram className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Instagram</p>
+                  <p className="text-xs font-semibold tracking-wider text-white/50">Instagram</p>
                   <a
                     href={ny.instagramUrl}
                     target="_blank"

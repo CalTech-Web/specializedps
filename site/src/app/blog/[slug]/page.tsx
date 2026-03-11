@@ -205,7 +205,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               </p>
               <Link
                 href="/contact"
-                className="mt-4 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary/90"
+                className="mt-4 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-xs font-bold tracking-wider text-white transition-colors hover:bg-primary/90"
               >
                 <Calendar className="h-4 w-4" />
                 Book Now
@@ -221,7 +221,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Recent Posts */}
             <div className="rounded-lg border border-gray-100 p-6">
-              <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-heading">
+              <h3 className="font-heading text-lg font-bold tracking-wide text-heading">
                 Recent Posts
               </h3>
               <div className="mt-4 space-y-4">
@@ -255,7 +255,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Categories */}
             <div className="rounded-lg border border-gray-100 p-6">
-              <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-heading">
+              <h3 className="font-heading text-lg font-bold tracking-wide text-heading">
                 Categories
               </h3>
               <div className="mt-4 space-y-1">

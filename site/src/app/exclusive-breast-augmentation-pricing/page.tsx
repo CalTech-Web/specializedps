@@ -112,7 +112,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
             </a>
             <Link
               href="#contact-form"
-              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary/90"
+              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold tracking-wider text-white transition-colors hover:bg-primary/90"
             >
               Claim This Offer
             </Link>
@@ -133,7 +133,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+          <p className="text-xs font-bold tracking-[0.25em] text-primary">
             Westchester, NY
           </p>
           <h1 className="font-heading mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -145,7 +145,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
           </p>
           <Link
             href="#contact-form"
-            className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
+            className="mt-8 inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
           >
             Claim This Offer
           </Link>
@@ -157,7 +157,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-primary">
                 Limited Time Offer
               </p>
               <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -192,7 +192,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
 
             <div className="rounded-xl border border-gray-100 bg-warm-grey p-8 shadow-sm sm:p-10">
               <div className="mb-6 text-center">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                <p className="text-xs font-bold tracking-[0.2em] text-primary">
                   All-Inclusive Starting At
                 </p>
                 <p className="mt-3 font-heading text-6xl font-bold text-heading">
@@ -206,19 +206,19 @@ export default function ExclusiveBreastAugmentationPricingPage() {
               <div className="mt-6 grid gap-5 sm:grid-cols-3">
                 <div className="text-center">
                   <DollarSign className="mx-auto h-6 w-6 text-primary" />
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-heading">
+                  <p className="mt-2 text-xs font-semibold tracking-wider text-heading">
                     No Hidden Fees
                   </p>
                 </div>
                 <div className="text-center">
                   <ShieldCheck className="mx-auto h-6 w-6 text-primary" />
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-heading">
+                  <p className="mt-2 text-xs font-semibold tracking-wider text-heading">
                     Board Certified
                   </p>
                 </div>
                 <div className="text-center">
                   <Star className="mx-auto h-6 w-6 text-primary" />
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-heading">
+                  <p className="mt-2 text-xs font-semibold tracking-wider text-heading">
                     Top Rated
                   </p>
                 </div>
@@ -226,7 +226,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
               <div className="mt-8">
                 <Link
                   href="#contact-form"
-                  className="flex w-full items-center justify-center gap-2 rounded-md border-2 border-gold bg-gold px-8 py-3.5 text-sm font-bold uppercase tracking-[0.1em] text-heading transition-all hover:bg-heading hover:text-white hover:border-heading"
+                  className="flex w-full items-center justify-center gap-2 rounded-md border-2 border-gold bg-gold px-8 py-3.5 text-sm font-bold tracking-[0.1em] text-heading transition-all hover:bg-heading hover:text-white hover:border-heading"
                 >
                   Claim This Offer
                   <ArrowRight className="h-4 w-4" />
@@ -269,7 +269,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
 
               {/* Doctor Info */}
               <div className="flex flex-1 flex-col justify-center p-8 lg:p-10">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                <p className="text-xs font-bold tracking-[0.2em] text-primary">
                   Your Surgeon
                 </p>
                 <h2 className="mt-3 font-heading text-2xl font-bold text-white sm:text-3xl">
@@ -326,14 +326,14 @@ export default function ExclusiveBreastAugmentationPricingPage() {
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Link
                     href={`/doctors/${drChris.slug}`}
-                    className="inline-flex items-center gap-2 rounded-md border-2 border-white bg-white px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-heading transition-all hover:bg-transparent hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-md border-2 border-white bg-white px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-heading transition-all hover:bg-transparent hover:text-white"
                   >
                     View Full Profile
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                   <Link
                     href="#contact-form"
-                    className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-transparent hover:text-primary"
+                    className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-white transition-all hover:bg-transparent hover:text-primary"
                   >
                     Book Consultation
                   </Link>
@@ -348,7 +348,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-primary">
               Simple Process
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -448,7 +448,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
                 height={50}
                 className="mx-auto sm:mx-0"
               />
-              <p className="mt-2 text-xs font-bold uppercase tracking-wider text-primary">
+              <p className="mt-2 text-xs font-bold tracking-wider text-primary">
                 New York Office
               </p>
             </div>

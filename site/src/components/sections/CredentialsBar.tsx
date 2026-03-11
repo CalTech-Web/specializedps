@@ -20,7 +20,7 @@ export default function CredentialsBar() {
         }}
       />
       <div className="relative mx-auto max-w-[1320px] px-6">
-        <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-body/60">
+        <p className="mb-6 text-xs font-semibold tracking-[0.2em] text-body/60">
           Credentials You Can Trust:
         </p>
         <div className="flex flex-wrap items-center justify-between gap-8">

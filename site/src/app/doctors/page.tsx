@@ -75,7 +75,7 @@ export default function DoctorsPage() {
                           <Award className="h-4 w-4 text-primary" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold uppercase tracking-wide text-heading">
+                          <p className="text-xs font-bold tracking-wide text-heading">
                             Board Certifications
                           </p>
                           <p className="mt-0.5 text-sm text-body">
@@ -91,7 +91,7 @@ export default function DoctorsPage() {
                           <BookOpen className="h-4 w-4 text-primary" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold uppercase tracking-wide text-heading">
+                          <p className="text-xs font-bold tracking-wide text-heading">
                             Notable Achievement
                           </p>
                           <p className="mt-0.5 text-sm text-body">
@@ -107,7 +107,7 @@ export default function DoctorsPage() {
                           <BookOpen className="h-4 w-4 text-primary" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold uppercase tracking-wide text-heading">
+                          <p className="text-xs font-bold tracking-wide text-heading">
                             Publications
                           </p>
                           <p className="mt-0.5 text-sm text-body">
@@ -146,7 +146,7 @@ export default function DoctorsPage() {
         />
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <p className="mb-4 inline-block rounded-sm bg-white/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-4 inline-block rounded-sm bg-white/10 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
               Awards & Recognition
             </p>
             <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
@@ -235,7 +235,7 @@ export default function DoctorsPage() {
                 <p className="mt-2 text-sm leading-relaxed text-white/60">
                   {item.description}
                 </p>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-primary">
+                <p className="mt-3 text-xs font-semibold tracking-wide text-primary">
                   {item.doctors}
                 </p>
               </div>
@@ -248,7 +248,7 @@ export default function DoctorsPage() {
       <section className="py-14 sm:py-16" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="mb-4 inline-block rounded-sm bg-primary/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="mb-4 inline-block rounded-sm bg-primary/10 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
               Get in Touch
             </p>
             <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">

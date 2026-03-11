@@ -43,7 +43,7 @@ export default function BeforeAfterDragSlider() {
     <section className="bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
         <div className="mb-10 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary">
             Real Results
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-heading sm:text-4xl">

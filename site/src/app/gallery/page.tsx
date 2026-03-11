@@ -79,7 +79,7 @@ export default function GalleryPage() {
 
                     {/* Category title */}
                     <Link href={`/gallery/${getGroupSlug(group)}`}>
-                      <h2 className="font-heading text-3xl font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary sm:text-4xl">
+                      <h2 className="font-heading text-3xl font-bold tracking-wide text-heading transition-colors hover:text-primary sm:text-4xl">
                         {group}
                       </h2>
                     </Link>
@@ -133,10 +133,10 @@ export default function GalleryPage() {
 
               {/* Right: Text content */}
               <div className="flex-1 pt-8 lg:pt-0">
-                <span className="mb-5 inline-block bg-heading px-5 py-2.5 text-xs font-bold uppercase tracking-[0.25em] text-white">
+                <span className="mb-5 inline-block bg-heading px-5 py-2.5 text-xs font-bold tracking-[0.25em] text-white">
                   Before and After Gallery
                 </span>
-                <h2 className="font-heading text-3xl font-bold uppercase leading-[1.15] text-heading sm:text-4xl">
+                <h2 className="font-heading text-3xl font-bold leading-[1.15] text-heading sm:text-4xl">
                   Specialized Plastic Surgery
                 </h2>
                 <p className="mt-8 text-sm leading-relaxed text-body">
@@ -168,7 +168,7 @@ export default function GalleryPage() {
             }}
           />
           <div className="relative mx-auto max-w-[1320px] px-6">
-            <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.25em] text-heading/70">
+            <p className="mb-10 text-center text-xs font-semibold tracking-[0.25em] text-heading/70">
               Credentials You Can Trust:
             </p>
             <div className="overflow-hidden">
@@ -218,11 +218,11 @@ export default function GalleryPage() {
             </div>
             {/* Right: Text */}
             <div className="flex flex-1 flex-col justify-center px-8 py-16 sm:px-14 lg:px-20 lg:py-20">
-              <span className="mb-5 inline-block self-start bg-heading px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+              <span className="mb-5 inline-block self-start bg-heading px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white">
                 Advanced Aesthetic and Reconstructive Procedures in New York and
                 New Jersey
               </span>
-              <h2 className="font-heading text-3xl font-bold uppercase leading-[1.15] text-heading sm:text-4xl">
+              <h2 className="font-heading text-3xl font-bold leading-[1.15] text-heading sm:text-4xl">
                 A Commitment to Safety and Comfort
               </h2>
               <p className="mt-8 text-sm leading-relaxed text-body">
@@ -236,7 +236,7 @@ export default function GalleryPage() {
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-block border-2 border-heading bg-transparent px-10 py-3.5 text-xs font-bold uppercase tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
+                  className="inline-block border-2 border-heading bg-transparent px-10 py-3.5 text-xs font-bold tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
                 >
                   Contact Us Today!
                 </Link>
@@ -248,10 +248,10 @@ export default function GalleryPage() {
         {/* ───────── Section 5: Contact Form ───────── */}
         <section className="overflow-hidden py-14 sm:py-20" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="mx-auto max-w-4xl px-6">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-body/70">
+            <p className="text-center text-xs font-semibold tracking-[0.25em] text-body/70">
               Join Us on Your Journey
             </p>
-            <h2 className="mt-4 text-center font-heading text-3xl font-bold uppercase leading-[1.2] text-heading sm:text-4xl">
+            <h2 className="mt-4 text-center font-heading text-3xl font-bold leading-[1.2] text-heading sm:text-4xl">
               Take the Next Step and Schedule an Appointment Today
             </h2>
             <p className="mx-auto mt-8 max-w-xl text-center text-sm leading-relaxed text-body">

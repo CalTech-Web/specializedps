@@ -56,7 +56,7 @@ export default function BlogPage() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <span className="inline-block w-fit rounded-sm bg-primary/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                  <span className="inline-block w-fit rounded-sm bg-primary/20 px-3 py-1 text-xs font-bold tracking-wider text-primary">
                     {post.category}
                   </span>
 

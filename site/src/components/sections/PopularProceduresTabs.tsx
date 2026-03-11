@@ -13,7 +13,7 @@ export default function PopularProceduresTabs() {
   return (
     <section className="bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
-        <h2 className="mb-8 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl">
+        <h2 className="mb-8 text-center font-heading text-3xl font-bold text-heading sm:text-4xl">
           Popular Procedures
         </h2>
 
@@ -53,7 +53,7 @@ export default function PopularProceduresTabs() {
                   </p>
                   <Link
                     href={active.href}
-                    className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-heading transition-all hover:bg-heading hover:text-white"
+                    className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-7 py-3 text-xs font-bold tracking-[0.15em] text-heading transition-all hover:bg-heading hover:text-white"
                   >
                     View Details
                   </Link>
@@ -69,7 +69,7 @@ export default function PopularProceduresTabs() {
             <button
               key={proc.id}
               onClick={() => setActiveTab(i)}
-              className={`flex items-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-wider transition-all sm:px-6 ${
+              className={`flex items-center gap-2 px-4 py-3 text-xs font-bold tracking-wider transition-all sm:px-6 ${
                 i === activeTab
                   ? "bg-heading text-white"
                   : "bg-warm-grey text-heading hover:bg-heading/10"

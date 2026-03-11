@@ -85,7 +85,7 @@ export const navigation: NavItem[] = [
           { label: "Oncoplastic", href: "/services/breast-reconstruction/oncoplastic" },
           { label: "Resensation", href: "/services/breast-reconstruction/resensation" },
           { label: "Revision", href: "/services/breast-reconstruction/revision" },
-          { label: "Specialized", href: "/services/breast-reconstruction/specialized" },
+          { label: "Specialized Procedures", href: "/services/breast-reconstruction/specialized" },
         ],
       },
       {

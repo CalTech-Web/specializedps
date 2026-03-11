@@ -450,12 +450,12 @@ export default async function ProcedurePage({ params }: PageProps) {
                       <div className="mt-7 flex flex-wrap gap-3">
                         <Link
                           href={`/doctors/${doctor!.slug}`}
-                          className="inline-flex items-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-heading"
+                          className="inline-flex items-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-white transition-all hover:bg-white hover:text-heading"
                         >
                           View Profile
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
-                        <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-primary">
+                        <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-white transition-all hover:bg-white hover:text-primary">
                           Schedule Consultation
                         </AppointmentButton>
                       </div>

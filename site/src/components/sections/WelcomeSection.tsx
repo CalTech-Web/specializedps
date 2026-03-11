@@ -53,10 +53,10 @@ export default function WelcomeSection() {
 
         {/* Right: Text content */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary">
             Welcome to Specialized Plastic Surgery
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-heading sm:text-4xl">
+          <h2 className="mt-4 font-heading text-3xl font-bold leading-tight text-heading sm:text-4xl">
             Aesthetic and Reconstructive Procedures in New York and New Jersey
           </h2>
           <p className="mt-6 text-base leading-relaxed text-body">
@@ -71,7 +71,7 @@ export default function WelcomeSection() {
           </p>
           <Link
             href="/about"
-            className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
+            className="mt-8 inline-block rounded-md border-2 border-heading bg-transparent px-8 py-3 text-xs font-bold tracking-[0.2em] text-heading transition-all hover:bg-heading hover:text-white"
           >
             Learn More About Us
           </Link>

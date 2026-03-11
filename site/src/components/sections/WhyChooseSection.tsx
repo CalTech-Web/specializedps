@@ -44,7 +44,7 @@ export default function WhyChooseSection() {
       <div className="relative mx-auto max-w-[1320px] px-6">
         {/* Header */}
         <div className="text-center">
-          <p className="inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+          <p className="inline-block rounded-sm bg-primary/20 px-5 py-2 text-xs font-bold tracking-[0.2em] text-primary">
             The Specialized Difference
           </p>
           <h2 className="mt-6 font-heading text-3xl font-bold text-white sm:text-4xl">
@@ -86,7 +86,7 @@ export default function WhyChooseSection() {
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-heading text-xs font-bold uppercase tracking-wide text-white">
+                      <h3 className="font-heading text-xs font-bold tracking-wide text-white">
                         {item.title}
                       </h3>
                       <p className="mt-2 text-xs leading-relaxed text-white/55">

@@ -105,7 +105,7 @@ export default function ERASPage() {
                     <Apple className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+                    <p className="text-sm font-semibold tracking-widest text-primary">
                       Phase 1
                     </p>
                     <h3 className="font-heading text-xl font-bold text-white">
@@ -225,7 +225,7 @@ export default function ERASPage() {
                     <Syringe className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+                    <p className="text-sm font-semibold tracking-widest text-primary">
                       Phase 2
                     </p>
                     <h3 className="font-heading text-xl font-bold text-white">
@@ -251,7 +251,7 @@ export default function ERASPage() {
                     <Activity className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+                    <p className="text-sm font-semibold tracking-widest text-primary">
                       Phase 3
                     </p>
                     <h3 className="font-heading text-xl font-bold text-white">

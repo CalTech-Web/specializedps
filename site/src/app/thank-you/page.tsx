@@ -43,13 +43,13 @@ export default function ThankYouPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/"
-              className="inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
+              className="inline-block rounded-md border-2 border-gold bg-gold px-8 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-transparent hover:text-white hover:border-white"
             >
               Back to Homepage
             </Link>
             <Link
               href="/contact"
-              className="inline-block rounded-md border-2 border-white/30 bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:border-white hover:bg-white/10"
+              className="inline-block rounded-md border-2 border-white/30 bg-transparent px-8 py-3 text-sm font-bold tracking-wider text-white transition-all hover:border-white hover:bg-white/10"
             >
               Contact Us
             </Link>
@@ -62,7 +62,7 @@ export default function ThankYouPage() {
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="mb-10 text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="text-xs font-bold tracking-[0.2em] text-primary">
               Get in Touch
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-heading sm:text-4xl">

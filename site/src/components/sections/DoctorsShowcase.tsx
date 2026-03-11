@@ -15,7 +15,7 @@ export default function DoctorsShowcase() {
     <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-[1320px] px-6">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-primary">
             Meet Your Surgeons
           </p>
           <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -93,12 +93,12 @@ export default function DoctorsShowcase() {
                     <div className="mt-7 flex flex-wrap gap-3">
                       <Link
                         href={`/doctors/${doctor.slug}`}
-                        className="inline-flex items-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-heading"
+                        className="inline-flex items-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-white transition-all hover:bg-white hover:text-heading"
                       >
                         View Profile
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
-                      <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-primary">
+                      <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold tracking-[0.1em] text-white transition-all hover:bg-white hover:text-primary">
                         Schedule Consultation
                       </AppointmentButton>
                     </div>

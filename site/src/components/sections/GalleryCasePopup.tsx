@@ -136,7 +136,7 @@ export default function GalleryCasePopup({
         {/* Right: Case details */}
         <div className="flex w-full shrink-0 flex-col border-t border-gray-100 lg:w-72 lg:border-l lg:border-t-0 xl:w-80">
           <div className="flex-1 p-6">
-            <div className="mb-4 inline-block rounded bg-heading px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+            <div className="mb-4 inline-block rounded bg-heading px-3 py-1.5 text-xs font-bold tracking-wider text-white">
               Case {caseNumber}
             </div>
 
@@ -157,7 +157,7 @@ export default function GalleryCasePopup({
 
             {item.procedureDetail && (
               <div className="mt-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-heading">
+                <p className="text-xs font-semibold tracking-wider text-heading">
                   Procedure Details
                 </p>
                 <p className="mt-1 text-sm leading-relaxed text-body">

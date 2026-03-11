@@ -54,7 +54,7 @@ export default function HotspotBodyMap() {
 
         {/* Right: Text content */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary">
             Our Specialties
           </p>
           <h2 className="mt-4 font-heading text-3xl font-bold text-heading sm:text-4xl">

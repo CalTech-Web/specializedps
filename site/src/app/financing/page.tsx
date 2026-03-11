@@ -123,7 +123,7 @@ export default function FinancingPage() {
                   href="https://patient.withcherry.com/prequalify"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-primary/90"
                 >
                   See If You Qualify
                 </a>
@@ -131,7 +131,7 @@ export default function FinancingPage() {
                   href="https://patient.withcherry.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-primary/90"
                 >
                   Manage Your Account
                 </a>
@@ -139,7 +139,7 @@ export default function FinancingPage() {
 
               {/* Payment Example */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold tracking-wider text-heading">
                   See an Example of What You Could Pay
                 </h3>
                 <div className="mt-4 flex items-center gap-3">
@@ -155,7 +155,7 @@ export default function FinancingPage() {
                   href="https://patient.withcherry.com/prequalify"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90 sm:w-auto"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-primary/90 sm:w-auto"
                 >
                   Get Personalized Options
                 </a>
@@ -179,7 +179,7 @@ export default function FinancingPage() {
 
               {/* How Cherry Works */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold tracking-wider text-heading">
                   How Cherry Works
                 </h3>
                 <ol className="mt-5 space-y-4">
@@ -217,7 +217,7 @@ export default function FinancingPage() {
 
               {/* Questions */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold tracking-wider text-heading">
                   Questions?
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-body">
@@ -231,7 +231,7 @@ export default function FinancingPage() {
                     href="https://withcherry.com/faqs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-primary/90"
                   >
                     View All FAQs
                   </a>
@@ -239,7 +239,7 @@ export default function FinancingPage() {
                     href="https://withcherry.com/help"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-heading bg-transparent px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-heading hover:text-white"
+                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-heading bg-transparent px-7 py-3 text-sm font-bold tracking-wider text-heading transition-all hover:bg-heading hover:text-white"
                   >
                     Visit Help Center
                   </a>
@@ -281,7 +281,7 @@ export default function FinancingPage() {
 
             {/* Right: CareCredit Content */}
             <div>
-              <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-primary">
                 Credit Options
               </span>
 
@@ -365,7 +365,7 @@ export default function FinancingPage() {
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="text-center">
-            <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-primary">
               Compare Your Options
             </span>
 
@@ -403,7 +403,7 @@ export default function FinancingPage() {
                   { label: "Reusable", value: "Yes, at 266,000+ healthcare locations nationwide", highlight: false },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col gap-1 py-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-primary">{item.label}</span>
+                    <span className="text-xs font-bold tracking-wider text-primary">{item.label}</span>
                     <span className={`text-sm leading-relaxed ${item.highlight ? "font-medium text-heading" : "text-body"}`}>
                       {item.value}
                     </span>
@@ -445,7 +445,7 @@ export default function FinancingPage() {
                   { label: "Reusable", value: "Specific to the approved treatment and provider", highlight: false },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col gap-1 py-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-primary">{item.label}</span>
+                    <span className="text-xs font-bold tracking-wider text-primary">{item.label}</span>
                     <span className={`text-sm leading-relaxed ${item.highlight ? "font-medium text-heading" : "text-body"}`}>
                       {item.value}
                     </span>
@@ -481,7 +481,7 @@ export default function FinancingPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
-          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-primary">
             Payment Examples
           </span>
 

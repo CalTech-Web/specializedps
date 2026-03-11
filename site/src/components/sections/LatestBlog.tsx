@@ -14,7 +14,7 @@ export default function LatestBlog() {
     <section className="bg-blog-bg py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
         <div className="mb-8 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary">
             From Our Blog
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -37,7 +37,7 @@ export default function LatestBlog() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-heading/90 via-heading/40 to-transparent" />
             <div className="relative z-10 p-8">
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+              <p className="text-xs font-semibold tracking-wider text-primary">
                 {featured.category}
               </p>
               <h3 className="mt-2 font-heading text-2xl font-bold leading-snug text-white sm:text-3xl">
@@ -77,7 +77,7 @@ export default function LatestBlog() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col justify-center p-5">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-primary">
+                  <p className="text-[10px] font-semibold tracking-wider text-primary">
                     {post.category}
                   </p>
                   <h3 className="mt-1.5 font-heading text-base font-bold leading-snug text-heading line-clamp-2">
@@ -105,7 +105,7 @@ export default function LatestBlog() {
         <div className="mt-10 text-center">
           <Link
             href="/blog"
-            className="inline-block rounded-md border-2 border-heading bg-heading px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white hover:text-heading hover:shadow-md"
+            className="inline-block rounded-md border-2 border-heading bg-heading px-7 py-3 text-xs font-bold tracking-[0.15em] text-white transition-all hover:bg-white hover:text-heading hover:shadow-md"
           >
             View All Posts
           </Link>

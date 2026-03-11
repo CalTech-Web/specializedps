@@ -65,7 +65,7 @@ export default function HomeHero() {
               className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-xs text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
             >
               <Calendar className="h-4 w-4" />
-              <span className="font-bold uppercase tracking-wide">
+              <span className="font-bold tracking-wide">
                 Request an Appointment
               </span>
             </button>
@@ -74,7 +74,7 @@ export default function HomeHero() {
               className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-xs text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
             >
               <Search className="h-4 w-4" />
-              <span className="font-bold uppercase tracking-wide">
+              <span className="font-bold tracking-wide">
                 Find Your Procedure
               </span>
             </Link>

@@ -24,7 +24,7 @@ export default function AdvancedTechnology() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="text-xs font-semibold tracking-[0.2em] text-primary">
             Innovation in Surgery
           </p>
           <h2 className="mt-4 font-heading text-3xl font-bold text-heading sm:text-4xl">
@@ -46,7 +46,7 @@ export default function AdvancedTechnology() {
           </p>
           <Link
             href="/services/breast-reconstruction/resensation"
-            className="mt-8 inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
+            className="mt-8 inline-block rounded-md border-2 border-primary bg-primary px-7 py-3 text-xs font-bold tracking-[0.15em] text-white transition-all hover:bg-white hover:text-primary hover:shadow-md"
           >
             Learn More
           </Link>

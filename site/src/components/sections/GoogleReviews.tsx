@@ -120,7 +120,7 @@ function DoctorReviewMarquee({
           href={doctor.googleReviewUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-5 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
+          className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-5 py-2 text-xs font-bold tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
         >
           Read More Reviews
           <ExternalLink className="h-3.5 w-3.5" />

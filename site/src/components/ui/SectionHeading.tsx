@@ -30,7 +30,7 @@ export default function SectionHeading({
       {/* Eyebrow badge */}
       {eyebrow && (
         <p className={cn(
-          "mb-4 inline-block rounded-sm px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]",
+          "mb-4 inline-block rounded-sm px-5 py-2 text-xs font-bold tracking-[0.2em]",
           light ? "bg-white/10 text-primary" : "bg-primary/20 text-primary"
         )}>
           {eyebrow}
@@ -40,7 +40,7 @@ export default function SectionHeading({
       {/* Subtitle with decorative line */}
       {subtitle && (
         <p className={cn(
-          "mb-3 flex items-center gap-4 font-semibold text-sm uppercase tracking-[0.15em]",
+          "mb-3 flex items-center gap-4 font-semibold text-sm tracking-[0.15em]",
           light ? "text-primary" : "text-primary"
         )}>
           {centered && <span className="flex-1" />}

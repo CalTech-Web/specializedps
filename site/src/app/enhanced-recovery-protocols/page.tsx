@@ -128,7 +128,7 @@ export default function EnhancedRecoveryProtocolsPage() {
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="flex items-center justify-center gap-3 mb-2">
             <Lightbulb className="h-6 w-6 text-gold" />
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            <p className="text-xs font-bold tracking-[0.2em] text-primary">
               Helpful Tips
             </p>
           </div>
