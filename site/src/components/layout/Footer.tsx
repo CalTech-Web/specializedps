@@ -25,7 +25,7 @@ export default function Footer() {
         </video>
         <div className="absolute inset-0 bg-heading/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-6 py-16 text-center">
-          <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
             Discover the Difference of Personalized Aesthetic Solutions
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/85">
