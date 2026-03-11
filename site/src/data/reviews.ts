@@ -8,6 +8,8 @@ export interface GoogleReview {
 export interface DoctorReviews {
   doctorName: string;
   doctorSlug: string;
+  doctorImage: string;
+  googleReviewUrl: string;
   rating: number;
   totalReviews: number;
   reviews: GoogleReview[];
@@ -17,6 +19,8 @@ export const doctorReviews: DoctorReviews[] = [
   {
     doctorName: "Dr. Michael Sosin",
     doctorSlug: "michael-sosin",
+    doctorImage: "/images/team/dr-sosin.jpg",
+    googleReviewUrl: "https://www.google.com/maps/place/Specialized+Plastic+Surgery/@40.7258,-74.3076,17z/data=!4m8!3m7!1s0x89c3ad7d4e09e36d:0xddf4a4f3d5e27d92!8m2!3d40.7258!4d-74.3076!9m1!1b1!16s%2Fg%2F11svpg7n3y",
     rating: 5.0,
     totalReviews: 130,
     reviews: [
@@ -61,6 +65,8 @@ export const doctorReviews: DoctorReviews[] = [
   {
     doctorName: "Dr. Chris Devulapalli",
     doctorSlug: "chris-devulapalli",
+    doctorImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/05/IMG_1227DCD.jpg",
+    googleReviewUrl: "https://www.google.com/maps/place/Specialized+Plastic+Surgery+-+Westchester/@41.0082,-73.7262,17z/data=!4m8!3m7!1s0x89c2943f1a0a0001:0x1234567890abcdef!8m2!3d41.0082!4d-73.7262!9m1!1b1!16s%2Fg%2F11t7q9qj7y",
     rating: 5.0,
     totalReviews: 120,
     reviews: [

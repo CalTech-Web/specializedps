@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { doctorReviews } from "@/data/reviews";
+import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { Star, ExternalLink, X } from "lucide-react";
+import { doctorReviews, type GoogleReview } from "@/data/reviews";
 
 function GoogleLogo() {
   return (
@@ -19,10 +20,7 @@ function GoogleLogo() {
         fill="#FBBC05"
         d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"
       />
-      <path
-        fill="#4285F4"
-        d="M225 3v65h-9.5V3h9.5z"
-      />
+      <path fill="#4285F4" d="M225 3v65h-9.5V3h9.5z" />
       <path
         fill="#34A853"
         d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"
@@ -41,20 +39,23 @@ function StarRating({ rating }: { rating: number }) {
       {[1, 2, 3, 4, 5].map((i) => (
         <Star
           key={i}
-          className={`h-5 w-5 ${i <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          className={`h-4 w-4 ${i <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
         />
       ))}
     </div>
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Main Component                                                     */
+/* ------------------------------------------------------------------ */
 export default function GoogleReviews() {
   return (
-    <section className="bg-warm-grey py-14 sm:py-16">
+    <section className="bg-warm-grey py-14 sm:py-20 overflow-hidden">
       <div className="mx-auto max-w-[1320px] px-6">
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="space-y-14">
           {doctorReviews.map((doc) => (
-            <DoctorReviewBlock key={doc.doctorSlug} doctor={doc} />
+            <DoctorReviewMarquee key={doc.doctorSlug} doctor={doc} />
           ))}
         </div>
       </div>
@@ -62,76 +63,262 @@ export default function GoogleReviews() {
   );
 }
 
-function DoctorReviewBlock({
+/* ------------------------------------------------------------------ */
+/*  Doctor Review Marquee                                              */
+/* ------------------------------------------------------------------ */
+function DoctorReviewMarquee({
   doctor,
 }: {
   doctor: (typeof doctorReviews)[0];
 }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [hoveredReview, setHoveredReview] = useState<{
+    review: GoogleReview;
+    rect: DOMRect;
+  } | null>(null);
+  const [paused, setPaused] = useState(false);
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
-  function scroll(direction: "left" | "right") {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -300 : 300,
-      behavior: "smooth",
-    });
-  }
+  // Duplicate reviews for seamless loop
+  const reviews = [...doctor.reviews, ...doctor.reviews];
 
   return (
     <div>
-      <div className="mb-6 flex items-center gap-4">
-        <GoogleLogo />
+      {/* Header row */}
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
+          {/* Doctor image */}
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+            <Image
+              src={doctor.doctorImage}
+              alt={doctor.doctorName}
+              fill
+              className="object-cover object-top"
+              sizes="48px"
+            />
+          </div>
+          <div>
+            <div className="flex items-center gap-3">
+              <p className="text-sm font-bold text-heading">
+                {doctor.doctorName}
+              </p>
+              <GoogleLogo />
+            </div>
+            <div className="mt-1 flex items-center gap-2">
+              <span className="text-sm font-bold text-heading">
+                {doctor.rating.toFixed(1)}
+              </span>
+              <StarRating rating={Math.round(doctor.rating)} />
+              <span className="text-xs text-body/60">
+                ({doctor.totalReviews}+ reviews)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Read More Reviews button */}
+        <a
+          href={doctor.googleReviewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-5 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-primary"
+        >
+          Read More Reviews
+          <ExternalLink className="h-3.5 w-3.5" />
+        </a>
+      </div>
+
+      {/* Marquee container */}
+      <div
+        className="relative"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => {
+          setPaused(false);
+          setHoveredReview(null);
+        }}
+      >
+        <div
+          ref={marqueeRef}
+          className="flex gap-4"
+          style={{
+            animation: `scroll-marquee-reviews 30s linear infinite`,
+            animationPlayState: paused ? "paused" : "running",
+          }}
+        >
+          {reviews.map((review, i) => (
+            <ReviewCard
+              key={`${review.name}-${i}`}
+              review={review}
+              doctorImage={doctor.doctorImage}
+              doctorName={doctor.doctorName}
+              onHover={(rect) => setHoveredReview({ review, rect })}
+              onLeave={() => setHoveredReview(null)}
+            />
+          ))}
+        </div>
+
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-warm-grey to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-warm-grey to-transparent" />
+      </div>
+
+      {/* Hover popup */}
+      {hoveredReview && (
+        <ReviewPopup
+          review={hoveredReview.review}
+          doctorImage={doctor.doctorImage}
+          doctorName={doctor.doctorName}
+          triggerRect={hoveredReview.rect}
+          onClose={() => setHoveredReview(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Review Card (in marquee)                                           */
+/* ------------------------------------------------------------------ */
+function ReviewCard({
+  review,
+  doctorImage,
+  doctorName,
+  onHover,
+  onLeave,
+}: {
+  review: GoogleReview;
+  doctorImage: string;
+  doctorName: string;
+  onHover: (rect: DOMRect) => void;
+  onLeave: () => void;
+}) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseEnter={() => {
+        if (cardRef.current) onHover(cardRef.current.getBoundingClientRect());
+      }}
+      onMouseLeave={onLeave}
+      className="w-[300px] flex-shrink-0 cursor-pointer rounded-lg bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+    >
+      <div className="flex items-start gap-3">
+        {/* Doctor mini avatar */}
+        <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full">
+          <Image
+            src={doctorImage}
+            alt={doctorName}
+            fill
+            className="object-cover object-top"
+            sizes="36px"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-bold text-heading">{review.name}</p>
+          <div className="mt-0.5 flex items-center gap-2">
+            <StarRating rating={review.stars} />
+            <span className="text-xs text-body/50">{review.date}</span>
+          </div>
+        </div>
+      </div>
+      <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">
+        {review.text}
+      </p>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Review Popup (on hover)                                            */
+/* ------------------------------------------------------------------ */
+function ReviewPopup({
+  review,
+  doctorImage,
+  doctorName,
+  triggerRect,
+  onClose,
+}: {
+  review: GoogleReview;
+  doctorImage: string;
+  doctorName: string;
+  triggerRect: DOMRect;
+  onClose: () => void;
+}) {
+  const popupRef = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number }>({
+    top: 0,
+    left: 0,
+  });
+
+  useEffect(() => {
+    if (!popupRef.current) return;
+    const popup = popupRef.current;
+    const popupRect = popup.getBoundingClientRect();
+
+    // Center horizontally on the card
+    let left =
+      triggerRect.left + triggerRect.width / 2 - popupRect.width / 2;
+    // Position above the card
+    let top = triggerRect.top - popupRect.height - 12;
+
+    // Keep within viewport
+    const pad = 16;
+    if (left < pad) left = pad;
+    if (left + popupRect.width > window.innerWidth - pad)
+      left = window.innerWidth - pad - popupRect.width;
+    if (top < pad) top = triggerRect.bottom + 12;
+
+    setPos({ top, left });
+  }, [triggerRect]);
+
+  return (
+    <div
+      ref={popupRef}
+      className="fixed z-50 w-[360px] animate-fade-in rounded-xl bg-white p-6 shadow-2xl ring-1 ring-black/10"
+      style={{ top: pos.top, left: pos.left }}
+      onMouseLeave={onClose}
+    >
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded-full text-body/40 transition-colors hover:bg-warm-grey hover:text-heading"
+      >
+        <X className="h-3.5 w-3.5" />
+      </button>
+
+      {/* Doctor + Reviewer info */}
+      <div className="flex items-start gap-4">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+          <Image
+            src={doctorImage}
+            alt={doctorName}
+            fill
+            className="object-cover object-top"
+            sizes="56px"
+          />
+        </div>
         <div>
-          <p className="text-sm font-bold text-heading">{doctor.doctorName}</p>
-          <div className="mt-1 flex items-center gap-2">
-            <span className="text-sm font-bold text-heading">
-              {doctor.rating.toFixed(1)}
-            </span>
-            <StarRating rating={Math.round(doctor.rating)} />
-            <span className="text-xs text-body/60">
-              ({doctor.totalReviews}+ reviews)
-            </span>
+          <p className="font-heading text-base font-bold text-heading">
+            {review.name}
+          </p>
+          <p className="mt-0.5 text-xs text-body/60">
+            Review for {doctorName}
+          </p>
+          <div className="mt-1.5 flex items-center gap-2">
+            <StarRating rating={review.stars} />
+            <span className="text-xs text-body/50">{review.date}</span>
           </div>
         </div>
       </div>
 
-      <div className="relative">
-        <button
-          onClick={() => scroll("left")}
-          aria-label="Scroll reviews left"
-          className="absolute -left-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-colors hover:bg-primary hover:text-white"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          aria-label="Scroll reviews right"
-          className="absolute -right-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-colors hover:bg-primary hover:text-white"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </button>
+      {/* Full review text */}
+      <p className="mt-4 text-sm leading-relaxed text-body">{review.text}</p>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth pb-2 snap-x snap-mandatory"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {doctor.reviews.map((review, i) => (
-            <div
-              key={i}
-              className="w-[280px] flex-shrink-0 snap-start rounded-lg bg-white p-5 shadow-sm"
-            >
-              <StarRating rating={review.stars} />
-              <p className="mt-3 text-sm leading-relaxed text-body line-clamp-4">
-                {review.text}
-              </p>
-              <div className="mt-3 border-t border-gray-100 pt-3">
-                <p className="text-sm font-bold text-heading">{review.name}</p>
-                <p className="text-xs text-body/60">{review.date}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Google attribution */}
+      <div className="mt-4 flex items-center gap-2 border-t border-gray-100 pt-3">
+        <GoogleLogo />
+        <span className="text-xs text-body/40">Verified Review</span>
       </div>
     </div>
   );

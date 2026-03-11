@@ -127,6 +127,11 @@ img {
   animation: hotspot-pulse 1.5s ease-out infinite;
 }
 
+@keyframes scroll-marquee-reviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ================================================================== */
 /*  Accessibility Widget Styles                                        */
 /* ================================================================== */
