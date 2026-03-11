@@ -31,7 +31,7 @@ export default function InsurancePage() {
       />
 
       {/* Out-of-Network Excellence */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
@@ -73,7 +73,7 @@ export default function InsurancePage() {
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-heading text-base font-bold text-heading">
+                      <h3 className="font-heading text-lg font-bold text-heading">
                         {item.title}
                       </h3>
                       <p className="mt-1 text-sm leading-relaxed text-body">
@@ -99,7 +99,7 @@ export default function InsurancePage() {
       </section>
 
       {/* Reconstructive Coverage (WHCRA) */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -111,6 +111,16 @@ export default function InsurancePage() {
 
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/images/insurance/sps-image-1022.jpg"
+                alt="Medical professional consultation"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+
             <div>
               <SectionHeading
                 eyebrow="Reconstructive Coverage"
@@ -149,35 +159,15 @@ export default function InsurancePage() {
                 ))}
               </ul>
             </div>
-
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src="/images/insurance/sps-image-1022.jpg"
-                alt="Medical professional consultation"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* Medically Necessary Procedures - Accordion with image */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg max-lg:order-2">
-              <Image
-                src="/images/insurance/new-image-120.jpg"
-                alt="Patient consultation for insurance covered procedures"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-
-            <div className="max-lg:order-1">
+            <div>
               <SectionHeading
                 eyebrow="Medically Necessary"
                 title="Exploring Coverage for Medically Necessary and Aesthetic Procedures"
@@ -266,12 +256,22 @@ export default function InsurancePage() {
                 </details>
               </div>
             </div>
+
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/images/insurance/new-image-120.jpg"
+                alt="Patient consultation for insurance covered procedures"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Your Next Step - Insurance Process */}
-      <section className="bg-warm-grey py-14 sm:py-16">
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="How It Works"
