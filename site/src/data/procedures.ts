@@ -6,12 +6,15 @@ export interface Procedure {
   categorySlug: string;
   description: string;
   heroDescription: string;
+  heroImage?: string;
+  contentImage?: string;
   benefits: string[];
   candidateCriteria: string[];
   techniques?: string[];
   recoveryTimeline: string;
   procedureDuration?: string;
   insuranceCoverage?: string;
+  procedureSteps?: string[];
 }
 
 export type ProcedureCategory =
@@ -73,9 +76,13 @@ export const procedures: Procedure[] = [
     category: "face",
     categorySlug: "face",
     description:
-      "A facelift, also known as a rhytidectomy, is a transformative surgical procedure designed to restore a youthful, refreshed appearance by addressing sagging skin, deep wrinkles, and loss of facial volume. At Specialized Plastic Surgery, our board-certified plastic surgeons specialize in advanced facelift techniques that lift and reposition facial tissues, smooth deep folds, and rejuvenate the overall facial contour.\n\nAs we age, the skin gradually loses its elasticity, leading to sagging along the jawline, deep creases around the nose and mouth, and an overall tired appearance. A facelift addresses these concerns by tightening the underlying muscles and repositioning the skin for a naturally refreshed look that turns back the clock without appearing \"done.\"",
+      "A facelift, also known as a rhytidectomy, is a transformative surgical procedure designed to restore a youthful, refreshed appearance by tightening the skin and underlying facial muscles. At Specialized Plastic Surgery, our board-certified plastic surgeons specialize in advanced facelift techniques that lift and reposition facial tissues, smooth deep folds, and rejuvenate the overall facial contour.\n\nAs we age, the skin gradually loses its elasticity, leading to sagging along the jawline, deep creases around the nose and mouth, and an overall tired appearance. A facelift addresses these concerns by tightening the underlying muscles and repositioning the skin for a naturally refreshed look that turns back the clock without appearing overdone.\n\nOur surgeons use minimally invasive techniques to achieve natural looking results that enhance rather than alter your appearance. Every facelift procedure is customized to complement each patient's unique facial structure, ensuring results that look natural and proportionate.",
     heroDescription:
       "Restore a youthful, refreshed appearance by lifting and repositioning facial tissues to smooth folds, reduce sagging, and restore natural contour.",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-244.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2025/11/SPS-Center-Image.jpg",
     benefits: [
       "Smoothing of deep wrinkles, creases, and nasolabial folds",
       "Improved jawline definition and neck contours",
@@ -96,8 +103,14 @@ export const procedures: Procedure[] = [
       "SMAS facelift (deep tissue repositioning for longer-lasting results)",
       "Combined facelift with neck lift for full rejuvenation",
     ],
+    procedureSteps: [
+      "Incision placement along the natural hairline and around the ears for discreet scarring",
+      "Lifting and repositioning of underlying facial tissues and muscles",
+      "Removal of excess skin and careful incision closure for a smooth, natural result",
+    ],
     recoveryTimeline:
-      "Most patients return to light activities within 1-2 weeks. Bruising and swelling gradually subside over the following weeks, with final results becoming fully visible over several months as tissues settle into their new position.",
+      "You may experience temporary swelling, bruising, and mild discomfort, which are managed with prescribed medications and proper care. Bandages or compression garments may be applied to support healing. Most patients return to light activities within 1 to 2 weeks, though strenuous activity should be avoided for several weeks. Final results become fully visible over the following months as tissues settle into their new position.",
+    procedureDuration: "3 to 5 hours",
   },
   {
     slug: "neck-lift",

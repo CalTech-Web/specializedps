@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   procedures,
   getProcedureBySlug,
@@ -10,7 +11,8 @@ import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Phone, MapPin, CheckCircle, Images } from "lucide-react";
+import AppointmentButton from "@/components/ui/AppointmentButton";
+import { Phone, MapPin, CheckCircle, Images, Clock, Calendar } from "lucide-react";
 
 interface PageProps {
   params: Promise<{ category: string; procedure: string }>;
@@ -50,7 +52,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       <HeroSection
         title={proc.name}
         subtitle={proc.heroDescription}
-        backgroundImage="/images/hero/SPS-Image-125.jpg"
+        backgroundImage={proc.heroImage || "/images/hero/SPS-Image-125.jpg"}
         ctaText="Schedule Consultation"
         ctaLink="/contact"
         breadcrumbs={[
@@ -61,34 +63,53 @@ export default async function ProcedurePage({ params }: PageProps) {
         ]}
       />
 
-      {/* What Is [Procedure]? */}
-      <section className="bg-white py-14 sm:py-16">
+      {/* What Is [Procedure]? — Two-column with optional image */}
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <SectionHeading
-            eyebrow="Overview"
-            title={`What Is ${proc.name}?`}
-            centered={false}
-          />
-          <div className="mt-4 max-w-3xl space-y-4">
-            {proc.description.split("\n\n").map((paragraph, i) => (
-              <p key={i} className="text-lg leading-relaxed text-body">
-                {paragraph}
-              </p>
-            ))}
+          <div className={`grid gap-12 ${proc.contentImage ? "lg:grid-cols-[1fr_400px]" : ""}`}>
+            <div>
+              <SectionHeading
+                eyebrow="Overview"
+                title={`What Is ${proc.name}?`}
+                centered={false}
+              />
+              <div className="mt-4 space-y-4">
+                {proc.description.split("\n\n").map((paragraph, i) => (
+                  <p key={i} className="text-lg leading-relaxed text-body">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              {proc.procedureDuration && (
+                <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-gray-100 bg-warm-grey px-5 py-3">
+                  <Clock className="h-5 w-5 text-primary" />
+                  <span className="text-base text-body">
+                    <span className="font-semibold text-heading">
+                      Typical Duration:
+                    </span>{" "}
+                    {proc.procedureDuration}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {proc.contentImage && (
+              <div className="relative hidden h-[480px] overflow-hidden rounded-lg shadow-lg lg:block">
+                <Image
+                  src={proc.contentImage}
+                  alt={proc.name}
+                  fill
+                  className="object-cover"
+                  sizes="400px"
+                />
+              </div>
+            )}
           </div>
-          {proc.procedureDuration && (
-            <p className="mt-4 text-base text-body">
-              <span className="font-semibold text-heading">
-                Typical Procedure Duration:
-              </span>{" "}
-              {proc.procedureDuration}
-            </p>
-          )}
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -100,10 +121,10 @@ export default async function ProcedurePage({ params }: PageProps) {
         <div className="relative mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Advantages"
-            title="Benefits"
+            title={`Why Choose ${proc.name}?`}
             light
           />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {proc.benefits.map((benefit, i) => (
               <div
                 key={i}
@@ -122,7 +143,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Candidacy */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Am I a Candidate?"
@@ -150,7 +171,7 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Techniques */}
       {proc.techniques && proc.techniques.length > 0 && (
-        <section className="bg-warm-grey py-14 sm:py-16">
+        <section className="bg-warm-grey py-14 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <SectionHeading
               eyebrow="Our Approach"
@@ -158,7 +179,7 @@ export default async function ProcedurePage({ params }: PageProps) {
               description="Our surgeons use a variety of approaches tailored to your unique anatomy and goals."
               centered={false}
             />
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {proc.techniques.map((technique, i) => (
                 <div
                   key={i}
@@ -173,15 +194,43 @@ export default async function ProcedurePage({ params }: PageProps) {
         </section>
       )}
 
+      {/* Procedure Steps */}
+      {proc.procedureSteps && proc.procedureSteps.length > 0 && (
+        <section className="bg-white py-14 sm:py-20">
+          <div className="mx-auto max-w-[1320px] px-6">
+            <SectionHeading
+              eyebrow="The Process"
+              title="What to Expect During Your Procedure"
+              centered={false}
+            />
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {proc.procedureSteps.map((step, i) => (
+                <div
+                  key={i}
+                  className="relative rounded-lg border border-gray-100 bg-warm-grey p-6"
+                >
+                  <span className="font-heading text-4xl font-bold text-primary/20">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="mt-2 text-base leading-relaxed text-body">
+                    {step}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Recovery */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className={`${proc.procedureSteps ? "bg-warm-grey" : "bg-white"} py-14 sm:py-20`}>
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="What to Expect"
             title="Recovery Timeline"
             centered={false}
           />
-          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-warm-grey p-8 space-y-4">
+          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-white p-8 shadow-sm space-y-4">
             {proc.recoveryTimeline.split("\n\n").map((paragraph, i) => (
               <p key={i} className="text-lg leading-relaxed text-body">
                 {paragraph}
@@ -193,14 +242,14 @@ export default async function ProcedurePage({ params }: PageProps) {
 
       {/* Insurance Coverage */}
       {proc.insuranceCoverage && (
-        <section className="bg-warm-grey py-14 sm:py-16">
+        <section className="bg-white py-14 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <SectionHeading
               eyebrow="Coverage"
               title="Insurance Coverage"
               centered={false}
             />
-            <div className="mt-4 max-w-3xl rounded-lg border-l-4 border-primary bg-white p-8 shadow-sm">
+            <div className="mt-4 max-w-3xl rounded-lg border-l-4 border-primary bg-warm-grey p-8 shadow-sm">
               <p className="text-lg leading-relaxed text-body">
                 {proc.insuranceCoverage}
               </p>
@@ -210,7 +259,7 @@ export default async function ProcedurePage({ params }: PageProps) {
       )}
 
       {/* Gallery Link */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -238,8 +287,26 @@ export default async function ProcedurePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Schedule Consultation CTA */}
+      <section className="bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="rounded-lg border border-gray-100 bg-warm-grey p-8 text-center sm:p-12">
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
+              Schedule a {proc.name} Consultation Today
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-body">
+              Take the first step toward achieving your goals. Our board-certified plastic surgeons will create a personalized treatment plan tailored to your unique needs.
+            </p>
+            <AppointmentButton className="mt-8 inline-flex items-center gap-2.5 rounded-md border-2 border-primary bg-primary px-9 py-4 text-base font-bold uppercase tracking-wider text-white transition-all hover:bg-transparent hover:text-primary">
+              <Calendar className="h-5 w-5" />
+              Request an Appointment
+            </AppointmentButton>
+          </div>
+        </div>
+      </section>
+
       {/* Doctors Section */}
-      <section className="bg-white py-14 sm:py-16">
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="Meet Your Surgeons"
