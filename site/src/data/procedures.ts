@@ -545,11 +545,12 @@ export const procedures: Procedure[] = [
     shortName: "Tissue Flap",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-218.jpg",
     contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-155.jpg",
     description:
-      "Natural tissue flap reconstruction involves using a patient's own tissue from areas such as the abdomen, back, or thighs to recreate a breast following mastectomy. This autologous tissue reconstruction provides a softer, more natural outcome compared to implant-based reconstruction.\n\nThe DIEP (Deep Inferior Epigastric Perforator) flap is the most frequently performed technique at Specialized Plastic Surgery because it creates the most natural appearance using the patient's own abdominal fat and skin, preserves abdominal muscles (unlike the TRAM flap), provides lasting results that adapt to body changes over time, works better with radiation therapy than synthetic materials, and offers a secondary abdominal contouring benefit similar to a tummy tuck.",
+      "Natural tissue flap reconstruction, particularly the DIEP (Deep Inferior Epigastric Perforator) flap, represents the most advanced breast reconstruction option available today. The procedure uses a patient's own tissue from areas such as the abdomen, back, or thighs to recreate a breast following mastectomy. This autologous tissue reconstruction provides a softer, more natural outcome compared to implant-based approaches, and the results are designed to last a lifetime.\n\nThe DIEP flap is the most frequently performed and preferred technique at Specialized Plastic Surgery. It creates the most natural appearance using the patient's own abdominal fat and skin while preserving abdominal muscles entirely (unlike the TRAM flap). This preservation results in less post-operative pain, maintained core strength, and a lower risk of hernia. Because it uses the body's own tissue, the reconstruction adapts naturally to weight fluctuations and aging, tolerates radiation therapy better than synthetic materials, and offers a secondary abdominal contouring benefit similar to a tummy tuck.",
     heroDescription:
-      "Rebuild your breast using your body's own tissue for the most natural-looking results, with advanced microsurgical techniques.",
+      "Rebuild your breast using your body's own tissue for the most natural-looking, long-lasting results with advanced microsurgical techniques at our New York and New Jersey offices.",
     benefits: [
       "Most natural look and feel using your own tissue",
       "Long-lasting results that age and change naturally with your body",
@@ -559,22 +560,31 @@ export const procedures: Procedure[] = [
       "Better tolerance of radiation therapy than implants",
     ],
     candidateCriteria: [
-      "Individuals who have undergone or plan to undergo mastectomy",
-      "Patients with sufficient abdominal, thigh, or back tissue for donation",
-      "Those preferring to avoid synthetic implants",
-      "Good overall health suitable for microsurgical procedure",
+      "Individuals who have undergone or are planning a mastectomy",
+      "Patients with sufficient abdominal, thigh, or back tissue for harvesting",
+      "Those wishing to avoid synthetic implants due to personal preference or prior complications",
+      "Good overall health suitable for a microsurgical procedure",
+      "Patients who have undergone or will undergo radiation therapy",
     ],
     techniques: [
       "DIEP Flap (preferred, preserves abdominal muscles entirely)",
       "TRAM Flap (uses abdominal muscle tissue)",
-      "LAT Flap (back tissue, often combined with an implant)",
+      "TDAP/LAT Flap (back tissue, often combined with an implant or fat grafting)",
       "PAP Flap (inner thigh tissue for patients without sufficient abdominal tissue)",
+      "Hybrid Reconstruction (combines multiple techniques for personalized results)",
+    ],
+    procedureSteps: [
+      "Surgical Planning: Your surgeon carefully marks the abdomen and plans the tissue harvest, mapping the perforator blood vessels using advanced imaging.",
+      "Tissue Harvest: Skin and fat are carefully separated from the muscle layer while keeping abdominal muscles fully intact, preserving core strength.",
+      "Microsurgical Reconnection: The deep inferior epigastric perforator vessels are detached and meticulously reconnected to chest blood vessels using microsurgery to ensure optimal blood flow and tissue viability.",
+      "Breast Shaping: The harvested tissue is sculpted and shaped to recreate a natural breast mound, with careful attention to symmetry and contouring to match the patient's body frame.",
+      "Follow-Up Procedures: Secondary surgery may be recommended for nipple-areolar reconstruction, symmetry fine-tuning, or Resensation nerve restoration.",
     ],
     procedureDuration: "6-8 hours under general anesthesia",
     recoveryTimeline:
-      "Initial recovery is 4-6 weeks, during which activity is gradually increased. Full healing occurs over several months. Regular follow-up appointments monitor the microsurgical connections and overall healing progress.",
+      "Initial recovery requires 4-6 weeks of gradually increasing activity. During this period, patients may experience temporary discomfort, bruising, and swelling. Our team provides comprehensive aftercare instructions covering mobility, heavy lifting restrictions, and pain management.\n\nFull healing occurs over several months with regular check-up appointments to monitor the microsurgical connections and overall healing progress. Most patients return to work within 4-6 weeks depending on the nature of their job. Our Enhanced Recovery Protocols are designed to promote a faster, safer, and more comfortable healing process.",
     insuranceCoverage:
-      "Covered by insurance under the Women's Health and Cancer Rights Act of 1998 (WHCRA), which mandates coverage for all stages of breast reconstruction after mastectomy.",
+      "Covered by insurance under the Women's Health and Cancer Rights Act of 1998 (WHCRA), which mandates coverage for all stages of breast reconstruction after mastectomy, including natural tissue flap procedures, symmetry surgery on the opposite breast, external prostheses, and treatment of physical complications such as lymphedema.",
   },
   {
     slug: "implant-based",
@@ -918,6 +928,8 @@ export const procedures: Procedure[] = [
     name: "Body Lift",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg",
     description:
       "A body lift is an extensive plastic surgery procedure that removes large amounts of excess skin and tightens the underlying tissue around the midsection, thighs, and buttocks. This procedure is typically sought by patients who have achieved significant, stable weight loss (often 100 pounds or more) and are dealing with redundant skin that cannot be addressed through non-surgical methods.\n\nAt Specialized Plastic Surgery, we help patients from New York, New Jersey, Connecticut, and throughout the TriState Area complete their weight loss transformation through post-bariatric body contouring. Almost everyone who loses a substantial amount of weight is left with some degree of loose or sagging skin that can cause infections, rashes, chafing, limited mobility, and poor-fitting clothing. The goal of a body lift is not weight reduction, but rather to sculpt and refine the body's final shape, dramatically improving both the look and feel of the skin.",
     heroDescription:
@@ -955,6 +967,8 @@ export const procedures: Procedure[] = [
     shortName: "Thighplasty",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-197.jpg",
     description:
       "A thigh lift (thighplasty) is a comprehensive body contouring procedure focused on reshaping the thighs by surgically removing excess skin and, in some cases, excess fat deposits that lead to a sagging appearance. While many patients achieve weight loss success through diet, fitness, or bariatric surgery, the skin often loses its elasticity and cannot snap back to the body's new, smaller contours.\n\nAt Specialized Plastic Surgery, thigh lift surgery offers dual benefits: aesthetic improvement through firmer, more youthful leg contours that allow clothes to fit better, and functional relief by eliminating uncomfortable skin-on-skin friction (chafing) and addressing chronic hygiene concerns caused by hanging skin folds. Our surgeon possesses extensive experience in post-bariatric and massive weight loss body contouring, with a commitment to deep-layer tissue support to ensure the most discreet and aesthetic scarring possible.",
     heroDescription:
@@ -988,6 +1002,8 @@ export const procedures: Procedure[] = [
     shortName: "Brachioplasty",
     category: "body",
     categorySlug: "body",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-193.jpg",
     description:
       "An arm lift, or brachioplasty, is a procedure designed to improve the shape and definition of the upper arms by removing excess skin and fat. The incision is strategically placed along the inner arm, hidden in the natural folds to ensure minimal visible scarring.\n\nAt Specialized Plastic Surgery, we offer several arm lift approaches depending on the degree of excess tissue. A full brachioplasty involves a longer incision from elbow to armpit for patients with significant excess, while a short scar brachioplasty uses a shorter incision for those needing minimal correction. For younger patients with excess fat but firm skin, arm liposuction provides improvement without addressing skin laxity. Each procedure is tailored to meet the patient's specific needs and desired outcomes.",
     heroDescription:
