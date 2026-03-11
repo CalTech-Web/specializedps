@@ -110,7 +110,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <button
               onClick={() => openAppointment()}
-              className="inline-block border border-white/60 px-6 py-2.5 text-[12px] font-bold uppercase tracking-[0.15em] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
+              className="inline-block border border-white/60 px-6 py-2.5 text-[12px] font-bold tracking-[0.15em] text-white transition-all hover:border-white hover:bg-white hover:text-heading"
             >
               Request an Appointment
             </button>
@@ -140,7 +140,7 @@ export default function Header() {
                 <Link
                   key={item.label}
                   href={item.href!}
-                  className="px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                  className="px-5 py-3.5 text-[13px] font-semibold tracking-[0.12em] text-white transition-colors hover:text-gold"
                 >
                   {item.label}
                 </Link>
@@ -158,7 +158,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href!}
-                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold tracking-[0.12em] text-white transition-colors hover:text-gold"
                   >
                     {item.label}
                     <ChevronDown
@@ -182,7 +182,7 @@ export default function Header() {
                           <div key={category.label}>
                             <Link
                               href={category.href || "#"}
-                              className="mb-3 flex items-center gap-2 text-[13px] font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary"
+                              className="mb-3 flex items-center gap-2 text-[13px] font-bold tracking-wide text-heading transition-colors hover:text-primary"
                             >
                               <span className="h-1 w-1 rounded-full bg-primary" />
                               {category.label}
@@ -222,7 +222,7 @@ export default function Header() {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold tracking-[0.12em] text-white transition-colors hover:text-gold"
                   >
                     {item.label}
                     <ChevronDown
@@ -233,7 +233,7 @@ export default function Header() {
                   </Link>
                 ) : (
                   <button
-                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-gold"
+                    className="inline-flex items-center gap-1 px-5 py-3.5 text-[13px] font-semibold tracking-[0.12em] text-white transition-colors hover:text-gold"
                     aria-expanded={activeDropdown === item.label}
                   >
                     {item.label}
@@ -339,17 +339,26 @@ export default function Header() {
 
               return (
                 <li key={item.label} className="border-b border-gray-100">
-                  <button
-                    onClick={() => toggleMobileItem(item.label)}
-                    className="flex w-full items-center justify-between py-3.5 font-sans text-[15px] font-medium text-heading transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                  <div className="flex w-full items-center justify-between">
+                    <Link
+                      href={item.href!}
+                      onClick={closeMobile}
+                      className="flex-1 py-3.5 font-sans text-[15px] font-medium text-heading transition-colors hover:text-primary"
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      onClick={() => toggleMobileItem(item.label)}
+                      className="p-2 text-heading transition-colors hover:text-primary"
+                      aria-label={`Toggle ${item.label} submenu`}
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
@@ -362,17 +371,26 @@ export default function Header() {
                           const isSubOpen = activeMobileSubItem === child.label;
                           return (
                             <li key={child.label}>
-                              <button
-                                onClick={() => toggleMobileSubItem(child.label)}
-                                className="flex w-full items-center justify-between py-2.5 font-sans text-[14px] font-semibold text-heading transition-colors hover:text-primary"
-                              >
-                                {child.label}
-                                <ChevronDown
-                                  className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                                    isSubOpen ? "rotate-180" : ""
-                                  }`}
-                                />
-                              </button>
+                              <div className="flex w-full items-center justify-between">
+                                <Link
+                                  href={child.href!}
+                                  onClick={closeMobile}
+                                  className="flex-1 py-2.5 font-sans text-[14px] font-semibold text-heading transition-colors hover:text-primary"
+                                >
+                                  {child.label}
+                                </Link>
+                                <button
+                                  onClick={() => toggleMobileSubItem(child.label)}
+                                  className="p-2 text-heading transition-colors hover:text-primary"
+                                  aria-label={`Toggle ${child.label} submenu`}
+                                >
+                                  <ChevronDown
+                                    className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                                      isSubOpen ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
                               <div
                                 className={`overflow-hidden transition-all duration-300 ${
                                   isSubOpen ? "max-h-[500px] pb-2" : "max-h-0"

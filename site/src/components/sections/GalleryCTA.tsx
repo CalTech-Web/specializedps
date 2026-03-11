@@ -10,17 +10,17 @@ export default function GalleryCTA() {
         alt="Before and After Gallery"
         fill
         className="object-cover"
-        sizes="100vw"
+        sizes="(max-width: 1024px) 100vw, 1320px"
       />
       <div className="absolute inset-0 bg-heading/40" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1320px] justify-end px-6 py-14 sm:py-16">
         <div className="max-w-lg">
-          <p className="inline-block bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+          <p className="inline-block bg-white/10 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-white">
             Photo Gallery
           </p>
-          <h2 className="mt-6 font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl">
+          <h2 className="mt-6 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
             Explore Our Before &amp; After Gallery
           </h2>
           <p className="mt-6 text-sm leading-relaxed text-white/85">
@@ -33,7 +33,7 @@ export default function GalleryCTA() {
           </p>
           <Link
             href="/gallery"
-            className="mt-10 inline-block rounded-md border-2 border-white bg-transparent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-heading"
+            className="mt-10 inline-block rounded-md border-2 border-white bg-transparent px-8 py-3 text-xs font-bold tracking-[0.2em] text-white transition-all hover:bg-white hover:text-heading"
           >
             Explore Gallery
           </Link>
