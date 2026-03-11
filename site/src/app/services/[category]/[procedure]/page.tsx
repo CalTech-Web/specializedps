@@ -12,7 +12,18 @@ import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AppointmentButton from "@/components/ui/AppointmentButton";
-import { Phone, MapPin, CheckCircle, Images, Clock, Calendar } from "lucide-react";
+import {
+  Phone,
+  MapPin,
+  CheckCircle,
+  Images,
+  Clock,
+  Calendar,
+  Sparkles,
+  ArrowRight,
+  Shield,
+  Star,
+} from "lucide-react";
 
 interface PageProps {
   params: Promise<{ category: string; procedure: string }>;
@@ -63,10 +74,12 @@ export default async function ProcedurePage({ params }: PageProps) {
         ]}
       />
 
-      {/* What Is [Procedure]? — Two-column with optional image */}
+      {/* What Is [Procedure]? */}
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <div className={`grid gap-12 ${proc.contentImage ? "lg:grid-cols-[1fr_400px]" : ""}`}>
+          <div
+            className={`grid gap-12 ${proc.contentImage ? "lg:grid-cols-[1fr_400px]" : ""}`}
+          >
             <div>
               <SectionHeading
                 eyebrow="Overview"
@@ -81,7 +94,7 @@ export default async function ProcedurePage({ params }: PageProps) {
                 ))}
               </div>
               {proc.procedureDuration && (
-                <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-gray-100 bg-warm-grey px-5 py-3">
+                <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-primary/10 bg-cream px-5 py-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <span className="text-base text-body">
                     <span className="font-semibold text-heading">
@@ -128,10 +141,10 @@ export default async function ProcedurePage({ params }: PageProps) {
             {proc.benefits.map((benefit, i) => (
               <div
                 key={i}
-                className="group rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
+                className="group rounded-xl border border-white/[0.06] bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:bg-white/[0.06]"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                  <CheckCircle className="h-6 w-6 text-primary" />
                 </div>
                 <p className="font-heading text-base font-semibold leading-relaxed text-white">
                   {benefit}
@@ -145,27 +158,50 @@ export default async function ProcedurePage({ params }: PageProps) {
       {/* Candidacy */}
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <SectionHeading
-            eyebrow="Am I a Candidate?"
-            title="Who is a Good Candidate?"
-            centered={false}
-          />
-          <p className="mt-2 max-w-3xl text-lg text-body">
-            You may be a good candidate for this procedure if you meet the
-            following criteria:
-          </p>
-          <ul className="mt-6 max-w-3xl space-y-4">
-            {proc.candidateCriteria.map((criterion, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 mt-0.5">
-                  <CheckCircle className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <span className="text-base leading-relaxed text-body">
-                  {criterion}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div className="grid items-start gap-12 lg:grid-cols-[1fr_auto]">
+            <div>
+              <SectionHeading
+                eyebrow="Am I a Candidate?"
+                title="Who is a Good Candidate?"
+                centered={false}
+              />
+              <p className="mt-2 max-w-3xl text-lg text-body">
+                You may be a good candidate for this procedure if you meet the
+                following criteria:
+              </p>
+              <ul className="mt-6 max-w-3xl space-y-4">
+                {proc.candidateCriteria.map((criterion, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                      <CheckCircle className="h-3.5 w-3.5 text-primary" />
+                    </div>
+                    <span className="text-base leading-relaxed text-body">
+                      {criterion}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick info card */}
+            <div className="hidden rounded-xl border border-primary/10 bg-cream p-6 lg:block lg:w-[280px]">
+              <Sparkles className="mb-3 h-6 w-6 text-primary" />
+              <h3 className="font-heading text-lg font-bold text-heading">
+                Personalized Approach
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-body">
+                Every treatment plan is tailored to your unique anatomy and
+                aesthetic goals by our board-certified surgeons.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-heading"
+              >
+                Book a Consultation
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -183,10 +219,12 @@ export default async function ProcedurePage({ params }: PageProps) {
               {proc.techniques.map((technique, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="group rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg"
                 >
-                  <div className="h-[2px] w-8 bg-gradient-to-r from-primary to-gold" />
-                  <p className="mt-3 font-semibold text-heading">{technique}</p>
+                  <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                    <Star className="h-4 w-4 text-primary" />
+                  </div>
+                  <p className="font-semibold text-heading">{technique}</p>
                 </div>
               ))}
             </div>
@@ -207,9 +245,9 @@ export default async function ProcedurePage({ params }: PageProps) {
               {proc.procedureSteps.map((step, i) => (
                 <div
                   key={i}
-                  className="relative rounded-lg border border-gray-100 bg-warm-grey p-6"
+                  className="relative overflow-hidden rounded-xl border border-gray-100 bg-warm-grey p-6"
                 >
-                  <span className="font-heading text-4xl font-bold text-primary/20">
+                  <span className="font-heading text-5xl font-bold text-primary/15">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p className="mt-2 text-base leading-relaxed text-body">
@@ -223,14 +261,22 @@ export default async function ProcedurePage({ params }: PageProps) {
       )}
 
       {/* Recovery */}
-      <section className={`${proc.procedureSteps ? "bg-warm-grey" : "bg-white"} py-14 sm:py-20`}>
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <SectionHeading
             eyebrow="What to Expect"
             title="Recovery Timeline"
             centered={false}
           />
-          <div className="mt-4 max-w-3xl rounded-lg border border-gray-100 bg-white p-8 shadow-sm space-y-4">
+          <div className="mt-4 max-w-3xl space-y-4 rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                <Shield className="h-5 w-5 text-primary" />
+              </div>
+              <p className="font-heading text-lg font-bold text-heading">
+                Your Recovery Journey
+              </p>
+            </div>
             {proc.recoveryTimeline.split("\n\n").map((paragraph, i) => (
               <p key={i} className="text-lg leading-relaxed text-body">
                 {paragraph}
@@ -249,7 +295,7 @@ export default async function ProcedurePage({ params }: PageProps) {
               title="Insurance Coverage"
               centered={false}
             />
-            <div className="mt-4 max-w-3xl rounded-lg border-l-4 border-primary bg-warm-grey p-8 shadow-sm">
+            <div className="mt-4 max-w-3xl rounded-xl border-l-4 border-primary bg-warm-grey p-8 shadow-sm">
               <p className="text-lg leading-relaxed text-body">
                 {proc.insuranceCoverage}
               </p>
@@ -276,7 +322,8 @@ export default async function ProcedurePage({ params }: PageProps) {
             </h2>
           </div>
           <p className="mx-auto mt-3 max-w-xl text-base text-white/70">
-            Browse our before and after gallery to see transformative outcomes from our board-certified surgeons.
+            Browse our before and after gallery to see transformative outcomes
+            from our board-certified surgeons.
           </p>
           <Link
             href="/gallery"
@@ -288,21 +335,41 @@ export default async function ProcedurePage({ params }: PageProps) {
       </section>
 
       {/* Schedule Consultation CTA */}
-      <section className="bg-white py-14 sm:py-20">
-        <div className="mx-auto max-w-[1320px] px-6">
-          <div className="rounded-lg border border-gray-100 bg-warm-grey p-8 text-center sm:p-12">
-            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
-              Schedule a {proc.name} Consultation Today
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-body">
-              Take the first step toward achieving your goals. Our board-certified plastic surgeons will create a personalized treatment plan tailored to your unique needs.
-            </p>
-            <AppointmentButton className="mt-8 inline-flex items-center gap-2.5 rounded-md border-2 border-primary bg-primary px-9 py-4 text-base font-bold uppercase tracking-wider text-white transition-all hover:bg-transparent hover:text-primary">
-              <Calendar className="h-5 w-5" />
-              Request an Appointment
-            </AppointmentButton>
+      <section className="relative overflow-hidden py-20 sm:py-24">
+        <Image
+          src={proc.heroImage || "/images/hero/SPS-Image-125.jpg"}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/85 to-heading/75" />
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+        <div className="relative z-10 mx-auto max-w-[1320px] px-6 text-center">
+          <div className="mx-auto mb-6 flex items-center justify-center gap-3">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold" />
+            <Sparkles className="h-5 w-5 text-gold" />
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold" />
           </div>
+          <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl lg:text-5xl lg:leading-tight">
+            Schedule a {proc.name} Consultation Today
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+            Take the first step toward achieving your goals. Our board-certified
+            plastic surgeons will create a personalized treatment plan tailored
+            to your unique needs.
+          </p>
+          <AppointmentButton className="mt-8 inline-flex items-center gap-2.5 rounded-md border-2 border-gold bg-gold px-9 py-4 text-base font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white hover:shadow-lg">
+            <Calendar className="h-5 w-5" />
+            Request an Appointment
+          </AppointmentButton>
+          <p className="mt-6 text-sm tracking-wide text-white/40">
+            Board-Certified Plastic Surgeons &bull; Castle Connolly Top Doctors
+          </p>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
       {/* Doctors Section */}
@@ -314,66 +381,88 @@ export default async function ProcedurePage({ params }: PageProps) {
           />
           <div className="grid gap-6 md:grid-cols-2">
             {njDoctor && (
-              <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <Link
-                  href={`/doctors/${njDoctor.slug}`}
-                  className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
-                >
-                  {njDoctor.name}, {njDoctor.credentials}
-                </Link>
-                <p className="mt-1 text-sm font-medium text-body">
-                  {njDoctor.title}
-                </p>
-                <div className="mt-5 space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-body">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <MapPin className="h-3.5 w-3.5 text-primary" />
+              <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={njDoctor.image}
+                    alt={njDoctor.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-8">
+                  <Link
+                    href={`/doctors/${njDoctor.slug}`}
+                    className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
+                  >
+                    {njDoctor.name}, {njDoctor.credentials}
+                  </Link>
+                  <p className="mt-1 text-sm font-medium text-body">
+                    {njDoctor.title}
+                  </p>
+                  <div className="mt-5 space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-body">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <MapPin className="h-3.5 w-3.5 text-primary" />
+                      </div>
+                      {siteConfig.locations.nj.address}
                     </div>
-                    {siteConfig.locations.nj.address}
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <Phone className="h-3.5 w-3.5 text-primary" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Phone className="h-3.5 w-3.5 text-primary" />
+                      </div>
+                      <a
+                        href={`tel:${siteConfig.locations.nj.phoneRaw}`}
+                        className="text-sm font-semibold text-primary transition-colors hover:text-heading"
+                      >
+                        {siteConfig.locations.nj.phone}
+                      </a>
                     </div>
-                    <a
-                      href={`tel:${siteConfig.locations.nj.phoneRaw}`}
-                      className="text-sm font-semibold text-primary transition-colors hover:text-heading"
-                    >
-                      {siteConfig.locations.nj.phone}
-                    </a>
                   </div>
                 </div>
               </div>
             )}
 
             {nyDoctor && (
-              <div className="rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <Link
-                  href={`/doctors/${nyDoctor.slug}`}
-                  className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
-                >
-                  {nyDoctor.name}, {nyDoctor.credentials}
-                </Link>
-                <p className="mt-1 text-sm font-medium text-body">
-                  {nyDoctor.title}
-                </p>
-                <div className="mt-5 space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-body">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <MapPin className="h-3.5 w-3.5 text-primary" />
+              <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={nyDoctor.image}
+                    alt={nyDoctor.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-8">
+                  <Link
+                    href={`/doctors/${nyDoctor.slug}`}
+                    className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
+                  >
+                    {nyDoctor.name}, {nyDoctor.credentials}
+                  </Link>
+                  <p className="mt-1 text-sm font-medium text-body">
+                    {nyDoctor.title}
+                  </p>
+                  <div className="mt-5 space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-body">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <MapPin className="h-3.5 w-3.5 text-primary" />
+                      </div>
+                      {siteConfig.locations.ny.address}
                     </div>
-                    {siteConfig.locations.ny.address}
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <Phone className="h-3.5 w-3.5 text-primary" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <Phone className="h-3.5 w-3.5 text-primary" />
+                      </div>
+                      <a
+                        href={`tel:${siteConfig.locations.ny.phoneRaw}`}
+                        className="text-sm font-semibold text-primary transition-colors hover:text-heading"
+                      >
+                        {siteConfig.locations.ny.phone}
+                      </a>
                     </div>
-                    <a
-                      href={`tel:${siteConfig.locations.ny.phoneRaw}`}
-                      className="text-sm font-semibold text-primary transition-colors hover:text-heading"
-                    >
-                      {siteConfig.locations.ny.phone}
-                    </a>
                   </div>
                 </div>
               </div>
@@ -381,7 +470,6 @@ export default async function ProcedurePage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
     </>
   );
 }
