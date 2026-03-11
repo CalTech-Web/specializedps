@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Sparkles, Star, ArrowRight, Calendar } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import AppointmentButton from "@/components/ui/AppointmentButton";
 
@@ -9,8 +9,9 @@ export default function Footer() {
 
   return (
     <footer>
-      {/* ============ Video CTA Section ============ */}
-      <div className="relative flex min-h-[500px] items-center justify-center overflow-hidden">
+      {/* ============ CTA Section ============ */}
+      <div className="relative overflow-hidden">
+        {/* Background video */}
         <video
           autoPlay
           muted
@@ -18,31 +19,91 @@ export default function Footer() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source
-            src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Video-110.mp4"
-            type="video/mp4"
-          />
+          <source src="/videos/SPS-Video-110.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-heading/50" />
-        <div className="relative z-10 mx-auto max-w-3xl px-6 py-16 text-center">
-          <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
-            Discover the Difference of Personalized Aesthetic Solutions
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/85">
-            At Specialized Plastic Surgery, we&apos;re dedicated to helping you
-            achieve your aesthetic goals with unparalleled precision and care.
-            Explore our services and experience a transformative journey tailored
-            to your unique needs.{" "}
-            <strong>Schedule a Free Consultation</strong> today and take the
-            first step towards a confident, revitalized you. Your transformation
-            starts here.
-          </p>
-          <AppointmentButton
-            className="mt-8 inline-block rounded-md border-2 border-white bg-transparent px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-heading"
-          >
-            Request an Appointment
-          </AppointmentButton>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/80 to-heading/70" />
+
+        {/* Subtle pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        {/* Gold gradient top bar */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+        {/* Content */}
+        <div className="relative z-10 py-14 sm:py-20">
+          <div className="mx-auto max-w-[1320px] px-6">
+            <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
+              {/* Left: Text content */}
+              <div className="max-w-2xl">
+                {/* Decorative ornament */}
+                <div className="mb-6 flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 text-gold" />
+                  <div className="h-[1px] w-16 bg-gradient-to-r from-gold to-transparent" />
+                </div>
+
+                <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
+                  Discover the Difference of Personalized Aesthetic Solutions
+                </h2>
+                <p className="mt-5 text-lg leading-relaxed text-white/70">
+                  Schedule your personalized consultation with one of our
+                  board-certified plastic surgeons today.
+                </p>
+
+                {/* Trust badges */}
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-gold" />
+                    <span className="text-sm font-medium text-white/60">
+                      Board-Certified Surgeons
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-gold" />
+                    <span className="text-sm font-medium text-white/60">
+                      Castle Connolly Top Doctors
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-gold" />
+                    <span className="text-sm font-medium text-white/60">
+                      Two Locations
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: CTA card */}
+              <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm sm:p-10">
+                <p className="text-sm font-semibold uppercase tracking-widest text-gold">
+                  Get Started Today
+                </p>
+                <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-white/60">
+                  Your journey to confidence begins with a consultation.
+                </p>
+                <AppointmentButton className="mt-6 inline-flex items-center gap-2.5 rounded-md border-2 border-gold bg-gold px-9 py-4 text-base font-bold text-heading transition-all hover:border-white hover:bg-transparent hover:text-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                  <Calendar className="h-5 w-5" />
+                  Schedule Consultation
+                </AppointmentButton>
+                <div className="mt-4 flex items-center justify-center gap-1.5 text-sm text-white/40">
+                  <span>Or call us directly</span>
+                  <ArrowRight className="h-3 w-3" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Gold gradient bottom bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </div>
 
       {/* ============ Instagram Photo Strip ============ */}
