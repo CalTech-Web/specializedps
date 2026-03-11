@@ -23,6 +23,7 @@ import {
   ArrowRight,
   Shield,
   Star,
+  Award,
 } from "lucide-react";
 
 interface PageProps {
@@ -379,94 +380,89 @@ export default async function ProcedurePage({ params }: PageProps) {
             eyebrow="Meet Your Surgeons"
             title="Our Surgeons"
           />
-          <div className="grid gap-6 md:grid-cols-2">
-            {njDoctor && (
-              <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={njDoctor.image}
-                    alt={njDoctor.name}
-                    fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-8">
-                  <Link
-                    href={`/doctors/${njDoctor.slug}`}
-                    className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
-                  >
-                    {njDoctor.name}, {njDoctor.credentials}
-                  </Link>
-                  <p className="mt-1 text-sm font-medium text-body">
-                    {njDoctor.title}
-                  </p>
-                  <div className="mt-5 space-y-3">
-                    <div className="flex items-center gap-3 text-sm text-body">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                        <MapPin className="h-3.5 w-3.5 text-primary" />
+          <div className="space-y-8">
+            {[njDoctor, nyDoctor].filter(Boolean).map((doctor) => {
+              const loc = siteConfig.locations[doctor!.locationKey];
+              return (
+                <div
+                  key={doctor!.slug}
+                  className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+                >
+                  <div className="flex flex-col md:flex-row">
+                    {/* Doctor Image */}
+                    <div className="relative w-full flex-shrink-0 md:w-[340px] lg:w-[400px]">
+                      <div className="relative h-72 md:h-full md:min-h-[460px]">
+                        <Image
+                          src={doctor!.aboutImage || doctor!.image}
+                          alt={doctor!.name}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(max-width: 768px) 100vw, 400px"
+                        />
                       </div>
-                      {siteConfig.locations.nj.address}
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                        <Phone className="h-3.5 w-3.5 text-primary" />
-                      </div>
-                      <a
-                        href={`tel:${siteConfig.locations.nj.phoneRaw}`}
-                        className="text-sm font-semibold text-primary transition-colors hover:text-heading"
-                      >
-                        {siteConfig.locations.nj.phone}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
-            {nyDoctor && (
-              <div className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={nyDoctor.image}
-                    alt={nyDoctor.name}
-                    fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-8">
-                  <Link
-                    href={`/doctors/${nyDoctor.slug}`}
-                    className="font-heading text-xl font-bold text-heading transition-colors hover:text-primary"
-                  >
-                    {nyDoctor.name}, {nyDoctor.credentials}
-                  </Link>
-                  <p className="mt-1 text-sm font-medium text-body">
-                    {nyDoctor.title}
-                  </p>
-                  <div className="mt-5 space-y-3">
-                    <div className="flex items-center gap-3 text-sm text-body">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                        <MapPin className="h-3.5 w-3.5 text-primary" />
-                      </div>
-                      {siteConfig.locations.ny.address}
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                        <Phone className="h-3.5 w-3.5 text-primary" />
-                      </div>
-                      <a
-                        href={`tel:${siteConfig.locations.ny.phoneRaw}`}
-                        className="text-sm font-semibold text-primary transition-colors hover:text-heading"
+                    {/* Doctor Info */}
+                    <div className="flex flex-1 flex-col justify-center p-8 lg:p-10">
+                      <Link
+                        href={`/doctors/${doctor!.slug}`}
+                        className="font-heading text-2xl font-bold text-heading transition-colors hover:text-primary"
                       >
-                        {siteConfig.locations.ny.phone}
-                      </a>
+                        {doctor!.name}, {doctor!.credentials}
+                      </Link>
+                      <p className="mt-1 text-base font-medium text-primary">
+                        {doctor!.title}
+                      </p>
+
+                      {/* Credentials */}
+                      <div className="mt-5 space-y-2">
+                        {doctor!.boardCertifications.slice(0, 4).map((cert) => (
+                          <div key={cert} className="flex items-start gap-2.5">
+                            <Award className="mt-0.5 h-4 w-4 shrink-0 text-primary/70" />
+                            <span className="text-sm text-body">{cert}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Location & Phone */}
+                      <div className="mt-6 space-y-3">
+                        <div className="flex items-center gap-3 text-sm text-body">
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                            <MapPin className="h-3.5 w-3.5 text-primary" />
+                          </div>
+                          {loc.address}
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                            <Phone className="h-3.5 w-3.5 text-primary" />
+                          </div>
+                          <a
+                            href={`tel:${loc.phoneRaw}`}
+                            className="text-sm font-semibold text-primary transition-colors hover:text-heading"
+                          >
+                            {loc.phone}
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* Buttons */}
+                      <div className="mt-7 flex flex-wrap gap-3">
+                        <Link
+                          href={`/doctors/${doctor!.slug}`}
+                          className="inline-flex items-center gap-2 rounded-md border-2 border-heading bg-heading px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-heading"
+                        >
+                          View Profile
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                        <AppointmentButton className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-primary">
+                          Schedule Consultation
+                        </AppointmentButton>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              );
+            })}
           </div>
         </div>
       </section>
