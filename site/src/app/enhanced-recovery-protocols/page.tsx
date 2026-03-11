@@ -75,7 +75,7 @@ export default function EnhancedRecoveryProtocolsPage() {
       <HeroSection
         title="Enhanced Recovery Protocols"
         subtitle="Our evidence-based approach to recovery helps you heal faster, with less discomfort, and get back to your life sooner."
-        backgroundImage="/images/hero/SPS-Image-116.jpg"
+        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-232.jpg"
         ctaText="Schedule Consultation"
         ctaLink="#contact-form"
         breadcrumbs={[
