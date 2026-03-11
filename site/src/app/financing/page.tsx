@@ -27,7 +27,7 @@ export default function FinancingPage() {
       {/* ─── Hero ─── */}
       <section className="relative flex min-h-[55vh] w-full items-center justify-center overflow-hidden bg-heading">
         <Image
-          src="/images/hero/SPS-Image-116.jpg"
+          src="https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-sora-shimazaki-5938394.jpg"
           alt="Financing and payment options"
           fill
           priority

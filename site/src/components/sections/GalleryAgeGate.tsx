@@ -7,7 +7,7 @@ interface GalleryAgeGateProps {
   children: React.ReactNode;
 }
 
-const SESSION_KEY = "gallery_age_verified";
+const STORAGE_KEY = "gallery_age_verified";
 
 export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
   const [verified, setVerified] = useState(false);
@@ -15,14 +15,14 @@ export default function GalleryAgeGate({ children }: GalleryAgeGateProps) {
 
   useEffect(() => {
     setMounted(true);
-    if (sessionStorage.getItem(SESSION_KEY) === "true") {
+    if (localStorage.getItem(STORAGE_KEY) === "true") {
       setVerified(true);
     }
   }, []);
 
   function handleYes() {
     setVerified(true);
-    sessionStorage.setItem(SESSION_KEY, "true");
+    localStorage.setItem(STORAGE_KEY, "true");
   }
 
   // Server render and pre-hydration: show blurred with no overlay (prevents flash)
