@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer>
       {/* ============ CTA Section ============ */}
-      <div className="relative overflow-hidden">
+      <div className="relative min-h-[500px] overflow-hidden">
         {/* Background video */}
         <video
           autoPlay
@@ -23,7 +23,7 @@ export default function Footer() {
         </video>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/80 to-heading/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-heading/70 via-heading/60 to-heading/50" />
 
         {/* Subtle pattern overlay */}
         <div
@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
         {/* Content */}
-        <div className="relative z-10 py-14 sm:py-20">
+        <div className="relative z-10 flex min-h-[500px] items-center py-14 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
               {/* Left: Text content */}
