@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       {/* Hero with featured image */}
-      <section className="relative h-[350px] sm:h-[400px]">
+      <section className="relative h-[500px]">
         <Image
           src={getFeaturedImage(post)}
           alt={post.title}
