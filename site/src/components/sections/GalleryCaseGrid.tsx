@@ -38,9 +38,6 @@ export default function GalleryCaseGrid({ cases }: GalleryCaseGridProps) {
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 280px"
                     />
                   </div>
-                  <span className="absolute left-2 top-2 rounded bg-heading/70 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                    Before
-                  </span>
                 </div>
 
                 {/* After */}
@@ -54,9 +51,6 @@ export default function GalleryCaseGrid({ cases }: GalleryCaseGridProps) {
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 280px"
                     />
                   </div>
-                  <span className="absolute right-2 top-2 rounded bg-heading/70 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                    After
-                  </span>
                 </div>
               </div>
 

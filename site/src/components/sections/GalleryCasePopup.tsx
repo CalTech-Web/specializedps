@@ -111,14 +111,6 @@ export default function GalleryCasePopup({
               </div>
             </div>
 
-            {/* Before / After labels */}
-            <span className="absolute left-3 top-3 z-10 rounded bg-heading/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
-              Before
-            </span>
-            <span className="absolute right-3 top-3 z-10 rounded bg-heading/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
-              After
-            </span>
-
             {/* Slider handle */}
             <div
               className="absolute top-0 bottom-0 z-10 w-0.5 cursor-col-resize bg-white shadow-lg"

@@ -85,14 +85,6 @@ export default function BeforeAfterDragSlider() {
             />
           </div>
 
-          {/* Labels */}
-          <span className="absolute left-4 top-4 rounded bg-heading/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-            Before
-          </span>
-          <span className="absolute right-4 top-4 rounded bg-heading/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-            After
-          </span>
-
           {/* Slider handle */}
           <div
             className="absolute top-0 bottom-0 z-10 w-1 cursor-col-resize bg-white shadow-lg"
