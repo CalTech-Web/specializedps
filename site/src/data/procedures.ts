@@ -722,39 +722,47 @@ export const procedures: Procedure[] = [
     name: "Revision Breast Reconstruction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    heroImage: "/images/services/revision-hero.jpg",
     contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-169.jpg",
     description:
-      "Revision breast reconstruction is a specialized procedure designed to address concerns or complications from prior breast reconstruction. Unlike primary reconstruction, which is performed immediately after mastectomy, revision surgery focuses on enhancing or correcting the results of an earlier procedure.\n\nAt Specialized Plastic Surgery, we believe that every patient deserves to feel confident and comfortable with their breast reconstruction results. Common reasons for revision include improving symmetry, addressing changes in breast shape over time, resolving implant-related issues such as capsular contracture or malposition, or enhancing the overall appearance. Each revision is tailored to meet the unique needs of the patient, restoring confidence and comfort.",
+      "Revision breast reconstruction is a specialized procedure designed to address concerns or complications from prior breast reconstruction. Unlike primary reconstruction, which is performed immediately after mastectomy, revision surgery focuses on enhancing or correcting the results of an earlier procedure.\n\nAt Specialized Plastic Surgery, we believe that every patient deserves optimal results. Whether you experience issues with implants, tissue flaps, or asymmetry, our surgeons offer personalized revision options to improve prior breast reconstruction results. Common reasons for revision include improving symmetry, addressing changes in breast shape over time, resolving implant related issues such as capsular contracture or malposition, and enhancing the overall appearance.\n\nEach revision is tailored to meet the unique needs of the patient. During your consultation, our board-certified plastic surgeons assess your individual concerns and goals to determine the best revision approach, restoring confidence and comfort with results that look and feel natural.",
     heroDescription:
       "Improve or correct results from prior breast reconstruction with personalized revision options for symmetry, comfort, and natural appearance.",
     benefits: [
-      "Enhanced symmetry and balanced proportions",
-      "Correction of implant complications (capsular contracture, displacement, rippling)",
-      "Refined tissue flap contours through additional sculpting or fat grafting",
-      "Relief from pain or discomfort caused by scar tissue or nerve issues",
-      "Restored shape after aging or weight changes",
-      "Option to change reconstruction type (implants to flap, or vice versa)",
+      "Enhanced symmetry and balanced proportions for a more cohesive appearance",
+      "Correction of implant complications including capsular contracture, displacement, and rippling",
+      "Refined tissue flap contours through additional sculpting or fat grafting for a rejuvenated look",
+      "Relief from pain or discomfort caused by scar tissue, nerve issues, or poor implant positioning",
+      "Restored shape after aging or weight changes to rejuvenate breast contour",
+      "Option to change reconstruction type, including conversion from implants to natural tissue flap or vice versa",
     ],
     candidateCriteria: [
-      "Prior breast reconstruction with dissatisfaction regarding appearance, symmetry, or comfort",
-      "Implant complications such as capsular contracture, displacement, or rupture",
-      "Discomfort or pain from previous surgery (scar tissue, nerve issues)",
-      "Desire to change reconstruction type or update to current techniques",
-      "Changes in breast shape due to aging or weight fluctuations",
+      "Seeking improvement in breast symmetry, contour, or size after prior reconstruction, with uneven or disproportionate breasts that could benefit from revision",
+      "Experiencing implant complications such as capsular contracture, displacement, or rupture that affect comfort and appearance",
+      "Discomfort or pain from previous surgery caused by scar tissue, nerve issues, or poor implant positioning that may be alleviated through revision",
+      "Desire to change reconstruction type, transitioning from implants to natural tissue reconstruction or vice versa based on lifestyle or evolving preferences",
+      "Changes in breast shape due to aging or weight fluctuations requiring rejuvenation of breast contour",
     ],
     techniques: [
-      "Implant exchange, removal, or repositioning",
-      "Capsular contracture correction (removal of hardened scar tissue)",
-      "Natural tissue (flap) refinement and additional contouring",
-      "Fat grafting to add volume, smooth contours, and correct asymmetry",
-      "Scar revision and tissue reshaping",
-      "Nipple and areola reconstruction or adjustment",
-      "Conversion from subpectoral to prepectoral implant placement",
+      "Implant exchange, removal, or repositioning to improve comfort and appearance, including switching implant types or selecting autologous reconstruction",
+      "Capsular contracture correction through removal of hardened scar tissue to improve the feel and shape of the breast",
+      "Natural tissue (flap) refinement with additional contouring or fat grafting to improve shape and symmetry",
+      "Fat grafting using fat transfer from another body area to add volume, smooth contours, and fill uneven areas",
+      "Scar revision and tissue reshaping to improve appearance and achieve a more natural look",
+      "Nipple and areola reconstruction or adjustment to improve aesthetic balance",
+      "Conversion from subpectoral to prepectoral implant placement, combining breast lift benefits with implant fullness",
+    ],
+    procedureSteps: [
+      "A thorough consultation where your surgeon evaluates your current reconstruction, discusses your concerns and goals, and develops a personalized revision plan.",
+      "Customized incision and access, carefully working with previous scars to minimize new scarring while providing optimal surgical access.",
+      "Correction of existing issues with precision, whether implant repositioning, fat grafting, tissue reshaping, or flap contouring to address each concern.",
+      "Final adjustments to achieve the desired symmetry and contour, ensuring results that look and feel natural.",
+      "Careful closure and bandaging to support healing, with detailed aftercare instructions for optimal recovery.",
     ],
     recoveryTimeline:
-      "Resume light activities within 1-2 weeks. Avoid strenuous exercise for 4-6 weeks. Swelling gradually subsides, and improved shape and symmetry become more visible over the following months. Regular follow-up appointments monitor healing.",
+      "Most patients return to work and daily routines within one to two weeks, depending on the extent of revision. Physical activity should be limited for 4-6 weeks to promote healing and support the best outcomes.\n\nSwelling gradually subsides over the following months, with improved shape and symmetry becoming more visible over time. Regular follow-up appointments allow your surgical team to monitor progress, ensuring results heal beautifully and meet your expectations.",
     insuranceCoverage:
-      "Covered under the Women's Health and Cancer Rights Act (WHCRA) for all stages of breast reconstruction, including revision procedures.",
+      "Covered under the Women's Health and Cancer Rights Act (WHCRA) for all stages of breast reconstruction, including revision procedures. Our dedicated insurance team handles pre-authorization and claims submission to help maximize your benefits.",
   },
   {
     slug: "specialized",
@@ -852,26 +860,43 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
-      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg",
+      "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-kindelmedia-7298900.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-kindelmedia-7298670.jpg",
     description:
-      "Lipo 360 is a powerful body contouring procedure designed to sculpt the entire midsection, creating a slimmer waist, smoother torso, and more defined silhouette. Unlike traditional liposuction that targets only one area, Lipo 360 focuses on shaping the abdomen, flanks, and lower back together to create balanced, natural-looking results.\n\nAt Specialized Plastic Surgery, Lipo 360 is performed with precision, artistic planning, and advanced surgical technique. The goal is not simply to remove fat, but to create refined contours, enhance curves, and deliver a sculpted appearance that aligns with each patient's natural anatomy. By addressing the full circumference of the torso, patients can achieve a more dramatic and harmonious transformation that improves waist-to-hip contrast.",
+      "Lipo 360 is an advanced body contouring procedure designed to sculpt the entire midsection and create a slimmer, more defined waistline. By targeting the abdomen, flanks, and lower back together, Lipo 360 enhances natural curves and improves overall body balance. This comprehensive approach enhances overall body proportion rather than producing isolated improvements.\n\nUnlike traditional liposuction that targets only one area, Lipo 360 focuses on shaping the abdomen, flanks, and lower back together to create balanced, natural looking results. At Specialized Plastic Surgery, Lipo 360 is performed with precision, artistic planning, and advanced surgical technique.\n\nThe procedure is designed to remove stubborn fat deposits that do not respond to diet or exercise. By sculpting the torso in a complete 360 degree manner, Lipo 360 improves body proportions and enhances waist-to-hip contrast, delivering a sculpted appearance that aligns with each patient's natural anatomy.",
     heroDescription:
-      "Sculpt your entire midsection with circumferential liposuction for a slimmer, more defined waistline and balanced contours.",
+      "Sculpt your waistline with advanced circumferential body contouring, targeting the abdomen, flanks, and lower back for a slimmer, more defined silhouette.",
     benefits: [
-      "Sharper waist-to-hip contrast and enhanced curves",
-      "Tighter, more sculpted midsection from every angle",
-      "Smoother transitions between body areas (no abrupt contour changes)",
-      "More balanced, proportionate silhouette",
+      "Sharper waist-to-hip contrast and enhanced natural curves",
+      "Complete 360 degree sculpting of the entire midsection from every angle",
+      "Smoother transitions between body areas with no abrupt contour changes",
+      "More balanced, proportionate silhouette and improved body proportions",
+      "Targeted removal of stubborn fat that does not respond to diet or exercise",
       "Improved body confidence in and out of clothing",
     ],
     candidateCriteria: [
       "Close to goal weight with stubborn fat in the abdomen, flanks, and back",
       "Good skin elasticity for optimal contouring results",
       "No significant loose skin requiring surgical removal",
-      "Non-smoker with realistic expectations about achievable results",
+      "Non-smoker in good overall health with realistic expectations",
+      "Desire for comprehensive midsection sculpting rather than isolated fat removal",
     ],
+    techniques: [
+      "Traditional Lipo 360 (circumferential liposuction of the abdomen, flanks, and lower back)",
+      "Tumescent technique (anesthetic solution for comfort and precise fat removal)",
+      "Power-assisted liposuction (PAL) for efficient, smooth contouring",
+      "Combined Lipo 360 with Brazilian Butt Lift for enhanced curves and fat transfer",
+    ],
+    procedureSteps: [
+      "Small, discreet incisions are placed in natural creases around the midsection, typically just a few millimeters in length",
+      "A tumescent solution is injected to numb the treatment area, minimize bleeding, and facilitate smooth fat removal",
+      "A specialized cannula is used to carefully remove fat from the abdomen, flanks, and lower back while sculpting the body with precision",
+      "The surgeon evaluates contours from all angles to ensure balanced, symmetrical results before closing incisions and applying a compression garment",
+    ],
+    procedureDuration: "2-4 hours",
     recoveryTimeline:
-      "A compression garment is worn to support healing and contouring. Return to desk work in 5-10 days, physical work in 3-4 weeks. Avoid strenuous exercise for 4-6 weeks. Final results become fully visible at 3-6 months as swelling completely resolves.",
+      "A compression garment is worn for several weeks to support healing and optimize contouring results. Most patients return to desk work within 5 to 10 days and physical work in 3 to 4 weeks.\n\nAvoid strenuous exercise for 4 to 6 weeks to support optimal healing. Mild bruising and swelling are normal and gradually subside over the following weeks. Final results become fully visible at 3 to 6 months as swelling completely resolves, revealing a sculpted, defined midsection.",
   },
   {
     slug: "bbl",
@@ -909,9 +934,11 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image128.jpg",
+    contentImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-193.jpg",
     description:
-      "A tummy tuck, or abdominoplasty, is a surgical procedure that removes excess skin and fat from the abdominal area, tightens weakened or separated muscles, and creates a smoother, more toned midsection. This procedure not only addresses loose skin and unwanted fat, but also repairs underlying abdominal muscles that may have been stretched or damaged, especially after pregnancy.\n\nUnlike liposuction, which primarily removes fat, a tummy tuck improves the contour and firmness of the abdomen by addressing both the skin and muscles. At Specialized Plastic Surgery, our surgeons offer multiple abdominoplasty techniques including full, mini, and extended tummy tucks, selecting the best approach based on each patient's anatomy and goals. Liposuction of the flanks may be combined for additional waist contouring.",
+      "A tummy tuck, or abdominoplasty, is a surgical procedure that removes excess skin and fat from the abdominal area, tightens weakened or separated muscles, and creates a smoother, more toned midsection. This procedure not only addresses loose skin and unwanted fat, but also repairs underlying abdominal muscles that may have been stretched or damaged, especially after pregnancy.\n\nUnlike liposuction, which primarily removes fat, a tummy tuck improves the contour and firmness of the abdomen by addressing both the skin and muscles. At Specialized Plastic Surgery, our surgeons offer multiple abdominoplasty techniques including full, mini, and extended tummy tucks, selecting the best approach based on each patient's anatomy and goals. Liposuction of the flanks may be combined for additional waist contouring.\n\nPerformed under general anesthesia at our AAAASF-accredited surgical suite, every tummy tuck is planned with meticulous attention to incision placement, ensuring scars are positioned low on the abdomen and hidden by most clothing and swimwear. Our Enhanced Recovery After Surgery (ERAS) protocols help minimize discomfort and speed your return to daily life.",
     heroDescription:
       "Achieve a flatter, more toned abdomen by removing excess skin, eliminating stubborn fat, and tightening weakened muscles.",
     benefits: [
@@ -920,6 +947,7 @@ export const procedures: Procedure[] = [
       "Removal of excess skin and stretch marks below the incision line",
       "Improved body contour and waistline definition",
       "Relief from weakened core muscles, improved posture, and reduced lower back pain",
+      "Can be combined with liposuction for enhanced waist sculpting",
     ],
     candidateCriteria: [
       "Close to ideal weight with loose skin or weakened abdominal muscles",
@@ -933,9 +961,16 @@ export const procedures: Procedure[] = [
       "Mini tummy tuck (focuses on the lower abdomen below the belly button)",
       "Extended tummy tuck (includes flanks and hips, ideal after major weight loss)",
     ],
+    procedureSteps: [
+      "A low, horizontal incision is made across the lower abdomen, carefully positioned to be hidden by underwear and swimwear",
+      "Excess skin and fat are removed from the abdominal area, and the belly button is repositioned if needed (full tummy tuck)",
+      "Weakened or separated abdominal muscles are tightened and sutured together, restoring core strength and a flatter profile",
+      "Optional liposuction of the flanks and waistline is performed for additional contouring and a more sculpted result",
+      "The incisions are carefully closed in layers and a compression garment is applied to support healing and minimize swelling",
+    ],
     procedureDuration: "2-4 hours",
     recoveryTimeline:
-      "Initial recovery period of 1-2 weeks with limited activity. Incisions are placed low on the abdomen for discreet scarring hidden by most clothing. Avoid strenuous exercise and heavy lifting for 6-8 weeks. Swelling gradually subsides, with sculpted final results visible within a few months.",
+      "Initial recovery requires 1-2 weeks of limited activity. Patients are encouraged to walk gently within the first few days to promote circulation. A compression garment is worn for several weeks to support the abdomen and reduce swelling. Incisions are placed low for discreet scarring hidden by most clothing. Avoid strenuous exercise and heavy lifting for 6-8 weeks. Swelling gradually subsides over the following months, with sculpted final results becoming visible within 3-6 months. Follow-up appointments are scheduled to monitor healing and ensure optimal results.",
   },
   {
     slug: "mommy-makeover",
