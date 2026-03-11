@@ -160,10 +160,10 @@ export default function BreastReductionInsuranceWestchesterPage() {
           alt="Breast Reduction Surgery"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-top"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-heading/60 via-heading/40 to-heading/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-heading/50 via-heading/30 to-heading/70" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
@@ -328,15 +328,16 @@ export default function BreastReductionInsuranceWestchesterPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-lg border border-gray-100 bg-warm-grey p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                  className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                    <item.icon className="h-5 w-5 text-primary" />
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary/0 transition-all duration-300 group-hover:bg-primary" />
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                    <item.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-heading text-base font-bold text-heading">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm text-body">{item.text}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-body">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -436,18 +437,19 @@ export default function BreastReductionInsuranceWestchesterPage() {
           />
 
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
-            {processSteps.map((step) => (
+            {processSteps.map((step, i) => (
               <div
                 key={step.step}
-                className="group relative rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="absolute -top-4 left-8">
-                  <span className="inline-flex h-8 items-center rounded-full bg-primary px-4 text-xs font-bold uppercase tracking-wider text-white">
-                    Step {step.step}
-                  </span>
-                </div>
-                <div className="mt-4 mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                  <step.icon className="h-6 w-6 text-primary" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="mb-5 flex items-center gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-xl font-bold text-white shadow-md transition-transform duration-300 group-hover:scale-110">
+                    {i + 1}
+                  </div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                    <step.icon className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-heading">
                   {step.title}
@@ -520,10 +522,10 @@ export default function BreastReductionInsuranceWestchesterPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-start gap-3 rounded-lg border border-gray-100 bg-warm-grey p-4"
+                    className="group flex items-start gap-3 rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/20"
                   >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                      <item.icon className="h-4 w-4 text-primary" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <item.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <p className="text-sm font-bold text-heading">
@@ -765,83 +767,106 @@ export default function BreastReductionInsuranceWestchesterPage() {
             centered
           />
 
-          <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-gray-100 bg-warm-grey p-8 shadow-sm">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="flex items-start gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <MapPin className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
-                    Address
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-heading">
-                    {ny.address}
-                  </p>
-                </div>
+          <div className="mx-auto mt-10 grid max-w-5xl items-stretch gap-8 lg:grid-cols-2">
+            {/* Building Image */}
+            <div className="relative min-h-[360px] overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2025/08/500-Mamaroneck-Ave-Building-scaled.jpg"
+                alt="500 Mamaroneck Ave, Harrison, NY"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 600px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-heading/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="font-heading text-xl font-bold text-white">
+                  500 Mamaroneck Ave
+                </p>
+                <p className="mt-1 text-sm text-white/80">
+                  Suite 211, Harrison, NY 10528
+                </p>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <Mail className="h-4 w-4 text-primary" />
+            </div>
+
+            {/* Contact Details Card */}
+            <div className="rounded-lg border border-gray-100 bg-warm-grey p-8 shadow-sm">
+              <div className="grid gap-6">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <MapPin className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                      Address
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-heading">
+                      {ny.address}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${ny.email}`}
-                    className="mt-1 block text-sm font-medium text-primary transition-colors hover:text-heading"
-                  >
-                    {ny.email}
-                  </a>
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <Phone className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                      Phone
+                    </p>
+                    <a
+                      href={`tel:${ny.phoneRaw}`}
+                      className="mt-1 block text-sm font-bold text-primary transition-colors hover:text-heading"
+                    >
+                      {ny.phone}
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <Phone className="h-4 w-4 text-primary" />
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <Mail className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                      Email
+                    </p>
+                    <a
+                      href={`mailto:${ny.email}`}
+                      className="mt-1 block text-sm font-medium text-primary transition-colors hover:text-heading"
+                    >
+                      {ny.email}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
-                    Phone
-                  </p>
-                  <a
-                    href={`tel:${ny.phoneRaw}`}
-                    className="mt-1 block text-sm font-bold text-primary transition-colors hover:text-heading"
-                  >
-                    {ny.phone}
-                  </a>
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <Instagram className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                      Instagram
+                    </p>
+                    <a
+                      href={ny.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block text-sm text-heading transition-colors hover:text-primary"
+                    >
+                      @chrisdevulapalliMD
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <Instagram className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
-                    Instagram
-                  </p>
-                  <a
-                    href={ny.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 block text-sm text-heading transition-colors hover:text-primary"
-                  >
-                    @chrisdevulapalliMD
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 sm:col-span-2">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <Clock className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
-                    Hours
-                  </p>
-                  <p className="mt-1 text-sm text-heading">
-                    Mon - Fri: 9am - 5PM
-                  </p>
-                  <p className="text-sm text-body">Sat - Sun: Closed</p>
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <Clock className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-body/60">
+                      Hours
+                    </p>
+                    <p className="mt-1 text-sm text-heading">
+                      Mon - Fri: 9am - 5PM
+                    </p>
+                    <p className="text-sm text-body">Sat - Sun: Closed</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -882,10 +907,11 @@ export default function BreastReductionInsuranceWestchesterPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="group rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
-                  <item.icon className="h-6 w-6 text-primary" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-gold to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-all duration-300 group-hover:border-primary/50 group-hover:bg-primary/20 group-hover:scale-110">
+                  <item.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-heading">
                   {item.title}
@@ -942,15 +968,16 @@ export default function BreastReductionInsuranceWestchesterPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border border-gray-100 bg-warm-grey p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="group relative overflow-hidden rounded-lg border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <item.icon className="h-5 w-5 text-primary" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary/0 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:via-gold group-hover:to-primary" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                  <item.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-heading">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-body">
+                <p className="mt-3 text-sm leading-relaxed text-body">
                   {item.description}
                 </p>
               </div>
@@ -980,20 +1007,37 @@ export default function BreastReductionInsuranceWestchesterPage() {
             centered
           />
 
-          <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
-            {hospitals.map((hospital) => (
-              <div
-                key={hospital}
-                className="flex items-center gap-3 rounded-lg border border-white/[0.06] bg-white/[0.03] px-6 py-5"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <Building2 className="h-5 w-5 text-primary" />
+          <div className="mx-auto mt-10 grid max-w-5xl items-start gap-10 lg:grid-cols-[1fr_400px]">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {hospitals.map((hospital, i) => (
+                <div
+                  key={hospital}
+                  className={`flex items-center gap-3 rounded-lg border border-white/[0.08] bg-white/[0.04] px-6 py-5 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.07] ${
+                    i === hospitals.length - 1 && hospitals.length % 2 !== 0
+                      ? "sm:col-span-2"
+                      : ""
+                  }`}
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                    <Building2 className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="font-heading text-base font-bold text-white">
+                    {hospital}
+                  </span>
                 </div>
-                <span className="font-heading text-base font-bold text-white">
-                  {hospital}
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <div className="relative hidden min-h-[320px] overflow-hidden rounded-lg shadow-lg lg:block">
+              <Image
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2025/09/OR-Surgery-Picture.jpg"
+                alt="State-of-the-art surgical facility"
+                fill
+                className="object-cover"
+                sizes="400px"
+              />
+              <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10" />
+            </div>
           </div>
         </div>
       </section>
@@ -1085,10 +1129,14 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
             <div className="text-center sm:text-left">
-              <p className="font-heading text-lg font-bold text-white">
-                Specialized Plastic Surgery
-              </p>
-              <p className="mt-1 text-xs font-bold uppercase tracking-wider text-primary">
+              <Image
+                src="/images/logos/white-logo.webp"
+                alt="Specialized Plastic Surgery"
+                width={220}
+                height={50}
+                className="mx-auto sm:mx-0"
+              />
+              <p className="mt-2 text-xs font-bold uppercase tracking-wider text-primary">
                 New York Office
               </p>
             </div>
