@@ -246,9 +246,8 @@ export default function GalleryPage() {
         </section>
 
         {/* ───────── Section 5: Contact Form ───────── */}
-        <section className="relative overflow-hidden bg-white py-14 sm:py-20">
-          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
-          <div className="relative mx-auto max-w-2xl px-6">
+        <section className="overflow-hidden py-14 sm:py-20" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="mx-auto max-w-2xl px-6">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-body/70">
               Join Us on Your Journey
             </p>
@@ -268,7 +267,7 @@ export default function GalleryPage() {
               Specialized Plastic Surgery, where your journey to transformation
               begins.
             </p>
-            <div className="mt-12">
+            <div className="mt-12 rounded-xl bg-white p-8 shadow-lg sm:p-10">
               <ContactForm />
             </div>
           </div>

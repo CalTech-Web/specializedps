@@ -365,9 +365,8 @@ export default function ExclusiveBreastAugmentationPricingPage() {
       <FAQSection faqs={faqs} heading="Breast Augmentation FAQ" />
 
       {/* Contact Form */}
-      <section id="contact-form" className="relative bg-white py-14 sm:py-20">
-        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-[1320px] px-6">
+      <section id="contact-form" className="py-14 sm:py-20" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Claim This Offer"
@@ -375,7 +374,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
               description="Fill out the form below to schedule your consultation with Dr. Chris Devulapalli and lock in this exclusive pricing."
               centered
             />
-            <div className="mt-8 rounded-xl border border-gray-100 bg-white p-8 shadow-sm sm:p-10">
+            <div className="mt-8 rounded-xl bg-white p-8 shadow-lg sm:p-10">
               <ContactForm
                 fixedLocation="NY"
                 fixedDoctor="Dr. Chris Devulapalli, MD"

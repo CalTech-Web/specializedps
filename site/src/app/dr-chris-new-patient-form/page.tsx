@@ -328,9 +328,8 @@ export default function DrChrisNewPatientFormPage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="relative bg-white py-14 sm:py-20">
-        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-[1320px] px-6">
+      <section id="contact-form" className="py-14 sm:py-20" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_520px]">
             {/* Left: Info */}
             <div>
@@ -389,7 +388,7 @@ export default function DrChrisNewPatientFormPage() {
             </div>
 
             {/* Right: Form */}
-            <div className="rounded-lg border border-gray-100 bg-warm-grey p-8 shadow-sm lg:sticky lg:top-24">
+            <div className="rounded-xl bg-white p-8 shadow-lg sm:p-10 lg:sticky lg:top-24">
               <h3 className="font-heading text-xl font-bold text-heading">
                 Request Your Consultation
               </h3>

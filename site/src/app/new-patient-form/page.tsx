@@ -100,9 +100,8 @@ export default function NewPatientFormPage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="relative bg-white py-14 sm:py-16">
-        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="relative mx-auto max-w-[1320px] px-6">
+      <section id="contact-form" className="py-14 sm:py-16" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading
               eyebrow="Get Started"
@@ -110,7 +109,7 @@ export default function NewPatientFormPage() {
               description="Select your preferred location and surgeon, then fill out the form below. We will reach out to confirm your appointment."
               centered
             />
-            <div className="mt-8 rounded-lg border border-gray-100 bg-white p-8 shadow-sm">
+            <div className="mt-8 rounded-xl bg-white p-8 shadow-lg sm:p-10">
               <ContactForm />
             </div>
           </div>
