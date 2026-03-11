@@ -15,6 +15,7 @@ export interface Procedure {
   procedureDuration?: string;
   insuranceCoverage?: string;
   procedureSteps?: string[];
+  heroVideo?: string;
 }
 
 export type ProcedureCategory =
@@ -30,6 +31,7 @@ export interface ServiceCategory {
   heroDescription: string;
   icon: string;
   heroImage?: string;
+  heroVideo?: string;
 }
 
 export const serviceCategories: ServiceCategory[] = [
@@ -51,6 +53,7 @@ export const serviceCategories: ServiceCategory[] = [
     icon: "Heart",
     heroImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-190.jpg",
+    heroVideo: "/videos/SPS-Video-102.mp4",
   },
   {
     slug: "breast-reconstruction",
@@ -61,6 +64,7 @@ export const serviceCategories: ServiceCategory[] = [
       "Compassionate, expert breast reconstruction using advanced microsurgical techniques to restore form, function, and confidence after breast cancer surgery.",
     icon: "HandHeart",
     heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-anntarazevich-5629208.jpg",
+    heroVideo: "/videos/Breast-Reconstruction-Video.mp4",
   },
   {
     slug: "body",
@@ -88,6 +92,7 @@ export const procedures: Procedure[] = [
       "Restore a youthful, refreshed appearance by lifting and repositioning facial tissues to smooth folds, reduce sagging, and restore natural contour.",
     heroImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-244.jpg",
+    heroVideo: "/videos/SPS-Video-105.mp4",
     contentImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2025/11/SPS-Center-Image.jpg",
     benefits: [
@@ -153,6 +158,7 @@ export const procedures: Procedure[] = [
     category: "face",
     categorySlug: "face",
     heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-1004.jpg",
+    heroVideo: "/videos/SPS-Video-106.mp4",
     contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/11/SPS-Center-Image.jpg",
     description:
       "Rhinoplasty, commonly called a \"nose job,\" is a popular surgical procedure designed to enhance the shape, size, and overall appearance of the nose while improving facial balance. It can address both structural issues and aesthetic concerns, from refining the nasal tip and correcting a bump on the bridge to straightening the nose or improving breathing difficulties caused by a deviated septum.\n\nAt Specialized Plastic Surgery, our board-certified surgeons understand that the nose is the central feature of the face, and even subtle changes can create a significant improvement in facial harmony. Every rhinoplasty procedure is customized to complement each patient's unique facial structure, ensuring results that look natural and proportionate while also improving function when needed.",
@@ -818,6 +824,7 @@ export const procedures: Procedure[] = [
     categorySlug: "body",
     heroImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-233.jpg",
+    heroVideo: "/videos/SPS-Video-103.mp4",
     contentImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-197.jpg",
     description:
@@ -996,6 +1003,7 @@ export const procedures: Procedure[] = [
     categorySlug: "body",
     heroImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-244.jpg",
+    heroVideo: "/videos/SPS-Video-104.mp4",
     description:
       "A mommy makeover is a comprehensive cosmetic procedure designed to help mothers restore their pre-pregnancy shape and boost their confidence. Pregnancy, childbirth, and breastfeeding can bring significant changes to the body, affecting areas like the abdomen, breasts, and more. A mommy makeover combines a range of body-contouring and aesthetic surgeries customized to each individual's needs.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons have helped countless women achieve their aesthetic goals, providing natural-looking results that help them feel like the best versions of themselves. Typically, a mommy makeover includes procedures such as tummy tuck, breast enhancement (lift and/or augmentation), and liposuction, allowing women to address multiple areas in a single surgery for a balanced, youthful appearance.",
     heroDescription:

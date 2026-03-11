@@ -11,6 +11,7 @@ interface HeroSectionProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  backgroundVideo?: string;
   ctaText?: string;
   ctaLink?: string;
   secondaryCtaText?: string;
@@ -23,6 +24,7 @@ export default function HeroSection({
   title,
   subtitle,
   backgroundImage,
+  backgroundVideo,
   ctaText,
   ctaLink,
   secondaryCtaText,
@@ -47,18 +49,31 @@ export default function HeroSection({
     </nav>
   );
 
-  /* ---------- Page hero with background image ---------- */
-  if (backgroundImage) {
+  /* ---------- Page hero with background image/video ---------- */
+  if (backgroundImage || backgroundVideo) {
     return (
       <section className="relative flex h-[500px] w-full items-center justify-center overflow-hidden bg-heading">
-        <Image
-          src={backgroundImage}
-          alt=""
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        {backgroundVideo && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+        )}
+        {backgroundImage && !backgroundVideo && (
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+        )}
         {overlay && <div className="absolute inset-0 bg-gradient-to-b from-heading/60 via-heading/40 to-heading/70" />}
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 text-center sm:py-20">

@@ -48,6 +48,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         title={`${cat.name} Procedures`}
         subtitle={cat.heroDescription}
         backgroundImage={cat.heroImage || "/images/hero/SPS-Image-125.jpg"}
+        backgroundVideo={cat.heroVideo}
         ctaText="Schedule Consultation"
         ctaLink="/contact"
         breadcrumbs={[
