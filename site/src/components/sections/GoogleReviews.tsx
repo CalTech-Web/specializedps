@@ -51,8 +51,8 @@ function StarRating({ rating }: { rating: number }) {
 /* ------------------------------------------------------------------ */
 export default function GoogleReviews() {
   return (
-    <section className="bg-warm-grey py-14 sm:py-20 overflow-hidden">
-      <div className="mx-auto max-w-[1320px] px-6">
+    <section className="bg-warm-grey py-14 sm:py-20">
+      <div className="mx-auto max-w-[1320px] px-6 overflow-hidden">
         <div className="space-y-14">
           {doctorReviews.map((doc) => (
             <DoctorReviewMarquee key={doc.doctorSlug} doctor={doc} />
@@ -148,8 +148,6 @@ function DoctorReviewMarquee({
             <ReviewCard
               key={`${review.name}-${i}`}
               review={review}
-              doctorImage={doctor.doctorImage}
-              doctorName={doctor.doctorName}
               onHover={(rect) => setHoveredReview({ review, rect })}
               onLeave={() => setHoveredReview(null)}
             />
@@ -165,7 +163,6 @@ function DoctorReviewMarquee({
       {hoveredReview && (
         <ReviewPopup
           review={hoveredReview.review}
-          doctorImage={doctor.doctorImage}
           doctorName={doctor.doctorName}
           triggerRect={hoveredReview.rect}
           onClose={() => setHoveredReview(null)}
@@ -180,14 +177,10 @@ function DoctorReviewMarquee({
 /* ------------------------------------------------------------------ */
 function ReviewCard({
   review,
-  doctorImage,
-  doctorName,
   onHover,
   onLeave,
 }: {
   review: GoogleReview;
-  doctorImage: string;
-  doctorName: string;
   onHover: (rect: DOMRect) => void;
   onLeave: () => void;
 }) {
@@ -202,23 +195,11 @@ function ReviewCard({
       onMouseLeave={onLeave}
       className="w-[300px] flex-shrink-0 cursor-pointer rounded-lg bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
     >
-      <div className="flex items-start gap-3">
-        {/* Doctor mini avatar */}
-        <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full">
-          <Image
-            src={doctorImage}
-            alt={doctorName}
-            fill
-            className="object-cover object-top"
-            sizes="36px"
-          />
-        </div>
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-bold text-heading">{review.name}</p>
-          <div className="mt-0.5 flex items-center gap-2">
-            <StarRating rating={review.stars} />
-            <span className="text-xs text-body/50">{review.date}</span>
-          </div>
+      <div>
+        <p className="text-sm font-bold text-heading">{review.name}</p>
+        <div className="mt-0.5 flex items-center gap-2">
+          <StarRating rating={review.stars} />
+          <span className="text-xs text-body/50">{review.date}</span>
         </div>
       </div>
       <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">
@@ -233,13 +214,11 @@ function ReviewCard({
 /* ------------------------------------------------------------------ */
 function ReviewPopup({
   review,
-  doctorImage,
   doctorName,
   triggerRect,
   onClose,
 }: {
   review: GoogleReview;
-  doctorImage: string;
   doctorName: string;
   triggerRect: DOMRect;
   onClose: () => void;
@@ -287,28 +266,17 @@ function ReviewPopup({
         <X className="h-3.5 w-3.5" />
       </button>
 
-      {/* Doctor + Reviewer info */}
-      <div className="flex items-start gap-4">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
-          <Image
-            src={doctorImage}
-            alt={doctorName}
-            fill
-            className="object-cover object-top"
-            sizes="56px"
-          />
-        </div>
-        <div>
-          <p className="font-heading text-base font-bold text-heading">
-            {review.name}
-          </p>
-          <p className="mt-0.5 text-xs text-body/60">
-            Review for {doctorName}
-          </p>
-          <div className="mt-1.5 flex items-center gap-2">
-            <StarRating rating={review.stars} />
-            <span className="text-xs text-body/50">{review.date}</span>
-          </div>
+      {/* Reviewer info */}
+      <div>
+        <p className="font-heading text-base font-bold text-heading">
+          {review.name}
+        </p>
+        <p className="mt-0.5 text-xs text-body/60">
+          Review for {doctorName}
+        </p>
+        <div className="mt-1.5 flex items-center gap-2">
+          <StarRating rating={review.stars} />
+          <span className="text-xs text-body/50">{review.date}</span>
         </div>
       </div>
 
