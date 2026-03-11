@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AppointmentButton from "@/components/ui/AppointmentButton";
 import {
+  CheckCircle,
+  Check,
   CreditCard,
   ShieldCheck,
-  Calculator,
-  CheckCircle,
-  DollarSign,
-  Clock,
+  Phone,
+  ExternalLink,
+  CircleDollarSign,
+  FileText,
+  Wallet,
+  ListChecks,
+  Send,
+  HelpCircle,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -20,207 +29,442 @@ export const metadata: Metadata = {
 export default function FinancingPage() {
   return (
     <>
-      <HeroSection
-        title="Financing & Payment Options"
-        subtitle="We believe exceptional care should be accessible. Explore flexible payment plans designed to fit your budget."
-        backgroundImage="/images/hero/SPS-Image-129.jpg"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Financing" },
-        ]}
-      />
+      {/* ─── Hero ─── */}
+      <section className="relative flex min-h-[55vh] w-full items-center justify-center overflow-hidden bg-heading">
+        <Image
+          src="/images/financing/hero-bg.jpg"
+          alt="Financing and payment options"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-heading/60 via-heading/40 to-heading/70" />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 text-center sm:py-20">
+          <nav className="mb-4 flex items-center justify-center gap-1.5 text-sm text-white/60">
+            <Link href="/" className="transition-colors hover:text-white">
+              Home
+            </Link>
+            <span className="text-white/40">/</span>
+            <span className="text-white/80">Financing</span>
+          </nav>
 
-      {/* Transparent Pricing */}
-      <section className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-6">
-          <SectionHeading
-            eyebrow="Your Dream Is Accessible"
-            title="Transparent, Upfront Pricing"
-            description="We understand that investing in expert surgical care is a major decision. Our practice is dedicated to transparent pricing and a supportive experience, ensuring that financial limitations do not stand in the way of accessing the highest quality care. During your consultation, you will receive a detailed breakdown of all fees, including surgeon fees, anesthesia, facility costs, and any post-operative garments or supplies."
-            centered
-          />
+          <h1 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Your Dream Is Accessible: Financing and Payment Options
+          </h1>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                <DollarSign className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading text-lg font-bold text-heading">
-                All-Inclusive Quotes
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-body">
-                Your quote includes surgeon fees, anesthesia, facility costs,
-                and post-operative supplies so you know the full cost upfront.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                <ShieldCheck className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading text-lg font-bold text-heading">
-                No Hidden Fees
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-body">
-                We are committed to honest pricing with no surprise charges.
-                What you are quoted is what you pay.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                <Calculator className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading text-lg font-bold text-heading">
-                Flexible Plans
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-body">
-                Multiple financing options let you choose a payment plan that
-                works for your lifestyle and budget.
-              </p>
-            </div>
-          </div>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+            We understand that investing in expert surgical care is a major
+            decision. Our practice is dedicated to transparent pricing and a
+            supportive experience, ensuring that financial limitations do not
+            stand in the way of accessing the highest quality care.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
+            We firmly believe that everyone deserves access to top-tier plastic
+            surgery, and we are proud to offer flexible financing solutions
+            through two trusted partners: CareCredit and Cherry Payments.
+          </p>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
-      {/* CareCredit */}
-      <section className="relative bg-heading py-14 sm:py-16">
-        {/* Marble texture overlay */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      {/* ─── Cherry Payments Section ─── */}
+      <section className="bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+            {/* Left: Image */}
+            <div className="relative overflow-hidden rounded-xl">
+              <Image
+                src="/images/financing/cherry-woman.webp"
+                alt="Cherry Payments financing"
+                width={600}
+                height={800}
+                className="h-auto w-full object-cover"
+              />
+            </div>
 
-        {/* Gold accent bar */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
-
-        <div className="relative mx-auto max-w-[1320px] px-6">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
+            {/* Right: Cherry Content */}
             <div>
-              <SectionHeading
-                eyebrow="Financing Option"
-                title="CareCredit"
-                centered={false}
-                light
-              />
-              <p className="mb-6 text-lg leading-relaxed text-white/75">
-                CareCredit is a revolving health and wellness credit card
-                accepted at over 266,000 locations nationwide. It gives you the
-                flexibility to use your card again and again for procedures,
-                follow-up treatments, and even everyday health expenses.
-              </p>
-              <p className="text-base leading-relaxed text-white/70">
-                CareCredit offers promotional financing periods of 6 to 24
-                months at 0% APR with deferred interest. Longer terms of up to
-                60 months are available at a reduced APR for larger procedures.
-                Please note that CareCredit requires a hard credit check as part
-                of the application process.
-              </p>
-
-              <div className="mt-8 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <CreditCard className="h-6 w-6 text-primary" />
+              {/* Cherry Logo/Badge */}
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1a1a2e]">
+                  <CircleDollarSign className="h-5 w-5 text-white" />
                 </div>
-                <p className="text-sm leading-relaxed text-white/60">
-                  Apply online or in our office before your procedure date.
-                </p>
+                <span className="text-lg font-bold text-heading">Cherry</span>
               </div>
-            </div>
 
-            <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-8">
-              <h3 className="font-heading mb-6 text-xl font-bold text-white">
-                CareCredit Highlights
-              </h3>
-              <ul className="space-y-4">
+              <h2 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+                Treat now, pay later
+              </h2>
+
+              <ul className="mt-6 space-y-3">
                 {[
-                  "0% APR promotional financing for 6 to 24 months",
-                  "Extended terms up to 60 months at reduced APR",
-                  "Reusable at 266,000+ healthcare locations",
-                  "Deferred interest on promotional plans",
-                  "Requires a hard credit check for approval",
-                  "Apply online or in our office before your procedure",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-white/80">
-                      {item}
+                  { text: "No hard credit checks", highlight: ", ever" },
+                  {
+                    text: "True 0% APR",
+                    highlight: " options available",
+                  },
+                  {
+                    text: "Create payment plans with APR as low as 0.49%",
+                    highlight: "",
+                  },
+                  { text: "Up to ", highlight: "60 month terms" },
+                  { text: "No hidden fees", highlight: "" },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-base text-body">
+                      <span className="font-semibold text-heading">
+                        {item.text}
+                      </span>
+                      {item.highlight}
                     </span>
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="https://patient.withcherry.com/prequalify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                >
+                  See If You Qualify
+                </a>
+                <a
+                  href="https://patient.withcherry.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                >
+                  Manage Your Account
+                </a>
+              </div>
+
+              {/* Payment Example */}
+              <div className="mt-10 border-t border-gray-200 pt-8">
+                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                  See an Example of What You Could Pay
+                </h3>
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="text-sm text-body">
+                    Example payments for
+                  </span>
+                  <span className="rounded border border-gray-300 px-4 py-1.5 text-base font-bold text-heading">
+                    $5,000
+                  </span>
+                </div>
+
+                <a
+                  href="https://patient.withcherry.com/prequalify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90 sm:w-auto"
+                >
+                  Get Personalized Options
+                </a>
+
+                <div className="mt-4 flex flex-wrap gap-4 text-sm text-body">
+                  <div className="flex items-center gap-1.5">
+                    <ShieldCheck className="h-4 w-4 text-primary" />
+                    <span>No hard credit checks, ever</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>60 seconds to apply</span>
+                  </div>
+                </div>
+
+                <p className="mt-3 text-xs text-body/60">
+                  *All rates are personalized and are subject to eligibility. For
+                  loan terms, click here for details.
+                </p>
+              </div>
+
+              {/* How Cherry Works */}
+              <div className="mt-10 border-t border-gray-200 pt-8">
+                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                  How Cherry Works
+                </h3>
+                <ol className="mt-5 space-y-4">
+                  {[
+                    {
+                      icon: FileText,
+                      text: "See if you qualify",
+                      desc: "Only takes 30 seconds to complete the application",
+                    },
+                    {
+                      icon: ListChecks,
+                      text: "Pick a plan",
+                      desc: "Pick your approved plan to pay for your treatment",
+                    },
+                    {
+                      icon: Wallet,
+                      text: "Pay over time",
+                      desc: "Choose a plan length that fits your needs with 0% APR options",
+                    },
+                  ].map((step, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
+                        <step.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-heading">
+                          {step.text}
+                        </p>
+                        <p className="text-sm text-body">{step.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Questions */}
+              <div className="mt-10 border-t border-gray-200 pt-8">
+                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                  Questions?
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-body">
+                  What is Cherry? Cherry is a buy now, pay later company, making
+                  it fast and easy to pay for health and wellness procedures and
+                  treatments.
+                </p>
+
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://withcherry.com/faqs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-primary/90"
+                  >
+                    View All FAQs
+                  </a>
+                  <a
+                    href="https://withcherry.com/help"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-heading bg-transparent px-7 py-3 text-sm font-bold uppercase tracking-wider text-heading transition-all hover:bg-heading hover:text-white"
+                  >
+                    Visit Help Center
+                  </a>
+                </div>
+              </div>
+
+              {/* Fine Print */}
+              <p className="mt-8 text-[11px] leading-relaxed text-body/50">
+                *Fixed payments may vary 0% APR offer availability may vary by
+                merchant. Any promotional rate based on qualifying transactions.
+                Fixed rate and APR feature of the Cherry program will include a
+                fixed monthly payment, for loans with 0% APR the approved new
+                balance must be paid in full by the end of the promotional term.
+                If not, interest on the remaining balance will be applied as
+                initially determined and may be up to a max APR of 35.99%.
+                Results may vary. All credit decisions are subject to credit
+                approval. By Cherry Technologies, Inc. NMLS#2154504, Licensed by
+                the CA Dept. of Financial Protection & Innovation under the CFLL.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cherry Payments */}
-      <section className="bg-white py-14 sm:py-16">
+      {/* ─── CareCredit Section ─── */}
+      <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="order-2 rounded-lg border border-gray-100 bg-white p-8 shadow-sm lg:order-1">
-              <h3 className="font-heading mb-6 text-xl font-bold text-heading">
-                Cherry Highlights
-              </h3>
-              <ul className="space-y-4">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+            {/* Left: CareCredit Image */}
+            <div className="relative overflow-hidden rounded-xl">
+              <Image
+                src="/images/financing/carecredit-promo.webp"
+                alt="Pay over time with CareCredit"
+                width={600}
+                height={800}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+
+            {/* Right: CareCredit Content */}
+            <div>
+              <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                Credit Options
+              </span>
+
+              <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
+                Pay Over Time with the CareCredit Credit Card
+              </h2>
+
+              <p className="mt-5 text-base leading-relaxed text-body">
+                Dr. Chris Devulapalli, Specialized Plastic Surgery Westchester
+                proudly accepts the{" "}
+                <strong className="text-heading">CareCredit credit card</strong>{" "}
+                for all your health, wellness, and beauty needs.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-body">
+                Help fit the care you want and need into your budget with the
+                CareCredit health and wellness credit card. It offers flexible
+                financing options that allow you to pay over time.*
+              </p>
+
+              <ul className="mt-5 space-y-2">
                 {[
-                  "Soft credit check with no impact on your credit score",
-                  "True 0% APR options for qualified borrowers",
-                  "Fixed monthly payments with clear, transparent terms",
-                  "Loan terms ranging from 3 to 60 months",
-                  "Quick application with fast approval decisions",
-                  "No prepayment penalties or hidden fees",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-base leading-relaxed text-body">
-                      {item}
-                    </span>
+                  "Promotional financing options available",
+                  "See if you prequalify with no impact to your credit score",
+                  "Instant credit decisions",
+                  "No annual fee*",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span className="text-sm text-body">{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
 
-            <div className="order-1 lg:order-2">
-              <SectionHeading
-                eyebrow="Financing Option"
-                title="Cherry Payments"
-                centered={false}
-              />
-              <p className="mb-6 text-lg leading-relaxed text-body">
-                Cherry offers fixed installment loans designed specifically for
-                healthcare expenses. Unlike revolving credit, Cherry provides a
-                clear, predictable repayment schedule so you always know exactly
-                what your monthly payment will be.
-              </p>
-              <p className="text-base leading-relaxed text-body">
-                One of the biggest advantages of Cherry is the soft credit
-                check, which means applying will not affect your credit score.
-                Qualified borrowers can access true 0% APR financing with fixed
-                terms ranging from 3 to 60 months, making it an excellent choice
-                for patients who want straightforward, no-surprise payment
-                plans.
+              <p className="mt-6 text-base leading-relaxed text-body">
+                CareCredit helps make care possible for you and your family. It
+                is accepted at 266,000+ locations, so you can pay for
+                chiropractic, dentistry, dermatology, cosmetic, hearing,
+                prescriptions, pet care, and more. It is a convenient way to fit
+                expected and unexpected expenses into your budget.
               </p>
 
-              <div className="mt-8 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                  <ShieldCheck className="h-6 w-6 text-primary" />
-                </div>
-                <p className="text-sm leading-relaxed text-body">
-                  No hard credit pull means applying will not affect your score.
+              <p className="mt-4 text-sm text-body/70">
+                Learn more by visiting carecredit.com or contacting our office.
+              </p>
+
+              {/* Fine Print */}
+              <div className="mt-6 border-t border-gray-200 pt-5">
+                <p className="text-[11px] leading-relaxed text-body/50">
+                  *Subject to credit approval. Visit carecredit.com for details.
+                  For new accounts as of 5/30/24: Purchase APR is 32.99%. Penalty
+                  APR is 39.99%. Minimum Interest Charge is $2.
                 </p>
+                <p className="mt-2 text-[11px] leading-relaxed text-body/50">
+                  CareCredit is a Synchrony solution. When you go to the
+                  CareCredit website, you will be subject to the Synchrony
+                  privacy policy, which differs from the Dr. Chris Devulapalli,
+                  Specialized Plastic Surgery Westchester privacy policy. You can
+                  learn more about the Synchrony privacy policy at carecredit.com.
+                </p>
+              </div>
+
+              {/* Financing Available Button */}
+              <div className="mt-6">
+                <a
+                  href="https://www.carecredit.com/apply"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border-2 border-primary bg-primary px-7 py-3 text-sm font-bold text-heading transition-all hover:bg-primary/90"
+                >
+                  <CreditCard className="h-4 w-4" />
+                  Financing Available
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Payment Example */}
-      <section className="relative bg-heading py-14 sm:py-16">
-        {/* Marble texture overlay */}
+      {/* ─── Comparison Table: CareCredit vs Cherry ─── */}
+      <section className="bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            Compare Your Options
+          </span>
+
+          <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
+            Financing Options: CareCredit vs. Cherry Payments
+          </h2>
+
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-body">
+            We offer two distinct financing models to give you maximum
+            flexibility based on your credit profile, desired payment terms, and
+            procedure cost.
+          </p>
+
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse">
+              <thead>
+                <tr>
+                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
+                    Feature
+                  </th>
+                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
+                    CareCredit
+                  </th>
+                  <th className="border border-gray-200 bg-heading px-5 py-4 text-left text-sm font-bold uppercase tracking-wider text-white">
+                    Cherry Payments
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    feature: "Model",
+                    carecredit:
+                      "Revolving Credit Card (specifically for health & wellness)",
+                    cherry:
+                      "Fixed Installment Loans (Buy Now, Pay Later)",
+                  },
+                  {
+                    feature: "Credit Check",
+                    carecredit: "Hard Credit Check required for final approval",
+                    cherry:
+                      "Soft Credit Check (does not impact credit score)",
+                  },
+                  {
+                    feature: "Payment Structure",
+                    carecredit:
+                      "Minimum monthly payments; balance is revolving",
+                    cherry:
+                      "Fixed monthly installments with transparent, set terms",
+                  },
+                  {
+                    feature: "0% APR Option",
+                    carecredit:
+                      "Deferred Interest Promotions (6-24 months). If the balance is not paid in full by end of the term, interest is charged retroactively from the purchase date.",
+                    cherry:
+                      "True 0% APR Plans for qualified borrowers. Interest is never applied retroactively.",
+                  },
+                  {
+                    feature: "Terms",
+                    carecredit:
+                      "Promotional terms (6-24 months) or longer-term reduced APR options (up to 60 months)",
+                    cherry:
+                      "Flexible terms typically ranging from 3 to 60 months",
+                  },
+                  {
+                    feature: "Usage",
+                    carecredit:
+                      "Reusable for healthcare services at any provider that accepts CareCredit",
+                    cherry:
+                      "Specific to the approved treatment and provider",
+                  },
+                ].map((row, i) => (
+                  <tr
+                    key={i}
+                    className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}
+                  >
+                    <td className="border border-gray-200 px-5 py-4 text-sm font-semibold text-heading">
+                      {row.feature}
+                    </td>
+                    <td className="border border-gray-200 px-5 py-4 text-sm leading-relaxed text-body">
+                      {row.carecredit}
+                    </td>
+                    <td className="border border-gray-200 px-5 py-4 text-sm leading-relaxed text-body">
+                      {row.cherry}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Example Monthly Payment Breakdown ─── */}
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -229,66 +473,130 @@ export default function FinancingPage() {
             backgroundPosition: "center",
           }}
         />
-
-        {/* Gold accent bar */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-[1320px] px-6">
-          <SectionHeading
-            eyebrow="Payment Example"
-            title="See What Your Monthly Payments Could Look Like"
-            centered
-            light
-          />
+          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+            Payment Examples
+          </span>
 
-          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-white/[0.06] bg-white/[0.03] p-8 sm:p-10">
-            <div className="mb-6 flex items-center justify-center gap-3">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-                <Clock className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-heading text-2xl font-bold text-white">
-                $9,000 Procedure
-              </h3>
+          <h2 className="mt-4 font-heading text-2xl font-bold text-white sm:text-3xl">
+            Example Monthly Payment Breakdown
+          </h2>
+
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/70">
+            To give you an idea of affordability, here is an example of what a{" "}
+            <strong className="text-white">$9,000 procedure</strong> might cost
+            under common financing scenarios.
+          </p>
+
+          <div className="mt-10 overflow-x-auto">
+            <table className="w-full min-w-[700px] border-collapse">
+              <thead>
+                <tr>
+                  <th className="border border-white/10 bg-primary px-5 py-4 text-left text-sm font-bold text-heading">
+                    Scenario
+                  </th>
+                  <th className="border border-white/10 bg-primary px-5 py-4 text-left text-sm font-bold text-heading">
+                    Service
+                  </th>
+                  <th className="border border-white/10 bg-primary px-5 py-4 text-left text-sm font-bold text-heading">
+                    Estimated Monthly Payment
+                  </th>
+                  <th className="border border-white/10 bg-primary px-5 py-4 text-left text-sm font-bold text-heading">
+                    Total Term
+                  </th>
+                  <th className="border border-white/10 bg-primary px-5 py-4 text-left text-sm font-bold text-heading">
+                    Interest Note
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    scenario: "Short-Term, No Interest",
+                    service: "CareCredit",
+                    payment: "$375.00",
+                    term: "24 Months",
+                    note: "Requires balance paid in full by month 24 to avoid deferred interest",
+                  },
+                  {
+                    scenario: "Short-Term, True 0%",
+                    service: "Cherry Payments",
+                    payment: "$750.00",
+                    term: "12 Months",
+                    note: 'The qualified rate is genuinely 0% APR',
+                  },
+                  {
+                    scenario: "Longer-Term, Reduced APR",
+                    service: "CareCredit",
+                    payment: "~$180.00",
+                    term: "60 Months",
+                    note: "Requires a purchase of monthly payment at reduced APR (e.g., 32.99%)",
+                  },
+                  {
+                    scenario: "Longer-Term, Fixed",
+                    service: "Cherry Payments",
+                    payment: "~$195.00-$350.00",
+                    term: "36 Months",
+                    note: "Estimated rates are APR 0%-29.99% determined by credit",
+                  },
+                ].map((row, i) => (
+                  <tr
+                    key={i}
+                    className={
+                      i % 2 === 0 ? "bg-white/[0.03]" : "bg-white/[0.06]"
+                    }
+                  >
+                    <td className="border border-white/10 px-5 py-4 text-sm font-semibold text-white">
+                      {row.scenario}
+                    </td>
+                    <td className="border border-white/10 px-5 py-4 text-sm text-white/80">
+                      {row.service}
+                    </td>
+                    <td className="border border-white/10 px-5 py-4 text-sm font-bold text-primary">
+                      {row.payment}
+                    </td>
+                    <td className="border border-white/10 px-5 py-4 text-sm text-white/80">
+                      {row.term}
+                    </td>
+                    <td className="border border-white/10 px-5 py-4 text-sm leading-relaxed text-white/60">
+                      {row.note}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-6 text-xs leading-relaxed text-white/40">
+            *Estimated payments shown for illustrative purposes only. Actual
+            monthly payments may vary based on credit approval, APR, and selected
+            financing term. Contact our office for a personalized quote.
+          </p>
+
+          {/* Call Finance Team CTA */}
+          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <AppointmentButton className="inline-flex items-center gap-2.5 rounded-md border-2 border-gold bg-gold px-8 py-3.5 text-sm font-bold text-heading transition-all hover:bg-transparent hover:text-white hover:border-white">
+              Schedule a Consultation
+            </AppointmentButton>
+            <div className="flex items-center gap-4 text-sm text-white/60">
+              <span>Or call our finance team:</span>
+              <a
+                href="tel:9148740900"
+                className="flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-white"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                (914) 874-0900
+              </a>
+              <a
+                href="tel:9735610900"
+                className="flex items-center gap-1.5 font-semibold text-primary transition-colors hover:text-white"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                (973) 561-0900
+              </a>
             </div>
-
-            <p className="mb-8 text-center text-base leading-relaxed text-white/70">
-              Based on a $9,000 all-inclusive procedure cost, here is what your
-              estimated monthly payments could look like depending on the
-              financing term you choose.
-            </p>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 text-center">
-                <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  12 Months
-                </p>
-                <p className="mt-2 text-3xl font-bold text-white">~$750</p>
-                <p className="mt-1 text-sm text-white/60">per month</p>
-              </div>
-
-              <div className="rounded-lg border border-primary/40 bg-primary/10 p-6 text-center">
-                <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  24 Months
-                </p>
-                <p className="mt-2 text-3xl font-bold text-white">~$375</p>
-                <p className="mt-1 text-sm text-white/60">per month</p>
-              </div>
-
-              <div className="rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 text-center">
-                <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  48+ Months
-                </p>
-                <p className="mt-2 text-3xl font-bold text-white">~$180</p>
-                <p className="mt-1 text-sm text-white/60">per month</p>
-              </div>
-            </div>
-
-            <p className="mt-8 text-center text-xs leading-relaxed text-white/40">
-              *Estimated payments shown for illustrative purposes only. Actual
-              monthly payments may vary based on credit approval, APR, and
-              selected financing term. Contact our office for a personalized
-              quote.
-            </p>
           </div>
         </div>
       </section>

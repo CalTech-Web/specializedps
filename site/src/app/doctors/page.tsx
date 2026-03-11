@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Award, BookOpen, ArrowRight } from "lucide-react";
+import { MapPin, Award, BookOpen, ArrowRight, FileText, GraduationCap, Users } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
 import DoctorsContactForm from "@/components/sections/DoctorsContactForm";
@@ -136,7 +136,7 @@ export default function DoctorsPage() {
       </section>
 
       {/* Recognition Section */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -154,26 +154,111 @@ export default function DoctorsPage() {
               Recognized for Excellence
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">
-              Our surgeons are consistently recognized by leading medical organizations for their expertise and patient outcomes.
+              Our surgeons are consistently recognized by leading medical
+              organizations for their expertise, clinical outcomes, and
+              dedication to advancing the field of plastic surgery.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Stats Bar */}
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              "Castle Connolly Top Doctor",
-              "US News Top Doctor",
-              "American Board of Plastic Surgery",
-              "Fellow, American College of Surgeons",
-            ].map((recognition) => (
+              { value: "90+", label: "Peer-Reviewed Publications", icon: FileText },
+              { value: "2", label: "Board-Certified Surgeons", icon: Users },
+              { value: "5+", label: "Board Certifications & Fellowships", icon: GraduationCap },
+              { value: "1,000+", label: "Breast Procedures Performed", icon: Award },
+            ].map((stat) => (
               <div
-                key={recognition}
-                className="group rounded-lg border border-white/[0.06] bg-white/[0.03] px-5 py-5 text-center transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.06]"
+                key={stat.label}
+                className="rounded-lg border border-white/[0.06] bg-white/[0.03] px-4 py-6 text-center"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+                <stat.icon className="mx-auto mb-2 h-5 w-5 text-primary" />
+                <p className="font-heading text-2xl font-bold text-gold sm:text-3xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-xs font-medium leading-tight text-white/50">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Credential Logos */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            {[
+              { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", width: 140, height: 60 },
+              { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", width: 100, height: 100 },
+              { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", width: 120, height: 100 },
+              { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", width: 120, height: 100 },
+              { src: "/images/credentials/microsurgery.webp", alt: "American Society Reconstructive Microsurgery", width: 100, height: 100 },
+            ].map((cred, i) => (
+              <div key={i} className="opacity-80 transition-opacity hover:opacity-100">
+                <Image
+                  src={cred.src}
+                  alt={cred.alt}
+                  width={cred.width}
+                  height={cred.height}
+                  className="h-14 w-auto sm:h-16"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Recognition Cards */}
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Castle Connolly Top Doctors",
+                description:
+                  "Both Dr. Sosin and Dr. Devulapalli have been named Castle Connolly Top Doctors, an honor awarded to physicians recognized by their peers for exceptional clinical skill and patient care.",
+                doctors: "Dr. Sosin & Dr. Devulapalli",
+              },
+              {
+                title: "US News Top Doctor",
+                description:
+                  "Dr. Devulapalli has been recognized as a US News Top Doctor, a distinction highlighting physicians who demonstrate outstanding expertise in their specialty.",
+                doctors: "Dr. Devulapalli",
+              },
+              {
+                title: "Featured in New York Magazine",
+                description:
+                  "Both surgeons have been featured in New York Magazine and Jersey's Best Magazine for their contributions to plastic and reconstructive surgery in the tri-state area.",
+                doctors: "Dr. Sosin & Dr. Devulapalli",
+              },
+              {
+                title: "American Board of Plastic Surgery",
+                description:
+                  "Both surgeons hold board certification from the American Board of Plastic Surgery, the gold standard for demonstrating competence in plastic surgery practice.",
+                doctors: "Dr. Sosin & Dr. Devulapalli",
+              },
+              {
+                title: "Fellow, American College of Surgeons",
+                description:
+                  "Dr. Sosin is a Fellow of the American College of Surgeons (FACS), recognizing his commitment to ethical practice, professional competence, and surgical excellence.",
+                doctors: "Dr. Sosin",
+              },
+              {
+                title: "First Face Transplant in New York State",
+                description:
+                  "Dr. Sosin served as a primary team member of the team that performed New York State's first successful face transplant, a landmark achievement in reconstructive surgery.",
+                doctors: "Dr. Sosin",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-lg border border-white/[0.06] bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:bg-white/[0.06]"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
                   <Award className="h-5 w-5 text-primary" />
                 </div>
-                <p className="mt-3 text-sm font-semibold text-white">
-                  {recognition}
+                <h3 className="font-heading text-base font-bold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60">
+                  {item.description}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-primary">
+                  {item.doctors}
                 </p>
               </div>
             ))}
