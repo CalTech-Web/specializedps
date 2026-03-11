@@ -125,8 +125,8 @@ const nextConfig: NextConfig = {
       { source: "/gynecomastia/", destination: "/services/aesthetic-breast/gynecomastia", permanent: true },
 
       // Gallery
-      { source: "/gallery/breast-reconstruction/:path*", destination: "/gallery", permanent: true },
-      { source: "/gallery/aesthetic-breast-surgery/:path*", destination: "/gallery", permanent: true },
+      { source: "/gallery/breast-reconstruction/:path+", destination: "/gallery/breast-reconstruction", permanent: true },
+      { source: "/gallery/aesthetic-breast-surgery/:path*", destination: "/gallery/aesthetic-breast", permanent: true },
       { source: "/gallery/breast-augmentation-fat-transfer", destination: "/gallery", permanent: true },
       { source: "/gallery/breast-augmentation-fat-transfer/", destination: "/gallery", permanent: true },
       { source: "/gallery/brest-lift-mastopexy", destination: "/gallery", permanent: true },

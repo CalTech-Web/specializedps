@@ -4,11 +4,14 @@ import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 import GalleryAgeGate from "@/components/sections/GalleryAgeGate";
 import GalleryCaseGrid from "@/components/sections/GalleryCaseGrid";
+import GroupGalleryView from "@/components/sections/GroupGalleryView";
 import {
   galleryCategories,
-  galleryGroups,
+  galleryGroupData,
   getGalleryCategory,
   getGalleryCases,
+  getGalleryGroup,
+  getGroupSlug,
 } from "@/data/gallery";
 import { ChevronRight } from "lucide-react";
 
@@ -17,11 +20,22 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return galleryCategories.map((cat) => ({ slug: cat.slug }));
+  const procedureParams = galleryCategories.map((cat) => ({ slug: cat.slug }));
+  const groupParams = galleryGroupData.map((g) => ({ slug: g.slug }));
+  return [...procedureParams, ...groupParams];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+
+  const group = getGalleryGroup(slug);
+  if (group) {
+    return {
+      title: `${group.label} Gallery`,
+      description: group.description,
+    };
+  }
+
   const category = getGalleryCategory(slug);
   if (!category) return { title: "Gallery" };
 
@@ -31,14 +45,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function GalleryProcedurePage({ params }: Props) {
+export default async function GallerySlugPage({ params }: Props) {
   const { slug } = await params;
+
+  // Check if this is a group page
+  const group = getGalleryGroup(slug);
+  if (group) {
+    return <GroupGalleryView group={group} />;
+  }
+
+  // Otherwise, it's a procedure page
   const category = getGalleryCategory(slug);
   if (!category) notFound();
 
   const cases = getGalleryCases(slug);
 
-  // Get sibling categories in the same group for sidebar navigation
   const siblings = galleryCategories.filter(
     (cat) => cat.group === category.group
   );
@@ -61,6 +82,13 @@ export default async function GalleryProcedurePage({ params }: Props) {
                 className="transition-colors hover:text-primary"
               >
                 Gallery
+              </Link>
+              <ChevronRight className="h-3.5 w-3.5" />
+              <Link
+                href={`/gallery/${getGroupSlug(category.group)}`}
+                className="transition-colors hover:text-primary"
+              >
+                {category.group}
               </Link>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="font-medium text-heading">
@@ -91,7 +119,12 @@ export default async function GalleryProcedurePage({ params }: Props) {
               <div className="w-full shrink-0 lg:w-72">
                 <div className="sticky top-24 rounded-lg border border-peach bg-cream p-6">
                   <h3 className="mb-4 border-b border-peach pb-3 font-heading text-lg font-bold text-heading">
-                    {category.group}
+                    <Link
+                      href={`/gallery/${getGroupSlug(category.group)}`}
+                      className="transition-colors hover:text-primary"
+                    >
+                      {category.group}
+                    </Link>
                   </h3>
                   <ul className="space-y-2">
                     {siblings.map((cat) => (
@@ -111,16 +144,21 @@ export default async function GalleryProcedurePage({ params }: Props) {
                   </ul>
 
                   {/* Other groups */}
-                  {galleryGroups
-                    .filter((g) => g !== category.group)
-                    .map((group) => {
+                  {galleryGroupData
+                    .filter((g) => g.label !== category.group)
+                    .map((otherGroup) => {
                       const cats = galleryCategories.filter(
-                        (c) => c.group === group
+                        (c) => c.group === otherGroup.label
                       );
                       return (
-                        <div key={group} className="mt-6">
+                        <div key={otherGroup.slug} className="mt-6">
                           <h3 className="mb-3 border-b border-peach pb-2 font-heading text-base font-bold text-heading">
-                            {group}
+                            <Link
+                              href={`/gallery/${otherGroup.slug}`}
+                              className="transition-colors hover:text-primary"
+                            >
+                              {otherGroup.label}
+                            </Link>
                           </h3>
                           <ul className="space-y-1.5">
                             {cats.map((cat) => (

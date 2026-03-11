@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GalleryAgeGate from "@/components/sections/GalleryAgeGate";
 import ContactForm from "@/components/sections/ContactForm";
-import { galleryCategories, galleryItems, galleryGroups } from "@/data/gallery";
+import { galleryCategories, galleryItems, galleryGroups, getGroupSlug } from "@/data/gallery";
 
 export const metadata: Metadata = {
   title: "Before & After Gallery",
@@ -63,22 +63,26 @@ export default function GalleryPage() {
                 return (
                   <div key={group} className="group">
                     {/* Category image */}
-                    <div className="relative mb-8 aspect-[4/5] overflow-hidden">
-                      <Image
-                        src={
-                          categoryImages[group] ?? "/images/misc/sps-center.jpg"
-                        }
-                        alt={group}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
+                    <Link href={`/gallery/${getGroupSlug(group)}`}>
+                      <div className="relative mb-8 aspect-[4/5] overflow-hidden">
+                        <Image
+                          src={
+                            categoryImages[group] ?? "/images/misc/sps-center.jpg"
+                          }
+                          alt={group}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    </Link>
 
                     {/* Category title */}
-                    <h2 className="font-heading text-3xl font-bold uppercase tracking-wide text-heading sm:text-4xl">
-                      {group}
-                    </h2>
+                    <Link href={`/gallery/${getGroupSlug(group)}`}>
+                      <h2 className="font-heading text-3xl font-bold uppercase tracking-wide text-heading transition-colors hover:text-primary sm:text-4xl">
+                        {group}
+                      </h2>
+                    </Link>
                     <div className="mt-3 h-[1px] w-10 bg-primary" />
 
                     {/* Procedure links */}

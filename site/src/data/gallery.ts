@@ -827,3 +827,64 @@ export function getGalleryCases(slug: string): GalleryItem[][] {
 
   return Array.from(groups.values());
 }
+
+// ── Group-level data ──
+
+export interface GalleryGroupData {
+  slug: string;
+  label: string;
+  description: string;
+  heroImage: string;
+}
+
+const groupNameToSlug: Record<string, string> = {
+  Face: "face",
+  Body: "body",
+  "Aesthetic Breast": "aesthetic-breast",
+  "Breast Reconstruction": "breast-reconstruction",
+};
+
+export const galleryGroupData: GalleryGroupData[] = [
+  {
+    slug: "face",
+    label: "Face",
+    description:
+      "Browse before and after photos of facial procedures including blepharoplasty, otoplasty, and more.",
+    heroImage: "/images/gallery-page/face.jpg",
+  },
+  {
+    slug: "body",
+    label: "Body",
+    description:
+      "Browse before and after photos of body contouring procedures including tummy tuck, liposuction, and Brazilian butt lift.",
+    heroImage: "/images/gallery-page/body.jpg",
+  },
+  {
+    slug: "aesthetic-breast",
+    label: "Aesthetic Breast",
+    description:
+      "Browse before and after photos of aesthetic breast procedures including augmentation, lift, and reduction.",
+    heroImage: "/images/gallery-page/breast.webp",
+  },
+  {
+    slug: "breast-reconstruction",
+    label: "Breast Reconstruction",
+    description:
+      "Browse before and after photos of breast reconstruction procedures including DIEP flap, implant-based reconstruction, and oncoplastic reduction.",
+    heroImage: "/images/gallery-page/reconstruction.jpg",
+  },
+];
+
+export function getGalleryGroup(slug: string): GalleryGroupData | undefined {
+  return galleryGroupData.find((g) => g.slug === slug);
+}
+
+export function getGroupCategories(groupSlug: string): GalleryCategory[] {
+  const groupData = getGalleryGroup(groupSlug);
+  if (!groupData) return [];
+  return galleryCategories.filter((cat) => cat.group === groupData.label);
+}
+
+export function getGroupSlug(groupName: string): string {
+  return groupNameToSlug[groupName] ?? groupName.toLowerCase().replace(/\s+/g, "-");
+}
