@@ -392,7 +392,7 @@ export default function ERASPage() {
       <section className="relative overflow-hidden py-20 sm:py-28">
         {/* Background image */}
         <Image
-          src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-223.jpg"
+          src="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-232.jpg"
           alt=""
           fill
           className="object-cover"
