@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
 import { AppointmentModalProvider } from "@/components/sections/AppointmentModal";
 
 const dmSans = DM_Sans({
@@ -65,9 +64,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <AppointmentModalProvider>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <LayoutWrapper>{children}</LayoutWrapper>
         </AppointmentModalProvider>
       </body>
     </html>
