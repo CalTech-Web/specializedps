@@ -147,7 +147,7 @@ export default async function ProcedurePage({ params }: PageProps) {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
                   <CheckCircle className="h-6 w-6 text-primary" />
                 </div>
-                <p className="font-heading text-base font-semibold leading-relaxed text-white">
+                <p className="text-base font-semibold leading-relaxed text-white">
                   {benefit}
                 </p>
               </div>
