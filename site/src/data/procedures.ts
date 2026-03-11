@@ -49,6 +49,8 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription:
       "Achieve your desired look with personalized breast enhancement procedures from augmentation to reduction, performed with precision and artistry.",
     icon: "Heart",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-190.jpg",
   },
   {
     slug: "breast-reconstruction",
