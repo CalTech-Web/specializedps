@@ -978,7 +978,7 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
-      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-191.jpg",
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-244.jpg",
     description:
       "A mommy makeover is a comprehensive cosmetic procedure designed to help mothers restore their pre-pregnancy shape and boost their confidence. Pregnancy, childbirth, and breastfeeding can bring significant changes to the body, affecting areas like the abdomen, breasts, and more. A mommy makeover combines a range of body-contouring and aesthetic surgeries customized to each individual's needs.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons have helped countless women achieve their aesthetic goals, providing natural-looking results that help them feel like the best versions of themselves. Typically, a mommy makeover includes procedures such as tummy tuck, breast enhancement (lift and/or augmentation), and liposuction, allowing women to address multiple areas in a single surgery for a balanced, youthful appearance.",
     heroDescription:
@@ -1006,6 +1006,11 @@ export const procedures: Procedure[] = [
       "Body contouring to refine and sculpt the waist and thighs",
     ],
     procedureDuration: "3-6 hours depending on procedures included",
+    procedureSteps: [
+      "In-depth consultation to discuss your concerns, goals, and which combination of procedures will deliver the best results for your body",
+      "Your customized combination of procedures (tummy tuck, breast lift/augmentation, liposuction) is performed in a single session under general anesthesia",
+      "Careful closure with compression garments applied, followed by detailed aftercare instructions and scheduled follow-up appointments to monitor your recovery",
+    ],
     recoveryTimeline:
       "Initial recovery of 1-2 weeks with limited activity. Most patients resume desk work and light activities within 1-2 weeks. Avoid strenuous exercise for 6-8 weeks. It may take several months for swelling to fully subside, revealing your final results.",
   },
@@ -1015,37 +1020,46 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
-      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg",
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-227.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-213.jpg",
     description:
-      "A body lift is an extensive plastic surgery procedure that removes large amounts of excess skin and tightens the underlying tissue around the midsection, thighs, and buttocks. This procedure is typically sought by patients who have achieved significant, stable weight loss (often 100 pounds or more) and are dealing with redundant skin that cannot be addressed through non-surgical methods.\n\nAt Specialized Plastic Surgery, we help patients from New York, New Jersey, Connecticut, and throughout the TriState Area complete their weight loss transformation through post-bariatric body contouring. Almost everyone who loses a substantial amount of weight is left with some degree of loose or sagging skin that can cause infections, rashes, chafing, limited mobility, and poor-fitting clothing. The goal of a body lift is not weight reduction, but rather to sculpt and refine the body's final shape, dramatically improving both the look and feel of the skin.",
+      "Significant weight loss, whether achieved through bariatric surgery or dedicated lifestyle changes, is a life-changing accomplishment that deserves to be celebrated. But for many people, the journey doesn't end there. Almost everyone who loses a substantial amount of weight is left with some degree of loose or sagging skin. When someone loses 100 pounds or more, the skin often cannot \"bounce back\" on its own.\n\nA body lift is an extensive plastic surgery procedure that removes large amounts of excess skin and tightens the underlying tissue around the midsection, thighs, and buttocks. At Specialized Plastic Surgery, we help patients from New York City, Westchester County, New Jersey, Connecticut, and throughout the TriState Area complete their weight loss transformation through post-bariatric body contouring. The goal is not weight reduction, but rather to sculpt and refine the body's final shape, dramatically improving both the look and feel of the skin.\n\nExcess skin after massive weight loss can create a warm, moist environment prone to yeast and bacterial infections, cause painful rashes and chafing, limit mobility and make exercise difficult, and prevent clothing from fitting properly. Body lift surgery addresses all of these concerns in a customizable approach tailored to each patient's needs.",
     heroDescription:
-      "Transform your body after significant weight loss by removing excess skin and reshaping your midsection, thighs, and buttocks.",
+      "Comprehensive body lift surgery in New Jersey and New York, helping patients achieve their post-weight loss goals by removing excess skin and reshaping the body.",
     benefits: [
-      "Removal of heavy, hanging excess skin from multiple areas",
-      "Improved hygiene by eliminating skin folds prone to infection and rashes",
-      "Increased mobility and ability to exercise comfortably",
-      "Smoother body contours and better-fitting clothes",
-      "Enhanced confidence and renewed self-esteem after weight loss journey",
+      "Improved hygiene by eliminating skin folds that lead to rashes, irritation, and infection",
+      "Increased mobility by removing heavy, redundant skin that restricts physical activity and exercise",
+      "Enhanced comfort by eliminating chafing and physical discomfort caused by excess skin",
+      "Smoother contours with a firmer, more proportional body silhouette",
+      "Better-fitting clothes that sit properly and comfortably on your new frame",
+      "Renewed confidence and a sense of self-esteem that matches your weight loss achievement",
     ],
     candidateCriteria: [
-      "Significant, stable weight loss (typically 100+ pounds) with loose, hanging skin",
-      "Weight stable for at least 6 months (recommend waiting 1 year after bariatric surgery)",
+      "Significant, stable weight loss (typically 100+ pounds) with loose, hanging skin around the midsection and limbs",
+      "Weight stable for at least 6 months (we recommend waiting at least 1 year after bariatric surgery to allow weight to fully stabilize)",
       "Good overall health with no medical conditions that would impair healing",
       "Non-smoker or willing to quit prior to surgery",
-      "Realistic expectations about surgical results and permanent scarring",
+      "Realistic expectations about surgical results, including understanding that permanent scarring is strategically placed to be hidden by undergarments",
     ],
     techniques: [
-      "Lower body lift (circumferential, addresses abdomen, flanks, outer thighs, and buttocks)",
-      "Panniculectomy (removal of the overhanging abdominal skin 'apron')",
-      "Abdominoplasty (tummy tuck for abdominal muscle tightening)",
-      "Thigh lift (thighplasty for inner, outer, or posterior thighs)",
-      "Arm lift (brachioplasty for upper arm excess skin)",
-      "Breast lift (mastopexy for deflated or sagging breasts)",
+      "Lower body lift (circumferential, the most comprehensive procedure addressing abdomen, flanks, outer thighs, and buttocks in one operation)",
+      "Panniculectomy (removal of the overhanging abdominal skin \"apron\")",
+      "Abdominoplasty (tummy tuck for abdominal muscle tightening and skin removal)",
+      "Thigh lift (thighplasty for inner, outer, or posterior thigh excess skin)",
+      "Arm lift (brachioplasty to eliminate excess skin of the upper arms)",
+      "Breast lift (mastopexy for deflated or sagging breasts after weight loss)",
+    ],
+    procedureSteps: [
+      "Comprehensive consultation to evaluate your excess skin, discuss your goals, and create a customized surgical plan tailored to the areas that need the most improvement.",
+      "Surgery is performed under general anesthesia using advanced techniques and strategic incision placement to remove excess skin while ensuring scars can be hidden by undergarments and bathing suits.",
+      "Underlying tissue is tightened and reshaped to create firmer, smoother contours around the midsection, thighs, and buttocks.",
+      "Advanced pain management protocols, including nerve blocks, are used to optimize your comfort during the recovery process.",
     ],
     recoveryTimeline:
-      "Initial recovery requiring restricted activity is typically 3-4 weeks. Full recovery and return to vigorous exercise can take 6-8 weeks. Final results continue to refine for up to one year. Strategic incision placement ensures scars can be hidden by undergarments and bathing suits.",
+      "Initial recovery requiring restricted activity is typically 3-4 weeks. During this time, you will need to limit movement and follow detailed aftercare instructions to support optimal healing.\n\nFull recovery and return to vigorous exercise can take 6-8 weeks, with final results continuing to refine for up to one year. While body lift surgery does require strategically placed incisions, we strive to place scars where they can be hidden by undergarments and bathing suits. Scars will fade significantly over time.",
     insuranceCoverage:
-      "Panniculectomy (removal of the large flap of overhanging abdominal skin) may qualify for partial insurance coverage when documented as medically necessary due to chronic infections, rashes, or functional impairment. Our insurance coordinators assist with documentation and pre-authorization. Coverage depends on your plan and requires medical records from your primary doctor or bariatric surgeon.",
+      "A portion of your body lift procedure, such as a panniculectomy (removal of the large flap of overhanging skin), may be deemed medically necessary and partially covered by insurance. This typically requires documentation of chronic medical issues like rashes, infections, or pain related to the excess skin. Insurance companies require documentation of chronic skin infections, rashes, or medical complications, medical records from your primary doctor or bariatric surgeon, and photos and detailed notes showing how excess skin impacts your health. Our in-house insurance coordinators understand the process and will work closely with you to submit the required paperwork.",
   },
   {
     slug: "thigh-lift",
@@ -1054,33 +1068,43 @@ export const procedures: Procedure[] = [
     category: "body",
     categorySlug: "body",
     heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-217.jpg",
+    contentImage:
       "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-197.jpg",
     description:
-      "A thigh lift (thighplasty) is a comprehensive body contouring procedure focused on reshaping the thighs by surgically removing excess skin and, in some cases, excess fat deposits that lead to a sagging appearance. While many patients achieve weight loss success through diet, fitness, or bariatric surgery, the skin often loses its elasticity and cannot snap back to the body's new, smaller contours.\n\nAt Specialized Plastic Surgery, thigh lift surgery offers dual benefits: aesthetic improvement through firmer, more youthful leg contours that allow clothes to fit better, and functional relief by eliminating uncomfortable skin-on-skin friction (chafing) and addressing chronic hygiene concerns caused by hanging skin folds. Our surgeon possesses extensive experience in post-bariatric and massive weight loss body contouring, with a commitment to deep-layer tissue support to ensure the most discreet and aesthetic scarring possible.",
+      "A thigh lift (thighplasty) is a comprehensive body contouring procedure focused on reshaping the thighs by surgically removing excess skin and, in some cases, excess fat deposits that lead to a sagging appearance. While many patients achieve weight loss success through diet, fitness, or bariatric surgery, the skin often loses its elasticity and cannot conform to the body's new, smaller contours, leaving behind loose folds that no amount of exercise can correct.\n\nThigh lift surgery offers dual benefits: aesthetic improvement through firmer, more youthful leg contours that allow clothes to fit better, and functional relief by eliminating uncomfortable skin-on-skin friction (chafing) and addressing chronic hygiene concerns caused by hanging skin folds. These functional issues can significantly impact daily comfort and quality of life, making a thigh lift both a cosmetic and quality-of-life procedure.\n\nAt Specialized Plastic Surgery, our surgeons employ meticulous, advanced surgical techniques with deep internal sutures that anchor the underlying tissues, supporting the newly contoured skin and promoting the best possible long-term scar quality. Every incision is customized and mapped while standing to account for gravity, ensuring the most discreet placement and optimal final results.",
     heroDescription:
-      "Achieve firmer, more contoured legs by removing excess skin and fat for improved shape and comfort.",
+      "Achieve firm, contoured, and proportionate legs by removing excess skin and fat with expert thighplasty techniques.",
     benefits: [
       "Firmer, more youthful leg contours and improved proportions",
-      "Elimination of skin friction, chafing, and irritation",
-      "Improved hygiene by removing hanging skin folds",
-      "Better clothing fit and increased comfort during activity",
-      "Can be combined with liposuction for enhanced sculpting",
+      "Elimination of skin friction, chafing, and chronic irritation between the thighs",
+      "Improved hygiene by removing hanging skin folds that trap moisture",
+      "Better clothing fit and increased comfort during physical activity",
+      "Can be combined with liposuction for enhanced sculpting and smoother results",
+      "Deep tissue anchoring techniques for long-lasting contour improvement",
     ],
     candidateCriteria: [
       "Achieved a stable, healthy weight maintained for six months or more",
-      "Significant loose, non-elastic skin on the inner or outer thighs",
-      "Limited response to liposuction alone (excess skin, not just fat)",
-      "Psychologically prepared to accept surgical scarring for improved shape and comfort",
-      "Good overall health, non-smoker",
+      "Significant loose, non-elastic skin on the inner or outer thighs that does not respond to exercise",
+      "Limited response to liposuction alone (excess skin rather than just fat)",
+      "Psychologically prepared to accept surgical scarring in exchange for dramatically improved shape and comfort",
+      "Good overall health and a non-smoker",
     ],
     techniques: [
-      "Medial (inner) thigh lift, incision placed high in the groin crease for hidden scarring",
-      "Extended/vertical thigh lift for extreme skin laxity after massive weight loss",
-      "Lateral and outer thigh lift targeting the outer side and front of the thigh",
-      "Combination with liposuction for residual fat pockets and optimal sculpting",
+      "Medial (inner) thigh lift with incision placed high in the groin crease, keeping the scar hidden beneath underwear or swimwear",
+      "Extended/vertical thigh lift with an additional vertical incision down the inner thigh for extreme skin laxity after massive weight loss",
+      "Lateral and outer thigh lift targeting the outer side and front of the thigh, often performed as part of a comprehensive body lift",
+      "Combination with liposuction to remove residual fat pockets for optimally sculpted, smooth contours",
+    ],
+    procedureSteps: [
+      "Customized Planning: Your surgeon evaluates your thigh anatomy and skin laxity, then maps the incision lines while you are standing to account for gravity and ensure the most discreet scar placement.",
+      "Anesthesia and Incision: General anesthesia is administered and precise incisions are made according to the chosen technique, whether medial, extended, or lateral.",
+      "Tissue Removal and Reshaping: Excess skin and fat are carefully removed, and deep internal sutures are placed to anchor the underlying tissues, supporting the new contour and reducing tension on the skin closure.",
+      "Liposuction (if applicable): Targeted liposuction may be performed simultaneously to remove stubborn fat deposits and create smoother transitions between treated and untreated areas.",
+      "Closure and Compression: The incisions are closed in layers for minimal tension, and a compression garment is applied immediately to reduce swelling and support the newly contoured thighs.",
     ],
     recoveryTimeline:
-      "Most patients require 1-2 weeks off work. A compression garment is worn consistently for several weeks to minimize swelling and support new contours. Walking is encouraged early, but strenuous activity must be avoided for 4-6 weeks. Customized incision lines are mapped while standing to account for gravity and ensure the best final contours.",
+      "Most patients require 1-2 weeks off work, depending on the extent of their procedure. A compression garment is worn consistently for several weeks to minimize swelling and support the new contours. Walking is encouraged early to promote circulation, but strenuous activity and heavy lifting must be avoided for 4-6 weeks. Swelling and bruising gradually subside over the first few weeks, and final results become visible within 3-6 months as tissues fully heal and settle into their new shape. Follow-up appointments are scheduled to monitor your progress and scar healing.",
   },
   {
     slug: "arm-lift",
