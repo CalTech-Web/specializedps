@@ -29,6 +29,7 @@ export interface ServiceCategory {
   description: string;
   heroDescription: string;
   icon: string;
+  heroImage?: string;
 }
 
 export const serviceCategories: ServiceCategory[] = [
@@ -39,6 +40,7 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription:
       "Restore a youthful, refreshed appearance with our comprehensive facial procedures performed by board-certified plastic surgeons.",
     icon: "Sparkles",
+    heroImage: "/images/services/face-hero.webp",
   },
   {
     slug: "aesthetic-breast",
@@ -56,6 +58,7 @@ export const serviceCategories: ServiceCategory[] = [
     heroDescription:
       "Compassionate, expert breast reconstruction using advanced microsurgical techniques to restore form, function, and confidence after breast cancer surgery.",
     icon: "HandHeart",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-anntarazevich-5629208.jpg",
   },
   {
     slug: "body",
@@ -540,6 +543,7 @@ export const procedures: Procedure[] = [
     shortName: "Tissue Flap",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-155.jpg",
     description:
       "Natural tissue flap reconstruction involves using a patient's own tissue from areas such as the abdomen, back, or thighs to recreate a breast following mastectomy. This autologous tissue reconstruction provides a softer, more natural outcome compared to implant-based reconstruction.\n\nThe DIEP (Deep Inferior Epigastric Perforator) flap is the most frequently performed technique at Specialized Plastic Surgery because it creates the most natural appearance using the patient's own abdominal fat and skin, preserves abdominal muscles (unlike the TRAM flap), provides lasting results that adapt to body changes over time, works better with radiation therapy than synthetic materials, and offers a secondary abdominal contouring benefit similar to a tummy tuck.",
     heroDescription:
@@ -575,6 +579,7 @@ export const procedures: Procedure[] = [
     name: "Implant-Based Reconstruction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/11/SPS-Center-Image.jpg",
     description:
       "Implant-based reconstruction is a type of breast reconstruction that involves placing an implant beneath the chest muscle or just above it, recreating the shape and appearance of the breast after mastectomy. This approach often involves a two-stage process: first, a temporary tissue expander is placed to gradually stretch the skin and make space for the permanent implant; then, in a second procedure, the tissue expander is removed and the permanent implant is inserted.\n\nImplant-based reconstruction offers several benefits that make it a popular choice for many breast cancer patients. This option typically involves a shorter, less complex surgery and a faster recovery period than natural tissue flap reconstruction. It also allows patients with limited donor tissue to achieve natural-looking results. There are two main types of implants: saline implants (filled with sterile salt water) and silicone implants (filled with silicone gel, providing a softer, more natural look and feel).",
     heroDescription:
@@ -610,6 +615,7 @@ export const procedures: Procedure[] = [
     name: "Oncoplastic Breast Reduction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg",
     description:
       "Oncoplastic breast reduction (also known as Therapeutic Mammoplasty) is a sophisticated, two-in-one procedure that seamlessly combines the necessary removal of cancerous tissue with immediate breast reduction and reshaping, resulting in both improved health and superior cosmetic symmetry.\n\nInstead of simply removing the tumor and leaving a deformity or \"dent,\" the surgeon utilizes the principles of a cosmetic breast reduction to remove the tumor while ensuring clear margins, while simultaneously lifting and reducing the breast volume. The surrounding breast tissue is meticulously rearranged to immediately fill the void left by the cancer removal, achieving a beautiful, balanced contour. To achieve optimal balance, the surgeon often performs a contralateral breast reduction (a reduction on the healthy, opposite breast) at the same time.",
     heroDescription:
@@ -643,6 +649,7 @@ export const procedures: Procedure[] = [
     shortName: "Nerve Restoration",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-180.jpg",
     description:
       "Resensation is a revolutionary nerve grafting technique that uses a specially processed nerve allograft to reconnect nerves in the chest to reconstructed breast tissue. This enables the body to rebuild nerve pathways, potentially restoring protective sensation and sensitivity to the nipple and surrounding breast tissue.\n\nDuring surgery, the surgeon identifies severed nerve endings in the chest, places a Resensation nerve allograft to bridge the gap between the severed nerves, and uses microsurgical techniques to connect the graft. The body then naturally regenerates nerves over time, allowing sensation to gradually return. This procedure represents a complete approach to breast reconstruction that addresses both aesthetic and functional restoration.",
     heroDescription:
@@ -671,6 +678,7 @@ export const procedures: Procedure[] = [
     name: "Revision Breast Reconstruction",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-169.jpg",
     description:
       "Revision breast reconstruction is a specialized procedure designed to address concerns or complications from prior breast reconstruction. Unlike primary reconstruction, which is performed immediately after mastectomy, revision surgery focuses on enhancing or correcting the results of an earlier procedure.\n\nAt Specialized Plastic Surgery, we believe that every patient deserves to feel confident and comfortable with their breast reconstruction results. Common reasons for revision include improving symmetry, addressing changes in breast shape over time, resolving implant-related issues such as capsular contracture or malposition, or enhancing the overall appearance. Each revision is tailored to meet the unique needs of the patient, restoring confidence and comfort.",
     heroDescription:
@@ -709,6 +717,7 @@ export const procedures: Procedure[] = [
     name: "Specialized Reconstruction Procedures",
     category: "breast-reconstruction",
     categorySlug: "breast-reconstruction",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-155.jpg",
     description:
       "Specialized Plastic Surgery offers a comprehensive range of advanced reconstruction procedures beyond traditional breast reconstruction, including aesthetic flat closure, male breast reconstruction, and lymphedema surgery.\n\nAesthetic flat closure is designed for women who choose not to undergo traditional breast mound reconstruction, creating a smooth, even chest contour following mastectomy. Male breast reconstruction restores the chest contour for men who have undergone mastectomy for breast cancer, focusing on achieving a flat, symmetrical, and masculine appearance. Lymphedema surgery addresses chronic swelling through advanced microsurgical techniques such as lymphaticovenous bypass (LVB) and vascularized lymph node transfer (VLNT), providing relief for patients who have not responded to conservative treatment.",
     heroDescription:
