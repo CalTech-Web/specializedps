@@ -714,7 +714,7 @@ Dr. Chris Devulapalli is a Brazilian Butt Lift expert in Westchester County, New
   },
   {
     slug: "lipo-360-in-westchester-ny",
-    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-kindelmedia-7298900.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-kindelmedia-7298670.jpg",
     title: "Lipo 360 in Westchester, NY: Complete Midsection Sculpting",
     date: "2026-02-11",
     excerpt:
