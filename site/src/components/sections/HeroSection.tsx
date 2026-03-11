@@ -50,7 +50,7 @@ export default function HeroSection({
   /* ---------- Page hero with background image ---------- */
   if (backgroundImage) {
     return (
-      <section className="relative flex min-h-[50vh] w-full items-center justify-center overflow-hidden bg-heading">
+      <section className="relative flex h-[400px] w-full items-center justify-center overflow-hidden bg-heading">
         <Image
           src={backgroundImage}
           alt=""
@@ -102,7 +102,7 @@ export default function HeroSection({
 
   /* ---------- Dark hero (no background image) ---------- */
   return (
-    <section className="relative bg-heading py-14 sm:py-20">
+    <section className="relative flex h-[400px] items-center bg-heading">
       <div
         className="absolute inset-0 opacity-5"
         style={{

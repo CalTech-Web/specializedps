@@ -22,7 +22,7 @@ export default function GalleryPage() {
   return (
     <>
       {/* ───────── Section 1: Hero ───────── */}
-      <section className="relative flex min-h-[75vh] w-full items-end justify-center overflow-hidden bg-heading">
+      <section className="relative flex h-[400px] w-full items-end justify-center overflow-hidden bg-heading">
         <Image
           src="/images/gallery-page/hero.webp"
           alt="Gallery"

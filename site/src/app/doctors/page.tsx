@@ -19,7 +19,7 @@ export default function DoctorsPage() {
       <HeroSection
         title="Our Surgeons"
         subtitle="Meet our board-certified plastic surgeons, trained at the nation's top institutions and recognized for clinical excellence in cosmetic and reconstructive surgery."
-        backgroundImage="/images/hero/team-hero.jpg"
+        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-218.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Our Surgeons" },

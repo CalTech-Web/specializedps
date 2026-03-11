@@ -47,7 +47,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
   return (
     <>
       {/* Hero / Breadcrumb */}
-      <section className="relative bg-heading py-14 sm:py-16">
+      <section className="relative flex h-[400px] items-center bg-heading">
         <div
           className="absolute inset-0"
           style={{
