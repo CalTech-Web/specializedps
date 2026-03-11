@@ -6,6 +6,7 @@ export interface Doctor {
   location: string;
   locationKey: "nj" | "ny";
   image: string;
+  aboutImage?: string;
   heroImage?: string;
   education: string[];
   boardCertifications: string[];
@@ -87,6 +88,7 @@ export const doctors: Doctor[] = [
     location: "Harrison, NY (Westchester County)",
     locationKey: "ny",
     image: "https://specializedplasticsurgery.com/wp-content/uploads/2025/05/IMG_1227DCD.jpg",
+    aboutImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/02/Dr-Chris-SPS-Image.jpg",
     heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/01/SPS-Image-1023.jpg",
     education: [
       "Thomas Jefferson University School of Medicine (Medical School)",

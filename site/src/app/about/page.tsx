@@ -224,7 +224,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-[28rem] sm:h-[34rem] overflow-hidden">
                   <Image
-                    src={doctor.image}
+                    src={doctor.aboutImage || doctor.image}
                     alt={doctor.name}
                     fill
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
