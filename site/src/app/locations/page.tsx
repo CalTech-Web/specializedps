@@ -295,7 +295,6 @@ export default function LocationsPage() {
         heading="Ready to Visit One of Our Locations?"
         subtext="Schedule your personalized consultation at our New Jersey or New York office with one of our board-certified plastic surgeons."
         ctaText="Schedule a Consultation"
-        ctaLink="/contact"
       />
     </>
   );

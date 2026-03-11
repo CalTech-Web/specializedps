@@ -51,7 +51,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg')",
+            backgroundImage: `url('${doctor.heroImage || "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg"}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

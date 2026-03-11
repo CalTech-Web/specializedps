@@ -6,6 +6,7 @@ export interface Doctor {
   location: string;
   locationKey: "nj" | "ny";
   image: string;
+  heroImage?: string;
   education: string[];
   boardCertifications: string[];
   recognition: string[];
@@ -27,6 +28,7 @@ export const doctors: Doctor[] = [
     location: "Millburn, NJ",
     locationKey: "nj",
     image: "/images/team/dr-sosin.jpg",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg",
     education: [
       "Robert Wood Johnson Medical School (Accelerated 7-year BA/MD program)",
       "Georgetown University Hospital (General Surgery Residency)",
@@ -84,7 +86,8 @@ export const doctors: Doctor[] = [
     credentials: "MD",
     location: "Harrison, NY (Westchester County)",
     locationKey: "ny",
-    image: "/images/team/dr-devulapalli.jpg",
+    image: "https://specializedplasticsurgery.com/wp-content/uploads/2025/05/IMG_1227DCD.jpg",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/01/SPS-Image-1023.jpg",
     education: [
       "Thomas Jefferson University School of Medicine (Medical School)",
       "Georgetown University Hospital (General Surgery Residency)",

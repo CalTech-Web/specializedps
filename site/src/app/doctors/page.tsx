@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MapPin, Award, BookOpen, ArrowRight } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import CTABanner from "@/components/sections/CTABanner";
+import DoctorsContactForm from "@/components/sections/DoctorsContactForm";
 import { doctors } from "@/data/doctors";
 
 export const metadata: Metadata = {
@@ -176,6 +177,27 @@ export default function DoctorsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="mb-4 inline-block rounded-sm bg-primary/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Get in Touch
+            </p>
+            <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
+              Schedule Your Consultation
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-body">
+              Take the first step toward achieving your goals. Choose your preferred location and doctor, and our team will promptly reach out to confirm your appointment.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-lg">
+            <DoctorsContactForm />
           </div>
         </div>
       </section>
