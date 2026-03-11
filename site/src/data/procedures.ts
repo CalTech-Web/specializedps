@@ -271,25 +271,45 @@ export const procedures: Procedure[] = [
     name: "Chin Liposuction",
     category: "face",
     categorySlug: "face",
+    heroImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-126.jpg",
+    contentImage:
+      "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-126.jpg",
     description:
-      "Chin liposuction, also known as submental liposuction, permanently eliminates the double chin and restores jawline definition through small, discreet incisions. This minimally invasive procedure targets the stubborn pocket of fat beneath the chin that often does not respond to diet or exercise.\n\nAt Specialized Plastic Surgery, chin liposuction is performed using advanced techniques that allow for precise fat removal and sculpting of the submental area. The result is a sharper, more defined jawline and an improved facial profile. This procedure can also be combined with other facial rejuvenation procedures for enhanced results.",
+      "Chin liposuction, also known as submental liposuction, is a precise surgical solution for double chin removal that permanently eliminates excess fat beneath the chin and restores jawline definition. The procedure uses small, discreet incisions to remove unwanted fat while sculpting the natural angle between the chin and neck, known as the cervicomental angle.\n\nAt Specialized Plastic Surgery, our board-certified plastic surgeons use advanced contouring techniques that allow for precise fat removal and sculpting of the submental area. Once the fat cells are removed, they do not return, delivering predictable and permanent results. The outcome is a sharper, more defined jawline and an improved facial profile that enhances overall facial balance.\n\nChin liposuction is ideal for individuals with good skin elasticity who want to address stubborn fat beneath the chin that does not respond to diet or exercise. This procedure can also be combined with other facial rejuvenation procedures such as a facelift or neck lift for more comprehensive results.",
     heroDescription:
-      "Permanently eliminate the double chin and restore a sharper, more defined jawline with this minimally invasive procedure.",
+      "Permanently eliminate the double chin and restore a sharper, more defined jawline with advanced contouring techniques for natural, long-lasting results.",
     benefits: [
-      "Permanent fat removal from beneath the chin",
-      "Enhanced jawline definition and sharper profile",
-      "Improved neck contour and transition to the jawline",
-      "Smoother, more youthful profile appearance",
-      "Minimal scarring from small, discreet incisions",
+      "Permanent fat removal from beneath the chin, fat cells do not return",
+      "Enhanced jawline definition and sharper facial profile",
+      "Improved cervicomental angle (chin-to-neck definition)",
+      "Advanced contouring for natural, long-lasting results",
+      "Minimal scarring from small incisions in discreet locations",
+      "Can be combined with facelift or neck lift for comprehensive rejuvenation",
     ],
     candidateCriteria: [
       "Excess fat beneath the chin creating a double chin appearance",
-      "Desire for improved jawline definition and profile",
-      "Good skin elasticity for optimal contouring results",
+      "Desire for improved jawline definition and a sharper profile",
+      "Good skin elasticity for optimal contouring and skin retraction",
       "Stable weight and overall good health",
+      "Stubborn submental fat that has not responded to diet or exercise",
     ],
+    techniques: [
+      "Traditional Submental Liposuction",
+      "Tumescent Liposuction",
+      "Power-Assisted Liposuction (PAL)",
+      "Combined Chin Lipo with Neck Lift",
+    ],
+    procedureSteps: [
+      "A thorough consultation evaluates your chin, jawline, and neck anatomy to develop a customized treatment plan aligned with your aesthetic goals.",
+      "Small, discreet incisions are made beneath the chin or behind the ears, positioned to remain virtually invisible once healed.",
+      "A tumescent solution is injected to numb the area, minimize bleeding, and facilitate smooth fat removal.",
+      "A thin cannula is inserted through the incisions to precisely remove excess fat while sculpting the submental area for optimal contour.",
+      "The incisions are closed with fine sutures and a compression garment is applied to support healing and minimize swelling.",
+    ],
+    procedureDuration: "30-60 minutes",
     recoveryTimeline:
-      "Minimal downtime with most patients returning to work within a few days. A compression garment is worn for several weeks to support healing. Swelling gradually subsides, with final results visible within 1-3 months.",
+      "During the first 24-48 hours, mild swelling and bruising are normal. A compression chin strap is worn to support the new contour and minimize swelling. Most discomfort is manageable with over-the-counter pain medication.\n\nBy one week, most patients return to work and daily activities. Swelling continues to improve and the jawline begins to take shape. The compression garment is typically worn for 2-3 weeks.\n\nAt 2-4 weeks, the majority of swelling has subsided and the improved jawline definition becomes more visible. Light exercise can gradually resume.\n\nFinal results are typically visible within 1-3 months as any remaining swelling fully resolves, revealing a sharper, more sculpted jawline and chin profile.",
   },
 
   // === AESTHETIC BREAST ===
@@ -345,27 +365,42 @@ export const procedures: Procedure[] = [
     shortName: "Breast Lift",
     category: "aesthetic-breast",
     categorySlug: "aesthetic-breast",
+    heroImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-215.jpg",
+    contentImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-165.jpg",
     description:
-      "A breast lift, or mastopexy, is a surgical procedure that raises and reshapes sagging breasts by removing excess skin and tightening the surrounding tissue. This procedure restores a more youthful, uplifted breast contour and repositions the nipples to a more aesthetically pleasing height.\n\nBreast sagging (ptosis) is a natural result of aging, pregnancy, breastfeeding, weight fluctuations, and gravity. A breast lift at Specialized Plastic Surgery addresses these changes, creating firmer, more symmetrical breasts that complement your natural body proportions. For patients who also desire increased volume, a breast lift can be combined with augmentation.",
+      "A breast lift, also known as mastopexy, is a cosmetic surgery procedure designed to raise and reshape sagging breasts by removing excess skin and tightening the surrounding tissue. Unlike breast augmentation, a breast lift does not significantly increase breast size but instead improves position, firmness, and overall shape.\n\nOver time, aging, pregnancy, breastfeeding, weight fluctuations, and gravity cause the breasts to lose their youthful appearance. A breast lift at Specialized Plastic Surgery addresses these changes, creating firmer, more symmetrical breasts that complement your natural body proportions. The results create a youthful contour that enhances body proportions and clothing fit. For patients who also desire increased volume, a breast lift can be combined with augmentation for a comprehensive transformation.",
     heroDescription:
-      "Restore youthful breast contours by raising and reshaping sagging breasts with expert surgical precision.",
+      "Restore youthful breast contours by raising and reshaping sagging breasts with expert surgical precision at our New York and New Jersey offices.",
     benefits: [
       "Improved breast shape, firmness, and position",
       "Enhanced projection and youthful contour",
       "Symmetry correction between breasts",
       "Repositioned nipples and reduced areola size if needed",
-      "Better fit in clothing and swimwear",
+      "Better fit in clothing, intimates, and swimwear",
+      "Can be combined with augmentation for added volume",
     ],
     candidateCriteria: [
-      "Significant breast sagging (ptosis) due to aging, pregnancy, or weight changes",
-      "Downward-pointing nipples or nipples that fall below the breast crease",
+      "Experienced significant breast sagging or volume loss due to aging, pregnancy, or weight changes",
+      "Nipples that point downward or sit below the breast crease",
       "Desire for youthful, uplifted contours without necessarily increasing size",
-      "Non-smoker in good overall health",
-      "Stable weight with realistic expectations",
+      "Non-smoker in good overall health, as smoking interferes with healing",
+      "Stable weight with realistic expectations for outcomes",
+    ],
+    techniques: [
+      "Crescent Lift (minimal sagging)",
+      "Peri-Areolar (Donut) Lift",
+      "Vertical (Lollipop) Lift",
+      "Inverted-T (Anchor) Lift",
+      "Breast Lift with Augmentation",
+    ],
+    procedureSteps: [
+      "Incision Placement: Your surgeon makes the chosen incision type based on your individual anatomy and the degree of lifting needed.",
+      "Reshaping and Lifting: Excess skin is removed, the breast tissue is reshaped, and the nipple and areola are repositioned to achieve a youthful contour.",
+      "Closing Incisions: Incisions are carefully closed using layered sutures to minimize scarring and enhance recovery.",
     ],
     procedureDuration: "2-3 hours",
     recoveryTimeline:
-      "Return to work in 1-2 weeks. Avoid heavy lifting and strenuous exercise for 4-6 weeks. A supportive bra is worn during the healing period. Final results become visible within several months as swelling resolves.",
+      "Most patients experience swelling, soreness, and minor bruising that typically improves within the first few days. Our Enhanced Recovery Protocol includes detailed post-operative care instructions and pain management to promote a smooth recovery.\n\nReturn to work within 1-2 weeks depending on the nature of your job. Avoid heavy lifting or intense physical activity for 4-6 weeks. A supportive bra is worn during the healing period. Final results become visible within several months as swelling subsides and scars continue to fade. Follow-up appointments are scheduled to monitor healing and ensure satisfaction with your results.",
   },
   {
     slug: "reduction",
