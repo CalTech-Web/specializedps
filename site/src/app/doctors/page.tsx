@@ -183,27 +183,6 @@ export default function DoctorsPage() {
             ))}
           </div>
 
-          {/* Credential Logos */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-            {[
-              { src: "/images/credentials/castle-connolly.webp", alt: "Castle Connolly Top Doctors", width: 140, height: 60 },
-              { src: "/images/credentials/top-us-news.webp", alt: "Top US News Doctor", width: 100, height: 100 },
-              { src: "/images/credentials/asps.webp", alt: "American Society of Plastic Surgeons", width: 120, height: 100 },
-              { src: "/images/credentials/alpha-omega.webp", alt: "Alpha Omega Alpha Honor Medical Society", width: 120, height: 100 },
-              { src: "/images/credentials/microsurgery.webp", alt: "American Society Reconstructive Microsurgery", width: 100, height: 100 },
-            ].map((cred, i) => (
-              <div key={i} className="opacity-80 transition-opacity hover:opacity-100">
-                <Image
-                  src={cred.src}
-                  alt={cred.alt}
-                  width={cred.width}
-                  height={cred.height}
-                  className="h-14 w-auto sm:h-16"
-                />
-              </div>
-            ))}
-          </div>
-
           {/* Recognition Cards */}
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[

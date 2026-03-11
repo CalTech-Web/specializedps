@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import CTABanner from "@/components/sections/CTABanner";
+
 import AppointmentButton from "@/components/ui/AppointmentButton";
 import {
   CheckCircle,
@@ -268,37 +268,15 @@ export default function FinancingPage() {
       <section className="bg-warm-grey py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left: CareCredit Image with Branding Overlay */}
-            <div className="relative overflow-hidden rounded-xl">
+            {/* Left: CareCredit Image */}
+            <div className="overflow-hidden rounded-xl">
               <Image
-                src="/images/financing/cherry-woman.webp"
-                alt="Pay over time with CareCredit"
+                src="https://specializedplasticsurgery.com/wp-content/uploads/2025/10/cosmetic-flexible-financing-600x800-1.webp"
+                alt="CareCredit flexible financing"
                 width={600}
                 height={800}
                 className="h-auto w-full object-cover"
               />
-              {/* CareCredit branding overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-heading/80 via-heading/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  Pay over time
-                </p>
-                <p className="font-heading text-2xl font-bold text-white sm:text-3xl">
-                  with CareCredit
-                </p>
-                <div className="mt-3 flex items-center gap-2">
-                  <Image
-                    src="/images/financing/carecredit-icon.webp"
-                    alt="CareCredit"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                  />
-                  <span className="text-sm text-white/70">
-                    Health & Wellness Credit Card
-                  </span>
-                </div>
-              </div>
             </div>
 
             {/* Right: CareCredit Content */}
@@ -628,8 +606,6 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <CTABanner />
     </>
   );
 }
