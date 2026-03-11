@@ -48,7 +48,7 @@ export default function HomeHero() {
         </video>
         <div className="absolute inset-0 bg-heading/40" />
 
-        <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24 text-center sm:py-32">
           <h1 className="font-heading text-3xl font-bold leading-[1.2] text-white sm:text-4xl lg:text-5xl">
             Your Destination for Plastic Surgery in New York and New Jersey
           </h1>
@@ -81,8 +81,8 @@ export default function HomeHero() {
           </div>
 
           {/* Scrolling services strip */}
-          <div className="mt-14 overflow-hidden">
-            <div className="flex items-center gap-3 animate-marquee hover:[animation-play-state:paused]">
+          <div className="relative mt-14 w-full overflow-hidden">
+            <div className="flex w-max items-center gap-3 animate-marquee hover:[animation-play-state:paused]">
               {heroServices.map((svc) => (
                 <Link
                   key={svc.label}
