@@ -3,7 +3,6 @@ import Image from "next/image";
 import { doctors } from "@/data/doctors";
 import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQSection from "@/components/sections/FAQSection";
@@ -224,7 +223,6 @@ export default function ExclusiveBreastAugmentationPricingPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

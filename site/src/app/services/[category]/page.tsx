@@ -9,7 +9,6 @@ import {
   type ProcedureCategory,
 } from "@/data/procedures";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 interface PageProps {
@@ -90,7 +89,6 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

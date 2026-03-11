@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Award, BookOpen, ArrowRight, FileText, GraduationCap, Users } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import DoctorsContactForm from "@/components/sections/DoctorsContactForm";
 import { doctors } from "@/data/doctors";
 
@@ -266,7 +265,6 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

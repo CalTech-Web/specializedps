@@ -48,7 +48,7 @@ export default async function GalleryProcedurePage({ params }: Props) {
       <HeroSection
         title={`${category.label} Gallery`}
         subtitle={category.description}
-        backgroundImage="/images/hero/about-hero.jpg"
+        backgroundImage={category.heroImage || "/images/hero/about-hero.jpg"}
       />
 
       <GalleryAgeGate>

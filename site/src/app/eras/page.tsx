@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AppointmentButton from "@/components/ui/AppointmentButton";
 import {
@@ -456,11 +455,6 @@ export default function ERASPage() {
         <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
       </section>
 
-      <CTABanner
-        heading="Discover the Difference of Personalized Aesthetic Solutions"
-        subtext="At Specialized Plastic Surgery, we're dedicated to helping you achieve your aesthetic goals with unparalleled precision and care. Explore our services and experience a transformative journey tailored to your unique needs. Schedule a consultation today and take the first step towards a confident, revitalized you."
-        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2025/01/SPS-Image-1023.jpg"
-      />
     </>
   );
 }

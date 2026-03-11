@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import CTABanner from "@/components/sections/CTABanner";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -81,7 +80,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

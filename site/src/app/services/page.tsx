@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Sparkles, Heart, HandHeart, User, ArrowRight } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { serviceCategories, getProceduresByCategory, type ProcedureCategory } from "@/data/procedures";
 
@@ -113,7 +112,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

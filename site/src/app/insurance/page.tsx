@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   ShieldCheck,
@@ -340,7 +339,6 @@ export default function InsurancePage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

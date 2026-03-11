@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock, Stethoscope } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import SectionHeading from "@/components/ui/SectionHeading";
-import CTABanner from "@/components/sections/CTABanner";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -291,11 +290,6 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <CTABanner
-        heading="Ready to Visit One of Our Locations?"
-        subtext="Schedule your personalized consultation at our New Jersey or New York office with one of our board-certified plastic surgeons."
-        ctaText="Schedule a Consultation"
-      />
     </>
   );
 }

@@ -5,7 +5,6 @@ import { siteConfig } from "@/data/site";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Calendar, Quote, ChevronRight } from "lucide-react";
-import CTABanner from "@/components/sections/CTABanner";
 import AppointmentButton from "@/components/ui/AppointmentButton";
 
 interface DoctorPageProps {
@@ -363,7 +362,6 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
   CheckCircle,
@@ -204,8 +203,6 @@ export default function FirstAppointmentPage() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <CTABanner />
     </>
   );
 }

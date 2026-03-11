@@ -20,7 +20,6 @@ import {
   GraduationCap,
 } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { doctors } from "@/data/doctors";
 
@@ -440,7 +439,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

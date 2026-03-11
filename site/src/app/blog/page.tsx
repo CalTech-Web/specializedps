@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { blogPosts, getFeaturedImage } from "@/data/blog-posts";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
   title: "Educational Resources | Specialized Plastic Surgery",
@@ -84,7 +83,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

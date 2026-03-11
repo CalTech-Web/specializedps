@@ -3,7 +3,6 @@ import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { doctors } from "@/data/doctors";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import { MapPin, Phone, Mail, Clock, Award, GraduationCap } from "lucide-react";
@@ -178,7 +177,6 @@ export default function DrChrisNewPatientFormPage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 import HeroSection from "@/components/sections/HeroSection";
-import CTABanner from "@/components/sections/CTABanner";
+
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import {
@@ -160,7 +160,6 @@ export default function TravellingToOurPracticePage() {
         </div>
       </section>
 
-      <CTABanner />
     </>
   );
 }
