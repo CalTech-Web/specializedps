@@ -44,7 +44,7 @@ export default function ServicesPage() {
       <HeroSection
         title="Our Services"
         subtitle="A comprehensive range of cosmetic and reconstructive plastic surgery procedures performed by board-certified surgeons."
-        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg"
+        backgroundImage="https://specializedplasticsurgery.com/wp-content/uploads/2026/03/pexels-pixabay-371126.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },
@@ -278,7 +278,7 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-236.jpg')",
+            backgroundImage: "url('https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-deor-est-243774879-16897750.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
