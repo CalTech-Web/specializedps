@@ -607,6 +607,8 @@ Our Harrison office features a private, state-of-the-art operating room accredit
     category: "Body Contouring",
     content: `## Understanding the Brazilian Butt Lift Procedure
 
+![Brazilian Butt Lift in Westchester NY](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/bbl-in-westchester.jpg)
+
 A Brazilian Butt Lift (BBL) is a multi-step body contouring surgery that combines liposuction and fat grafting to enhance the shape, projection, and contour of the buttocks while sculpting surrounding areas. Unlike procedures that add volume with implants or synthetic materials, a BBL uses a patient's own fat to create a more natural integration with existing tissue.
 
 The procedure begins with liposuction, which removes fat from selected donor areas. Common regions include the abdomen, flanks, lower back, thighs, or upper back. Small incisions are made, and a thin cannula is used to gently remove fat while sculpting the area.
@@ -1226,7 +1228,17 @@ Dr. Devulapalli brings years of experience in breast surgery, including breast a
 - **Board-Certified Plastic Surgeon** with advanced training in breast surgery
 - **Customized surgical plans** to achieve your desired shape and volume
 - **State-of-the-art surgical techniques** for a smooth, safe recovery
-- **Expertise in Motiva Implants**, offering the most advanced technology available`,
+- **Expertise in Motiva Implants**, offering the most advanced technology available
+
+![Motiva breast implant event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7407-2.jpg)
+
+![Motiva implant showcase](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7419.jpg)
+
+![Specialized Plastic Surgery Motiva event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7406-1.jpg)
+
+![Motiva implant technology presentation](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7474.jpg)
+
+![Motiva breast implant innovation event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7488-2.jpg)`,
   },
   {
     slug: "summer-ready-plastic-surgery",
@@ -1714,7 +1726,11 @@ Dr. Chris Devulapalli is a board-certified plastic surgeon specializing in cosme
     excerpt:
       "Combine breast explant surgery with a lift and fat grafting for natural reshaping and volume restoration after implant removal.",
     category: "Breast",
-    content: `## Why Women Choose Breast Implant Removal
+    content: `![Breast implant removal with lift and fat grafting](https://specializedplasticsurgery.com/wp-content/uploads/2025/10/0406117539_n.jpg)
+
+*Disclaimer: This is an actual patient with real results who has given informed consent. Individual results may vary.*
+
+## Why Women Choose Breast Implant Removal
 
 Over time, implants can shift, harden, or no longer align with a woman's aesthetic goals. Removing them allows for greater comfort and a more authentic appearance. However, simply removing implants can sometimes leave behind stretched skin or a deflated look.
 
