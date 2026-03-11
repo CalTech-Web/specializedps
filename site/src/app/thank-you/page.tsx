@@ -17,7 +17,7 @@ export default function ThankYouPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-heading py-20 sm:py-28">
+      <section className="relative bg-heading py-14 sm:py-20">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -55,7 +55,7 @@ export default function ThankYouPage() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
               Get in Touch
             </p>
-            <h2 className="mt-2 font-heading text-2xl font-bold text-heading sm:text-3xl">
+            <h2 className="mt-2 font-heading text-3xl font-bold text-heading sm:text-4xl">
               Our Offices
             </h2>
           </div>

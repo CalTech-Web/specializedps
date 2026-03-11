@@ -36,7 +36,7 @@ export default function CTABanner({
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 py-20 sm:py-28">
+      <div className="relative z-10 py-14 sm:py-20">
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
             {/* Left: Text content */}
@@ -47,7 +47,7 @@ export default function CTABanner({
                 <div className="h-[1px] w-16 bg-gradient-to-r from-gold to-transparent" />
               </div>
 
-              <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
+              <h2 className="font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
                 {heading}
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-white/70">

@@ -52,7 +52,7 @@ export default async function GalleryProcedurePage({ params }: Props) {
       />
 
       <GalleryAgeGate>
-        <section className="bg-white py-16 sm:py-20">
+        <section className="bg-white py-14 sm:py-20">
           <div className="mx-auto max-w-[1320px] px-6">
             {/* Breadcrumb */}
             <nav className="mb-8 flex items-center gap-2 text-sm text-body">

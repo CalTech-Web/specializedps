@@ -273,7 +273,7 @@ export default function TravelingPatientsPage() {
                 <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-heading text-base font-bold text-heading">
+                <h3 className="font-heading text-lg font-bold text-heading">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">

@@ -60,7 +60,7 @@ function renderContent(content: string) {
       return (
         <h2
           key={i}
-          className="font-heading mb-4 mt-10 text-2xl font-bold text-heading"
+          className="font-heading mb-4 mt-10 text-3xl font-bold sm:text-4xl text-heading"
         >
           {trimmed.replace(/^## /, "")}
         </h2>
@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span className="inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-medium text-gold">
             {post.category}
           </span>
-          <h1 className="font-heading mt-4 max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl">
+          <h1 className="font-heading mt-4 max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             {post.title}
           </h1>
           <p className="mt-3 text-sm text-white/70">{formatDate(post.date)}</p>
@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Recent Posts */}
             <div className="rounded-lg border border-gray-100 p-6">
-              <h3 className="font-heading text-base font-bold uppercase tracking-wide text-heading">
+              <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-heading">
                 Recent Posts
               </h3>
               <div className="mt-4 space-y-4">
@@ -238,7 +238,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Categories */}
             <div className="rounded-lg border border-gray-100 p-6">
-              <h3 className="font-heading text-base font-bold uppercase tracking-wide text-heading">
+              <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-heading">
                 Categories
               </h3>
               <div className="mt-4 space-y-1">

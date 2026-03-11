@@ -223,7 +223,7 @@ export default async function ProcedurePage({ params }: PageProps) {
         <div className="relative mx-auto max-w-[1320px] px-6 text-center">
           <div className="flex items-center justify-center gap-3">
             <Images className="h-7 w-7 text-primary" />
-            <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">
               See Real Patient Results
             </h2>
           </div>

@@ -68,10 +68,10 @@ export default function TeamPage() {
                   />
                 </div>
                 <div className="px-3 py-4 text-center">
-                  <h3 className="font-heading text-base font-bold text-heading">
+                  <h3 className="font-heading text-lg font-bold text-heading">
                     {member.name}
                   </h3>
-                  <p className="mt-0.5 text-sm text-gray-500">
+                  <p className="mt-0.5 text-sm text-body">
                     {member.role}
                   </p>
                 </div>

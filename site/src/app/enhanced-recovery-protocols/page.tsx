@@ -132,7 +132,7 @@ export default function EnhancedRecoveryProtocolsPage() {
               Helpful Tips
             </p>
           </div>
-          <h2 className="text-center font-heading text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="text-center font-heading text-3xl font-bold text-white sm:text-4xl">
             Recovery Tips for Patients
           </h2>
 

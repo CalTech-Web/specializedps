@@ -147,7 +147,7 @@ export default function FirstAppointmentPage() {
                   <tip.icon className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-base font-bold text-heading">
+                  <h3 className="font-heading text-lg font-bold text-heading">
                     {tip.title}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-body">

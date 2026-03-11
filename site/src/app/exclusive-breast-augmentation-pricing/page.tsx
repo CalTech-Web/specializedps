@@ -174,7 +174,7 @@ export default function ExclusiveBreastAugmentationPricingPage() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
                 Your Surgeon
               </p>
-              <h2 className="mt-3 font-heading text-2xl font-bold text-white sm:text-3xl">
+              <h2 className="mt-3 font-heading text-3xl font-bold text-white sm:text-4xl">
                 {drChris.name}, {drChris.credentials}
               </h2>
               <p className="mt-2 text-sm font-medium text-primary">

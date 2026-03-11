@@ -57,7 +57,7 @@ export default function DoctorsPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+                  <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
                     {doctor.name}
                   </h2>
                   <p className="mt-1 text-sm font-medium text-body">
@@ -251,7 +251,7 @@ export default function DoctorsPage() {
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
                   <Award className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-heading text-base font-bold text-white">
+                <h3 className="font-heading text-lg font-bold text-white">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">

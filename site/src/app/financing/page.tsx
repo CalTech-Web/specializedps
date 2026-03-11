@@ -88,7 +88,7 @@ export default function FinancingPage() {
                 <span className="text-lg font-bold text-heading">Cherry</span>
               </div>
 
-              <h2 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+              <h2 className="font-heading text-3xl font-bold text-heading sm:text-4xl">
                 Treat now, pay later
               </h2>
 
@@ -139,7 +139,7 @@ export default function FinancingPage() {
 
               {/* Payment Example */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
                   See an Example of What You Could Pay
                 </h3>
                 <div className="mt-4 flex items-center gap-3">
@@ -179,7 +179,7 @@ export default function FinancingPage() {
 
               {/* How Cherry Works */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
                   How Cherry Works
                 </h3>
                 <ol className="mt-5 space-y-4">
@@ -217,7 +217,7 @@ export default function FinancingPage() {
 
               {/* Questions */}
               <div className="mt-10 border-t border-gray-200 pt-8">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-heading">
+                <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-heading">
                   Questions?
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-body">
@@ -247,7 +247,7 @@ export default function FinancingPage() {
               </div>
 
               {/* Fine Print */}
-              <p className="mt-8 text-[11px] leading-relaxed text-body/50">
+              <p className="mt-8 text-xs leading-relaxed text-body/50">
                 *Fixed payments may vary 0% APR offer availability may vary by
                 merchant. Any promotional rate based on qualifying transactions.
                 Fixed rate and APR feature of the Cherry program will include a
@@ -307,7 +307,7 @@ export default function FinancingPage() {
                 Credit Options
               </span>
 
-              <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
+              <h2 className="mt-4 font-heading text-3xl font-bold text-heading sm:text-4xl">
                 Pay Over Time with the CareCredit Credit Card
               </h2>
 
@@ -352,12 +352,12 @@ export default function FinancingPage() {
 
               {/* Fine Print */}
               <div className="mt-6 border-t border-gray-200 pt-5">
-                <p className="text-[11px] leading-relaxed text-body/50">
+                <p className="text-xs leading-relaxed text-body/50">
                   *Subject to credit approval. Visit carecredit.com for details.
                   For new accounts as of 5/30/24: Purchase APR is 32.99%. Penalty
                   APR is 39.99%. Minimum Interest Charge is $2.
                 </p>
-                <p className="mt-2 text-[11px] leading-relaxed text-body/50">
+                <p className="mt-2 text-xs leading-relaxed text-body/50">
                   CareCredit is a Synchrony solution. When you go to the
                   CareCredit website, you will be subject to the Synchrony
                   privacy policy, which differs from the Dr. Chris Devulapalli,
@@ -391,7 +391,7 @@ export default function FinancingPage() {
               Compare Your Options
             </span>
 
-            <h2 className="mt-4 font-heading text-2xl font-bold text-heading sm:text-3xl">
+            <h2 className="mt-4 font-heading text-3xl font-bold text-heading sm:text-4xl">
               Financing Options: CareCredit vs. Cherry Payments
             </h2>
 
@@ -507,7 +507,7 @@ export default function FinancingPage() {
             Payment Examples
           </span>
 
-          <h2 className="mt-4 font-heading text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="mt-4 font-heading text-3xl font-bold text-white sm:text-4xl">
             Example Monthly Payment Breakdown
           </h2>
 

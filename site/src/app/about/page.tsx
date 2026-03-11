@@ -232,7 +232,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-heading text-2xl font-bold text-white">
+                  <h3 className="font-heading text-xl font-bold text-white">
                     {doctor.name}
                   </h3>
                   <p className="mt-1 text-base text-white/70">{doctor.title}</p>

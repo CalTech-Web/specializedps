@@ -20,7 +20,7 @@ export default function GalleryCTA() {
           <p className="inline-block bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
             Photo Gallery
           </p>
-          <h2 className="mt-6 font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-6 font-heading text-3xl font-bold uppercase leading-tight text-white sm:text-4xl">
             Explore Our Before &amp; After Gallery
           </h2>
           <p className="mt-6 text-sm leading-relaxed text-white/85">

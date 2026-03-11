@@ -49,10 +49,10 @@ export default function HomeHero() {
         <div className="absolute inset-0 bg-heading/40" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
-          <h1 className="font-heading text-4xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="font-heading text-3xl font-bold leading-[1.2] text-white sm:text-4xl lg:text-5xl">
             Your Destination for Plastic Surgery in New York and New Jersey
           </h1>
-          <p className="mx-auto mt-8 max-w-4xl text-[15px] leading-relaxed text-white/90 sm:text-base">
+          <p className="mx-auto mt-8 max-w-4xl text-sm leading-relaxed text-white/90 sm:text-base">
             At Specialized Plastic Surgery, we offer world-class expertise,
             advanced surgical training, and cutting-edge techniques, delivering
             results with unmatched precision, artistry, and compassionate care.
@@ -62,7 +62,7 @@ export default function HomeHero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <button
               onClick={() => openAppointment()}
-              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-[13px] text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
+              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-xs text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
             >
               <Calendar className="h-4 w-4" />
               <span className="font-bold uppercase tracking-wide">
@@ -71,7 +71,7 @@ export default function HomeHero() {
             </button>
             <Link
               href="/services/face"
-              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-[13px] text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
+              className="flex items-center gap-2 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-xs text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-heading hover:shadow-lg"
             >
               <Search className="h-4 w-4" />
               <span className="font-bold uppercase tracking-wide">

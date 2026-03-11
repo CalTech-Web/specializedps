@@ -61,7 +61,7 @@ export default function BlogPage() {
                     {post.category}
                   </span>
 
-                  <h2 className="font-heading mt-3 text-lg font-bold text-heading transition-colors group-hover:text-primary">
+                  <h2 className="font-heading mt-3 text-3xl font-bold sm:text-4xl text-heading transition-colors group-hover:text-primary">
                     {post.title}
                   </h2>
 

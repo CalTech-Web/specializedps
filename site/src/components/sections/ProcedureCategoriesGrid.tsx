@@ -45,7 +45,7 @@ export default function ProcedureCategoriesGrid() {
           <div className="absolute inset-0 bg-gradient-to-t from-heading/70 via-heading/20 to-transparent transition-colors duration-300 group-hover:from-heading/80" />
 
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-10 sm:pb-14">
-            <h3 className="font-heading text-xl font-bold uppercase tracking-wider text-white sm:text-2xl">
+            <h3 className="font-heading text-xl font-bold uppercase tracking-wider text-white">
               {cat.name}
             </h3>
             <span className="mt-4 inline-block rounded-md border-2 border-white bg-transparent px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-white opacity-0 transition-all duration-300 group-hover:opacity-100 hover:bg-white hover:text-heading">

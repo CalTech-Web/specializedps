@@ -13,7 +13,7 @@ export default function PopularProceduresTabs() {
   return (
     <section className="bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1320px] px-6">
-        <h2 className="mb-8 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl lg:text-5xl">
+        <h2 className="mb-8 text-center font-heading text-3xl font-bold uppercase text-heading sm:text-4xl">
           Popular Procedures
         </h2>
 
@@ -45,7 +45,7 @@ export default function PopularProceduresTabs() {
                   }}
                 />
                 <div className="relative p-10 sm:p-14">
-                  <h3 className="font-heading text-2xl font-bold text-heading sm:text-3xl">
+                  <h3 className="font-heading text-xl font-bold text-heading">
                     {active.name}
                   </h3>
                   <p className="mt-6 text-sm leading-relaxed text-body">

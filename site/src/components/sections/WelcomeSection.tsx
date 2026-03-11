@@ -56,7 +56,7 @@ export default function WelcomeSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Welcome to Specialized Plastic Surgery
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-heading sm:text-4xl lg:text-[2.75rem]">
+          <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-heading sm:text-4xl">
             Aesthetic and Reconstructive Procedures in New York and New Jersey
           </h2>
           <p className="mt-6 text-base leading-relaxed text-body">
