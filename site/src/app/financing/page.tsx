@@ -27,7 +27,7 @@ export default function FinancingPage() {
       {/* ─── Hero ─── */}
       <section className="relative flex min-h-[55vh] w-full items-center justify-center overflow-hidden bg-heading">
         <Image
-          src="/images/financing/hero-bg.jpg"
+          src="/images/hero/SPS-Image-116.jpg"
           alt="Financing and payment options"
           fill
           priority

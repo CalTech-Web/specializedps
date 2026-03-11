@@ -101,7 +101,7 @@ export default function NewPatientFormPage() {
 
       {/* Contact Form */}
       <section id="contact-form" className="relative bg-white py-14 sm:py-16">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative mx-auto max-w-[1320px] px-6">
           <div className="mx-auto max-w-2xl">
             <SectionHeading

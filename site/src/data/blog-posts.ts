@@ -659,6 +659,8 @@ For patients seeking stronger curves, fat grafting can increase upper pole fulln
 
 ### Hip Dip Correction with Fat Transfer
 
+![Hip dip correction with fat transfer](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/hip-dip-imge.jpg)
+
 The inward contour between the hip bone and upper thigh, often called a hip dip, is a normal anatomical variation. During a BBL, fat can be placed in this region to round out the transition between the waist and thighs. This technique contributes to a smoother outer hip contour and enhances the hourglass shape.
 
 ## Non-Surgical Filler for Buttock Enhancement vs. BBL
@@ -687,6 +689,8 @@ A Brazilian Butt Lift uses your own fat, which integrates naturally into tissue,
 For patients seeking significant shape change, improved waist-to-hip ratio, and comprehensive contouring, surgical fat transfer remains the more predictable and structurally integrated approach.
 
 ## The BBL Patient Experience at Specialized Plastic Surgery
+
+![BBL results at Specialized Plastic Surgery](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Untitled-design-93.jpg)
 
 ### The Importance of Anatomical Knowledge
 
@@ -719,6 +723,8 @@ Dr. Chris Devulapalli is a Brazilian Butt Lift expert in Westchester County, New
 Lipo 360 represents one of the most sought-after body contouring techniques globally, enabling patients to achieve a tighter, more sculpted midsection with sharper waist definition. At Specialized Plastic Surgery, Dr. Devulapalli offers expert-level surgical body contouring for patients seeking defined waistlines, smoother torso contours, and enhanced silhouettes.
 
 ## What is Lipo 360?
+
+![Lipo 360 body contouring](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Untitled-design-92.jpg)
 
 Lipo 360 is comprehensive liposuction addressing the entire midsection in one surgical plan. Rather than treating isolated zones, the surgeon contours the torso circumferentially, including:
 
@@ -762,6 +768,8 @@ Under anesthesia, small incisions are placed in discreet natural crease location
 
 ## Recovery After Lipo 360
 
+![Lipo 360 recovery](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Untitled-design-94.jpg)
+
 ### First 1-2 Weeks
 
 - Bruising and swelling occur
@@ -790,6 +798,8 @@ Under anesthesia, small incisions are placed in discreet natural crease location
 Lipo 360 is not simply fat removal. It is advanced, artistic body contouring that requires surgical precision and an aesthetic eye. Dr. Devulapalli brings microsurgical training to body contouring, providing precise fat removal enhancing natural curves while maintaining smooth contours.
 
 ## Exceptional Results Come From the Entire Care Team
+
+![Exceptional results from the entire care team](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Untitled-design-93.jpg)
 
 Surgery alone does not guarantee optimal results. Structured aftercare support optimizes healing, reduces swelling, and protects results.
 
@@ -825,9 +835,13 @@ Submental fullness, commonly called a "double chin," affects people across all b
 
 ## Why Submental Fullness Occurs
 
+![Chin liposuction before and after](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Chin-Lipo-Blog-Header-Thumbnail.jpg)
+
 The area under the chin behaves differently than other body parts. Contributing factors include genetic fat distribution patterns, chin and jawbone anatomy, natural aging changes, and skin quality and elasticity. Even individuals at a healthy weight may experience persistent fullness that softens jawline definition.
 
 ## Understanding Neck Anatomy
+
+![Chin liposuction in Westchester, New York](https://specializedplasticsurgery.com/wp-content/uploads/2026/02/Chin-Lipo-Westchester-New-York.jpg)
 
 Several anatomical factors influence submental fullness:
 
@@ -943,6 +957,10 @@ Popular injectable options include:
       "A recap of our community involvement during Breast Cancer Awareness Month, including educational events and the Making Strides walk.",
     category: "Community",
     content: `## Supporting Breast Cancer Patients in Our Office
+
+![Supporting breast cancer patients in our office](https://specializedplasticsurgery.com/wp-content/uploads/2025/10/IMG_2752.jpg)
+
+![Breast cancer awareness at Specialized Plastic Surgery](https://specializedplasticsurgery.com/wp-content/uploads/2025/10/IMG_2751.jpg)
 
 Throughout October, Specialized Plastic Surgery demonstrated appreciation for breast cancer patients with special treats and thoughtful touches during visits. The Westchester office aims to serve as more than a surgical practice, a place where patients heal, connect, and feel cared for.
 
@@ -1513,6 +1531,12 @@ Our Breast Cancer Awareness Month event highlighted the critical role of support
 
 ## Recap of Our Breast Cancer Awareness Month Event
 
+![Breast Cancer Awareness Month event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7407-2.jpg)
+
+![Community support at our awareness event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7419.jpg)
+
+![Breast cancer awareness event highlights](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7406-1.jpg)
+
 We had an incredible time at our Breast Cancer Awareness Month event, where community members, medical professionals, and patients came together for an evening of support and empowerment. At Specialized Plastic Surgery, we are dedicated to walking alongside breast cancer patients every step of the way, offering compassionate care and advanced options for reconstruction and healing.
 
 A huge thank you to the wonderful breast surgeons we collaborate with: Dr. Fou, Dr. Oommen, and Dr. Josephson, along with their amazing staff, for their dedication and partnership.
@@ -1520,6 +1544,10 @@ A huge thank you to the wonderful breast surgeons we collaborate with: Dr. Fou, 
 We are also deeply grateful for our sponsors, Resensation, Allergan, and Sientra, for making this event possible and for their unwavering support for breast cancer reconstruction.
 
 Special thanks to our raffle sponsors who donated amazing prizes to uplift and give back to breast cancer patients in our community: Westchester Acupuncture, Kaia Yoga, EverViolet, and Boiron.
+
+![Event sponsors and community partners](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7474.jpg)
+
+![Breast cancer awareness community event](https://specializedplasticsurgery.com/wp-content/uploads/2024/12/IMG_7488-2.jpg)
 
 This event was a resounding success, and we are honored to have shared it with so many from the community.
 
@@ -1539,7 +1567,11 @@ If you or someone you know has questions about breast reconstruction or would li
     category: "Breast",
     content: `## What is Breast Ptosis?
 
+![Breast augmentation with lift before and after](https://specializedplasticsurgery.com/wp-content/uploads/2025/08/Breast-Aug-Mastopexy-Case-3-IG-Before-After.jpg)
+
 Breast ptosis refers to the natural drooping or sagging of the breasts. This occurs over time due to factors such as pregnancy and breastfeeding, weight fluctuations, aging and loss of skin elasticity, and genetics.
+
+![Breast ptosis classification diagram](https://specializedplasticsurgery.com/wp-content/uploads/2025/08/breast-ptosis.png)
 
 Ptosis is often identified by the position of the nipple in relation to the breast fold (the inframammary crease). If the nipple sits at or below the fold, or points downward, a lift is often recommended. In these cases, placing an implant alone will not correct sagging, which is why a breast lift combined with augmentation can provide a more complete result.
 
@@ -1591,9 +1623,13 @@ If you have been considering breast surgery in New York, trust your care to an e
     category: "Breast Augmentation",
     content: `## What Is the Dual Plane Technique?
 
+![Breast augmentation with lift before and after](https://specializedplasticsurgery.com/wp-content/uploads/2025/08/Breast-Aug-Mastopexy-Case-2-Before-and-After.png)
+
 The **dual plane breast augmentation technique** is a specialized approach where the implant is placed partially under the chest muscle (pectoralis major) and partially under the breast tissue. This hybrid placement combines the advantages of both submuscular and subglandular techniques, allowing for enhanced support, improved coverage, and a more natural appearance.
 
 In cases where sagging is present, placing an implant alone will not correct it, which is why a breast lift combined with augmentation can provide a more complete result.
+
+![Dual plane technique diagram](https://specializedplasticsurgery.com/wp-content/uploads/2025/08/dual-plane.png)
 
 ## Why Patients Love the Dual Plane Technique
 
@@ -1641,6 +1677,8 @@ High profile breast implants work well for women who:
 - Prefer more projection without requiring very large implants
 
 ## The Dual Plane Technique Explained
+
+![Dual plane technique diagram](https://specializedplasticsurgery.com/wp-content/uploads/2025/08/dual-plane.png)
 
 The dual plane technique places the implant partially beneath the chest muscle and partially beneath breast tissue, offering several advantages:
 

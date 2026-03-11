@@ -246,16 +246,8 @@ export default function GalleryPage() {
         </section>
 
         {/* ───────── Section 5: Contact Form ───────── */}
-        <section className="relative overflow-hidden py-14 sm:py-20">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/images/gallery-page/marble-bg.webp')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              opacity: 0.4,
-            }}
-          />
+        <section className="relative overflow-hidden bg-white py-14 sm:py-20">
+          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url('/images/gallery-page/marble-bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
           <div className="relative mx-auto max-w-2xl px-6">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-body/70">
               Join Us on Your Journey
