@@ -7,6 +7,7 @@ interface CTABannerProps {
   subtext?: string;
   ctaText?: string;
   backgroundImage?: string;
+  backgroundVideo?: string;
 }
 
 export default function CTABanner({
@@ -14,17 +15,32 @@ export default function CTABanner({
   subtext = "Schedule your personalized consultation with one of our board-certified plastic surgeons today.",
   ctaText = "Schedule Consultation",
   backgroundImage = "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-115.jpg",
+  backgroundVideo = "/videos/SPS-Video-110.mp4",
 }: CTABannerProps) {
   return (
     <section className="relative overflow-hidden">
-      {/* Background image with Next Image for optimization */}
-      <Image
-        src={backgroundImage}
-        alt=""
-        fill
-        className="object-cover"
-        sizes="100vw"
-      />
+      {/* Background video */}
+      {backgroundVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      )}
+      {/* Background image fallback */}
+      {backgroundImage && !backgroundVideo && (
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+      )}
 
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-heading/90 via-heading/80 to-heading/70" />

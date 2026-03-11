@@ -67,6 +67,23 @@ function renderContent(content: string) {
       );
     }
 
+    // Image block: ![alt](src)
+    const imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imgMatch) {
+      return (
+        <div key={i} className="my-8">
+          <Image
+            src={imgMatch[2]}
+            alt={imgMatch[1] || "Blog image"}
+            width={800}
+            height={500}
+            className="w-full rounded-lg object-cover"
+            sizes="(max-width: 1024px) 100vw, 700px"
+          />
+        </div>
+      );
+    }
+
     const lines = trimmed.split("\n");
     const isListBlock = lines.every((line) => line.trim().startsWith("- "));
     if (isListBlock) {

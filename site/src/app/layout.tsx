@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -59,6 +60,10 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${playfair.variable} antialiased`}
       >
+        <Script
+          src="https://www.google.com/recaptcha/api.js?render=6LdWv4UsAAAAADqB8J_eoc35dvvOon1lnd98nT9f"
+          strategy="afterInteractive"
+        />
         <AppointmentModalProvider>
           <Header />
           <main className="min-h-screen">{children}</main>

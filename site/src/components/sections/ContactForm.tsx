@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 interface FormData {
   location: string;
@@ -47,6 +48,8 @@ export default function ContactForm({
   recipientEmail,
 }: ContactFormProps = {}) {
   const router = useRouter();
+  const { getToken } = useRecaptcha();
+  const honeypotRef = useRef<HTMLInputElement>(null);
   const isFixed = !!(fixedLocation && fixedDoctor);
 
   const [formData, setFormData] = useState<FormData>({
@@ -87,11 +90,17 @@ export default function ContactForm({
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    if (honeypotRef.current?.value) {
+      setStatus("success");
+      router.push("/thank-you");
+      return;
+    }
     if (!validate()) return;
 
     setStatus("submitting");
 
     try {
+      const recaptcha_token = await getToken("contact_form");
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -99,6 +108,7 @@ export default function ContactForm({
           site_id: SITE_ID,
           ...formData,
           recipientEmail: recipientEmail ?? selectedLocation?.email,
+          recaptcha_token,
         }),
       });
 
@@ -247,6 +257,11 @@ export default function ContactForm({
         {errors.message && (
           <p className="mt-1 text-xs text-red-500">{errors.message}</p>
         )}
+      </div>
+
+      {/* Honeypot */}
+      <div className="absolute -left-[9999px]" aria-hidden="true">
+        <input type="text" name="website" ref={honeypotRef} tabIndex={-1} autoComplete="off" />
       </div>
 
       {status === "error" && (

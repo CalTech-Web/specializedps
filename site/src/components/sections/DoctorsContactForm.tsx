@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -22,6 +23,8 @@ function doctorForLocation(loc: string): string {
 
 export default function DoctorsContactForm() {
   const router = useRouter();
+  const { getToken } = useRecaptcha();
+  const honeypotRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     location: "",
     doctor: "",
@@ -46,13 +49,19 @@ export default function DoctorsContactForm() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    if (honeypotRef.current?.value) {
+      setStatus("success");
+      router.push("/thank-you");
+      return;
+    }
     setStatus("submitting");
 
     try {
+      const recaptcha_token = await getToken("doctors_contact_form");
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: SITE_ID, ...formData }),
+        body: JSON.stringify({ site_id: SITE_ID, ...formData, recaptcha_token }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");
@@ -171,6 +180,11 @@ export default function DoctorsContactForm() {
           className="block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] px-[20px] py-4 text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30"
           placeholder="Please tell us what procedure you're interested in"
         />
+      </div>
+
+      {/* Honeypot */}
+      <div className="absolute -left-[9999px]" aria-hidden="true">
+        <input type="text" name="website" ref={honeypotRef} tabIndex={-1} autoComplete="off" />
       </div>
 
       {/* Error */}

@@ -27,7 +27,7 @@ export function getFeaturedImage(post: BlogPost): string {
 export const blogPosts: BlogPost[] = [
   {
     slug: "silicone-vs-saline-breast-implants",
-    featuredImage: "/images/blog/silicone-vs-saline.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-cottonbro-6568244.jpg",
     title: "Silicone vs Saline Breast Implants: Which Is Right for You?",
     date: "2026-02-24",
     excerpt:
@@ -96,7 +96,7 @@ During consultation, the surgeon evaluates tissue thickness, chest width, existi
   },
   {
     slug: "how-long-do-breast-implants-last",
-    featuredImage: "/images/blog/how-long-implants-last.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-cottonbro-5747834.jpg",
     title: "How Long Do Breast Implants Last?",
     date: "2026-02-24",
     excerpt:
@@ -172,7 +172,7 @@ Routine monitoring helps ensure implant safety. Monitoring may include physical 
   },
   {
     slug: "do-i-need-a-breast-lift-with-implants",
-    featuredImage: "/images/blog/breast-lift-with-implants.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-rocketmann-prod-9486596.jpg",
     title: "Do I Need a Breast Lift with Implants?",
     date: "2026-02-24",
     excerpt:
@@ -257,7 +257,7 @@ Recovery after combined procedures may involve swelling, incision care, support 
   },
   {
     slug: "what-size-breast-implants-should-i-get",
-    featuredImage: "/images/blog/what-size-implants.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-anntarazevich-5629208.jpg",
     title: "What Size Breast Implants Should I Get?",
     date: "2026-02-24",
     excerpt:
@@ -341,7 +341,7 @@ Larger implants are not always ideal. Oversized implants may lead to back discom
   },
   {
     slug: "round-vs-teardrop-breast-implants",
-    featuredImage: "/images/blog/round-vs-teardrop.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-deor-est-243774879-16897750.jpg",
     title: "Round vs Teardrop Breast Implants: Which Shape Is Right?",
     date: "2026-02-24",
     excerpt:
@@ -418,7 +418,7 @@ Implant shape selection is individualized for each patient. Planning includes de
   },
   {
     slug: "over-vs-under-muscle-breast-implants",
-    featuredImage: "/images/blog/over-vs-under-muscle.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-sora-shimazaki-5938394.jpg",
     title: "Over vs Under Muscle Breast Implants: Placement Options Explained",
     date: "2026-02-24",
     excerpt:
@@ -501,7 +501,7 @@ During consultation, evaluation includes chest width, tissue thickness, skin ela
   },
   {
     slug: "breast-augmentation-westchester-ny",
-    featuredImage: "/images/blog/breast-aug-westchester.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-cottonbro-5770700.jpg",
     title: "Breast Augmentation in Westchester, NY",
     date: "2026-02-21",
     excerpt:
@@ -599,7 +599,7 @@ Our Harrison office features a private, state-of-the-art operating room accredit
   },
   {
     slug: "bbl-in-westchester-ny",
-    featuredImage: "/images/blog/bbl-westchester.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-gabrielxdias-7227788.jpg",
     title: "BBL in Westchester, NY: Your Guide to Brazilian Butt Lift",
     date: "2026-02-17",
     excerpt:
@@ -708,7 +708,7 @@ Dr. Chris Devulapalli is a Brazilian Butt Lift expert in Westchester County, New
   },
   {
     slug: "lipo-360-in-westchester-ny",
-    featuredImage: "/images/blog/lipo-360-westchester.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-kindelmedia-7298900.jpg",
     title: "Lipo 360 in Westchester, NY: Complete Midsection Sculpting",
     date: "2026-02-11",
     excerpt:
@@ -813,7 +813,7 @@ Surgery alone does not guarantee optimal results. Structured aftercare support o
   },
   {
     slug: "chin-liposuction-in-westchester-ny",
-    featuredImage: "/images/blog/chin-lipo-westchester.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2026/02/pexels-dong-ma-532628260-16523146.jpg",
     title: "Chin Liposuction in Westchester, NY: Permanent Double Chin Removal",
     date: "2026-02-11",
     excerpt:
@@ -888,7 +888,7 @@ Chin liposuction uses minimal, discreet incisions. One hidden in the natural cre
   },
   {
     slug: "holiday-season-plastic-surgery",
-    featuredImage: "/images/blog/holiday-season.jpeg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/12/IMG_4077.jpeg",
     title: "Why the Holiday Season Is the Perfect Time for Plastic Surgery",
     date: "2025-12-17",
     excerpt:
@@ -936,7 +936,7 @@ Popular injectable options include:
   },
   {
     slug: "breast-cancer-awareness-month-recap",
-    featuredImage: "/images/blog/breast-cancer-recap.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/10/IMG_2752.jpg",
     title: "Breast Cancer Awareness Month Recap",
     date: "2025-10-27",
     excerpt:
@@ -964,7 +964,7 @@ The practice serves patients throughout Westchester County, the Hudson Valley, N
   },
   {
     slug: "blepharoplasty-in-westchester-ny",
-    featuredImage: "/images/blog/blepharoplasty-westchester.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/04/SPS-Image-2021.jpg",
     title: "Blepharoplasty in Westchester, NY: Refresh Your Look",
     date: "2025-09-01",
     excerpt:
@@ -1065,7 +1065,7 @@ During your consultation, Dr. Devulapalli will help you weigh the pros and cons 
   },
   {
     slug: "summer-confidence-boost",
-    featuredImage: "/images/blog/summer-confidence.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/07/christin-noelle-O8MEiT825uU-unsplash.jpg",
     title: "Summer Confidence Boost: Top Procedures for the Season",
     date: "2025-07-01",
     excerpt:
@@ -1109,7 +1109,7 @@ Our state-of-the-art office in Westchester, NY provides a welcoming, supportive 
   },
   {
     slug: "breast-reduction-covered-by-insurance",
-    featuredImage: "/images/blog/breast-reduction-insurance.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/08/viktor-talashuk-kFU_JB9Xhc-unsplash.jpg",
     title: "Breast Reduction Covered by Insurance: What You Need to Know",
     date: "2025-06-01",
     excerpt:
@@ -1148,7 +1148,7 @@ If your insurance does not approve coverage, you still have options. At Speciali
   },
   {
     slug: "introducing-motiva-implants",
-    featuredImage: "/images/blog/motiva-implants.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-160.jpg",
     title: "Introducing Motiva: The Pinnacle of Breast Implant Innovation",
     date: "2025-05-01",
     excerpt:
@@ -1212,7 +1212,7 @@ Dr. Devulapalli brings years of experience in breast surgery, including breast a
   },
   {
     slug: "summer-ready-plastic-surgery",
-    featuredImage: "/images/blog/summer-ready.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-233.jpg",
     title: "Summer-Ready: Why Now Is the Best Time for a Tummy Tuck, Liposuction, or Breast Augmentation",
     date: "2025-04-01",
     excerpt:
@@ -1281,7 +1281,7 @@ Whether you are dreaming of a flat stomach, smooth contours, or fuller breasts, 
   },
   {
     slug: "meet-the-experts",
-    featuredImage: "/images/blog/meet-the-experts.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-129.jpg",
     title: "Meet the Experts Behind Specialized Plastic Surgery",
     date: "2025-03-01",
     excerpt:
@@ -1334,7 +1334,7 @@ Choosing the right plastic surgeon is a critical decision, and at Specialized Pl
   },
   {
     slug: "restoring-what-matters",
-    featuredImage: "/images/blog/restoring-what-matters.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-130.jpg",
     title: "Restoring What Matters: Sensation Recovery with Resensation",
     date: "2025-02-01",
     excerpt:
@@ -1374,7 +1374,7 @@ At Specialized Plastic Surgery, we are not just restoring breasts; we are restor
   },
   {
     slug: "a-mommy-makeover",
-    featuredImage: "/images/blog/mommy-makeover.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-244.jpg",
     title: "A Mommy Makeover: What Procedures Are Involved?",
     date: "2024-12-13",
     excerpt:
@@ -1428,7 +1428,7 @@ If you are interested in learning more about whether a Mommy Makeover is right f
   },
   {
     slug: "celebrating-breast-cancer-awareness-month",
-    featuredImage: "/images/blog/celebrating-awareness.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/pexels-klaus-nielsen-6303696.jpg",
     title: "Celebrating Breast Cancer Awareness Month",
     date: "2024-10-01",
     excerpt:
@@ -1487,7 +1487,7 @@ If you are considering breast reconstruction or want to explore your options, we
   },
   {
     slug: "wrapping-up-breast-cancer-awareness-month",
-    featuredImage: "/images/blog/wrapping-up-awareness.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2024/12/SPS-Image-245.jpg",
     title: "Wrapping Up Breast Cancer Awareness Month",
     date: "2024-10-31",
     excerpt:
@@ -1531,7 +1531,7 @@ If you or someone you know has questions about breast reconstruction or would li
   },
   {
     slug: "breast-augmentation-with-lift-harrison-ny",
-    featuredImage: "/images/blog/aug-lift-harrison.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/08/Breast-Aug-Mastopexy-Case-3-IG-Before-After.jpg",
     title: "Breast Augmentation with Lift (Mastopexy) in Harrison, NY",
     date: "2024-09-01",
     excerpt:
@@ -1583,7 +1583,7 @@ If you have been considering breast surgery in New York, trust your care to an e
   },
   {
     slug: "dual-plane-technique-explained",
-    featuredImage: "/images/blog/dual-plane-explained.png",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/08/Breast-Aug-Mastopexy-Case-2-Before-and-After.png",
     title: "Breast Augmentation with Lift: The Dual Plane Technique",
     date: "2024-08-01",
     excerpt:
@@ -1624,7 +1624,7 @@ Our Harrison office is conveniently located and features a private AAAASF-accred
   },
   {
     slug: "high-profile-implants-dual-plane",
-    featuredImage: "/images/blog/high-profile-dual-plane.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/08/High-Profile-Breast-Implants-with-the-Dual-Plane-Technique.jpg",
     title: "High Profile Breast Implants with the Dual Plane Technique",
     date: "2024-07-01",
     excerpt:
@@ -1670,7 +1670,7 @@ Dr. Chris Devulapalli is a board-certified plastic surgeon specializing in cosme
   },
   {
     slug: "breast-implant-removal-lift-fat-grafting",
-    featuredImage: "/images/blog/implant-removal-lift.jpg",
+    featuredImage: "https://specializedplasticsurgery.com/wp-content/uploads/2025/10/0406117539_n.jpg",
     title: "Breast Implant Removal with Lift and Fat Grafting",
     date: "2024-06-01",
     excerpt:

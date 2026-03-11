@@ -64,6 +64,7 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Ready to take the next step? Schedule a consultation with our board-certified plastic surgeons today."
         backgroundImage="/images/hero/contact-hero.webp"
+        backgroundVideo="/videos/SPS-Video-108.mp4"
         ctaText="Call (973) 561-0900"
         ctaLink="tel:9735610900"
         breadcrumbs={[
