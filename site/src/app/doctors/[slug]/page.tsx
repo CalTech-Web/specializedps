@@ -56,9 +56,9 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
           }}
         />
         <div className="absolute inset-0 bg-heading/70" />
-        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6">
+        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6 text-center">
           {/* Breadcrumb */}
-          <nav className="mb-6 flex items-center gap-2 text-sm text-white/60">
+          <nav className="mb-6 flex items-center justify-center gap-2 text-sm text-white/60">
             <Link href="/" className="transition-colors hover:text-white">
               Home
             </Link>
