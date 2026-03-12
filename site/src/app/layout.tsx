@@ -59,6 +59,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://specializedplasticsurgery.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero/SPS-Image-115.jpg"
+          fetchPriority="high"
+        />
       </head>
       <body
         className={`${dmSans.variable} antialiased`}

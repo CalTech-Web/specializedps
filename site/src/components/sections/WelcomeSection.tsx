@@ -9,14 +9,20 @@ export default function WelcomeSection() {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
     function handleScroll() {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowH = window.innerHeight;
-      if (rect.bottom > 0 && rect.top < windowH) {
-        const progress = (windowH - rect.top) / (windowH + rect.height);
-        setOffset((progress - 0.5) * 80);
-      }
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        if (!sectionRef.current) return;
+        const rect = sectionRef.current.getBoundingClientRect();
+        const windowH = window.innerHeight;
+        if (rect.bottom > 0 && rect.top < windowH) {
+          const progress = (windowH - rect.top) / (windowH + rect.height);
+          setOffset((progress - 0.5) * 80);
+        }
+        ticking = false;
+      });
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
@@ -46,7 +52,7 @@ export default function WelcomeSection() {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
