@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
-const SITE_ID = "specializedplasticsurgery";
+const SITE = "specializedplasticsurgery";
 
 const inputClasses =
   "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[56px] px-[20px] text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30";
@@ -55,10 +55,19 @@ export default function DoctorsContactForm() {
     setStatus("submitting");
 
     try {
+      const recipientEmail = formData.location === "NJ"
+        ? "NJ@myspsdocs.com"
+        : formData.location === "NY"
+          ? "Westchester@myspsdocs.com"
+          : "";
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ site_id: SITE_ID, ...formData }),
+        body: JSON.stringify({
+          site: SITE,
+          ...formData,
+          ...(recipientEmail ? { recipientEmail } : {}),
+        }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setStatus("success");

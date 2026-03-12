@@ -21,7 +21,7 @@ interface ContactFormProps {
 }
 
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
-const SITE_ID = "specializedplasticsurgery";
+const SITE = "specializedplasticsurgery";
 
 const locations = [
   {
@@ -102,7 +102,7 @@ export default function ContactForm({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          site_id: SITE_ID,
+          site: SITE,
           ...formData,
           recipientEmail: recipientEmail ?? selectedLocation?.email,
         }),

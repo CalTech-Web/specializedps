@@ -51,7 +51,7 @@ interface FormData {
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 const SUBMIT_URL = "https://forms.caltechweb.com/api/submit";
-const SITE_ID = "specializedplasticsurgery";
+const SITE = "specializedplasticsurgery";
 
 const modalInputClasses =
   "block w-full bg-white border-0 shadow-[0px_10px_45px_rgba(0,0,0,0.04)] h-[56px] px-[20px] text-sm text-heading placeholder:text-body focus:outline-none focus:ring-2 focus:ring-primary/30";
@@ -138,9 +138,12 @@ function AppointmentModalOverlay({ onClose, preset }: { onClose: () => void; pre
     setStatus("submitting");
 
     try {
-      const payload: Record<string, string> = { site_id: SITE_ID, ...formData };
-      if (preset?.recipientEmail) {
-        payload.recipientEmail = preset.recipientEmail;
+      const recipientEmail = preset?.recipientEmail
+        || (formData.location === "NJ" ? "NJ@myspsdocs.com" : "")
+        || (formData.location === "NY" ? "Westchester@myspsdocs.com" : "");
+      const payload: Record<string, string> = { site: SITE, ...formData };
+      if (recipientEmail) {
+        payload.recipientEmail = recipientEmail;
       }
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
