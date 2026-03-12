@@ -1,16 +1,18 @@
+import dynamic from "next/dynamic";
 import HomeHero from "@/components/sections/HomeHero";
 import WelcomeSection from "@/components/sections/WelcomeSection";
 import CredentialsBar from "@/components/sections/CredentialsBar";
 import ProcedureCategoriesGrid from "@/components/sections/ProcedureCategoriesGrid";
 import DoctorsShowcase from "@/components/sections/DoctorsShowcase";
-import PopularProceduresTabs from "@/components/sections/PopularProceduresTabs";
 import GalleryCTA from "@/components/sections/GalleryCTA";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
-import GoogleReviews from "@/components/sections/GoogleReviews";
 import AdvancedTechnology from "@/components/sections/AdvancedTechnology";
 import LatestBlog from "@/components/sections/LatestBlog";
-import BeforeAfterDragSlider from "@/components/sections/BeforeAfterDragSlider";
-import HotspotBodyMap from "@/components/sections/HotspotBodyMap";
+
+const PopularProceduresTabs = dynamic(() => import("@/components/sections/PopularProceduresTabs"));
+const GoogleReviews = dynamic(() => import("@/components/sections/GoogleReviews"));
+const BeforeAfterDragSlider = dynamic(() => import("@/components/sections/BeforeAfterDragSlider"));
+const HotspotBodyMap = dynamic(() => import("@/components/sections/HotspotBodyMap"));
 
 export default function HomePage() {
   return (

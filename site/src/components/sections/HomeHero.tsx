@@ -39,6 +39,8 @@ export default function HomeHero() {
           muted
           loop
           playsInline
+          preload="none"
+          poster="/images/hero/SPS-Image-115.jpg"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source

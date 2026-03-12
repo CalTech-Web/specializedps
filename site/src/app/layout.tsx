@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 import { AppointmentModalProvider } from "@/components/sections/AppointmentModal";
@@ -8,12 +8,6 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -62,8 +56,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://specializedplasticsurgery.com" />
+      </head>
       <body
-        className={`${dmSans.variable} ${playfair.variable} antialiased`}
+        className={`${dmSans.variable} antialiased`}
       >
         <AppointmentModalProvider>
           <LayoutWrapper>{children}</LayoutWrapper>
