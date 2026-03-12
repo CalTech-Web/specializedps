@@ -1,11 +1,15 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Script from "next/script";
+import dynamic from "next/dynamic";
 import Header from "./Header";
 import Footer from "./Footer";
-import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
 import CherryWidget from "@/components/ui/CherryWidget";
+
+const AccessibilityWidget = dynamic(
+  () => import("@/components/ui/AccessibilityWidget"),
+  { ssr: false }
+);
 
 const STANDALONE_ROUTES = [
   "/breast-reduction-covered-by-insurance-in-westchester",

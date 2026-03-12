@@ -7,7 +7,7 @@ export default function CherryWidget() {
     <>
       <Script
         src="https://files.withcherry.com/widgets/widget.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         onLoad={() => {
           // @ts-expect-error Cherry widget global
           window._hw?.("init", {

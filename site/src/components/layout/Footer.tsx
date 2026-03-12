@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Phone, Mail, Sparkles, Star, ArrowRight, Calendar } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import AppointmentButton from "@/components/ui/AppointmentButton";
+import DesktopVideo from "@/components/ui/DesktopVideo";
 
 export default function Footer() {
   const { nj, ny } = siteConfig.locations;
@@ -11,16 +12,16 @@ export default function Footer() {
     <footer>
       {/* ============ CTA Section ============ */}
       <div className="relative min-h-[400px] overflow-hidden sm:min-h-[500px]">
-        {/* Background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/videos/SPS-Video-110.mp4" type="video/mp4" />
-        </video>
+        {/* Background: static image on mobile, video on desktop */}
+        <Image
+          src="/images/hero/SPS-Image-115.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          loading="lazy"
+        />
+        <DesktopVideo src="/videos/SPS-Video-110.mp4" />
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-heading/70 via-heading/60 to-heading/50" />
