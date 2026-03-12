@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Search } from "lucide-react";
 import { useAppointmentModal } from "@/components/sections/AppointmentModal";
@@ -31,23 +33,42 @@ const heroServices = [
 /* ------------------------------------------------------------------ */
 export default function HomeHero() {
   const { open: openAppointment } = useAppointmentModal();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   return (
       <section className="relative flex min-h-[75vh] w-full flex-col items-center justify-center overflow-hidden bg-heading">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/images/hero/SPS-Image-115.jpg"
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source
-            src="https://specializedplasticsurgery.com/wp-content/uploads/2025/09/new-header-sps-video.mp4"
-            type="video/mp4"
-          />
-        </video>
+        {/* Static image background (fast LCP on mobile) */}
+        <Image
+          src="/images/hero/SPS-Image-115.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Video overlay — only rendered on desktop */}
+        {isDesktop && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source
+              src="https://specializedplasticsurgery.com/wp-content/uploads/2025/09/new-header-sps-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        )}
         <div className="absolute inset-0 bg-heading/40" />
 
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24 text-center sm:py-32">
