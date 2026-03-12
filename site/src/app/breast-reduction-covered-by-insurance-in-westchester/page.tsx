@@ -782,12 +782,19 @@ export default function BreastReductionInsuranceWestchesterPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-heading/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="font-heading text-xl font-bold text-white">
-                  500 Mamaroneck Ave
-                </p>
-                <p className="mt-1 text-sm text-white/80">
-                  Suite 211, Harrison, NY 10528
-                </p>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=500+Mamaroneck+Ave,+Suite+211,+Harrison,+NY+10528"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-opacity hover:opacity-80"
+                >
+                  <p className="font-heading text-xl font-bold text-white">
+                    500 Mamaroneck Ave
+                  </p>
+                  <p className="mt-1 text-sm text-white/80">
+                    Suite 211, Harrison, NY 10528
+                  </p>
+                </a>
               </div>
             </div>
 
@@ -802,9 +809,14 @@ export default function BreastReductionInsuranceWestchesterPage() {
                     <p className="text-xs font-semibold tracking-wider text-body/60">
                       Address
                     </p>
-                    <p className="mt-1 text-sm font-medium text-heading">
+                    <a
+                      href={ny.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block text-sm font-medium text-heading transition-colors hover:text-primary"
+                    >
                       {ny.address}
-                    </p>
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

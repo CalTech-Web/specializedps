@@ -413,11 +413,16 @@ export default function TravelingPatientsPage() {
               <p className="font-semibold text-heading">
                 Dr. Michael Sosin, MD, FACS
               </p>
-              <p className="mt-2 text-base leading-relaxed text-body">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=264+Millburn+Ave,+Millburn,+NJ+07041"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 block text-base leading-relaxed text-body transition-colors hover:text-primary"
+              >
                 264 Millburn Ave
                 <br />
                 Millburn, NJ 07041
-              </p>
+              </a>
               <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
               <p className="mt-3 text-base text-body">
                 <span className="font-semibold">Phone:</span>{" "}
@@ -455,11 +460,16 @@ export default function TravelingPatientsPage() {
               <p className="font-semibold text-heading">
                 Dr. Chris Devulapalli, MD
               </p>
-              <p className="mt-2 text-base leading-relaxed text-body">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=500+Mamaroneck+Ave,+Suite+211,+Harrison,+NY+10528"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 block text-base leading-relaxed text-body transition-colors hover:text-primary"
+              >
                 500 Mamaroneck Ave, Suite 211
                 <br />
                 Harrison, NY 10528
-              </p>
+              </a>
               <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
               <p className="mt-3 text-base text-body">
                 <span className="font-semibold">Phone:</span>{" "}

@@ -173,7 +173,14 @@ export default function Footer() {
                   {nj.surgeon}
                 </p>
                 <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
-                <p className="mt-2 text-sm text-body">{nj.address}</p>
+                <Link
+                  href={nj.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm text-body transition-colors hover:text-primary"
+                >
+                  {nj.address}
+                </Link>
                 <div className="mt-3 space-y-2">
                   <Link
                     href={`mailto:${nj.email}`}
@@ -220,7 +227,14 @@ export default function Footer() {
                   {ny.surgeon}
                 </p>
                 <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
-                <p className="mt-2 text-sm text-body">{ny.address}</p>
+                <Link
+                  href={ny.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm text-body transition-colors hover:text-primary"
+                >
+                  {ny.address}
+                </Link>
                 <div className="mt-3 space-y-2">
                   <Link
                     href={`mailto:${ny.email}`}
@@ -273,7 +287,14 @@ export default function Footer() {
                   {nj.surgeon}
                 </p>
                 <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
-                <p className="mt-2 text-sm text-body">{nj.address}</p>
+                <Link
+                  href={nj.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm text-body transition-colors hover:text-primary"
+                >
+                  {nj.address}
+                </Link>
                 <div className="mt-3 space-y-2">
                   <Link
                     href={`mailto:${nj.email}`}
@@ -334,7 +355,14 @@ export default function Footer() {
                   {ny.surgeon}
                 </p>
                 <p className="mt-2 text-sm text-body">Mon - Fri 9am - 5pm</p>
-                <p className="mt-2 text-sm text-body">{ny.address}</p>
+                <Link
+                  href={ny.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-sm text-body transition-colors hover:text-primary"
+                >
+                  {ny.address}
+                </Link>
                 <div className="mt-3 space-y-2">
                   <Link
                     href={`mailto:${ny.email}`}

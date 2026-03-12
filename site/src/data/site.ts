@@ -18,7 +18,7 @@ export const siteConfig = {
       instagramUrl: "https://instagram.com/michaelsosinMD",
       hours: "Mon-Fri 9am-5pm",
       mapUrl:
-        "https://www.google.com/maps/place/264+Millburn+Ave,+Millburn,+NJ+07041",
+        "https://www.google.com/maps/dir/?api=1&destination=264+Millburn+Ave,+Millburn,+NJ+07041",
     },
     ny: {
       name: "Harrison, NY (Westchester)",
@@ -31,7 +31,7 @@ export const siteConfig = {
       instagramUrl: "https://instagram.com/chrisdevulapalliMD",
       hours: "Mon-Fri 9am-5pm",
       mapUrl:
-        "https://www.google.com/maps/place/500+Mamaroneck+Ave+Suite+211,+Harrison,+NY+10528",
+        "https://www.google.com/maps/dir/?api=1&destination=500+Mamaroneck+Ave,+Suite+211,+Harrison,+NY+10528",
     },
   },
 };
