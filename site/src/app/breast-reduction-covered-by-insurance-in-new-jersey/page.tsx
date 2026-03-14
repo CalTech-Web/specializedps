@@ -122,37 +122,6 @@ export default function BreastReductionInsuranceNewJerseyPage() {
 
   return (
     <>
-      {/* -- Custom Landing Page Header -- */}
-      <header className="border-b border-gray-100 bg-white">
-        <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4">
-          <Link href="/">
-            <Image
-              src="/images/logos/black-logo.webp"
-              alt="Specialized Plastic Surgery"
-              width={200}
-              height={50}
-              className="h-8 w-auto"
-              priority
-            />
-          </Link>
-          <div className="flex items-center gap-4">
-            <a
-              href={`tel:${nj.phoneRaw}`}
-              className="hidden items-center gap-2 text-sm font-bold text-heading transition-colors hover:text-primary sm:flex"
-            >
-              <Phone className="h-4 w-4 text-primary" />
-              {nj.phone}
-            </a>
-            <Link
-              href="#contact-form"
-              className="rounded-md bg-primary px-5 py-2.5 text-xs font-bold tracking-wider text-white transition-colors hover:bg-primary/90"
-            >
-              Free Consultation
-            </Link>
-          </div>
-        </div>
-      </header>
-
       {/* -- Hero -- */}
       <section className="relative flex min-h-[520px] w-full items-center justify-center overflow-hidden bg-heading">
         <Image
@@ -1129,67 +1098,6 @@ export default function BreastReductionInsuranceNewJerseyPage() {
         </div>
       </section>
 
-      {/* -- Custom Landing Page Footer -- */}
-      <footer className="bg-heading py-10">
-        <div className="mx-auto max-w-[1320px] px-6">
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
-            <div className="text-center sm:text-left">
-              <Image
-                src="/images/logos/white-logo.webp"
-                alt="Specialized Plastic Surgery"
-                width={220}
-                height={50}
-                className="mx-auto sm:mx-0"
-              />
-              <p className="mt-2 text-xs font-bold tracking-wider text-primary">
-                New Jersey Office
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center gap-1 text-sm text-white/70 sm:items-end">
-              <span>Mon - Fri: 9am - 5PM</span>
-              <span>{nj.address}</span>
-              <a
-                href={`mailto:${nj.email}`}
-                className="transition-colors hover:text-primary"
-              >
-                {nj.email}
-              </a>
-              <a
-                href={`tel:${nj.phoneRaw}`}
-                className="font-bold text-primary transition-colors hover:text-white"
-              >
-                {nj.phone}
-              </a>
-              <a
-                href={nj.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-primary"
-              >
-                @michaelsosinMD
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-white/[0.06] pt-6 sm:flex-row">
-            <p className="text-xs text-white/40">
-              &copy; {new Date().getFullYear()} Specialized Plastic Surgery | All Rights Reserved.
-            </p>
-            <p className="text-xs text-white/40">
-              Built by{" "}
-              <a
-                href="https://caltechweb.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 transition-colors hover:text-primary"
-              >
-                CalTech Web
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
