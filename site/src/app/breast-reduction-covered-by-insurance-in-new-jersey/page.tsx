@@ -1003,7 +1003,7 @@ export default function BreastReductionInsuranceNewJerseyPage() {
 
             <div className="relative hidden min-h-[320px] overflow-hidden rounded-lg shadow-lg lg:block">
               <Image
-                src="https://specializedplasticsurgery.com/wp-content/uploads/2025/09/OR-Surgery-Picture.jpg"
+                src="/images/team/or-surgery-nj.jpg"
                 alt="State-of-the-art surgical facility"
                 fill
                 className="object-cover"
