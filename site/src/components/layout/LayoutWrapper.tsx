@@ -13,6 +13,7 @@ const AccessibilityWidget = dynamic(
 
 const STANDALONE_ROUTES = [
   "/breast-reduction-covered-by-insurance-in-westchester",
+  "/breast-reduction-covered-by-insurance-in-new-jersey",
   "/exclusive-breast-augmentation-pricing",
 ];
 
