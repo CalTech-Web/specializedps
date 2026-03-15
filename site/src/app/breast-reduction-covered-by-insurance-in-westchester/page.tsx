@@ -166,7 +166,8 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center">
-          <p className="text-xs font-bold tracking-[0.25em] text-primary">
+          <p className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.25em] text-primary">
+            <span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-primary/60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-[#a07d45]" /></span>
             Westchester, NY
           </p>
           <h1 className="font-heading mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -220,7 +221,8 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-xs font-bold tracking-[0.2em] text-primary">
+              <p className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-primary">
+                <span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-primary/60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-[#a07d45]" /></span>
                 Dr. Devulapalli&apos;s Philosophy
               </p>
               <h2 className="font-heading mt-3 text-3xl font-bold text-heading sm:text-4xl">
@@ -359,7 +361,8 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-primary">
+          <p className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-primary">
+            <span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-primary/60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-[#a07d45]" /></span>
             No Cost to You
           </p>
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -1114,7 +1117,8 @@ export default function BreastReductionInsuranceWestchesterPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-gold to-primary" />
 
         <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-primary">
+          <p className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-primary">
+            <span className="relative flex h-2 w-2"><span className="absolute inset-0 animate-ping rounded-full bg-primary/60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-[#a07d45]" /></span>
             Take the Next Step
           </p>
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">

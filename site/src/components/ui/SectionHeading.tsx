@@ -30,9 +30,13 @@ export default function SectionHeading({
       {/* Eyebrow badge */}
       {eyebrow && (
         <p className={cn(
-          "mb-4 inline-block rounded-sm px-5 py-2 text-xs font-bold tracking-[0.2em]",
+          "mb-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 text-xs font-bold tracking-[0.2em]",
           light ? "bg-white/10 text-primary" : "bg-primary/20 text-primary"
         )}>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inset-0 animate-ping rounded-full bg-primary/60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#a07d45]" />
+          </span>
           {eyebrow}
         </p>
       )}
