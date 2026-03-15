@@ -439,7 +439,7 @@ export default function BreastReductionInsuranceNewJerseyPage() {
           <div className="grid items-start gap-12 lg:grid-cols-[420px_1fr]">
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl">
               <Image
-                src={drMichael.heroImage || drMichael.image}
+                src="/images/team/dr-sosin-expert.jpg"
                 alt={drMichael.name}
                 fill
                 className="object-cover object-top"
