@@ -40,6 +40,54 @@ export const metadata: Metadata = {
     "Learn how breast reduction surgery may be covered by your insurance in Westchester, NY. Dr. Chris Devulapalli has performed over 1,000 breast reductions with a dedicated insurance concierge team to help secure your coverage.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      name: "Breast Reduction Surgery",
+      procedureType: "https://schema.org/SurgicalProcedure",
+      description:
+        "Breast reduction surgery to remove excess tissue, fat, and skin for improved comfort and proportion. May be covered by insurance when medically necessary.",
+      bodyLocation: "Breast",
+    },
+    {
+      "@type": "Physician",
+      name: "Dr. Chris Devulapalli",
+      description:
+        "Board-certified plastic surgeon specializing in breast reduction with over 1,000 procedures performed.",
+      medicalSpecialty: "Plastic Surgery",
+      image:
+        "https://specializedplasticsurgery.com/wp-content/uploads/2025/05/IMG_1227DCD.jpg",
+      memberOf: {
+        "@type": "MedicalOrganization",
+        name: "American Society of Plastic Surgeons",
+      },
+    },
+    {
+      "@type": "MedicalBusiness",
+      name: "Specialized Plastic Surgery - Westchester",
+      url: "https://specializedplasticsurgery.com",
+      telephone: "(914) 874-0900",
+      email: "Westchester@myspsdocs.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "500 Mamaroneck Ave, Suite 211",
+        addressLocality: "Harrison",
+        addressRegion: "NY",
+        postalCode: "10528",
+        addressCountry: "US",
+      },
+      openingHours: "Mo-Fr 09:00-17:00",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "120",
+      },
+    },
+  ],
+};
+
 const processSteps = [
   {
     icon: ClipboardList,
@@ -122,6 +170,15 @@ export default function BreastReductionInsuranceWestchesterPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white">
+        Skip to content
+      </a>
+
       {/* ── Custom Landing Page Header ── */}
       <header className="border-b border-gray-100 bg-white">
         <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4">
@@ -154,7 +211,7 @@ export default function BreastReductionInsuranceWestchesterPage() {
       </header>
 
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[520px] w-full items-center justify-center overflow-hidden bg-heading">
+      <section id="main-content" className="relative flex min-h-[520px] w-full items-center justify-center overflow-hidden bg-heading">
         <Image
           src="https://specializedplasticsurgery.com/wp-content/uploads/2025/11/Header-Image.jpg"
           alt="Breast Reduction Surgery"

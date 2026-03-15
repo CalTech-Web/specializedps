@@ -150,10 +150,11 @@ export default function ContactForm({
       {!isFixed && (
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+            <label htmlFor="cf-location" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
               Location *
             </label>
             <select
+              id="cf-location"
               value={formData.location}
               onChange={(e) => handleLocationChange(e.target.value)}
               className={`${inputBase} ${errors.location ? "border-red-400" : ""}`}
@@ -170,10 +171,11 @@ export default function ContactForm({
             )}
           </div>
           <div>
-            <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+            <label htmlFor="cf-doctor" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
               Doctor *
             </label>
             <select
+              id="cf-doctor"
               value={formData.doctor}
               onChange={(e) => handleChange("doctor", e.target.value)}
               className={inputBase}
@@ -192,10 +194,11 @@ export default function ContactForm({
       {/* Row 2: Name + Phone */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+          <label htmlFor="cf-name" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
             Your Name *
           </label>
           <input
+            id="cf-name"
             type="text"
             value={formData.name}
             onChange={(e) => handleChange("name", e.target.value)}
@@ -206,10 +209,11 @@ export default function ContactForm({
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+          <label htmlFor="cf-phone" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
             Your Phone *
           </label>
           <input
+            id="cf-phone"
             type="tel"
             value={formData.phone}
             onChange={(e) => handleChange("phone", e.target.value)}
@@ -224,10 +228,11 @@ export default function ContactForm({
 
       {/* Row 3: Email */}
       <div>
-        <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+        <label htmlFor="cf-email" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
           Email Address *
         </label>
         <input
+          id="cf-email"
           type="email"
           value={formData.email}
           onChange={(e) => handleChange("email", e.target.value)}
@@ -240,10 +245,11 @@ export default function ContactForm({
 
       {/* Row 4: Message */}
       <div>
-        <label className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
+        <label htmlFor="cf-message" className="mb-1.5 block text-xs font-semibold tracking-wider text-heading">
           Message *
         </label>
         <textarea
+          id="cf-message"
           rows={4}
           value={formData.message}
           onChange={(e) => handleChange("message", e.target.value)}
